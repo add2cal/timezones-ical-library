@@ -1,0 +1,67 @@
+{
+  "name": "timzones-ical-library",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.20.0"
+  },
+  "description": "Easy direct access to the most recent official timezone information for iCalendar files",
+  "main": "npm_dist/cjs/index.js",
+  "module": "npm_dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./npm_dist/mjs/index.js",
+      "require": "./npm_dist/cjs/index.js"
+    }
+  },
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/add2cal/timezones-ical-library.git"
+  },
+  "keywords": [
+    "ical",
+    "timezone",
+    "generator",
+    "builder",
+    "icalendar",
+    "google",
+    "apple",
+    "component",
+    "module",
+    "package",
+    "free",
+    "snippet",
+    "outlook",
+    "microsoft",
+    "javascript",
+    "node",
+    "react",
+    "IANA",
+    "ics",
+    "olson",
+    "vzic",
+    "calendar"
+  ],
+  "author": {
+    "name": "Jens Kuerschner",
+    "url": "https://jenskuerschner.de/"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/add2cal/timezones-ical-library/issues"
+  },
+  "homepage": "https://add-to-calendar-button.com/",
+  "scripts": {
+    "release": "node set-release.js",
+    "test": "node test/tests.js",
+    "build-npm": "npx grunt npm",
+    "build": "npx grunt"
+  },
+  "devDependencies": {
+    "grunt": ">=1.5.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-file-creator": "^0.1.3",
+    "grunt-version": "^3.0.0"
+  }
+}
