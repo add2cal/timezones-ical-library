@@ -1,0 +1,13 @@
+# This workflow will update the timezone data from the official database and can only be triggered manually
+
+name: update tz data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-build-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sh update-tzdata.sh
+      - shell: bash
