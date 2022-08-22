@@ -1,0 +1,12 @@
+.github/
+*.png
+security.md
+
+# plus all the maker stuff, which is not already ignored for Git
+
+tzdata
+Makefile
+*.c
+*.h
+*.sh
+*.pl

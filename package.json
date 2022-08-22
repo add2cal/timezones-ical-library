@@ -1,0 +1,86 @@
+{
+  "name": "add-to-calendar-button",
+  "version": "1.14.4",
+  "engines": {
+    "node": ">=14.20.0"
+  },
+  "description": "A convenient JavaScript snippet, which lets you create beautiful buttons, where people can add events to their calendars.",
+  "main": "npm_dist/cjs/index.js",
+  "module": "npm_dist/mjs/index.js",
+  "exports": {
+    "./assets/css/": "./assets/css/",
+    ".": {
+      "import": "./npm_dist/mjs/index.js",
+      "require": "./npm_dist/cjs/index.js"
+    }
+  },
+  "types": "index.d.ts",
+  "style": "assets/css/atcb.min.css",
+  "jsdelivr": "./assets/js/atcb.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/add2cal/add-to-calendar-button.git"
+  },
+  "keywords": [
+    "button",
+    "microsoft",
+    "light",
+    "open-source",
+    "apple",
+    "google",
+    "generator",
+    "component",
+    "simple",
+    "vanilla-js",
+    "free",
+    "snippet",
+    "outlook",
+    "easy",
+    "vanillajs",
+    "add-to-calendar",
+    "addevent",
+    "add-to-calendar-button",
+    "calendar"
+  ],
+  "author": {
+    "name": "Jens Kuerschner",
+    "url": "https://jenskuerschner.de/"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/add2cal/add-to-calendar-button/issues"
+  },
+  "homepage": "https://add-to-calendar-button.com/",
+  "scripts": {
+    "release": "node set-release.js",
+    "stylelint": "npx stylelint assets/css/*.css && npx stylelint demo_assets/css/*.css",
+    "stylelint:fix": "npm run stylelint -- --fix",
+    "eslint": "npx eslint .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run eslint:fix && npm run prettier:fix && npm run stylelint:fix",
+    "test": "node test/tests.js",
+    "build-npm": "npx grunt npm",
+    "build": "npx grunt"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-commonjs": "^1.0.2",
+    "eslint-plugin-security": "^1.5.0",
+    "grunt": ">=1.5.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-file-creator": "^0.1.3",
+    "grunt-version": "^3.0.0",
+    "prettier": "2.7.1",
+    "stylelint": "^14.10.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^27.0.0"
+  }
+}
