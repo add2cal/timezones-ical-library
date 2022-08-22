@@ -9,8 +9,10 @@ then
   cd tzdata
   wget "https://data.iana.org/time-zones/releases/tzdata${1}.tar.gz"
   tar -xf "tzdata${1}.tar.gz"
-  make -B
-  ./vzic
+  cd ..
+  rm -r zoneinfo
+  sudo make -B
+  sudo ./vzic
 else
   echo "no version given"
 fi

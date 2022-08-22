@@ -5,11 +5,6 @@
 #
 OLSON_DIR ?= tzdata
 
-# This is used as the PRODID property on the iCalendar files output.
-# It identifies the product which created the iCalendar objects.
-# So you need to substitute your own organization name and product.
-PRODUCT_ID ?= -//github.com/add2cal//timezonges iCal library//EN
-
 # This is used to create unique IDs for each VTIMEZONE component.
 # The prefix is put before each timezone city name. It should start and end
 # with a '/'. The first part, i.e. 'myorganization.org' below, should be
@@ -35,7 +30,7 @@ LIBICAL_LDADD = -lical -lpthread
 GLIB_CFLAGS = `pkg-config --cflags glib-2.0`
 GLIB_LDADD = `pkg-config --libs glib-2.0`
 
-CFLAGS = -g -DOLSON_DIR=\"$(OLSON_DIR)\" -DPRODUCT_ID='"$(PRODUCT_ID)"' -DTZID_PREFIX='"$(TZID_PREFIX)"' $(GLIB_CFLAGS) $(LIBICAL_CFLAGS)
+CFLAGS = -g -DOLSON_DIR=\"$(OLSON_DIR)\" -DTZID_PREFIX='"$(TZID_PREFIX)"' $(GLIB_CFLAGS) $(LIBICAL_CFLAGS)
 
 OBJECTS = vzic.o vzic-parse.o vzic-dump.o vzic-output.o
 

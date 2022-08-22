@@ -67,7 +67,6 @@
 
 
 /* These come from the Makefile. See the comments there. */
-char *ProductID = PRODUCT_ID;
 char *TZIDPrefix = TZID_PREFIX;
 
 /* We expand the TZIDPrefix, replacing %D with the date, in here. */
@@ -553,16 +552,12 @@ output_zone			(char		*directory,
     }
   }
 
-  fprintf (fp, "BEGIN:VCALENDAR\r\nPRODID:%s\r\nVERSION:2.0\r\n", ProductID);
-
   output_zone_to_files (zone, zone_name, rule_data, fp, changes_fp);
 
   if (ferror (fp)) {
     fprintf (stderr, "Error writing file: %s\n", filename);
     exit (1);
   }
-
-  fprintf (fp, "END:VCALENDAR\r\n");
 
   fclose (fp);
 
