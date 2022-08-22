@@ -1,3 +1,7 @@
+![Add to Calendar TimeZone iCal Library](https://github.com/add2cal/timezones-ical-library/blob/main/readme-header.png?raw=true)
+
+<br />
+
 # Add to Calendar TimeZones iCal Library
 
 The tool to convert the [IANA (formerly Olson) timezone database files](http://www.iana.org/time-zones) into VTIMEZONE files compatible with the iCalendar specification (RFC2445).
@@ -38,7 +42,7 @@ Anyone is welcome to contribute, but mind the [guidelines](.github/CONTRIBUTING.
 
 ## 📃 Copyright and License
 
-Licensed under [GPL-3.0)](LICENSE).
+Licensed under [GPL-3.0](LICENSE).
 
 <br />
 
