@@ -4,13 +4,12 @@
 name: update tz data
 
 on:
-  workflow_dispatch:
-    branches:
-      - 'dev'
+  workflow_dispatch
 
 jobs:
   fetch-build-and-update:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/dev'
     steps:
       - uses: actions/checkout@v3
-      - run: bash  ${GITHUB_WORKSPACE}/update-tzdata.sh ${{secrets.tzVersion}}
+      - run: bash ${GITHUB_WORKSPACE}/update-tzdata.sh ${{secrets.tzVersion}}
