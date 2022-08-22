@@ -4,6 +4,7 @@ name: update tz data
 
 on:
   workflow_dispatch:
+    branches: [dev]
 
 jobs:
   fetch-build-and-update:
