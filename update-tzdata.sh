@@ -13,6 +13,7 @@ then
   rm -r zoneinfo
   sudo make -B
   sudo ./vzic
+  node generator.js
 else
   echo "no version given"
 fi

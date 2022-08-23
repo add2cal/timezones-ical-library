@@ -1,7 +1,16 @@
-const initCodeDelimiter = /\/\/ PLACE EXPORT HERE/g;
+const fs = require('fs');
+const tzDbPlaceholder = /\/\/ PLACE ZONES DB HERE/g;
+const exportCodePlaceholder = /\/\/ PLACE EXPORT HERE/g;
+const tzDbContent = fs.readFileSync('./src/zonesdb.js', 'utf-8');
 
-function prepareExport(content, exportPhrase) {
-  return content.replace(initCodeDelimiter, `${exportPhrase} { tzlib_get_ical_block };`);
+function prepareFinalFile(content, exportPhrase = '') {
+  let newContent = content.replace(tzDbPlaceholder, tzDbContent);
+  if (exportPhrase != '') {
+    newContent = newContent.replace(exportCodePlaceholder, `${exportPhrase} { tzlib_get_ical_block };`);
+  } else {
+    newContent = newContent.replace(exportCodePlaceholder, '');
+  }
+  return newContent;
 }
 
 module.exports = function (grunt) {
@@ -23,20 +32,25 @@ module.exports = function (grunt) {
     clean: {
       oldBuildFiles: [
         'npm_dist/',
-        'dist',
+        'dist/',
       ],
     },
     // creates the source files for the npm versionm supporting CommonJS and ES Module (https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html)
     copy: {
+      plain_dist: {
+        src: 'src/tzlib.js',
+        dest: 'dist/index.js',
+        options: { process: (content) => prepareFinalFile(content) },
+      },
       mjs_dist: {
-        src: 'tzlib.js',
+        src: 'src/tzlib.js',
         dest: 'npm_dist/mjs/index.js',
-        options: { process: (content) => prepareExport(content, 'export') },
+        options: { process: (content) => prepareFinalFile(content, 'export') },
       },
       cjs_dist: {
-        src: 'tzlib.js',
+        src: 'src/tzlib.js',
         dest: 'npm_dist/cjs/index.js',
-        options: { process: (content) => prepareExport(content, 'module.exports =') },
+        options: { process: (content) => prepareFinalFile(content, 'module.exports =') },
       },
     },
     'file-creator': {
@@ -62,7 +76,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-version');
 
   // Register task(s).
-  grunt.registerTask('default', ['clean']);
+  grunt.registerTask('default', ['clean', 'copy:plain_dist']);
   grunt.registerTask('npm', ['clean', 'copy', 'file-creator']);
-  grunt.registerTask('cleanNpm', ['clean:npmFolder']);
 };
