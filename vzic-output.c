@@ -1121,7 +1121,7 @@ output_zone_components			(FILE		*fp,
   time_t now = time(0);
   struct tm *tm = gmtime(&now);
 
-  fprintf (fp, "BEGIN:VTIMEZONE\r\nTZID:%s%s\r\n", TZIDPrefixExpanded, name);
+  fprintf (fp, "TZID:%s%s\r\n", TZIDPrefixExpanded, name);
 
   vzictime = &g_array_index (changes, VzicTime, changes->len - 1);
   if (vzictime->until) {
@@ -1176,7 +1176,6 @@ output_zone_components			(FILE		*fp,
 #if 0
       printf ("Zone: %s using 2 RRULEs\n", CurrentZoneName);
 #endif
-      fprintf (fp, "END:VTIMEZONE\r\n");
       return;
     }
   }
@@ -1294,7 +1293,6 @@ output_zone_components			(FILE		*fp,
       break;
   }
 
-  fprintf (fp, "END:VTIMEZONE\r\n");
 }
 
 

@@ -1,10 +1,13 @@
 .github/
 *.png
 security.md
+generator.js
+src/
 
 # plus all the maker stuff, which is not already ignored for Git
 
-tzdata
+tzdata/
+zoneinfo/
 Makefile
 *.c
 *.h
