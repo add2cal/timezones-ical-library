@@ -1,4 +1,4 @@
-const initCodeDelimiter = /\/\/ START INIT[\s\S]*?\/\/ END INIT/g;
+const initCodeDelimiter = /\/\/ PLACE EXPORT HERE/g;
 
 function prepareExport(content, exportPhrase) {
   return content.replace(initCodeDelimiter, `${exportPhrase} { tzlib_get_ical_block };`);
@@ -23,6 +23,7 @@ module.exports = function (grunt) {
     clean: {
       oldBuildFiles: [
         'npm_dist/',
+        'dist',
       ],
     },
     // creates the source files for the npm versionm supporting CommonJS and ES Module (https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html)

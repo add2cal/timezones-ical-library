@@ -17,13 +17,6 @@ try {
     console.log('FAILED: Something went wrong with testing the commonJS setup\n');
   }
 
-  try {
-    execSync('node test/server-side-rendering.js', { stdio: [0, 1, 2] });
-    console.log('TEST SUCCESSFUL: server side rendering seems not to be blocked\n');
-  } catch (error) {
-    console.log('FAILED: Something went wrong with the server side rendering test\n');
-  }
-
   const fs = require('fs');
   const dirToDrop = 'npm_dist';
   fs.rm(dirToDrop, { recursive: true }, (err) => {
