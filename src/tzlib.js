@@ -21,7 +21,8 @@ function tzlib_get_ical_block(tzName) {
     } else {
       // otherwise, create the output
       let buffer = 'BEGIN:VTIMEZONE\r\n';
-      buffer += tzlibZonesDB[`${tzName}`].replace(/<br>/g, '\r\n');
+      // replace the linebreak placeholders with real linebreaks and strip out any bad characters
+      buffer += tzlibZonesDB[`${tzName}`].replace(/<br>/g, '\r\n').replace(/[^\w_\-\+\/]/g,'');
       buffer += 'END:VTIMEZONE';
       return buffer;
     }
