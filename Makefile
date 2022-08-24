@@ -15,14 +15,6 @@ OLSON_DIR ?= tzdata
 # changed, it bumps the version number on the end of this prefix. */
 TZID_PREFIX ?= /add-to-calendar-pro.com/%D/
 
-# Set any -I include directories to find the libical header files, and the
-# libical library to link with. You only need these if you want to run the
-# tests. You may need to change the '#include <ical.h>' line at the top of
-# test-vzic.c as well.
-LIBICAL_CFLAGS = -I/usr/local/include/libical -L/usr/local/lib64
-#LIBICAL_LDADD = -lical-evolution
-LIBICAL_LDADD = -lical -lpthread
-
 #
 # You shouldn't need to change the rest of the file.
 #
@@ -39,8 +31,6 @@ all: vzic
 vzic: $(OBJECTS)
 	$(CC) $(OBJECTS) $(GLIB_LDADD) -o vzic
 
-test-vzic: test-vzic.o
-	$(CC) test-vzic.o $(LIBICAL_LDADD) -o test-vzic
 
 # Dependencies.
 $(OBJECTS): vzic.h
@@ -48,28 +38,9 @@ vzic.o vzic-parse.o: vzic-parse.h
 vzic.o vzic-dump.o: vzic-dump.h
 vzic.o vzic-output.o: vzic-output.h
 
-test-parse: vzic
-	./vzic-dump.pl $(OLSON_DIR)
-	./vzic --dump --pure
-	@echo
-	@echo "#"
-	@echo "# If either of these diff commands outputs anything there may be a problem."
-	@echo "#"
-	diff -ru zoneinfo/ZonesPerl zoneinfo/ZonesVzic
-	diff -ru zoneinfo/RulesPerl zoneinfo/RulesVzic
-
-test-changes: vzic test-vzic
-	./test-vzic --dump-changes
-	./vzic --dump-changes --pure
-	@echo
-	@echo "#"
-	@echo "# If this diff command outputs anything there may be a problem."
-	@echo "#"
-	diff -ru zoneinfo/ChangesVzic test-output
-
 clean:
-	-rm -rf vzic $(OBJECTS) *~ ChangesVzic RulesVzic ZonesVzic RulesPerl ZonesPerl test-vzic test-vzic.o
+	-rm -rf vzic $(OBJECTS) *~ ChangesVzic RulesVzic ZonesVzic RulesPerl ZonesPerl
 
-.PHONY: clean perl-dump test-parse
+.PHONY: clean perl-dump
 
 

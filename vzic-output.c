@@ -81,7 +81,7 @@ char TZIDPrefixExpanded[1024];
 
 
 /* The year we go up to when dumping the list of timezone changes (used
-   for testing & debugging). */
+   for debugging). */
 #define MAX_CHANGES_YEAR	2050
 
 /* This is the maximum year that time_t value can typically hold on 32-bit
