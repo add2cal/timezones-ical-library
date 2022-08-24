@@ -20,9 +20,22 @@ It is based on the awesome tool by Damon Chaplin ([github.com/libical/vzic](http
 
 **This step is only relevant if you want to build the package from source!**
 
-Simply run `sh update-tzdata.sh tzVersionNumber` with *tzVersionNumber* being the version of the timezone database you want to use (e.g. sh update-tzdata.sh 2022c).
+(Requires Node.js as well as Linux as operating system.)
+
+Simply run `sudo sh update-tzdata.sh tzVersionNumber` with *tzVersionNumber* being the version of the timezone database you want to use (e.g. sudo sh update-tzdata.sh 2022c).
+
+<br />
 
 ### 2. Use it
+
+There are 2-3 option how you can use the script.
+
+1. You can use the VanillaJS version from the dist folder.
+2. You can use the npm package via `npm install timezones-ical-library` and ...
+  1. require the package (commonJS) or ...
+  2. import the module (ES) via `import { tzlib_get_ical_block } from 'timezones-ical-library';`.
+
+In all cases, you can then use the `tzlib_get_ical_block(tzName)` function, which returns the proper iCal VTIMEZONE block.
 
 <br /><br />
 
