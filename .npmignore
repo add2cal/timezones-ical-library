@@ -1,8 +1,15 @@
 .github/
 *.png
+*.ico
+*.gif
+*.svg
 security.md
 generator.js
 src/
+demo_assets
+index.html
+browserconfig.xml
+manifest.json
 
 # plus all the maker stuff, which is not already ignored for Git
 
