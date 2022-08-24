@@ -18,7 +18,8 @@ const tz = {};
 
 for (const zone of files) {
   const name = zone.replace('./zoneinfo/', '').replace('.ics', '');
-  tz[name] = fs.readFileSync(`./zoneinfo/${name}.ics`, 'utf-8').replace(/\r\n$/, '').replace(/\r\n/g, '<br>').replace(/.ics$/, '').replace(/\.\.\//g, '');
+  // cleaning up the entry by stripping out any last empty line, replacing linebreaks with <br>, removing the file extension and path information (from symlink entries)
+  tz[name] = fs.readFileSync(`./zoneinfo/${name}.ics`, 'utf-8').replace(/\r\n$/, '').replace(/\r\n/g, '<br>').replace(/.ics$/, '').replace(/^[(\.)*\/]*/g, '');
 }
 
 const tzlibDBFile = './src/zonesdb.js';

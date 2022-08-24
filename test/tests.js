@@ -8,6 +8,7 @@ try {
     console.log('TEST SUCCESSFUL: importing the script as module\n');
   } catch (error) {
     console.log('FAILED: Something went wrong with testing the ES Module setup\n');
+    throw error;
   }
 
   try {
@@ -15,13 +16,14 @@ try {
     console.log('TEST SUCCESSFUL: commonJS init via require\n');
   } catch (error) {
     console.log('FAILED: Something went wrong with testing the commonJS setup\n');
+    throw error;
   }
 
   const fs = require('fs');
   const dirToDrop = 'npm_dist';
-  fs.rm(dirToDrop, { recursive: true }, (err) => {
-    if (err) {
-      throw err;
+  fs.rm(dirToDrop, { recursive: true }, (error) => {
+    if (error) {
+      throw error;
     }
     console.log(`${dirToDrop} deleted again\n`);
   });
