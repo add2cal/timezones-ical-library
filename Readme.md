@@ -22,7 +22,7 @@ It is based on the awesome tool by Damon Chaplin ([github.com/libical/vzic](http
 
 (Requires Node.js as well as Linux as operating system.)
 
-Simply run `sh update-tzdata.sh tzVersionNumber` with *tzVersionNumber* being the version of the timezone database you want to use (e.g. sh update-tzdata.sh 2022c).
+Simply run `sudo sh update-tzdata.sh tzVersionNumber` with *tzVersionNumber* being the version of the timezone database you want to use (e.g. sudo sh update-tzdata.sh 2022c).
 
 <br />
 

@@ -1,9 +1,10 @@
 #!/bin/sh
 
-# provide tzVersion (like 2022c) via argument: sh update-tzdata.sh 2022c
+# provide tzVersion (like 2022c) via argument: sudo sh update-tzdata.sh 2022c
 if [ $1 ]
 then
   sudo apt-get install -y --no-install-recommends make gcc pkg-config libglib2.0-dev
+  npm install
   rm -r tzdata
   mkdir tzdata
   cd tzdata
