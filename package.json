@@ -51,7 +51,7 @@
   "bugs": {
     "url": "https://github.com/add2cal/timezones-ical-library/issues"
   },
-  "homepage": "https://add-to-calendar-button.com/",
+  "homepage": "https://tz.add-to-calendar-technology.com/",
   "scripts": {
     "release": "node set-release.js",
     "test": "node test/tests.js",
