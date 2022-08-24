@@ -39,7 +39,7 @@ module.exports = function (grunt) {
     copy: {
       plain_dist: {
         src: 'src/tzlib.js',
-        dest: 'dist/index.js',
+        dest: 'dist/tzlib.js',
         options: { process: (content) => prepareFinalFile(content) },
       },
       mjs_dist: {
@@ -67,15 +67,29 @@ module.exports = function (grunt) {
         },
       },
     },
+    // minifies the main js file
+    uglify: {
+      options: {
+        compress: true,
+        mangle: true,
+        sourceMap: true,
+      },
+      newBuild: {
+        files: {
+          'dist/tzlib.min.js': ['dist/tzlib.js'],
+        },
+      },
+    },
   });
 
   // Load the plugins.
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-file-creator');
   grunt.loadNpmTasks('grunt-version');
 
   // Register task(s).
-  grunt.registerTask('default', ['clean', 'copy:plain_dist']);
-  grunt.registerTask('npm', ['clean', 'copy', 'file-creator']);
+  grunt.registerTask('default', ['clean', 'copy:plain_dist', 'uglify']);
+  grunt.registerTask('npm', ['clean', 'copy', 'file-creator', 'uglify']);
 };
