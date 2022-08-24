@@ -23,9 +23,9 @@ module.exports = function (grunt) {
       },
       js: {
         options: {
-          prefix: 'Version.=..',
+          prefix: 'Version:.',
         },
-        src: ['tzlib.js'],
+        src: ['src/tzlib.js', 'generator.js'],
       },
     },
     // cleans old built files

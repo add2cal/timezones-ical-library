@@ -1,3 +1,15 @@
+/**
+ * ++++++++++++++++++++++++++++++++++++++
+ * Add to Calendar TimeZones iCal Library
+ * ++++++++++++++++++++++++++++++++++++++
+ *
+ * Version: 1.0.0
+ * Creator: Jens Kuerschner (https://jenskuerschner.de)
+ * Project: https://github.com/add2cal/timezones-ical-library
+ * License: GPL-3.0
+ *
+ */
+
 const fs = require('fs');
 const glob = require('glob');
 
