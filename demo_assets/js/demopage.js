@@ -37,3 +37,28 @@ function toggle_atcb_light_mode() {
   d.setTime(d.getTime() + 90 * 24 * 60 * 60 * 1000);
   document.cookie = 'atcb-light-mode=' + newCval + ';expires=' + d.toUTCString();
 }
+
+
+
+// TYPEAHEAD AUTO COMPLETE DROPDOWN
+// via https://github.com/trevoreyre/autocomplete by Trevor Eyre (https://github.com/trevoreyre)
+const tzNames = tzlib_get_timezones();
+new Autocomplete('#autocomplete', {
+
+  search: input => {
+    if (input.length < 1) { return [] }
+    return tzNames.filter(tzName => {
+      return tzName.toLowerCase()
+        .includes(input.toLowerCase())
+    })
+  },
+  
+  onSubmit: result => {
+    document.getElementById('tz-output').textContent = tzlib_get_ical_block(`${result}`);
+  },
+  
+  autoSelect: true,
+
+  debounceTime: 100
+
+});

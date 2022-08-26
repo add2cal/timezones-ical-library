@@ -105,14 +105,13 @@
       </p>
       <div class="example">
         <div class="example-left">
-
-          <!-- tz dropdown-->
-
+          <div id="autocomplete" class="autocomplete">
+            <input class="autocomplete-input" placeholder="Search for a timezone..." aria-label="Search for a timezone...">
+            <ul class="autocomplete-result-list"></ul>
+          </div>
         </div>
         <div class="example-right">
-<pre><code class="language-html">
-  
-</code></pre>
+          <pre><code id="tz-output">Please select a timezone...</code></pre>
         </div>
       </div>
 
@@ -140,7 +139,9 @@
 
 
     <!-- js stuff -->
-    <script type="application/javascript" src="./demo_assets/js/demopage.min.js?v=1.0.0" defer></script>
+    <script type="application/javascript" src="./dist/tzlib.min.js?v=1.0.0"></script>
+    <script type="application/javascript" src="./demo_assets/js/autocomplete.min.js"></script>
+    <script type="application/javascript" src="./demo_assets/js/demopage.min.js?v=1.0.0"></script>
 
   </body>
 </html>
