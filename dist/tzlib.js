@@ -626,7 +626,8 @@ function tzlib_get_ical_block(tzName) {
       return buffer;
     }
   }
-  error.log('Given timezone not valid.');
+  console.error('Given timezone not valid.');
+  return 'Given timezone not valid.';
 }
 
 // PROVIDE ALL TIMEZONES
