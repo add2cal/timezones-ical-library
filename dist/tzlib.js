@@ -619,8 +619,8 @@ function tzlib_get_ical_block(tzName) {
       // otherwise, create the output
       let buffer = 'BEGIN:VTIMEZONE\r\n';
       // replace the linebreak placeholders with real linebreaks and strip out any bad characters
-      buffer += tzlibZonesDB[`${tzName}`].replace(/<br>/g, '\r\n').replace(/[^\w_\-\+\/]/g,'');
-      buffer += 'END:VTIMEZONE';
+      buffer += tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:\+\/<br>]/g,'').replace(/<br>/g, '\r\n');
+      buffer += '\r\nEND:VTIMEZONE';
       console.log('iCal timezone information provided for ' + `${tzName}`);
       console.log('via Add to Calendar TimeZones iCal Library (version ' + tzlibVersion + ')');
       return buffer;
