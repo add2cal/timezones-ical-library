@@ -14,47 +14,39 @@
 */
 
 :root {
-  --primary-color: #9755ff;
-  --primary-color-light: #cbaaff;
+  --primary-color: #539eff;
+  --primary-color-light: #a9ceff;
+  --primary-color-atcb: #9755ff;
+  --primary-color-atcb-light: #cbaaff;
   --secondary-color: #ffa255;
   --secondary-color-light: #ffd0aa;
   --page-background: #f5f5f5;
+  --example-bg: #e1ecf9;
   --text: #333;
   --text-secondary: #969696;
   --text-subline: #fff;
   --hr: #cfcfcf;
-  --light-mode-switch: #0D1117;
+  --light-mode-switch: #282232;
   --example-background: #f5f5f5;
   --example-color: #7d7d7d;
   --example-border: #ababab;
-  --code-comment: #708090;
-  --code-punctuation: #999;
-  --code-tag: #905;
-  --code-selector: #690;
-  --code-operator: #9a6e3a;
-  --code-keyword: #07a;
-  --code-function: #DD4A68;
-  --code-regex: #e90;
+  --header-shadow: 0 6px 7px -6px rgb(0 0 0 / 10%), 0 12px 10px -6px rgb(0 0 0 / 12%), 0 31px 40px -6px rgb(0 0 0 / 20%);
 }
 
 /* Dark mode */
 
-body.atcb-dark {
+body.atcb-dark {  
+  --primary-color: #336db9;
+  --primary-color-light: #539eff;
   --page-background: #0D1117;
+  --example-bg: #1c2128;
   --text: #e6e2ed;
   --hr: #5e5c61;
   --light-mode-switch: #f5f5f5;
   --example-background: #2D2D2D;
   --example-color: #bcbabe;
   --example-border: #797979;
-  --code-comment: #999;
-  --code-punctuation: #ccc;
-  --code-tag: #e2777a;
-  --code-selector: #cc99cd;
-  --code-operator: #67cdcc;
-  --code-keyword: #99a2cd;
-  --code-function: #f08d49;
-  --code-regex: #7ec699;
+  --header-shadow: 0 6px 7px -6px rgb(0 0 0 / 15%), 0 12px 20px -6px rgb(0 0 0 / 18%), 0 31px 70px -6px rgb(0 0 0 / 34%);
 }
 
 /******************************
@@ -297,7 +289,7 @@ a.github:hover svg {
 #logo {
   display: block;
   width: 400px;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 #logo svg {
@@ -390,7 +382,7 @@ body.atcb-dark .light-mode-switch div::after {
 }
 
 #light-mode-switch-header div::after {
-  background: var(--primary-color-light);
+  background: var(--primary-color-atcb-light);
 }
 
 @media (max-width: 991px) {
@@ -404,8 +396,8 @@ body.atcb-dark .light-mode-switch div::after {
  */
 
 #header {
-  background: linear-gradient(45deg, var(--primary-color), var(--primary-color), var(--primary-color-light), var(--primary-color-light));
-  box-shadow: 0 6px 7px -6px rgb(0 0 0 / 15%), 0 12px 20px -6px rgb(0 0 0 / 18%), 0 31px 70px -6px rgb(0 0 0 / 34%);
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-color-light), var(--primary-color-atcb-light), var(--primary-color-atcb-light));
+  box-shadow: var(--header-shadow);
   display: flex;
   justify-content: center;
   padding: 0 25px 50px;
@@ -421,19 +413,32 @@ body.atcb-dark .light-mode-switch div::after {
 }
 
 .example {
-  align-items: start;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 280px auto;
-  justify-items: center;
+  box-shadow: rgba(0 0 0 / 10%) 2px 5px 18px -1px, rgba(0 0 0 / 20%) 2px 2px 10px -3px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+  background-color: var(--example-bg);
+  padding: 60px 20px;
 }
 
-.example-right {
+.tz-input-wrapper {
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.tz-output-wrapper {
   background-color: var(--example-background);
   border: 1px solid var(--example-border);
   border-radius: 6px;
   font-size: 0.8em;
   text-align: left;
+  margin: auto;
+  width: 100%;
+  max-width: 550px;
 }
 
 @media (max-width: 991px) {
@@ -449,10 +454,6 @@ body.atcb-dark .light-mode-switch div::after {
 
   #header-right {
     margin: 80px 25px 30px;
-  }
-
-  .example {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -490,9 +491,10 @@ pre {
 
  .autocomplete-input {
   border: 1px solid #eee;
+  box-shadow: rgba(0 0 0 / 10%) 2px 5px 18px -1px, rgba(0 0 0 / 40%) 2px 2px 10px -3px;
   border-radius: 8px;
   width: 100%;
-  padding: 12px 12px 12px 48px;
+  padding: 12px 48px 12px 12px;
   box-sizing: border-box;
   position: relative;
   font-size: 16px;
@@ -501,7 +503,7 @@ pre {
   background-color: #eee;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCIvPjxwYXRoIGQ9Ik0yMSAyMWwtNC00Ii8+PC9zdmc+');
   background-repeat: no-repeat;
-  background-position: 12px center;
+  background-position: right 12px center;
 }
 
 .autocomplete-input:focus,
@@ -509,7 +511,7 @@ pre {
   border-color: rgba(0, 0, 0, 0.12);
   background-color: #fff;
   outline: none;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: rgba(0 0 0 / 30%) 2px 5px 18px -1px, rgba(0 0 0 / 35%) 2px 2px 10px -3px;
 }
 
 [data-position="below"] .autocomplete-input[aria-expanded="true"] {
@@ -545,7 +547,9 @@ pre {
   box-sizing: border-box;
   max-height: 296px;
   overflow-y: auto;
+  overflow-x: hidden;
   background: #fff;
+  color: #333;
   list-style: none;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
 }
@@ -564,18 +568,41 @@ pre {
   padding-top: 8px;
 }
 
+#tz-no-results {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 100%;
+}
+
+.no-results #tz-no-results {
+  display: block;
+}
+
+.no-results .autocomplete-input.focused {
+  border-bottom-color: transparent;
+  border-radius: 8px 8px 0 0;
+}
+
+.no-results .autocomplete-input:not(.focused) ~ #tz-no-results {
+  display: none;
+}
+
 /* Single result item */
 .autocomplete-result {
   cursor: default;
-  padding: 12px 12px 12px 48px;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2NjIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCIvPjxwYXRoIGQ9Ik0yMSAyMWwtNC00Ii8+PC9zdmc+');
-  background-repeat: no-repeat;
-  background-position: 12px center;
+  text-align: left;
+  padding: 12px;
 }
 
-.autocomplete-result:hover,
+.autocomplete-result:not(.no-result):hover,
 .autocomplete-result[aria-selected="true"] {
   background-color: rgba(0, 0, 0, 0.06);
+}
+
+.autocomplete-result.no-result:hover {
+  cursor: not-allowed;
 }
 
 @keyframes rotate {
