@@ -70,7 +70,11 @@ let tzInput = new Autocomplete('#autocomplete', {
   },
   
   onSubmit: result => {
-    document.getElementById('tz-output').textContent = tzlib_get_ical_block(`${result}`);
+    let tzBlock = tzlib_get_ical_block(`${result}`);
+    if (tzBlock == '') {
+      tzBlock = 'Given timezone not valid.';
+    }
+    document.getElementById('tz-output').textContent = tzBlock;
     document.getElementById('tz-input').blur();
   },
   
