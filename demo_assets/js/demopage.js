@@ -45,6 +45,9 @@ function toggle_atcb_light_mode() {
 const tzNames = tzlib_get_timezones();
 let inputValue = '';
 let showNoResults = false;
+const today = new Date();
+const currentIsoDate = today.toISOString().replace(/:\d{2}.\d{3}Z$/g, '');
+const currentDate = currentIsoDate.split('T');
 const input = document.getElementById('tz-input');
 const noResults = document.getElementById('tz-no-results');
 let tzInput = new Autocomplete('#autocomplete', {
@@ -71,13 +74,13 @@ let tzInput = new Autocomplete('#autocomplete', {
   
   onSubmit: result => {
     let tzBlock = tzlib_get_ical_block(`${result}`);
-    let tzOffsetBlock = tzlib_get_ical_block(`${result}`);
+    let tzOffsetBlock = tzlib_get_offset(`${result}`, currentDate[0], currentDate[1]);
     if (tzBlock == '') {
       tzBlock = 'Given timezone not valid.';
       tzOffsetBlock = tzBlock;
     }
     document.getElementById('tz-output').textContent = tzBlock;
-    document.getElementById('tz-offset-output').textContent = "Offset: \r\n" + tzOffsetBlock;
+    document.getElementById('tz-offset-output').textContent = "Current Offset: " + tzOffsetBlock;
     document.getElementById('tz-input').blur();
     document.getElementById('tz-output-wrapper').style.display = 'block';
   },
