@@ -108,7 +108,7 @@
     <div class="example-wrapper">
 
       <div class="example">
-        <div class="tz-input-wrapper">
+        <div id="tz-input-wrapper">
           <div id="autocomplete" class="autocomplete">
             <input class="autocomplete-input" id="tz-input" onClick="this.select();" placeholder="Search for a timezone..." aria-label="Search for a timezone...">
             <ul class="autocomplete-result-list"></ul>
@@ -117,8 +117,9 @@
             </ul>
           </div>
         </div>
-        <div class="tz-output-wrapper">
+        <div id="tz-output-wrapper">
           <pre><code id="tz-output">Please select a timezone above...</code></pre>
+          <pre><code id="tz-offset-output">Please select a timezone above...</code></pre>
         </div>
       </div>
 

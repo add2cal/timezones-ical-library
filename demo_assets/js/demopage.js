@@ -5,7 +5,7 @@
  *
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
- * icense: GPL-3.0
+ * License: Apache-2.0
  * 
  */
 
@@ -71,11 +71,15 @@ let tzInput = new Autocomplete('#autocomplete', {
   
   onSubmit: result => {
     let tzBlock = tzlib_get_ical_block(`${result}`);
+    let tzOffsetBlock = tzlib_get_ical_block(`${result}`);
     if (tzBlock == '') {
       tzBlock = 'Given timezone not valid.';
+      tzOffsetBlock = tzBlock;
     }
     document.getElementById('tz-output').textContent = tzBlock;
+    document.getElementById('tz-offset-output').textContent = "Offset: \r\n" + tzOffsetBlock;
     document.getElementById('tz-input').blur();
+    document.getElementById('tz-output-wrapper').style.display = 'block';
   },
   
   autoSelect: true,

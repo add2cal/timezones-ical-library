@@ -5,7 +5,7 @@
  *
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
- * icense: GPL-3.0
+ * License: Apache-2.0
  * 
  */
 
@@ -27,6 +27,7 @@
   --text-subline: #fff;
   --hr: #cfcfcf;
   --light-mode-switch: #282232;
+  --light-mode-switch-header: #edf3fa;
   --example-background: #f5f5f5;
   --example-color: #7d7d7d;
   --example-border: #ababab;
@@ -348,6 +349,10 @@ a.github:hover svg {
   background: var(--light-mode-switch);
 }
 
+#light-mode-switch-header.light-mode-switch div {
+  background: var(--light-mode-switch-header);
+}
+
 .light-mode-switch div::before {
   content: "";
   position: absolute;
@@ -377,7 +382,6 @@ a.github:hover svg {
 
 body.atcb-dark .light-mode-switch div {
   transform: scale(0.5);
-  background: var(--light-mode-switch);
 }
 
 body.atcb-dark .light-mode-switch div::before {
@@ -444,21 +448,27 @@ body.atcb-dark .light-mode-switch div::after {
   padding: 60px 20px;  
 }
 
-.tz-input-wrapper {
-  margin: 0 auto 30px auto;
+#tz-input-wrapper {
+  margin: 0 auto;
   width: 100%;
   max-width: 300px;
 }
 
-.tz-output-wrapper {
+#tz-output-wrapper {
   background-color: var(--example-background);
   border: 1px solid var(--example-border);
   border-radius: 6px;
+  display: none;
   font-size: 0.8em;
   text-align: left;
-  margin: auto;
+  margin: 30px auto 0;
   width: 100%;
   max-width: 550px;
+}
+
+#tz-output-wrapper pre+pre {
+  margin-top: 20px;
+  border-top: 1px solid var(--example-border);
 }
 
 @media (max-width: 991px) {
@@ -532,6 +542,7 @@ pre {
   font-size: 16px;
   line-height: 1.5;
   flex: 1;
+  margin: 1px;
   background-color: #eee;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCIvPjxwYXRoIGQ9Ik0yMSAyMWwtNC00Ii8+PC9zdmc+');
   background-repeat: no-repeat;
@@ -540,19 +551,20 @@ pre {
 
 .autocomplete-input:focus,
 .autocomplete-input[aria-expanded="true"] {
-  border-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   background-color: #fff;
+  background-position: right 10px center;
   outline: none;
+  margin: 0;
   box-shadow: rgba(0 0 0 / 30%) 2px 5px 18px -1px, rgba(0 0 0 / 35%) 2px 2px 10px -3px;
 }
 
 [data-position="below"] .autocomplete-input[aria-expanded="true"] {
-  border-bottom-color: transparent;
   border-radius: 8px 8px 0 0;
+  z-index: 2;
 }
 
 [data-position="above"] .autocomplete-input[aria-expanded="true"] {
-  border-top-color: transparent;
   border-radius: 0 0 8px 8px;
   z-index: 2;
 }
@@ -573,6 +585,7 @@ pre {
 }
 
 .autocomplete-result-list {
+  cursor: pointer;
   margin: 0;
   border: 2px solid var(--primary-color);
   padding: 0;
@@ -587,22 +600,24 @@ pre {
 }
 
 [data-position="below"] .autocomplete-result-list {
-  margin-top: -1px;
-  border-top-color: transparent;
+  margin-top: -2px;
+  border-top: 0px;
   border-radius: 0 0 8px 8px;
   padding-bottom: 8px;
 }
 
 [data-position="above"] .autocomplete-result-list {
-  margin-bottom: -1px;
-  border-bottom-color: transparent;
+  margin-bottom: -2px;
+  border-bottom: 0px;
   border-radius: 8px 8px 0 0;
   padding-top: 8px;
 }
 
 #tz-no-results {
+  color: #666;
   display: none;
   position: absolute;
+  font-style: italic;
   z-index: 1;
   width: 100%;
   top: 100%;
