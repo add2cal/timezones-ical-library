@@ -1,6 +1,6 @@
 {
-  "name": "timzones-ical-library",
-  "version": "1.1.0",
+  "name": "timezones-ical-library",
+  "version": "1.1.2",
   "engines": {
     "node": ">=14.20.0"
   },
