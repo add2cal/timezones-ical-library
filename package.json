@@ -1,6 +1,6 @@
 {
   "name": "timzones-ical-library",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "engines": {
     "node": ">=14.20.0"
   },
@@ -47,7 +47,7 @@
     "name": "Jens Kuerschner",
     "url": "https://jenskuerschner.de/"
   },
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/add2cal/timezones-ical-library/issues"
   },

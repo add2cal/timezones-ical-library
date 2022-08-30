@@ -10,6 +10,11 @@ demo_assets/
 index.html
 browserconfig.xml
 manifest.json
+CNAME
+Gruntfile.js
+set-release.js
+test/
+package-lock.json
 
 # plus all the maker stuff, which is not already ignored for Git
 

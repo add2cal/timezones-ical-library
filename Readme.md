@@ -78,7 +78,7 @@ Anyone is welcome to contribute, but mind the [guidelines](.github/CONTRIBUTING.
 
 ## 📃 Copyright and License
 
-Licensed under [GPL-3.0](LICENSE).
+Licensed under [Apache-2.0](LICENSE).
 
 <br />
 

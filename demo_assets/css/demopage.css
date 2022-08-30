@@ -5,7 +5,7 @@
  *
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
- * icense: GPL-3.0
+ * License: Apache-2.0
  * 
  */
 
@@ -27,6 +27,7 @@
   --text-subline: #fff;
   --hr: #cfcfcf;
   --light-mode-switch: #282232;
+  --light-mode-switch-header: #edf3fa;
   --example-background: #f5f5f5;
   --example-color: #7d7d7d;
   --example-border: #ababab;
@@ -60,9 +61,9 @@ body.atcb-dark {
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/paytone-one-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/paytone-one-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/paytone-one-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* nunito-300 - latin */
@@ -72,9 +73,9 @@ body.atcb-dark {
   font-style: normal;
   font-weight: 300;
   src: local(''),
-       url('../fonts/nunito-v25-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/nunito-v25-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/nunito-v25-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* nunito-regular - latin */
@@ -84,9 +85,9 @@ body.atcb-dark {
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/nunito-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/nunito-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/nunito-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* nunito-600 - latin */
@@ -96,9 +97,9 @@ body.atcb-dark {
   font-style: normal;
   font-weight: 600;
   src: local(''),
-       url('../fonts/nunito-v25-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/nunito-v25-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/nunito-v25-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* nunito-800 - latin */
@@ -108,9 +109,9 @@ body.atcb-dark {
   font-style: normal;
   font-weight: 800;
   src: local(''),
-       url('../fonts/nunito-v25-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/nunito-v25-latin-800.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/nunito-v25-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* nunito-900 - latin */
@@ -120,31 +121,33 @@ body.atcb-dark {
   font-style: normal;
   font-weight: 900;
   src: local(''),
-       url('../fonts/nunito-v25-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/nunito-v25-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/nunito-v25-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* fira-mono-regular - latin */
 @font-face {
+  font-display: swap;
   font-family: 'Fira Mono';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/fira-mono-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/fira-mono-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/fira-mono-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* fira-mono-700 - latin */
 @font-face {
+  font-display: swap;
   font-family: 'Fira Mono';
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/fira-mono-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/fira-mono-v14-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/fira-mono-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /******************************
@@ -214,12 +217,15 @@ h3 {
 
 @media only screen and (max-width: 800px) {
   h3 {
-    text-align:center;
+    text-align: center;
   }
 }
 
-.description {
+p {
   text-align: left;
+}
+
+.description {
   padding-bottom: 40px;
 }
 
@@ -348,6 +354,10 @@ a.github:hover svg {
   background: var(--light-mode-switch);
 }
 
+#light-mode-switch-header.light-mode-switch div {
+  background: var(--light-mode-switch-header);
+}
+
 .light-mode-switch div::before {
   content: "";
   position: absolute;
@@ -377,7 +387,6 @@ a.github:hover svg {
 
 body.atcb-dark .light-mode-switch div {
   transform: scale(0.5);
-  background: var(--light-mode-switch);
 }
 
 body.atcb-dark .light-mode-switch div::before {
@@ -424,41 +433,46 @@ body.atcb-dark .light-mode-switch div::after {
   margin: 80px;
 }
 
-.example-wrapper {
-  box-sizing: border-box;
-  margin: auto;
-  max-width: 1000px;
-  padding: 0 25px;
-  width: 100%;
-}
-
 .example {
   box-shadow: rgba(0 0 0 / 10%) 2px 5px 18px -1px, rgba(0 0 0 / 20%) 2px 2px 10px -3px;
   box-sizing: border-box;
   text-align: center;
   width: 100%;
   text-align: center;
-  width: 100%;
-  border-radius: 20px;
+  margin: 50px 0;
   background-color: var(--example-bg);
-  padding: 60px 20px;  
+  padding: 60px 40px;  
 }
 
-.tz-input-wrapper {
-  margin: 0 auto 30px auto;
+#tz-input-wrapper {
+  box-sizing: border-box;
   width: 100%;
-  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 140px;
 }
 
-.tz-output-wrapper {
+#tz-input-wrapper svg.arrow {
+  stroke: var(--secondary-color);
+  margin-right: 25px;
+}
+
+#tz-output-wrapper {
   background-color: var(--example-background);
   border: 1px solid var(--example-border);
   border-radius: 6px;
+  display: none;
   font-size: 0.8em;
   text-align: left;
-  margin: auto;
+  margin: 50px auto 0;
   width: 100%;
   max-width: 550px;
+}
+
+#tz-output-wrapper pre+pre {
+  margin-top: 20px;
+  border-top: 1px solid var(--example-border);
 }
 
 @media (max-width: 991px) {
@@ -474,6 +488,14 @@ body.atcb-dark .light-mode-switch div::after {
 
   #header-right {
     margin: 80px 25px 30px;
+  }
+
+  #tz-input-wrapper {
+    padding-right: 0;
+  }
+
+  #tz-input-wrapper svg {
+    display: none;
   }
 }
 
@@ -525,34 +547,40 @@ pre {
   box-shadow: rgba(0 0 0 / 10%) 2px 5px 18px -1px, rgba(0 0 0 / 40%) 2px 2px 10px -3px;
   border-radius: 8px;
   font-family: Nunito, Arial, sans-serif;
-  width: 100%;
+  width: 280px;
   padding: 12px 48px 12px 12px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   position: relative;
   font-size: 16px;
   line-height: 1.5;
   flex: 1;
+  margin: 1px;
   background-color: #eee;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCIvPjxwYXRoIGQ9Ik0yMSAyMWwtNC00Ii8+PC9zdmc+');
   background-repeat: no-repeat;
   background-position: right 12px center;
 }
 
+.autocomplete-input:hover {
+  border-width: 2px;
+  margin: 0;
+}
+
 .autocomplete-input:focus,
 .autocomplete-input[aria-expanded="true"] {
-  border-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   background-color: #fff;
   outline: none;
+  margin: 0;
   box-shadow: rgba(0 0 0 / 30%) 2px 5px 18px -1px, rgba(0 0 0 / 35%) 2px 2px 10px -3px;
 }
 
 [data-position="below"] .autocomplete-input[aria-expanded="true"] {
-  border-bottom-color: transparent;
   border-radius: 8px 8px 0 0;
+  z-index: 2;
 }
 
 [data-position="above"] .autocomplete-input[aria-expanded="true"] {
-  border-top-color: transparent;
   border-radius: 0 0 8px 8px;
   z-index: 2;
 }
@@ -587,22 +615,24 @@ pre {
 }
 
 [data-position="below"] .autocomplete-result-list {
-  margin-top: -1px;
-  border-top-color: transparent;
+  margin-top: -2px;
+  border-top: 0px;
   border-radius: 0 0 8px 8px;
   padding-bottom: 8px;
 }
 
 [data-position="above"] .autocomplete-result-list {
-  margin-bottom: -1px;
-  border-bottom-color: transparent;
+  margin-bottom: -2px;
+  border-bottom: 0px;
   border-radius: 8px 8px 0 0;
   padding-top: 8px;
 }
 
 #tz-no-results {
+  color: #666;
   display: none;
   position: absolute;
+  font-style: italic;
   z-index: 1;
   width: 100%;
   top: 100%;
@@ -623,7 +653,7 @@ pre {
 
 /* Single result item */
 .autocomplete-result {
-  cursor: default;
+  cursor: pointer;
   text-align: left;
   padding: 12px;
 }

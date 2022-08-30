@@ -5,7 +5,7 @@
  *
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
- * icense: GPL-3.0
+ * License: Apache-2.0
  * 
  */
 
@@ -29,10 +29,7 @@ lightModeButtonFooter.addEventListener('click', toggle_atcb_light_mode);
 function toggle_atcb_light_mode() {
   document.body.classList.toggle('atcb-dark');
   // also save as cookie
-  let newCval = 'light';
-  if (document.body.classList.contains('atcb-dark')) {
-    newCval = 'dark';
-  }
+  let newCval = document.body.classList.contains('atcb-dark') ? 'dark' : 'light';
   const d = new Date();
   d.setTime(d.getTime() + 90 * 24 * 60 * 60 * 1000);
   document.cookie = 'atcb-light-mode=' + newCval + ';expires=' + d.toUTCString();
@@ -44,10 +41,12 @@ function toggle_atcb_light_mode() {
 // via https://github.com/trevoreyre/autocomplete by Trevor Eyre (https://github.com/trevoreyre)
 const tzNames = tzlib_get_timezones();
 let inputValue = '';
-let showNoResults = false;
+const today = new Date();
+const currentIsoDate = today.toISOString().replace(/:\d{2}.\d{3}Z$/g, '');
+const currentDate = currentIsoDate.split('T');
 const input = document.getElementById('tz-input');
 const noResults = document.getElementById('tz-no-results');
-let tzInput = new Autocomplete('#autocomplete', {
+const tzInput = new Autocomplete('#autocomplete', {
 
   search: input => {
     inputValue = input;
@@ -59,7 +58,7 @@ let tzInput = new Autocomplete('#autocomplete', {
   },
 
   onUpdate: (results, selectedIndex) => {
-    showNoResults = inputValue && results.length === 0;    
+    const showNoResults = inputValue && results.length === 0 ? true : false;    
     if (showNoResults) {
       autocomplete.classList.add('no-results');
       input.setAttribute('aria-describedby', 'no-results');
@@ -71,11 +70,15 @@ let tzInput = new Autocomplete('#autocomplete', {
   
   onSubmit: result => {
     let tzBlock = tzlib_get_ical_block(`${result}`);
+    let tzOffsetBlock = tzlib_get_offset(`${result}`, currentDate[0], currentDate[1]);
     if (tzBlock == '') {
       tzBlock = 'Given timezone not valid.';
+      tzOffsetBlock = tzBlock;
     }
     document.getElementById('tz-output').textContent = tzBlock;
+    document.getElementById('tz-offset-output').textContent = "Current Offset: " + tzOffsetBlock;
     document.getElementById('tz-input').blur();
+    document.getElementById('tz-output-wrapper').style.display = 'block';
   },
   
   autoSelect: true,
