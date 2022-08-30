@@ -56,11 +56,11 @@ After the installation:
 
 ### 2. Use it
 
-#### Get timezones
+#### A. Get timezones
 
 Use `tzlib_get_timezones()` to retrieve a list of all available timezone strings. You can pass `true` to retrieve a JSON formatted string instead of an array.
 
-#### Get the iCal timezone block
+#### B. Get the iCal timezone block
 
 Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given timezone string (tzName).
 
@@ -113,7 +113,7 @@ END:VEVENT
 END:VCALENDAR
 ```
 
-#### Get a specific offset
+#### C. Get a specific offset
 
 Use `tzlib_get_offset(tzName, isoDate, isoTime)` to get specific offset (relative to UTC), based on a provided date and time.
 
