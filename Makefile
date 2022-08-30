@@ -13,7 +13,7 @@ OLSON_DIR ?= tzdata
 # gets expanded to today's date. There is also a vzic-merge.pl which can be
 # used to merge changes into a master set of VTIMEZONEs. If a VTIMEZONE has
 # changed, it bumps the version number on the end of this prefix. */
-TZID_PREFIX ?= /add-to-calendar-pro.com/%D/
+TZID_PREFIX ?= /timezones-ical-library/%D/
 
 #
 # You shouldn't need to change the rest of the file.

@@ -66,64 +66,52 @@ body.atcb-dark {
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
-/* nunito-300 - latin */
+/* inter-300 - latin */
 @font-face {
   font-display: swap;
-  font-family: Nunito;
+  font-family: Inter;
   font-style: normal;
   font-weight: 300;
   src: local(''),
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
-/* nunito-regular - latin */
+/* inter-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: Nunito;
+  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
-/* nunito-600 - latin */
+/* inter-600 - latin */
 @font-face {
   font-display: swap;
-  font-family: Nunito;
+  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   src: local(''),
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
-/* nunito-800 - latin */
+/* inter-800 - latin */
 @font-face {
   font-display: swap;
-  font-family: Nunito;
+  font-family: Inter;
   font-style: normal;
   font-weight: 800;
   src: local(''),
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-800.woff') format('woff'), /* Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-
-/* nunito-900 - latin */
-@font-face {
-  font-display: swap;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: 900;
-  src: local(''),
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/nunito-v25-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* fira-mono-regular - latin */
@@ -163,7 +151,7 @@ body {
   background: var(--page-background);
   box-sizing: border-box;
   color: var(--text);
-  font-family: Nunito, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   height: 100%;
@@ -201,7 +189,7 @@ h1 {
 
 h2 {
   color: var(--text-subline);
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 800;
   line-height: 1.5em;
   max-width: 650px;
@@ -211,12 +199,25 @@ h2 {
 }
 
 h3 {
+  font-size: 1.2em;
+  line-height: 1.5em;
   font-weight: 800;
   text-align: left;
 }
 
+h4 {
+  font-weight: 800;
+  text-align: left;
+}
+
+p + h4,
+pre + h4 {
+  margin-top: 60px;
+}
+
 @media only screen and (max-width: 800px) {
-  h3 {
+  h3,
+  h4 {
     text-align: center;
   }
 }
@@ -463,8 +464,6 @@ body.atcb-dark .light-mode-switch div::after {
   border: 1px solid var(--example-border);
   border-radius: 6px;
   display: none;
-  font-size: 0.8em;
-  text-align: left;
   margin: 50px auto 0;
   width: 100%;
   max-width: 550px;
@@ -530,6 +529,7 @@ pre {
   padding: 1em;
   margin: .5em;
   overflow: auto;
+  font-size: 0.8em;
 }
 
 :not(pre) > code,
@@ -546,7 +546,7 @@ pre {
   border: 1px solid var(--example-border);
   box-shadow: rgba(0 0 0 / 10%) 2px 5px 18px -1px, rgba(0 0 0 / 40%) 2px 2px 10px -3px;
   border-radius: 8px;
-  font-family: Nunito, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   width: 280px;
   padding: 12px 48px 12px 12px;
   box-sizing: content-box;

@@ -6,7 +6,7 @@ const tzDbContent = fs.readFileSync('./src/zonesdb.js', 'utf-8');
 function prepareFinalFile(content, exportPhrase = '') {
   let newContent = content.replace(tzDbPlaceholder, tzDbContent);
   if (exportPhrase != '') {
-    newContent = newContent.replace(exportCodePlaceholder, `${exportPhrase} { tzlib_get_ical_block };`);
+    newContent = newContent.replace(exportCodePlaceholder, `${exportPhrase} { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones };`);
   } else {
     newContent = newContent.replace(exportCodePlaceholder, '');
   }
