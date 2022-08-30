@@ -1,4 +1,4 @@
-declare module 'timzones-ical-library' {
+declare module 'timezones-ical-library' {
   export function tzlib_get_ical_block(
     tzName: string
   ): void;

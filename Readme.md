@@ -37,7 +37,7 @@ sudo sh update-tzdata.sh tzVersionNumber
 You can use the pure and simple version directly from the dist folder or the jsDelivr CDN and include in your application:
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/timzones-ical-library"></script>
+<script src="https://cdn.jsdelivr.net/npm/timezones-ical-library"></script>
 ```
 
 #### B. npm package
