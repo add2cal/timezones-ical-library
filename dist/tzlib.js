@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  */
- const tzlibVersion = '1.2.0';
+ const tzlibVersion = '1.1.0';
 /* Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -621,7 +621,7 @@ function tzlib_get_ical_block(tzName) {
     return tzlib_get_offset(tzName, isoDate, isoTime);
   }
   // otherwise, create the output
-  return 'BEGIN:VTIMEZONE\r\n' + tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n') + '\r\nEND:VTIMEZONE';
+  return 'BEGIN:VTIMEZONE\r\n' + tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,.;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n') + '\r\nEND:VTIMEZONE';
 }
 
 // PROVIDING THE OFFSET BASED ON A GIVEN DATE AND TIME (YYYY-MM-DD and hh:mm as per ISO-8601).
@@ -658,7 +658,7 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
   const dateDay = date.getDate();
   const dateHour = date.getHours();
   // preparing the tz data
-  const timezoneData = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').split('<br>');
+  const timezoneData = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,.;=\+\/<br>]/g,'').split('<br>');
   // collect timezone breakpoints (exactly 2)
   const tzBreakpoints = {1: {}, 2: {}};
   let breakpointCount = 0;
