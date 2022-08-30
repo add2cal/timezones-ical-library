@@ -19,15 +19,14 @@ It is based on the awesome tool by Damon Chaplin ([github.com/libical/vzic](http
 ### 0. Update it (not required)
 
 **This step is only relevant if you want to build the package and data from source!** 
-(Requires Node.js as well as Linux as operating system.)
-
+*(Requires Node.js as well as Linux as operating system.)* 
 Run ...
 
 ```
 sudo sh update-tzdata.sh tzVersionNumber
 ```
 
-... with *tzVersionNumber* being the version of the timezone database you want to use (e.g. sudo sh update-tzdata.sh 2022c).
+... with *tzVersionNumber* being the version of the IANA timezone database you want to use (e.g. sudo sh update-tzdata.sh 2022c).
 
 <br />
 
@@ -155,5 +154,5 @@ Licensed under [Apache-2.0](LICENSE).
 
 * The ["Time Zone King"](https://samueli.ucla.edu/time-zone-king-how-one-ucla-computer-scientist-keeps-digital-clocks-ticking/) [Paul Eggert](https://github.com/eggert) for optimizing timezones for the web, ...
 * as well as all the contributors at [the official tz repository](https://github.com/eggert/tz).
-* The awesome auhors of zic and [vzic](https://github.com/libical/vzic/graphs/contributors); mainly Damon Chaplin, [Allen Winter](https://github.com/winterz), and [Ken Murchison](https://github.com/ksmurchison).
+* The awesome authors of zic and [vzic](https://github.com/libical/vzic/graphs/contributors); mainly Damon Chaplin, [Allen Winter](https://github.com/winterz), and [Ken Murchison](https://github.com/ksmurchison).
 * [Trevor Eyre](https://github.com/trevoreyre) for his smooth and beautiful [autocomplete script](https://github.com/trevoreyre/autocomplete).
