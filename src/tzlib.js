@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  */
- const tzlibVersion = '1.0.0';
+ const tzlibVersion = '1.2.0';
 /* Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -24,13 +24,7 @@ function tzlib_get_ical_block(tzName) {
     return tzlib_get_offset(tzName, isoDate, isoTime);
   }
   // otherwise, create the output
-  let buffer = 'BEGIN:VTIMEZONE\r\n';
-  // replace the linebreak placeholders with real linebreaks and strip out any bad characters
-  buffer += tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n');
-  buffer += '\r\nEND:VTIMEZONE';
-  console.log('iCal timezone information provided for ' + `${tzName}`);
-  console.log('via Add to Calendar TimeZones iCal Library (version ' + tzlibVersion + ')');
-  return buffer;
+  return 'BEGIN:VTIMEZONE\r\n' + tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n') + '\r\nEND:VTIMEZONE';
 }
 
 // PROVIDING THE OFFSET BASED ON A GIVEN DATE AND TIME (YYYY-MM-DD and hh:mm as per ISO-8601).
@@ -54,105 +48,85 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
     console.error('offset calculation failed: time misspelled [-> hh:mm]');
     return '';
   }
-  // calculate offset
-  let offset = '';
+  // return early if there are no daylight changes
+  if (!tzlibZonesDB[`${tzName}`].match(/BEGIN:DAYLIGHT/i)) {
+    return tzlibZonesDB[`${tzName}`].match(/TZOFFSETTO:([+|-]\d{4})/i)[1];
+  }
+  // otherwise, calculate offset
   // creating a JS date from the input
   const dateString = isoDate + 'T' + isoTime + ':00';
   const date = new Date(dateString);
+  const dateYear = date.getFullYear();
   const dateMonth = date.getMonth() + 1;
   const dateDay = date.getDate();
   const dateHour = date.getHours();
-  // collect timezone breakpoints
+  // preparing the tz data
   const timezoneData = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').split('<br>');
-  let tzBreakpoints = new Object();
-  let offsetBreakpointCount = 0;
-  let hoursBreakpointCount = 0;
-  let rruleBreakpointCount = 0;
-  let noChange = true;
-  let easyCase = true;
+  // collect timezone breakpoints (exactly 2)
+  const tzBreakpoints = {1: {}, 2: {}};
+  let breakpointCount = 0;
   for (let i = 0; i < timezoneData.length; i++) {
-    if (!tzBreakpoints[offsetBreakpointCount]) {
-      tzBreakpoints[offsetBreakpointCount] = new Object();
-    }
+    // always first and therefore drives the counter
     if (timezoneData[i].startsWith('TZOFFSETTO')) {
-      tzBreakpoints[offsetBreakpointCount]['offset'] = timezoneData[i].split(':')[1];
-      offsetBreakpointCount++;
+      breakpointCount++;
+      tzBreakpoints[breakpointCount].offset = timezoneData[i].split(':')[1];
     }
-    if (!tzBreakpoints[hoursBreakpointCount]) {
-      tzBreakpoints[hoursBreakpointCount] = new Object();
-    }
+    // only required for the critical hour
     if (timezoneData[i].startsWith('DTSTART')) {
-      tzBreakpoints[hoursBreakpointCount]['startingHour'] = parseInt(timezoneData[i].substr(17,2));
-      hoursBreakpointCount++;
+      tzBreakpoints[breakpointCount].hour = parseInt(timezoneData[i].substr(17,2));
     }
+    // the RRULE is deciding when the switch happens (excluding the hour information from DTSTART)
     if (timezoneData[i].startsWith('RRULE')) {
       let rruleParts = timezoneData[i].split(';');
       let rruleMonth = parseInt(rruleParts[1].split('=')[1]);
-      tzBreakpoints[rruleBreakpointCount]['month'] = rruleMonth;
-      tzBreakpoints[rruleBreakpointCount]['day'] = rruleParts[2].split('=')[1];
-      noChange = false;
-      if (dateMonth == rruleMonth) {
-        easyCase = false;
-      }
-      rruleBreakpointCount++;
+      tzBreakpoints[breakpointCount].month = parseInt(rruleMonth);
+      tzBreakpoints[breakpointCount].day = rruleParts[2].split('=')[1];
     }
   }
-  // abort early if there are no daylight changes
-  if (noChange) {
-    offset = tzBreakpoints[0]['offset'];
-  } else if (easyCase) {
-    // check for other easy cases where the month is cleary in between
-    if (
-      (tzBreakpoints[0]['month'] < tzBreakpoints[1]['month'] && dateMonth < tzBreakpoints[0]['month']) || 
-      (tzBreakpoints[0]['month'] < tzBreakpoints[1]['month'] && dateMonth > tzBreakpoints[1]['month']) ||
-      (tzBreakpoints[0]['month'] > tzBreakpoints[1]['month'] && dateMonth > tzBreakpoints[1]['month'] && dateMonth < tzBreakpoints[0]['month'])
-      ) {
-      offset = tzBreakpoints[1]['offset'];
+  // swap objects, if larger one comes first
+  if (tzBreakpoints[1].month > tzBreakpoints[2].month) {
+    [tzBreakpoints[1], tzBreakpoints[2]] = [tzBreakpoints[2], tzBreakpoints[1]];
+  }
+  // check for easy cases where the month is cleary in between
+  if (dateMonth != tzBreakpoints[1].month && dateMonth != tzBreakpoints[2].month) {
+    if (dateMonth < tzBreakpoints[1].month || dateMonth > tzBreakpoints[2].month) {
+      return tzBreakpoints[2].offset
     } else {
-      offset = tzBreakpoints[0]['offset'];
-    }
-  } else {
-    // in other cases, validate where we are exactly and pick the right offset
-    // preparing the information
-    let theCase = 0; // what we check
-    offset = tzBreakpoints[1]['offset']; // setting the opposite as default offset and override it later, if the check is true
-    if (dateMonth == tzBreakpoints[1]['month']) { // adjusting the case, if necessary
-      theCase = 1;
-      offset = tzBreakpoints[0]['offset'];
-    }
-    // determining the actual day
-    const helperArrayWeekdays = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
-    const numberDays = new Date(date.getFullYear(), dateMonth, 0).getDate();
-    let startWeekday = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-    let weekdays = new Object();
-    for (let d = 1; d <= numberDays; d++) {
-      if (!weekdays[helperArrayWeekdays[startWeekday]]) {
-        weekdays[helperArrayWeekdays[startWeekday]] = new Object();
-      }
-      let occurence = Object.keys(weekdays[helperArrayWeekdays[startWeekday]]).length + 1;
-      weekdays[helperArrayWeekdays[startWeekday]][occurence] = d;
-      startWeekday++;
-      if (startWeekday == 7) {
-        startWeekday = 0;
-      }
-    };
-    if (tzBreakpoints[theCase]['day'][0] == '-') {
-      let breakpointWeekday = tzBreakpoints[theCase]['day'].substr(2, 2);
-      let dayIndex = Object.keys(weekdays[breakpointWeekday]).length + 1 - parseInt(tzBreakpoints[theCase]['day'][1]);
-      tzBreakpoints[theCase]['actualDay'] = weekdays[breakpointWeekday][dayIndex];
-    } else {
-      let breakpointWeekday = tzBreakpoints[theCase]['day'].substr(1, 2);
-      tzBreakpoints[theCase]['actualDay'] = weekdays[breakpointWeekday][tzBreakpoints[theCase]['day'][0]];
-    }
-    // checking case and override default offset if true
-    if (dateDay > tzBreakpoints[theCase]['actualDay'] || (dateDay == tzBreakpoints[theCase]['actualDay'] && dateHour >= tzBreakpoints[theCase]['startingHour'])) {
-      offset = tzBreakpoints[theCase]['offset']
+      return tzBreakpoints[1].offset;
     }
   }
-  // create the output
-  console.log('timezone offset information provided for ' + `${tzName}`);
-  console.log('via Add to Calendar TimeZones iCal Library (version ' + tzlibVersion + ')');
-  return offset;
+  // in other cases, validate where we are exactly and pick the right offset
+  // defining the critical case, we need to evaluate (the breakpoint we are matching by month)
+  const theCase = (function () { return Object.keys(tzBreakpoints).find(key => tzBreakpoints[key].month == dateMonth); })();
+  // determining the actual day
+  const helperArrayWeekdays = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+  const numberDays = new Date(dateYear, dateMonth, 0).getDate();
+  let weekdayCount = new Date(dateYear, dateMonth - 1, 1).getDay();
+  const weekdays = {'SU': {}, 'MO': {}, 'TU': {}, 'WE': {}, 'TH': {}, 'FR': {}, 'SA': {}};
+  for (let d = 1; d <= numberDays; d++) {
+    const occurence = Object.keys(weekdays[helperArrayWeekdays[weekdayCount]]).length + 1;
+    weekdays[helperArrayWeekdays[weekdayCount]][occurence] = d;
+    weekdayCount++;
+    if (weekdayCount == 7) {
+      weekdayCount = 0;
+    }
+  };
+  const actualDay = (function () {
+    if (tzBreakpoints[theCase].day[0] == '-') {
+      const breakpointWeekday = tzBreakpoints[theCase].day.substr(2, 2);
+      const dayIndex = Object.keys(weekdays[breakpointWeekday]).length + 1 - parseInt(tzBreakpoints[theCase].day[1]);
+      return weekdays[breakpointWeekday][dayIndex];
+    } else {
+      const breakpointWeekday = tzBreakpoints[theCase].day.substr(1, 2);
+      return weekdays[breakpointWeekday][tzBreakpoints[theCase].day[0]];
+    }
+  })();
+  // finally identifying the right offset
+  if (dateDay > actualDay || (dateDay == actualDay && dateHour >= tzBreakpoints[theCase].hour)) {
+    return tzBreakpoints[theCase].offset;
+  }
+  const fallbackCase = (function () { if (theCase == 1) { return 2; } else { return 1; }})();
+  return tzBreakpoints[fallbackCase].offset;
 }
 
 // PROVIDE ALL TIMEZONES
@@ -163,5 +137,7 @@ function tzlib_get_timezones(jsonType = false) {
   }
   return tzNames;
 }
+
+console.log('Add to Calendar TimeZones iCal Library loaded (version ' + tzlibVersion + ')');
 
 // PLACE EXPORT HERE

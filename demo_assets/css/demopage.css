@@ -561,6 +561,11 @@ pre {
   background-position: right 12px center;
 }
 
+.autocomplete-input:hover {
+  border-width: 2px;
+  margin: 0;
+}
+
 .autocomplete-input:focus,
 .autocomplete-input[aria-expanded="true"] {
   border: 2px solid var(--primary-color);
