@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  */
- const tzlibVersion = '1.1.4';
+ const tzlibVersion = '1.1.5';
 /* Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -616,10 +616,6 @@ function tzlib_get_ical_block(tzName) {
     console.error('Given timezone not valid.');
     return '';
   }
-  // if symlink, follow
-  if (!tzlibZonesDB[`${tzName}`].startsWith('TZID')) {
-    return tzlib_get_offset(tzName, isoDate, isoTime);
-  }
   // otherwise, create the output
   return 'BEGIN:VTIMEZONE\r\n' + tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n') + '\r\nEND:VTIMEZONE';
 }
@@ -630,10 +626,6 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
   if (!tzlibZonesDB[`${tzName}`]) {
     console.error('Given timezone not valid.');
     return '';
-  }
-  // if symlink, follow
-  if (!tzlibZonesDB[`${tzName}`].startsWith('TZID')) {
-    return tzlib_get_offset(tzName, isoDate, isoTime);
   }
   // validate date
   if (!isoDate.match(/^\d{4}-\d{2}-\d{2}$/)) {
