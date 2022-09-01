@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14.20.0"
   },
-  "description": "Easy direct access to the most recent official timezone information for iCalendar files",
+  "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript",
   "main": "npm_dist/cjs/index.js",
   "module": "npm_dist/mjs/index.js",
   "exports": {
