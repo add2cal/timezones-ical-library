@@ -62,7 +62,9 @@ Use `tzlib_get_timezones()` to retrieve a list of all available timezone strings
 
 #### B. Get the iCal timezone block
 
-Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given timezone string (tzName).
+Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given timezone string (tzName). Again, pass `true` to retrieve a JSON formatted string instead of an array (not recommended).
+
+You will receive an array, holding the VTIMEZONE block first, and the TZID line (additionally) second. The latter one is needed for any further time statement.
 
 Include this into your further iCal data to come up with a complete ics file.
 

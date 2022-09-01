@@ -55,7 +55,7 @@
     <script async defer data-website-id="f221953d-158e-46c9-88d1-3b05df00997a" src="./demo_assets/js/a.min.js" data-host-url="https://a.add-to-calendar-button.com" data-domains="tz.add-to-calendar-technology.com"></script>
 
     <!-- load some basic css just for this demo page here -->
-    <link rel="stylesheet" href="./demo_assets/css/demopage.min.css?v=1.1.5">
+    <link rel="stylesheet" href="./demo_assets/css/demopage.min.css?v=1.2.0">
 
   </head>
   <body itemscope itemtype="http://schema.org/WebSite">
@@ -140,7 +140,11 @@
       </p>
       <pre><code>npm install timezones-ical-library</code></pre>
       <p>
-        ... and import it with:
+        ... and import it for commonJS approaches with:
+      </p>
+      <pre><code></code>const tzLib = require('timezones-ical-library');</code></pre>
+      <p>
+        ... or (preferred) with ES support:
       </p>
       <pre><code>import { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones } from 'timezones-ical-library';</code></pre>
 
@@ -153,7 +157,8 @@
       </p>
       <h4>Get the iCal time zone block</h4>
       <p>
-        Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given time zone string (tzName).<br>
+        Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given time zone string (tzName). Again, pass `true` to retrieve a JSON formatted string instead of an array (not recommended).<br>
+        You will receive an array, holding the VTIMEZONE block first, and the TZID line (additionally) second. The latter one is needed for any further time statement.<br>
         Include this into your further iCal data to come up with a complete ics file.<br>
         A final constellation could look like this:
       </p>
@@ -162,8 +167,8 @@ VERSION:2.0
 PRODID:-// github.com/add2cal/add-to-calendar-button // atcb v1.14.6 //EN
 CALSCALE:GREGORIAN
 
-BEGIN:VTIMEZONE
-TZID:/timezones-ical-library/20220824/America/New_York
+<strong>BEGIN:VTIMEZONE
+TZID:/timezones-ical-library/America/New_York
 LAST-MODIFIED:20220824T133813Z
 X-LIC-LOCATION:America/New_York
 BEGIN:DAYLIGHT
@@ -180,13 +185,13 @@ TZOFFSETTO:-0500
 DTSTART:19701101T020000
 RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
-END:VTIMEZONE
+END:VTIMEZONE</strong>
 
 BEGIN:VEVENT
 UID:2022-08-30T19:29:38.618Z@add-to-calendar-button
 DTSTAMP:20230214T091500Z
-DTSTART;TZID=/timezones-ical-library/20220824/America/New_York:20230214T091500
-DTEND;TZID=/timezones-ical-library/20220824/America/New_York:20230218T223000
+DTSTART<strong>;TZID=/timezones-ical-library/America/New_York</strong>:20230214T091500
+DTEND<strong>;TZID=/timezones-ical-library/America/New_York</strong>:20230218T223000
 SUMMARY:A sample event
 DESCRIPTION:Just some descriptive text...
 LOCATION:World Wide Web
@@ -227,15 +232,15 @@ END:VCALENDAR</code></pre>
           This page is hosted via "GitHub Pages". It includes some very basic analytics, that still preserves your anonymity and does not use any cookies. However, mind that the GitHub privacy policy applies additionally (<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/site-policy/github-privacy-statement">click here for details</a>).
         </p>
       </div>
-      <div id="tiny-version">v1.1.5</div>
+      <div id="tiny-version">v1.2.0</div>
 
     </div>
 
 
     <!-- js stuff -->
-    <script type="application/javascript" src="./dist/tzlib.min.js?v=1.1.5"></script>
+    <script type="application/javascript" src="./dist/tzlib.min.js?v=1.2.0"></script>
     <script type="application/javascript" src="./demo_assets/js/autocomplete.min.js"></script>
-    <script type="application/javascript" src="./demo_assets/js/demopage.min.js?v=1.1.5"></script>
+    <script type="application/javascript" src="./demo_assets/js/demopage.min.js?v=1.2.0"></script>
 
   </body>
 </html>

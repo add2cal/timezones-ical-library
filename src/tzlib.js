@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  */
- const tzlibVersion = '1.1.5';
+ const tzlibVersion = '1.2.0';
 /* Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -13,14 +13,21 @@
 // PLACE ZONES DB HERE
 
 // LOADING THE RIGHT CODE BLOCK
-function tzlib_get_ical_block(tzName) {  
+function tzlib_get_ical_block(tzName, jsonType = false) {  
   // validate timezone
   if (!tzlibZonesDB[`${tzName}`]) {
     console.error('Given timezone not valid.');
     return '';
   }
   // otherwise, create the output
-  return 'BEGIN:VTIMEZONE\r\n' + tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n') + '\r\nEND:VTIMEZONE';
+  const tzBlock = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n');
+  const tzidLine = tzBlock.split('\r\n')[0];
+  const output = ['BEGIN:VTIMEZONE\r\n' + tzBlock + '\r\nEND:VTIMEZONE', tzidLine];
+  // return
+  if (jsonType) {
+    return JSON.stringify(output);
+  }
+  return output;
 }
 
 // PROVIDING THE OFFSET BASED ON A GIVEN DATE AND TIME (YYYY-MM-DD and hh:mm as per ISO-8601).

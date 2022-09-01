@@ -69,7 +69,7 @@ const tzInput = new Autocomplete('#autocomplete', {
   },
   
   onSubmit: result => {
-    let tzBlock = tzlib_get_ical_block(`${result}`);
+    let tzBlock = tzlib_get_ical_block(`${result}`)[0];
     let tzOffsetBlock = tzlib_get_offset(`${result}`, currentDate[0], currentDate[1]);
     if (tzBlock == '') {
       tzBlock = 'Given timezone not valid.';
