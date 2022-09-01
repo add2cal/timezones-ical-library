@@ -16,6 +16,7 @@
 :root {
   --primary-color: #539eff;
   --primary-color-light: #a9ceff;
+  --primary-color-dark: #336db9;
   --primary-color-atcb: #9755ff;
   --primary-color-atcb-light: #cbaaff;
   --secondary-color: #ffa255;
@@ -25,29 +26,34 @@
   --text: #333;
   --text-secondary: #969696;
   --text-subline: #fff;
+  --github: #333;
   --hr: #cfcfcf;
   --light-mode-switch: #282232;
   --light-mode-switch-header: #edf3fa;
   --example-background: #f5f5f5;
-  --example-color: #7d7d7d;
+  --example-color: #6a6a6a;
   --example-border: #ababab;
   --header-shadow: 0 6px 7px -6px rgb(0 0 0 / 10%), 0 12px 10px -6px rgb(0 0 0 / 12%), 0 31px 40px -6px rgb(0 0 0 / 20%);
+  --header-bg: linear-gradient(45deg, var(--primary-color), var(--primary-color), var(--primary-color-light), var(--primary-color-light));
 }
 
 /* Dark mode */
 
 body.atcb-dark {  
-  --primary-color: #336db9;
-  --primary-color-light: #539eff;
-  --page-background: #0D1117;
-  --example-bg: #1c2128;
+  --primary-color: #539eff;
+  --primary-color-light: #a9ceff;
+  --primary-color-dark: #336db9;
+  --page-background: #121418;
+  --example-bg: #222830;
   --text: #e6e2ed;
+  --github: #222;
   --hr: #5e5c61;
   --light-mode-switch: #f5f5f5;
   --example-background: #2D2D2D;
-  --example-color: #bcbabe;
+  --example-color: #cacaca;
   --example-border: #797979;
   --header-shadow: 0 6px 7px -6px rgb(0 0 0 / 15%), 0 12px 20px -6px rgb(0 0 0 / 18%), 0 31px 70px -6px rgb(0 0 0 / 34%);
+  --header-bg: linear-gradient(45deg, var(--primary-color-dark), var(--primary-color-dark), var(--primary-color), var(--primary-color));
 }
 
 /******************************
@@ -60,7 +66,7 @@ body.atcb-dark {
   font-family: 'Paytone One';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
+  src: local('Paytone One'),
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/paytone-one-v18-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -72,7 +78,7 @@ body.atcb-dark {
   font-family: Inter;
   font-style: normal;
   font-weight: 300;
-  src: local(''),
+  src: local('Inter Light'),
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-300.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-300.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -84,7 +90,7 @@ body.atcb-dark {
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
-  src: local(''),
+  src: local('Inter'),
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -96,7 +102,7 @@ body.atcb-dark {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  src: local(''),
+  src: local('Inter SemiBold'),
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-600.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-600.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -108,7 +114,7 @@ body.atcb-dark {
   font-family: Inter;
   font-style: normal;
   font-weight: 800;
-  src: local(''),
+  src: local('Inter ExtraBold'),
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-800.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/inter-v12-latin-800.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -120,7 +126,7 @@ body.atcb-dark {
   font-family: 'Fira Mono';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
+  src: local('Fira Mono'),
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -132,8 +138,7 @@ body.atcb-dark {
   font-family: 'Fira Mono';
   font-style: normal;
   font-weight: 700;
-  src: local(''),
-       url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  src: url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.woff') format('woff'), /* Modern Browsers */
        url('https://tz.add-to-calendar-technology.com/demo_assets/fonts/fira-mono-v14-latin-700.ttf') format('truetype'); /* Safari, Android, iOS */
 }
@@ -259,11 +264,14 @@ body.atcb-dark a:hover {
 
 a.github,
 a.github:focus,
-a.github:active {
+a.github:active,
+body.atcb-dark a.github,
+body.atcb-dark a.github:focus,
+body.atcb-dark a.github:active {
   background: #f5f5f5;
   border-radius: 71% 29% 70% 30% / 50% 66% 34% 50%;
   box-shadow: 0.5px 0.2px 3.4px -14px rgb(0 0 0 / 10%), 1px 0.4px 9.5px -14px rgb(0 0 0 / 14%), 1.8px 0.7px 22.9px -14px rgb(0 0 0 / 18%), 5px 2px 76px -14px rgb(0 0 0 / 27%);
-  color: var(--primary-color);
+  color: var(--github);
   display: inline-block;
   padding: 20px 25px;
   user-select: none;
@@ -279,7 +287,7 @@ body.atcb-dark a.github:hover {
 }
 
 a.github svg {
-  fill: var(--primary-color);
+  fill: var(--github);
 }
 
 a.github:hover svg {
@@ -418,7 +426,7 @@ body.atcb-dark .light-mode-switch div::after {
  */
 
 #header {
-  background: linear-gradient(45deg, var(--primary-color), var(--primary-color), var(--primary-color-light), var(--primary-color-light));
+  background: var(--header-bg);
   box-shadow: var(--header-shadow);
   display: flex;
   justify-content: center;

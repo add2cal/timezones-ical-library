@@ -1,6 +1,7 @@
 declare module 'timezones-ical-library' {
   export function tzlib_get_ical_block(
-    tzName: string
+    tzName: string,
+    jsonType?: boolean
   ): void;
   export function tzlib_get_offset(
     tzName: string,
