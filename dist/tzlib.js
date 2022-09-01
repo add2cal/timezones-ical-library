@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  */
- const tzlibVersion = '1.2.0';
+ const tzlibVersion = '1.2.1';
 /* Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -618,7 +618,7 @@ function tzlib_get_ical_block(tzName, jsonType = false) {
   }
   // otherwise, create the output
   const tzBlock = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n');
-  const tzidLine = tzBlock.split('\r\n')[0];
+  const tzidLine = tzBlock.split('\r\n')[0].replace(':', '=');
   const output = ['BEGIN:VTIMEZONE\r\n' + tzBlock + '\r\nEND:VTIMEZONE', tzidLine];
   // return
   if (jsonType) {
