@@ -73,7 +73,7 @@ A final constellation could look like this:
 ```
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-// github.com/add2cal/add-to-calendar-button // atcb v1.14.6 //EN
+PRODID:-// github.com/add2cal/add-to-calendar-button //EN
 CALSCALE:GREGORIAN
 ```
 
