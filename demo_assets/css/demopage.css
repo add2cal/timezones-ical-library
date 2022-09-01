@@ -262,37 +262,7 @@ body.atcb-dark a:hover {
   color: var(--primary-color-light);
 }
 
-a.github,
-a.github:focus,
-a.github:active,
-body.atcb-dark a.github,
-body.atcb-dark a.github:focus,
-body.atcb-dark a.github:active {
-  background: #f5f5f5;
-  border-radius: 71% 29% 70% 30% / 50% 66% 34% 50%;
-  box-shadow: 0.5px 0.2px 3.4px -14px rgb(0 0 0 / 10%), 1px 0.4px 9.5px -14px rgb(0 0 0 / 14%), 1.8px 0.7px 22.9px -14px rgb(0 0 0 / 18%), 5px 2px 76px -14px rgb(0 0 0 / 27%);
-  color: var(--github);
-  display: inline-block;
-  padding: 20px 25px;
-  user-select: none;
-}
 
-a.github:hover,
-body.atcb-dark a.github:hover {
-  background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
-  border-radius: 67% 33% 66% 33% / 45% 70% 30% 56%;
-  box-shadow: 0.5px 0.2px 6.2px -4px rgb(0 0 0 / 13%), 1px 0.4px 17.2px -4px rgb(0 0 0 / 18%), 1.8px 0.7px 41.3px -4px rgb(0 0 0 / 35%), 5px 2px 137px -4px rgb(0 0 0 / 36%);
-  color: #fff;
-  cursor: pointer;
-}
-
-a.github svg {
-  fill: var(--github);
-}
-
-a.github:hover svg {
-  fill: #fff;
-}
 
 #tiny-version {
   color: var(--text-secondary);
@@ -310,13 +280,45 @@ a.github:hover svg {
 }
 
 /******************************
- * Logo
+ * Logos
  */
 
-#logo {
-  display: block;
-  width: 400px;
-  padding: 40px 0;
+a.github,
+a.github:focus,
+a.github:active {
+  background: #f5f5f5;
+  border-radius: 71% 29% 70% 30% / 50% 66% 34% 50%;
+  box-shadow: 0.5px 0.2px 3.4px -14px rgb(0 0 0 / 10%), 1px 0.4px 9.5px -14px rgb(0 0 0 / 14%), 1.8px 0.7px 22.9px -14px rgb(0 0 0 / 18%), 5px 2px 76px -14px rgb(0 0 0 / 27%);
+  color: var(--github);
+  display: inline-block;
+  padding: 20px 25px;
+  user-select: none;
+}
+
+a.github:hover {
+  background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
+  border-radius: 67% 33% 66% 33% / 45% 70% 30% 56%;
+  box-shadow: 0.5px 0.2px 6.2px -4px rgb(0 0 0 / 13%), 1px 0.4px 17.2px -4px rgb(0 0 0 / 18%), 1.8px 0.7px 41.3px -4px rgb(0 0 0 / 35%), 5px 2px 137px -4px rgb(0 0 0 / 36%);
+  color: #fff;
+  cursor: pointer;
+}
+
+body.atcb-dark a.github,
+body.atcb-dark a.github:focus,
+body.atcb-dark a.github:active {
+  color: var(--github);
+}
+
+body.atcb-dark a.github:hover {
+  color: #fff;
+}
+
+a.github svg {
+  fill: var(--github);
+}
+
+a.github:hover svg {
+  fill: #fff;
 }
 
 #logo svg {
@@ -324,10 +326,33 @@ a.github:hover svg {
   width: 100%;
 }
 
+#header a.github svg {
+  fill: var(--primary-color-dark);
+}
+
+#header a.github:hover svg {
+  fill: #fff;
+}
+
+#header a.github,
+#header a.github:focus,
+#header a.github:active {
+  color: var(--primary-color-dark);
+}
+
+#header a.github:hover {
+  color: #fff;
+}
+
+#logo {
+  display: block;
+  width: 400px;
+  padding: 30px 0;
+}
+
 @media (max-width: 991px) {
   #logo {
-    height: 177px;
-    width: 299px;
+    width: 300px;
     padding: 0;
     margin: auto;
   }
