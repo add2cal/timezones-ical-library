@@ -15,6 +15,7 @@ Gruntfile.js
 set-release.js
 test/
 package-lock.json
+sitemap.xml
 
 # plus all the maker stuff, which is not already ignored for Git
 
