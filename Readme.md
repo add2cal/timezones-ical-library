@@ -145,6 +145,7 @@ Licensed under [Apache-2.0](LICENSE).
 
 ## ⚡ Changelog (without minor changes and fixes)
 
+- v1.2 : providing tzblock as array with separate tzid
 - v1.1 : get-offset function
 - v1.0 : initial release
 
