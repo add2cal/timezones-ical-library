@@ -55,7 +55,6 @@
   "scripts": {
     "release": "node set-release.js",
     "test": "node test/tests.js",
-    "generate-db": "node generator.js",
     "build-npm": "npx grunt npm",
     "build": "npx grunt"
   },

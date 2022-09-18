@@ -15,6 +15,8 @@ then
   sudo make -B
   sudo ./vzic
   node generator.js
+  rm -r tzdata
+  rm -r zoneinfo
 else
   echo "no version given"
 fi

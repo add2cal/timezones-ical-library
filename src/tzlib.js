@@ -12,17 +12,35 @@
 
 // PLACE ZONES DB HERE
 
-// LOADING THE RIGHT CODE BLOCK
-function tzlib_get_ical_block(tzName, jsonType = false) {  
+// SHARED FUNCTION TO GET THE TZ CONTENT
+function tzlib_get_content(tzName){
+  // get timezone parts
+  const nameParts = tzName.split('/'); 
   // validate timezone
-  if (!tzlibZonesDB[`${tzName}`]) {
+  // TODO: Make this a little bit smarter (depending on the future db structure)
+  if ((nameParts.length === 3 && (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[1]}`] || !tzlibZonesDB[`${nameParts[2]}`])) || (nameParts.length === 2 && (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[1]}`])) || (nameParts.length === 1 && !tzlibZonesDB[`${nameParts[0]}`])) {
     console.error('Given timezone not valid.');
     return '';
   }
-  // otherwise, create the output
-  const tzBlock = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n');
-  const tzidLine = tzBlock.split('\r\n')[0].replace(':', '=');
-  const output = ['BEGIN:VTIMEZONE\r\n' + tzBlock + '\r\nEND:VTIMEZONE', tzidLine];
+  // create the output
+  if (nameParts.length === 3) {
+    return tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`];
+  }
+  if (nameParts.length === 2) {
+    return tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`];
+  }
+  return tzlibZonesDB[`${nameParts[0]}`];
+}
+
+// LOADING THE RIGHT CODE BLOCK
+function tzlib_get_ical_block(tzName, jsonType = false) {
+  const tzBlock = tzlib_get_content(tzName);
+  if (tzBlock == '') {
+    return '';
+  }
+  // create the output
+  const tzidLine ='TZID=/timezones-ical-library/' + tzBlock.split('\r\n')[0];
+  const output = ['BEGIN:VTIMEZONE\r\nTZID:/timezones-ical-library/' + tzBlock.replace(/[^\w_\-:,;=\+\/<br>]/g,'').replace(/<br>/g, '\r\n') + '\r\nEND:VTIMEZONE', tzidLine];
   // return
   if (jsonType) {
     return JSON.stringify(output);
@@ -32,9 +50,8 @@ function tzlib_get_ical_block(tzName, jsonType = false) {
 
 // PROVIDING THE OFFSET BASED ON A GIVEN DATE AND TIME (YYYY-MM-DD and hh:mm as per ISO-8601).
 function tzlib_get_offset(tzName, isoDate, isoTime) {
-  // validate timezone
-  if (!tzlibZonesDB[`${tzName}`]) {
-    console.error('Given timezone not valid.');
+  const tzBlock = tzlib_get_content(tzName);
+  if (tzBlock == '') {
     return '';
   }
   // validate date
@@ -48,8 +65,8 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
     return '';
   }
   // return early if there are no daylight changes
-  if (!tzlibZonesDB[`${tzName}`].match(/BEGIN:DAYLIGHT/i)) {
-    return tzlibZonesDB[`${tzName}`].match(/TZOFFSETTO:([+|-]\d{4})/i)[1];
+  if (!tzBlock.match(/BEGIN:DAYLIGHT/i)) {
+    return tzBlock.match(/TZOFFSETTO:([+|-]\d{4})/i)[1];
   }
   // otherwise, calculate offset
   // creating a JS date from the input
@@ -60,7 +77,7 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
   const dateDay = date.getDate();
   const dateHour = date.getHours();
   // preparing the tz data
-  const timezoneData = tzlibZonesDB[`${tzName}`].replace(/[^\w_\-:,;=\+\/<br>]/g,'').split('<br>');
+  const timezoneData = tzBlock.replace(/[^\w_\-:,;=\+\/<br>]/g,'').split('<br>');
   // collect timezone breakpoints (exactly 2)
   const tzBreakpoints = {1: {}, 2: {}};
   let breakpointCount = 0;

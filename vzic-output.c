@@ -1137,11 +1137,6 @@ output_zone_components			(FILE		*fp,
     vzictime->until = NULL;
   }
 
-  /* Use current time as LAST-MODIFIED */
-  fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
-	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
-	   tm->tm_hour, tm->tm_min, tm->tm_sec);
-
   if (VzicUrlPrefix != NULL)
       fprintf (fp, "TZURL:%s/%s\r\n", VzicUrlPrefix, name);
 
@@ -1155,6 +1150,11 @@ output_zone_components			(FILE		*fp,
     if (!vzictime->is_infinite) fputs(";X-NO-BIG-BANG=TRUE", fp);
     fprintf(fp, ":%s\r\n", vzictime->tzname);
   }
+
+  /* Use current time as LAST-MODIFIED */
+  fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
+	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
+	   tm->tm_hour, tm->tm_min, tm->tm_sec);
 
   /* We try to find any recurring components first, or they may get output
      as lots of RDATES instead. */
