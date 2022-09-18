@@ -18,18 +18,18 @@ function tzlib_get_content(tzName){
   const nameParts = tzName.split('/'); 
   // validate timezone
   // TODO: Make this a little bit smarter (depending on the future db structure)
-  if ((nameParts.length === 3 && (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[1]}`] || !tzlibZonesDB[`${nameParts[2]}`])) || (nameParts.length === 2 && (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[1]}`])) || (nameParts.length === 1 && !tzlibZonesDB[`${nameParts[0]}`])) {
+  if ((nameParts.length === 3 && (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`] || !tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`])) || (nameParts.length === 2 && (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`])) || (nameParts.length === 1 && !tzlibZonesDB[`${nameParts[0]}`])) {
     console.error('Given timezone not valid.');
     return '';
   }
   // create the output
   if (nameParts.length === 3) {
-    return tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`];
+    return tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][0] + tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][1]];
   }
   if (nameParts.length === 2) {
-    return tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`];
+    return tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][0] + tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][1]];
   }
-  return tzlibZonesDB[`${nameParts[0]}`];
+  return tzlibZonesDB[`${nameParts[0]}`][0] + tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][1]];
 }
 
 // LOADING THE RIGHT CODE BLOCK
@@ -147,11 +147,29 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
 
 // PROVIDE ALL TIMEZONES
 function tzlib_get_timezones(jsonType = false) {
-  const tzNames = Object.keys(tzlibZonesDB);
+  const flatten = (objectOrArray, prefix = '', formatter = (k) => (k)) => {
+    const nestedFormatter = (k) => ('/' + k);
+    const nestElement = (prev, value, key) => (
+      (value && typeof value === 'object')
+        ? { ...prev, ...flatten(value, `${prefix}${formatter(key)}`, nestedFormatter) }
+        : { ...prev, ...{ [`${prefix}${formatter(key)}`]: value } });
+  
+    return Array.isArray(objectOrArray)
+      ? objectOrArray.reduce(nestElement, {})
+      : Object.keys(objectOrArray).reduce(
+        (prev, element) => nestElement(prev, objectOrArray[element], element),
+        {},
+      );
+  };
+  const tzNamesObj = flatten(tzlibZonesDB);
+  const tzNames = Object.keys(tzNamesObj);
+  // TODO: Remove workaround of adjusting array indices - optimize the flatten function above instead!
+  const tzNamesTmpJSON = JSON.stringify(tzNames).replace(/\/\d/gm, '');
+  const output = Array.from(new Set(JSON.parse(tzNamesTmpJSON)));
   if (jsonType) {
-    return JSON.stringify(tzNames);
+    return JSON.stringify(output);
   }
-  return tzNames;
+  return output;
 }
 
 console.log('Add to Calendar TimeZones iCal Library loaded (version ' + tzlibVersion + ')');
