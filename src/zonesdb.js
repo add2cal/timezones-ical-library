@@ -1,2781 +1,2531 @@
 const tzlibZonesDB = {
   "Africa": {
     "Abidjan": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Accra": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Addis_Ababa": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Algiers": [
-      "Africa/Algiers",
+      "Africa/Algiers<br>X-LIC-LOCATION:Africa/Algiers",
       2
     ],
     "Asmara": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Asmera": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Bamako": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Bangui": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Banjul": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Bissau": [
-      "Africa/Bissau",
-      4
+      "Africa/Bissau<br>X-LIC-LOCATION:Africa/Bissau",
+      0
     ],
     "Blantyre": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Brazzaville": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Bujumbura": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Cairo": [
-      "Africa/Cairo",
-      6
+      "Africa/Cairo<br>X-LIC-LOCATION:Africa/Cairo",
+      5
     ],
     "Casablanca": [
-      "Africa/Casablanca<br>TZUNTIL:20870511T020001Z",
-      7
+      "Africa/Casablanca<br>TZUNTIL:20870511T020001Z<br>X-LIC-LOCATION:Africa/Casablanca",
+      6
     ],
     "Ceuta": [
-      "Africa/Ceuta",
-      8
+      "Africa/Ceuta<br>X-LIC-LOCATION:Africa/Ceuta",
+      7
     ],
     "Conakry": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Dakar": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Dar_es_Salaam": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Djibouti": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Douala": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "El_Aaiun": [
-      "Africa/El_Aaiun<br>TZUNTIL:20870511T020001Z",
-      9
+      "Africa/El_Aaiun<br>TZUNTIL:20870511T020001Z<br>X-LIC-LOCATION:Africa/El_Aaiun",
+      6
     ],
     "Freetown": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Gaborone": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Harare": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Johannesburg": [
-      "Africa/Johannesburg",
-      10
+      "Africa/Johannesburg<br>X-LIC-LOCATION:Africa/Johannesburg",
+      8
     ],
     "Juba": [
-      "Africa/Juba",
-      11
+      "Africa/Juba<br>X-LIC-LOCATION:Africa/Juba",
+      4
     ],
     "Kampala": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Khartoum": [
-      "Africa/Khartoum",
-      12
+      "Africa/Khartoum<br>X-LIC-LOCATION:Africa/Khartoum",
+      4
     ],
     "Kigali": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Kinshasa": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Lagos": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Libreville": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Lome": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Luanda": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Lubumbashi": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Lusaka": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Malabo": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Maputo": [
-      "Africa/Maputo",
-      5
+      "Africa/Maputo<br>X-LIC-LOCATION:Africa/Maputo",
+      4
     ],
     "Maseru": [
-      "Africa/Johannesburg",
-      10
+      "Africa/Johannesburg<br>X-LIC-LOCATION:Africa/Johannesburg",
+      8
     ],
     "Mbabane": [
-      "Africa/Johannesburg",
-      10
+      "Africa/Johannesburg<br>X-LIC-LOCATION:Africa/Johannesburg",
+      8
     ],
     "Mogadishu": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Monrovia": [
-      "Africa/Monrovia",
-      13
+      "Africa/Monrovia<br>X-LIC-LOCATION:Africa/Monrovia",
+      0
     ],
     "Nairobi": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Ndjamena": [
-      "Africa/Ndjamena",
-      14
+      "Africa/Ndjamena<br>X-LIC-LOCATION:Africa/Ndjamena",
+      3
     ],
     "Niamey": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Nouakchott": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Ouagadougou": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Porto-Novo": [
-      "Africa/Lagos",
+      "Africa/Lagos<br>X-LIC-LOCATION:Africa/Lagos",
       3
     ],
     "Sao_Tome": [
-      "Africa/Sao_Tome",
-      15
+      "Africa/Sao_Tome<br>X-LIC-LOCATION:Africa/Sao_Tome",
+      0
     ],
     "Timbuktu": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Tripoli": [
-      "Africa/Tripoli",
-      16
+      "Africa/Tripoli<br>X-LIC-LOCATION:Africa/Tripoli",
+      5
     ],
     "Tunis": [
-      "Africa/Tunis",
-      17
+      "Africa/Tunis<br>X-LIC-LOCATION:Africa/Tunis",
+      2
     ],
     "Windhoek": [
-      "Africa/Windhoek",
-      18
+      "Africa/Windhoek<br>X-LIC-LOCATION:Africa/Windhoek",
+      4
     ]
   },
   "America": {
     "Adak": [
-      "America/Adak",
-      19
+      "America/Adak<br>X-LIC-LOCATION:America/Adak",
+      9
     ],
     "Anchorage": [
-      "America/Anchorage",
-      20
+      "America/Anchorage<br>X-LIC-LOCATION:America/Anchorage",
+      10
     ],
     "Anguilla": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Antigua": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Araguaina": [
-      "America/Araguaina",
-      22
+      "America/Araguaina<br>X-LIC-LOCATION:America/Araguaina",
+      12
     ],
     "Argentina": {
       "Buenos_Aires": [
-        "America/Argentina/Buenos_Aires",
-        23
+        "America/Argentina/Buenos_Aires<br>X-LIC-LOCATION:America/Argentina/Buenos_Aires",
+        12
       ],
       "Catamarca": [
-        "America/Argentina/Catamarca",
-        24
+        "America/Argentina/Catamarca<br>X-LIC-LOCATION:America/Argentina/Catamarca",
+        12
       ],
       "ComodRivadavia": [
-        "America/Argentina/Catamarca",
-        24
+        "America/Argentina/Catamarca<br>X-LIC-LOCATION:America/Argentina/Catamarca",
+        12
       ],
       "Cordoba": [
-        "America/Argentina/Cordoba",
-        25
+        "America/Argentina/Cordoba<br>X-LIC-LOCATION:America/Argentina/Cordoba",
+        12
       ],
       "Jujuy": [
-        "America/Argentina/Jujuy",
-        26
+        "America/Argentina/Jujuy<br>X-LIC-LOCATION:America/Argentina/Jujuy",
+        12
       ],
       "La_Rioja": [
-        "America/Argentina/La_Rioja",
-        27
+        "America/Argentina/La_Rioja<br>X-LIC-LOCATION:America/Argentina/La_Rioja",
+        12
       ],
       "Mendoza": [
-        "America/Argentina/Mendoza",
-        28
+        "America/Argentina/Mendoza<br>X-LIC-LOCATION:America/Argentina/Mendoza",
+        12
       ],
       "Rio_Gallegos": [
-        "America/Argentina/Rio_Gallegos",
-        29
+        "America/Argentina/Rio_Gallegos<br>X-LIC-LOCATION:America/Argentina/Rio_Gallegos",
+        12
       ],
       "Salta": [
-        "America/Argentina/Salta",
-        30
+        "America/Argentina/Salta<br>X-LIC-LOCATION:America/Argentina/Salta",
+        12
       ],
       "San_Juan": [
-        "America/Argentina/San_Juan",
-        31
+        "America/Argentina/San_Juan<br>X-LIC-LOCATION:America/Argentina/San_Juan",
+        12
       ],
       "San_Luis": [
-        "America/Argentina/San_Luis",
-        32
+        "America/Argentina/San_Luis<br>X-LIC-LOCATION:America/Argentina/San_Luis",
+        12
       ],
       "Tucuman": [
-        "America/Argentina/Tucuman",
-        33
+        "America/Argentina/Tucuman<br>X-LIC-LOCATION:America/Argentina/Tucuman",
+        12
       ],
       "Ushuaia": [
-        "America/Argentina/Ushuaia",
-        34
+        "America/Argentina/Ushuaia<br>X-LIC-LOCATION:America/Argentina/Ushuaia",
+        12
       ]
     },
     "Aruba": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Asuncion": [
-      "America/Asuncion",
-      35
+      "America/Asuncion<br>X-LIC-LOCATION:America/Asuncion",
+      13
     ],
     "Atikokan": [
-      "America/Panama",
-      36
+      "America/Panama<br>X-LIC-LOCATION:America/Panama",
+      14
     ],
     "Atka": [
-      "America/Adak",
-      19
+      "America/Adak<br>X-LIC-LOCATION:America/Adak",
+      9
     ],
     "Bahia_Banderas": [
-      "America/Bahia_Banderas",
-      37
+      "America/Bahia_Banderas<br>X-LIC-LOCATION:America/Bahia_Banderas",
+      15
     ],
     "Bahia": [
-      "America/Bahia",
-      38
+      "America/Bahia<br>X-LIC-LOCATION:America/Bahia",
+      12
     ],
     "Barbados": [
-      "America/Barbados",
-      39
+      "America/Barbados<br>X-LIC-LOCATION:America/Barbados",
+      11
     ],
     "Belem": [
-      "America/Belem",
-      40
+      "America/Belem<br>X-LIC-LOCATION:America/Belem",
+      12
     ],
     "Belize": [
-      "America/Belize",
-      41
+      "America/Belize<br>X-LIC-LOCATION:America/Belize",
+      16
     ],
     "Blanc-Sablon": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Boa_Vista": [
-      "America/Boa_Vista",
-      42
+      "America/Boa_Vista<br>X-LIC-LOCATION:America/Boa_Vista",
+      17
     ],
     "Bogota": [
-      "America/Bogota",
-      43
+      "America/Bogota<br>X-LIC-LOCATION:America/Bogota",
+      18
     ],
     "Boise": [
-      "America/Boise",
-      44
+      "America/Boise<br>X-LIC-LOCATION:America/Boise",
+      19
     ],
     "Buenos_Aires": [
-      "America/Argentina/Buenos_Aires",
-      23
+      "America/Argentina/Buenos_Aires<br>X-LIC-LOCATION:America/Argentina/Buenos_Aires",
+      12
     ],
     "Cambridge_Bay": [
-      "America/Cambridge_Bay",
-      45
+      "America/Cambridge_Bay<br>X-LIC-LOCATION:America/Cambridge_Bay",
+      19
     ],
     "Campo_Grande": [
-      "America/Campo_Grande",
-      46
+      "America/Campo_Grande<br>X-LIC-LOCATION:America/Campo_Grande",
+      17
     ],
     "Cancun": [
-      "America/Cancun",
-      47
+      "America/Cancun<br>X-LIC-LOCATION:America/Cancun",
+      14
     ],
     "Caracas": [
-      "America/Caracas",
-      48
+      "America/Caracas<br>X-LIC-LOCATION:America/Caracas",
+      17
     ],
     "Catamarca": [
-      "America/Argentina/Catamarca",
-      24
+      "America/Argentina/Catamarca<br>X-LIC-LOCATION:America/Argentina/Catamarca",
+      12
     ],
     "Cayenne": [
-      "America/Cayenne",
-      49
+      "America/Cayenne<br>X-LIC-LOCATION:America/Cayenne",
+      12
     ],
     "Cayman": [
-      "America/Panama",
-      36
+      "America/Panama<br>X-LIC-LOCATION:America/Panama",
+      14
     ],
     "Chicago": [
-      "America/Chicago",
-      50
+      "America/Chicago<br>X-LIC-LOCATION:America/Chicago",
+      20
     ],
     "Chihuahua": [
-      "America/Chihuahua",
-      51
+      "America/Chihuahua<br>X-LIC-LOCATION:America/Chihuahua",
+      21
     ],
     "Coral_Harbour": [
-      "America/Panama",
-      36
+      "America/Panama<br>X-LIC-LOCATION:America/Panama",
+      14
     ],
     "Cordoba": [
-      "America/Argentina/Cordoba",
-      25
+      "America/Argentina/Cordoba<br>X-LIC-LOCATION:America/Argentina/Cordoba",
+      12
     ],
     "Costa_Rica": [
-      "America/Costa_Rica",
-      52
+      "America/Costa_Rica<br>X-LIC-LOCATION:America/Costa_Rica",
+      16
     ],
     "Creston": [
-      "America/Phoenix",
-      53
+      "America/Phoenix<br>X-LIC-LOCATION:America/Phoenix",
+      22
     ],
     "Cuiaba": [
-      "America/Cuiaba",
-      54
+      "America/Cuiaba<br>X-LIC-LOCATION:America/Cuiaba",
+      17
     ],
     "Curacao": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Danmarkshavn": [
-      "America/Danmarkshavn",
-      55
+      "America/Danmarkshavn<br>X-LIC-LOCATION:America/Danmarkshavn",
+      0
     ],
     "Dawson_Creek": [
-      "America/Dawson_Creek",
-      56
+      "America/Dawson_Creek<br>X-LIC-LOCATION:America/Dawson_Creek",
+      22
     ],
     "Dawson": [
-      "America/Dawson",
-      57
+      "America/Dawson<br>X-LIC-LOCATION:America/Dawson",
+      22
     ],
     "Denver": [
-      "America/Denver",
-      58
+      "America/Denver<br>X-LIC-LOCATION:America/Denver",
+      19
     ],
     "Detroit": [
-      "America/Detroit",
-      59
+      "America/Detroit<br>X-LIC-LOCATION:America/Detroit",
+      23
     ],
     "Dominica": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Edmonton": [
-      "America/Edmonton",
-      60
+      "America/Edmonton<br>X-LIC-LOCATION:America/Edmonton",
+      19
     ],
     "Eirunepe": [
-      "America/Eirunepe",
-      61
+      "America/Eirunepe<br>X-LIC-LOCATION:America/Eirunepe",
+      18
     ],
     "El_Salvador": [
-      "America/El_Salvador",
-      62
+      "America/El_Salvador<br>X-LIC-LOCATION:America/El_Salvador",
+      16
     ],
     "Ensenada": [
-      "America/Tijuana",
-      63
+      "America/Tijuana<br>X-LIC-LOCATION:America/Tijuana",
+      24
     ],
     "Fort_Nelson": [
-      "America/Fort_Nelson",
-      64
+      "America/Fort_Nelson<br>X-LIC-LOCATION:America/Fort_Nelson",
+      22
     ],
     "Fort_Wayne": [
-      "America/Indiana/Indianapolis",
-      65
+      "America/Indiana/Indianapolis<br>X-LIC-LOCATION:America/Indiana/Indianapolis",
+      23
     ],
     "Fortaleza": [
-      "America/Fortaleza",
-      66
+      "America/Fortaleza<br>X-LIC-LOCATION:America/Fortaleza",
+      12
     ],
     "Glace_Bay": [
-      "America/Glace_Bay",
-      67
+      "America/Glace_Bay<br>X-LIC-LOCATION:America/Glace_Bay",
+      25
     ],
     "Godthab": [
-      "America/Nuuk",
-      68
+      "America/Nuuk<br>X-LIC-LOCATION:America/Nuuk",
+      26
     ],
     "Goose_Bay": [
-      "America/Goose_Bay",
-      69
+      "America/Goose_Bay<br>X-LIC-LOCATION:America/Goose_Bay",
+      27
     ],
     "Grand_Turk": [
-      "America/Grand_Turk",
-      70
+      "America/Grand_Turk<br>X-LIC-LOCATION:America/Grand_Turk",
+      28
     ],
     "Grenada": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Guadeloupe": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Guatemala": [
-      "America/Guatemala",
-      71
+      "America/Guatemala<br>X-LIC-LOCATION:America/Guatemala",
+      16
     ],
     "Guayaquil": [
-      "America/Guayaquil",
-      72
+      "America/Guayaquil<br>X-LIC-LOCATION:America/Guayaquil",
+      18
     ],
     "Guyana": [
-      "America/Guyana",
-      73
+      "America/Guyana<br>X-LIC-LOCATION:America/Guyana",
+      17
     ],
     "Halifax": [
-      "America/Halifax",
-      74
+      "America/Halifax<br>X-LIC-LOCATION:America/Halifax",
+      25
     ],
     "Havana": [
-      "America/Havana",
-      75
+      "America/Havana<br>X-LIC-LOCATION:America/Havana",
+      29
     ],
     "Hermosillo": [
-      "America/Hermosillo",
-      76
+      "America/Hermosillo<br>X-LIC-LOCATION:America/Hermosillo",
+      22
     ],
     "Indiana": {
       "Indianapolis": [
-        "America/Indiana/Indianapolis",
-        65
+        "America/Indiana/Indianapolis<br>X-LIC-LOCATION:America/Indiana/Indianapolis",
+        23
       ],
       "Knox": [
-        "America/Indiana/Knox",
-        77
+        "America/Indiana/Knox<br>X-LIC-LOCATION:America/Indiana/Knox",
+        20
       ],
       "Marengo": [
-        "America/Indiana/Marengo",
-        78
+        "America/Indiana/Marengo<br>X-LIC-LOCATION:America/Indiana/Marengo",
+        23
       ],
       "Petersburg": [
-        "America/Indiana/Petersburg",
-        79
+        "America/Indiana/Petersburg<br>X-LIC-LOCATION:America/Indiana/Petersburg",
+        23
       ],
       "Tell_City": [
-        "America/Indiana/Tell_City",
-        80
+        "America/Indiana/Tell_City<br>X-LIC-LOCATION:America/Indiana/Tell_City",
+        20
       ],
       "Vevay": [
-        "America/Indiana/Vevay",
-        81
+        "America/Indiana/Vevay<br>X-LIC-LOCATION:America/Indiana/Vevay",
+        23
       ],
       "Vincennes": [
-        "America/Indiana/Vincennes",
-        82
+        "America/Indiana/Vincennes<br>X-LIC-LOCATION:America/Indiana/Vincennes",
+        23
       ],
       "Winamac": [
-        "America/Indiana/Winamac",
-        83
+        "America/Indiana/Winamac<br>X-LIC-LOCATION:America/Indiana/Winamac",
+        28
       ]
     },
     "Indianapolis": [
-      "America/Indiana/Indianapolis",
-      65
+      "America/Indiana/Indianapolis<br>X-LIC-LOCATION:America/Indiana/Indianapolis",
+      23
     ],
     "Inuvik": [
-      "America/Inuvik",
-      84
+      "America/Inuvik<br>X-LIC-LOCATION:America/Inuvik",
+      19
     ],
     "Iqaluit": [
-      "America/Iqaluit",
-      85
+      "America/Iqaluit<br>X-LIC-LOCATION:America/Iqaluit",
+      23
     ],
     "Jamaica": [
-      "America/Jamaica",
-      86
+      "America/Jamaica<br>X-LIC-LOCATION:America/Jamaica",
+      14
     ],
     "Jujuy": [
-      "America/Argentina/Jujuy",
-      26
+      "America/Argentina/Jujuy<br>X-LIC-LOCATION:America/Argentina/Jujuy",
+      12
     ],
     "Juneau": [
-      "America/Juneau",
-      87
+      "America/Juneau<br>X-LIC-LOCATION:America/Juneau",
+      10
     ],
     "Kentucky": {
       "Louisville": [
-        "America/Kentucky/Louisville",
-        88
+        "America/Kentucky/Louisville<br>X-LIC-LOCATION:America/Kentucky/Louisville",
+        23
       ],
       "Monticello": [
-        "America/Kentucky/Monticello",
-        89
+        "America/Kentucky/Monticello<br>X-LIC-LOCATION:America/Kentucky/Monticello",
+        23
       ]
     },
     "Knox_IN": [
-      "America/Indiana/Knox",
-      77
+      "America/Indiana/Knox<br>X-LIC-LOCATION:America/Indiana/Knox",
+      20
     ],
     "Kralendijk": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "La_Paz": [
-      "America/La_Paz",
-      90
+      "America/La_Paz<br>X-LIC-LOCATION:America/La_Paz",
+      17
     ],
     "Lima": [
-      "America/Lima",
-      91
+      "America/Lima<br>X-LIC-LOCATION:America/Lima",
+      18
     ],
     "Los_Angeles": [
-      "America/Los_Angeles",
-      92
+      "America/Los_Angeles<br>X-LIC-LOCATION:America/Los_Angeles",
+      24
     ],
     "Louisville": [
-      "America/Kentucky/Louisville",
-      88
+      "America/Kentucky/Louisville<br>X-LIC-LOCATION:America/Kentucky/Louisville",
+      23
     ],
     "Lower_Princes": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Maceio": [
-      "America/Maceio",
-      93
+      "America/Maceio<br>X-LIC-LOCATION:America/Maceio",
+      12
     ],
     "Managua": [
-      "America/Managua",
-      94
+      "America/Managua<br>X-LIC-LOCATION:America/Managua",
+      16
     ],
     "Manaus": [
-      "America/Manaus",
-      95
+      "America/Manaus<br>X-LIC-LOCATION:America/Manaus",
+      17
     ],
     "Marigot": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Martinique": [
-      "America/Martinique",
-      96
+      "America/Martinique<br>X-LIC-LOCATION:America/Martinique",
+      11
     ],
     "Matamoros": [
-      "America/Matamoros",
-      97
+      "America/Matamoros<br>X-LIC-LOCATION:America/Matamoros",
+      20
     ],
     "Mazatlan": [
-      "America/Mazatlan",
-      98
-    ],
-    "Mendoza": [
-      "America/Argentina/Mendoza",
-      28
-    ],
-    "Menominee": [
-      "America/Menominee",
-      99
-    ],
-    "Merida": [
-      "America/Merida",
-      100
-    ],
-    "Metlakatla": [
-      "America/Metlakatla",
-      101
-    ],
-    "Mexico_City": [
-      "America/Mexico_City",
-      102
-    ],
-    "Miquelon": [
-      "America/Miquelon",
-      103
-    ],
-    "Moncton": [
-      "America/Moncton",
-      104
-    ],
-    "Monterrey": [
-      "America/Monterrey",
-      105
-    ],
-    "Montevideo": [
-      "America/Montevideo",
-      106
-    ],
-    "Montreal": [
-      "America/Toronto",
-      107
-    ],
-    "Montserrat": [
-      "America/Puerto_Rico",
+      "America/Mazatlan<br>X-LIC-LOCATION:America/Mazatlan",
       21
     ],
+    "Mendoza": [
+      "America/Argentina/Mendoza<br>X-LIC-LOCATION:America/Argentina/Mendoza",
+      12
+    ],
+    "Menominee": [
+      "America/Menominee<br>X-LIC-LOCATION:America/Menominee",
+      20
+    ],
+    "Merida": [
+      "America/Merida<br>X-LIC-LOCATION:America/Merida",
+      30
+    ],
+    "Metlakatla": [
+      "America/Metlakatla<br>X-LIC-LOCATION:America/Metlakatla",
+      10
+    ],
+    "Mexico_City": [
+      "America/Mexico_City<br>X-LIC-LOCATION:America/Mexico_City",
+      30
+    ],
+    "Miquelon": [
+      "America/Miquelon<br>X-LIC-LOCATION:America/Miquelon",
+      31
+    ],
+    "Moncton": [
+      "America/Moncton<br>X-LIC-LOCATION:America/Moncton",
+      25
+    ],
+    "Monterrey": [
+      "America/Monterrey<br>X-LIC-LOCATION:America/Monterrey",
+      30
+    ],
+    "Montevideo": [
+      "America/Montevideo<br>X-LIC-LOCATION:America/Montevideo",
+      12
+    ],
+    "Montreal": [
+      "America/Toronto<br>X-LIC-LOCATION:America/Toronto",
+      23
+    ],
+    "Montserrat": [
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
+    ],
     "Nassau": [
-      "America/Toronto",
-      107
+      "America/Toronto<br>X-LIC-LOCATION:America/Toronto",
+      23
     ],
     "New_York": [
-      "America/New_York",
-      108
+      "America/New_York<br>X-LIC-LOCATION:America/New_York",
+      23
     ],
     "Nipigon": [
-      "America/Nipigon",
-      109
+      "America/Nipigon<br>X-LIC-LOCATION:America/Nipigon",
+      23
     ],
     "Nome": [
-      "America/Nome",
-      110
+      "America/Nome<br>X-LIC-LOCATION:America/Nome",
+      10
     ],
     "Noronha": [
-      "America/Noronha",
-      111
+      "America/Noronha<br>X-LIC-LOCATION:America/Noronha",
+      32
     ],
     "North_Dakota": {
       "Beulah": [
-        "America/North_Dakota/Beulah",
-        112
+        "America/North_Dakota/Beulah<br>X-LIC-LOCATION:America/North_Dakota/Beulah",
+        20
       ],
       "Center": [
-        "America/North_Dakota/Center",
-        113
+        "America/North_Dakota/Center<br>X-LIC-LOCATION:America/North_Dakota/Center",
+        20
       ],
       "New_Salem": [
-        "America/North_Dakota/New_Salem",
-        114
+        "America/North_Dakota/New_Salem<br>X-LIC-LOCATION:America/North_Dakota/New_Salem",
+        20
       ]
     },
     "Nuuk": [
-      "America/Nuuk",
-      68
+      "America/Nuuk<br>X-LIC-LOCATION:America/Nuuk",
+      26
     ],
     "Ojinaga": [
-      "America/Ojinaga",
-      115
+      "America/Ojinaga<br>X-LIC-LOCATION:America/Ojinaga",
+      19
     ],
     "Panama": [
-      "America/Panama",
-      36
+      "America/Panama<br>X-LIC-LOCATION:America/Panama",
+      14
     ],
     "Pangnirtung": [
-      "America/Pangnirtung",
-      116
+      "America/Pangnirtung<br>X-LIC-LOCATION:America/Pangnirtung",
+      23
     ],
     "Paramaribo": [
-      "America/Paramaribo",
-      117
+      "America/Paramaribo<br>X-LIC-LOCATION:America/Paramaribo",
+      12
     ],
     "Phoenix": [
-      "America/Phoenix",
-      53
+      "America/Phoenix<br>X-LIC-LOCATION:America/Phoenix",
+      22
     ],
     "Port_of_Spain": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Port-au-Prince": [
-      "America/Port-au-Prince",
-      118
+      "America/Port-au-Prince<br>X-LIC-LOCATION:America/Port-au-Prince",
+      23
     ],
     "Porto_Acre": [
-      "America/Rio_Branco",
-      119
+      "America/Rio_Branco<br>X-LIC-LOCATION:America/Rio_Branco",
+      18
     ],
     "Porto_Velho": [
-      "America/Porto_Velho",
-      120
+      "America/Porto_Velho<br>X-LIC-LOCATION:America/Porto_Velho",
+      17
     ],
     "Puerto_Rico": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Punta_Arenas": [
-      "America/Punta_Arenas",
-      121
+      "America/Punta_Arenas<br>X-LIC-LOCATION:America/Punta_Arenas",
+      12
     ],
     "Rainy_River": [
-      "America/Rainy_River",
-      122
+      "America/Rainy_River<br>X-LIC-LOCATION:America/Rainy_River",
+      20
     ],
     "Rankin_Inlet": [
-      "America/Rankin_Inlet",
-      123
+      "America/Rankin_Inlet<br>X-LIC-LOCATION:America/Rankin_Inlet",
+      20
     ],
     "Recife": [
-      "America/Recife",
-      124
+      "America/Recife<br>X-LIC-LOCATION:America/Recife",
+      12
     ],
     "Regina": [
-      "America/Regina",
-      125
+      "America/Regina<br>X-LIC-LOCATION:America/Regina",
+      16
     ],
     "Resolute": [
-      "America/Resolute",
-      126
+      "America/Resolute<br>X-LIC-LOCATION:America/Resolute",
+      33
     ],
     "Rio_Branco": [
-      "America/Rio_Branco",
-      119
+      "America/Rio_Branco<br>X-LIC-LOCATION:America/Rio_Branco",
+      18
     ],
     "Rosario": [
-      "America/Argentina/Cordoba",
-      25
+      "America/Argentina/Cordoba<br>X-LIC-LOCATION:America/Argentina/Cordoba",
+      12
     ],
     "Santa_Isabel": [
-      "America/Tijuana",
-      63
+      "America/Tijuana<br>X-LIC-LOCATION:America/Tijuana",
+      24
     ],
     "Santarem": [
-      "America/Santarem",
-      127
+      "America/Santarem<br>X-LIC-LOCATION:America/Santarem",
+      12
     ],
     "Santiago": [
-      "America/Santiago",
-      128
+      "America/Santiago<br>X-LIC-LOCATION:America/Santiago",
+      34
     ],
     "Santo_Domingo": [
-      "America/Santo_Domingo",
-      129
+      "America/Santo_Domingo<br>X-LIC-LOCATION:America/Santo_Domingo",
+      11
     ],
     "Sao_Paulo": [
-      "America/Sao_Paulo",
-      130
+      "America/Sao_Paulo<br>X-LIC-LOCATION:America/Sao_Paulo",
+      12
     ],
     "Scoresbysund": [
-      "America/Scoresbysund",
-      131
+      "America/Scoresbysund<br>X-LIC-LOCATION:America/Scoresbysund",
+      35
     ],
     "Shiprock": [
-      "America/Denver",
-      58
+      "America/Denver<br>X-LIC-LOCATION:America/Denver",
+      19
     ],
     "Sitka": [
-      "America/Sitka",
-      132
+      "America/Sitka<br>X-LIC-LOCATION:America/Sitka",
+      10
     ],
     "St_Barthelemy": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "St_Johns": [
-      "America/St_Johns",
-      133
+      "America/St_Johns<br>X-LIC-LOCATION:America/St_Johns",
+      36
     ],
     "St_Kitts": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "St_Lucia": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "St_Thomas": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "St_Vincent": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Swift_Current": [
-      "America/Swift_Current",
-      134
+      "America/Swift_Current<br>X-LIC-LOCATION:America/Swift_Current",
+      16
     ],
     "Tegucigalpa": [
-      "America/Tegucigalpa",
-      135
+      "America/Tegucigalpa<br>X-LIC-LOCATION:America/Tegucigalpa",
+      16
     ],
     "Thule": [
-      "America/Thule",
-      136
+      "America/Thule<br>X-LIC-LOCATION:America/Thule",
+      25
     ],
     "Thunder_Bay": [
-      "America/Thunder_Bay",
-      137
+      "America/Thunder_Bay<br>X-LIC-LOCATION:America/Thunder_Bay",
+      23
     ],
     "Tijuana": [
-      "America/Tijuana",
-      63
+      "America/Tijuana<br>X-LIC-LOCATION:America/Tijuana",
+      24
     ],
     "Toronto": [
-      "America/Toronto",
-      107
+      "America/Toronto<br>X-LIC-LOCATION:America/Toronto",
+      23
     ],
     "Tortola": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Vancouver": [
-      "America/Vancouver",
-      138
+      "America/Vancouver<br>X-LIC-LOCATION:America/Vancouver",
+      24
     ],
     "Virgin": [
-      "America/Puerto_Rico",
-      21
+      "America/Puerto_Rico<br>X-LIC-LOCATION:America/Puerto_Rico",
+      11
     ],
     "Whitehorse": [
-      "America/Whitehorse",
-      139
+      "America/Whitehorse<br>X-LIC-LOCATION:America/Whitehorse",
+      22
     ],
     "Winnipeg": [
-      "America/Winnipeg",
-      140
+      "America/Winnipeg<br>X-LIC-LOCATION:America/Winnipeg",
+      20
     ],
     "Yakutat": [
-      "America/Yakutat",
-      141
+      "America/Yakutat<br>X-LIC-LOCATION:America/Yakutat",
+      10
     ],
     "Yellowknife": [
-      "America/Yellowknife",
-      142
+      "America/Yellowknife<br>X-LIC-LOCATION:America/Yellowknife",
+      19
     ]
   },
   "Antarctica": {
     "Casey": [
-      "Antarctica/Casey",
-      143
+      "Antarctica/Casey<br>X-LIC-LOCATION:Antarctica/Casey",
+      37
     ],
     "Davis": [
-      "Antarctica/Davis",
-      144
+      "Antarctica/Davis<br>X-LIC-LOCATION:Antarctica/Davis",
+      38
     ],
     "DumontDUrville": [
-      "Pacific/Port_Moresby",
-      145
+      "Pacific/Port_Moresby<br>X-LIC-LOCATION:Pacific/Port_Moresby",
+      39
     ],
     "Macquarie": [
-      "Antarctica/Macquarie",
-      146
+      "Antarctica/Macquarie<br>X-LIC-LOCATION:Antarctica/Macquarie",
+      40
     ],
     "Mawson": [
-      "Antarctica/Mawson",
-      147
+      "Antarctica/Mawson<br>X-LIC-LOCATION:Antarctica/Mawson",
+      41
     ],
     "McMurdo": [
-      "Pacific/Auckland",
-      148
+      "Pacific/Auckland<br>X-LIC-LOCATION:Pacific/Auckland",
+      42
     ],
     "Palmer": [
-      "Antarctica/Palmer",
-      149
+      "Antarctica/Palmer<br>X-LIC-LOCATION:Antarctica/Palmer",
+      12
     ],
     "Rothera": [
-      "Antarctica/Rothera",
-      150
+      "Antarctica/Rothera<br>X-LIC-LOCATION:Antarctica/Rothera",
+      12
     ],
     "South_Pole": [
-      "Pacific/Auckland",
-      148
+      "Pacific/Auckland<br>X-LIC-LOCATION:Pacific/Auckland",
+      42
     ],
     "Syowa": [
-      "Asia/Riyadh",
-      151
+      "Asia/Riyadh<br>X-LIC-LOCATION:Asia/Riyadh",
+      43
     ],
     "Troll": [
-      "Antarctica/Troll",
-      152
+      "Antarctica/Troll<br>X-LIC-LOCATION:Antarctica/Troll",
+      44
     ],
     "Vostok": [
-      "Asia/Urumqi",
-      153
+      "Asia/Urumqi<br>X-LIC-LOCATION:Asia/Urumqi",
+      45
     ]
   },
   "Arctic": {
     "Longyearbyen": [
-      "Europe/Berlin",
-      154
+      "Europe/Berlin<br>X-LIC-LOCATION:Europe/Berlin",
+      7
     ]
   },
   "Asia": {
     "Aden": [
-      "Asia/Riyadh",
-      151
+      "Asia/Riyadh<br>X-LIC-LOCATION:Asia/Riyadh",
+      43
     ],
     "Almaty": [
-      "Asia/Almaty",
-      155
+      "Asia/Almaty<br>X-LIC-LOCATION:Asia/Almaty",
+      45
     ],
     "Amman": [
-      "Asia/Amman",
-      156
+      "Asia/Amman<br>X-LIC-LOCATION:Asia/Amman",
+      46
     ],
     "Anadyr": [
-      "Asia/Anadyr",
-      157
+      "Asia/Anadyr<br>X-LIC-LOCATION:Asia/Anadyr",
+      47
     ],
     "Aqtau": [
-      "Asia/Aqtau",
-      158
+      "Asia/Aqtau<br>X-LIC-LOCATION:Asia/Aqtau",
+      41
     ],
     "Aqtobe": [
-      "Asia/Aqtobe",
-      159
+      "Asia/Aqtobe<br>X-LIC-LOCATION:Asia/Aqtobe",
+      41
     ],
     "Ashgabat": [
-      "Asia/Ashgabat",
-      160
+      "Asia/Ashgabat<br>X-LIC-LOCATION:Asia/Ashgabat",
+      41
     ],
     "Ashkhabad": [
-      "Asia/Ashgabat",
-      160
+      "Asia/Ashgabat<br>X-LIC-LOCATION:Asia/Ashgabat",
+      41
     ],
     "Atyrau": [
-      "Asia/Atyrau",
-      161
+      "Asia/Atyrau<br>X-LIC-LOCATION:Asia/Atyrau",
+      41
     ],
     "Baghdad": [
-      "Asia/Baghdad",
-      162
+      "Asia/Baghdad<br>X-LIC-LOCATION:Asia/Baghdad",
+      43
     ],
     "Bahrain": [
-      "Asia/Qatar",
-      163
+      "Asia/Qatar<br>X-LIC-LOCATION:Asia/Qatar",
+      43
     ],
     "Baku": [
-      "Asia/Baku",
-      164
+      "Asia/Baku<br>X-LIC-LOCATION:Asia/Baku",
+      48
     ],
     "Bangkok": [
-      "Asia/Bangkok",
-      165
+      "Asia/Bangkok<br>X-LIC-LOCATION:Asia/Bangkok",
+      38
     ],
     "Barnaul": [
-      "Asia/Barnaul",
-      166
+      "Asia/Barnaul<br>X-LIC-LOCATION:Asia/Barnaul",
+      38
     ],
     "Beirut": [
-      "Asia/Beirut",
-      167
+      "Asia/Beirut<br>X-LIC-LOCATION:Asia/Beirut",
+      49
     ],
     "Bishkek": [
-      "Asia/Bishkek",
-      168
+      "Asia/Bishkek<br>X-LIC-LOCATION:Asia/Bishkek",
+      45
     ],
     "Brunei": [
-      "Asia/Kuching",
-      169
+      "Asia/Kuching<br>X-LIC-LOCATION:Asia/Kuching",
+      50
     ],
     "Calcutta": [
-      "Asia/Kolkata",
-      170
+      "Asia/Kolkata<br>X-LIC-LOCATION:Asia/Kolkata",
+      51
     ],
     "Chita": [
-      "Asia/Chita",
-      171
+      "Asia/Chita<br>X-LIC-LOCATION:Asia/Chita",
+      52
     ],
     "Choibalsan": [
-      "Asia/Choibalsan",
-      172
+      "Asia/Choibalsan<br>X-LIC-LOCATION:Asia/Choibalsan",
+      50
     ],
     "Chongqing": [
-      "Asia/Shanghai",
-      173
+      "Asia/Shanghai<br>X-LIC-LOCATION:Asia/Shanghai",
+      53
     ],
     "Chungking": [
-      "Asia/Shanghai",
-      173
+      "Asia/Shanghai<br>X-LIC-LOCATION:Asia/Shanghai",
+      53
     ],
     "Colombo": [
-      "Asia/Colombo",
-      174
+      "Asia/Colombo<br>X-LIC-LOCATION:Asia/Colombo",
+      54
     ],
     "Dacca": [
-      "Asia/Dhaka",
-      175
+      "Asia/Dhaka<br>X-LIC-LOCATION:Asia/Dhaka",
+      45
     ],
     "Damascus": [
-      "Asia/Damascus",
-      176
+      "Asia/Damascus<br>X-LIC-LOCATION:Asia/Damascus",
+      55
     ],
     "Dhaka": [
-      "Asia/Dhaka",
-      175
+      "Asia/Dhaka<br>X-LIC-LOCATION:Asia/Dhaka",
+      45
     ],
     "Dili": [
-      "Asia/Dili",
-      177
+      "Asia/Dili<br>X-LIC-LOCATION:Asia/Dili",
+      52
     ],
     "Dubai": [
-      "Asia/Dubai",
-      178
+      "Asia/Dubai<br>X-LIC-LOCATION:Asia/Dubai",
+      48
     ],
     "Dushanbe": [
-      "Asia/Dushanbe",
-      179
+      "Asia/Dushanbe<br>X-LIC-LOCATION:Asia/Dushanbe",
+      41
     ],
     "Famagusta": [
-      "Asia/Famagusta",
-      180
+      "Asia/Famagusta<br>X-LIC-LOCATION:Asia/Famagusta",
+      56
     ],
     "Gaza": [
-      "Asia/Gaza",
-      181
+      "Asia/Gaza<br>X-LIC-LOCATION:Asia/Gaza",
+      57
     ],
     "Harbin": [
-      "Asia/Shanghai",
-      173
+      "Asia/Shanghai<br>X-LIC-LOCATION:Asia/Shanghai",
+      53
     ],
     "Hebron": [
-      "Asia/Hebron",
-      182
+      "Asia/Hebron<br>X-LIC-LOCATION:Asia/Hebron",
+      57
     ],
     "Ho_Chi_Minh": [
-      "Asia/Ho_Chi_Minh",
-      183
+      "Asia/Ho_Chi_Minh<br>X-LIC-LOCATION:Asia/Ho_Chi_Minh",
+      38
     ],
     "Hong_Kong": [
-      "Asia/Hong_Kong",
-      184
+      "Asia/Hong_Kong<br>X-LIC-LOCATION:Asia/Hong_Kong",
+      58
     ],
     "Hovd": [
-      "Asia/Hovd",
-      185
+      "Asia/Hovd<br>X-LIC-LOCATION:Asia/Hovd",
+      38
     ],
     "Irkutsk": [
-      "Asia/Irkutsk",
-      186
+      "Asia/Irkutsk<br>X-LIC-LOCATION:Asia/Irkutsk",
+      50
     ],
     "Istanbul": [
-      "Europe/Istanbul",
-      187
+      "Europe/Istanbul<br>X-LIC-LOCATION:Europe/Istanbul",
+      43
     ],
     "Jakarta": [
-      "Asia/Jakarta",
-      188
+      "Asia/Jakarta<br>X-LIC-LOCATION:Asia/Jakarta",
+      59
     ],
     "Jayapura": [
-      "Asia/Jayapura",
-      189
+      "Asia/Jayapura<br>X-LIC-LOCATION:Asia/Jayapura",
+      60
     ],
     "Jerusalem": [
-      "Asia/Jerusalem",
-      190
+      "Asia/Jerusalem<br>X-LIC-LOCATION:Asia/Jerusalem",
+      61
     ],
     "Kabul": [
-      "Asia/Kabul",
-      191
+      "Asia/Kabul<br>X-LIC-LOCATION:Asia/Kabul",
+      62
     ],
     "Kamchatka": [
-      "Asia/Kamchatka",
-      192
+      "Asia/Kamchatka<br>X-LIC-LOCATION:Asia/Kamchatka",
+      47
     ],
     "Karachi": [
-      "Asia/Karachi",
-      193
+      "Asia/Karachi<br>X-LIC-LOCATION:Asia/Karachi",
+      63
     ],
     "Kashgar": [
-      "Asia/Urumqi",
-      153
+      "Asia/Urumqi<br>X-LIC-LOCATION:Asia/Urumqi",
+      45
     ],
     "Kathmandu": [
-      "Asia/Kathmandu",
-      194
+      "Asia/Kathmandu<br>X-LIC-LOCATION:Asia/Kathmandu",
+      64
     ],
     "Katmandu": [
-      "Asia/Kathmandu",
-      194
+      "Asia/Kathmandu<br>X-LIC-LOCATION:Asia/Kathmandu",
+      64
     ],
     "Khandyga": [
-      "Asia/Khandyga",
-      195
+      "Asia/Khandyga<br>X-LIC-LOCATION:Asia/Khandyga",
+      52
     ],
     "Kolkata": [
-      "Asia/Kolkata",
-      170
+      "Asia/Kolkata<br>X-LIC-LOCATION:Asia/Kolkata",
+      51
     ],
     "Krasnoyarsk": [
-      "Asia/Krasnoyarsk",
-      196
+      "Asia/Krasnoyarsk<br>X-LIC-LOCATION:Asia/Krasnoyarsk",
+      38
     ],
     "Kuala_Lumpur": [
-      "Asia/Singapore",
-      197
+      "Asia/Singapore<br>X-LIC-LOCATION:Asia/Singapore",
+      50
     ],
     "Kuching": [
-      "Asia/Kuching",
-      169
+      "Asia/Kuching<br>X-LIC-LOCATION:Asia/Kuching",
+      50
     ],
     "Kuwait": [
-      "Asia/Riyadh",
-      151
+      "Asia/Riyadh<br>X-LIC-LOCATION:Asia/Riyadh",
+      43
     ],
     "Macao": [
-      "Asia/Macau",
-      198
+      "Asia/Macau<br>X-LIC-LOCATION:Asia/Macau",
+      53
     ],
     "Macau": [
-      "Asia/Macau",
-      198
+      "Asia/Macau<br>X-LIC-LOCATION:Asia/Macau",
+      53
     ],
     "Magadan": [
-      "Asia/Magadan",
-      199
+      "Asia/Magadan<br>X-LIC-LOCATION:Asia/Magadan",
+      37
     ],
     "Makassar": [
-      "Asia/Makassar",
-      200
+      "Asia/Makassar<br>X-LIC-LOCATION:Asia/Makassar",
+      65
     ],
     "Manila": [
-      "Asia/Manila",
-      201
+      "Asia/Manila<br>X-LIC-LOCATION:Asia/Manila",
+      66
     ],
     "Muscat": [
-      "Asia/Dubai",
-      178
+      "Asia/Dubai<br>X-LIC-LOCATION:Asia/Dubai",
+      48
     ],
     "Nicosia": [
-      "Asia/Nicosia",
-      202
+      "Asia/Nicosia<br>X-LIC-LOCATION:Asia/Nicosia",
+      67
     ],
     "Novokuznetsk": [
-      "Asia/Novokuznetsk",
-      203
+      "Asia/Novokuznetsk<br>X-LIC-LOCATION:Asia/Novokuznetsk",
+      38
     ],
     "Novosibirsk": [
-      "Asia/Novosibirsk",
-      204
+      "Asia/Novosibirsk<br>X-LIC-LOCATION:Asia/Novosibirsk",
+      38
     ],
     "Omsk": [
-      "Asia/Omsk",
-      205
+      "Asia/Omsk<br>X-LIC-LOCATION:Asia/Omsk",
+      45
     ],
     "Oral": [
-      "Asia/Oral",
-      206
+      "Asia/Oral<br>X-LIC-LOCATION:Asia/Oral",
+      41
     ],
     "Phnom_Penh": [
-      "Asia/Bangkok",
-      165
+      "Asia/Bangkok<br>X-LIC-LOCATION:Asia/Bangkok",
+      38
     ],
     "Pontianak": [
-      "Asia/Pontianak",
-      207
+      "Asia/Pontianak<br>X-LIC-LOCATION:Asia/Pontianak",
+      59
     ],
     "Pyongyang": [
-      "Asia/Pyongyang",
-      208
+      "Asia/Pyongyang<br>X-LIC-LOCATION:Asia/Pyongyang",
+      68
     ],
     "Qatar": [
-      "Asia/Qatar",
-      163
+      "Asia/Qatar<br>X-LIC-LOCATION:Asia/Qatar",
+      43
     ],
     "Qostanay": [
-      "Asia/Qostanay",
-      209
+      "Asia/Qostanay<br>X-LIC-LOCATION:Asia/Qostanay",
+      45
     ],
     "Qyzylorda": [
-      "Asia/Qyzylorda",
-      210
+      "Asia/Qyzylorda<br>X-LIC-LOCATION:Asia/Qyzylorda",
+      41
     ],
     "Rangoon": [
-      "Asia/Yangon",
-      211
+      "Asia/Yangon<br>X-LIC-LOCATION:Asia/Yangon",
+      69
     ],
     "Riyadh": [
-      "Asia/Riyadh",
-      151
+      "Asia/Riyadh<br>X-LIC-LOCATION:Asia/Riyadh",
+      43
     ],
     "Saigon": [
-      "Asia/Ho_Chi_Minh",
-      183
+      "Asia/Ho_Chi_Minh<br>X-LIC-LOCATION:Asia/Ho_Chi_Minh",
+      38
     ],
     "Sakhalin": [
-      "Asia/Sakhalin",
-      212
+      "Asia/Sakhalin<br>X-LIC-LOCATION:Asia/Sakhalin",
+      37
     ],
     "Samarkand": [
-      "Asia/Samarkand",
-      213
+      "Asia/Samarkand<br>X-LIC-LOCATION:Asia/Samarkand",
+      41
     ],
     "Seoul": [
-      "Asia/Seoul",
-      214
+      "Asia/Seoul<br>X-LIC-LOCATION:Asia/Seoul",
+      68
     ],
     "Shanghai": [
-      "Asia/Shanghai",
-      173
+      "Asia/Shanghai<br>X-LIC-LOCATION:Asia/Shanghai",
+      53
     ],
     "Singapore": [
-      "Asia/Singapore",
-      197
+      "Asia/Singapore<br>X-LIC-LOCATION:Asia/Singapore",
+      50
     ],
     "Srednekolymsk": [
-      "Asia/Srednekolymsk",
-      215
+      "Asia/Srednekolymsk<br>X-LIC-LOCATION:Asia/Srednekolymsk",
+      37
     ],
     "Taipei": [
-      "Asia/Taipei",
-      216
+      "Asia/Taipei<br>X-LIC-LOCATION:Asia/Taipei",
+      53
     ],
     "Tashkent": [
-      "Asia/Tashkent",
-      217
+      "Asia/Tashkent<br>X-LIC-LOCATION:Asia/Tashkent",
+      41
     ],
     "Tbilisi": [
-      "Asia/Tbilisi",
-      218
+      "Asia/Tbilisi<br>X-LIC-LOCATION:Asia/Tbilisi",
+      48
     ],
     "Tehran": [
-      "Asia/Tehran",
-      219
+      "Asia/Tehran<br>X-LIC-LOCATION:Asia/Tehran",
+      70
     ],
     "Tel_Aviv": [
-      "Asia/Jerusalem",
-      190
+      "Asia/Jerusalem<br>X-LIC-LOCATION:Asia/Jerusalem",
+      61
     ],
     "Thimbu": [
-      "Asia/Thimphu",
-      220
+      "Asia/Thimphu<br>X-LIC-LOCATION:Asia/Thimphu",
+      45
     ],
     "Thimphu": [
-      "Asia/Thimphu",
-      220
+      "Asia/Thimphu<br>X-LIC-LOCATION:Asia/Thimphu",
+      45
     ],
     "Tokyo": [
-      "Asia/Tokyo",
-      221
+      "Asia/Tokyo<br>X-LIC-LOCATION:Asia/Tokyo",
+      71
     ],
     "Tomsk": [
-      "Asia/Tomsk",
-      222
+      "Asia/Tomsk<br>X-LIC-LOCATION:Asia/Tomsk",
+      38
     ],
     "Ujung_Pandang": [
-      "Asia/Makassar",
-      200
+      "Asia/Makassar<br>X-LIC-LOCATION:Asia/Makassar",
+      65
     ],
     "Ulaanbaatar": [
-      "Asia/Ulaanbaatar",
-      223
+      "Asia/Ulaanbaatar<br>X-LIC-LOCATION:Asia/Ulaanbaatar",
+      50
     ],
     "Ulan_Bator": [
-      "Asia/Ulaanbaatar",
-      223
+      "Asia/Ulaanbaatar<br>X-LIC-LOCATION:Asia/Ulaanbaatar",
+      50
     ],
     "Urumqi": [
-      "Asia/Urumqi",
-      153
+      "Asia/Urumqi<br>X-LIC-LOCATION:Asia/Urumqi",
+      45
     ],
     "Ust-Nera": [
-      "Asia/Ust-Nera",
-      224
+      "Asia/Ust-Nera<br>X-LIC-LOCATION:Asia/Ust-Nera",
+      39
     ],
     "Vientiane": [
-      "Asia/Bangkok",
-      165
+      "Asia/Bangkok<br>X-LIC-LOCATION:Asia/Bangkok",
+      38
     ],
     "Vladivostok": [
-      "Asia/Vladivostok",
-      225
+      "Asia/Vladivostok<br>X-LIC-LOCATION:Asia/Vladivostok",
+      39
     ],
     "Yakutsk": [
-      "Asia/Yakutsk",
-      226
+      "Asia/Yakutsk<br>X-LIC-LOCATION:Asia/Yakutsk",
+      52
     ],
     "Yangon": [
-      "Asia/Yangon",
-      211
+      "Asia/Yangon<br>X-LIC-LOCATION:Asia/Yangon",
+      69
     ],
     "Yekaterinburg": [
-      "Asia/Yekaterinburg",
-      227
+      "Asia/Yekaterinburg<br>X-LIC-LOCATION:Asia/Yekaterinburg",
+      41
     ],
     "Yerevan": [
-      "Asia/Yerevan",
-      228
+      "Asia/Yerevan<br>X-LIC-LOCATION:Asia/Yerevan",
+      48
     ]
   },
   "Atlantic": {
     "Azores": [
-      "Atlantic/Azores",
-      229
+      "Atlantic/Azores<br>X-LIC-LOCATION:Atlantic/Azores",
+      35
     ],
     "Bermuda": [
-      "Atlantic/Bermuda",
-      230
+      "Atlantic/Bermuda<br>X-LIC-LOCATION:Atlantic/Bermuda",
+      25
     ],
     "Canary": [
-      "Atlantic/Canary",
-      231
+      "Atlantic/Canary<br>X-LIC-LOCATION:Atlantic/Canary",
+      72
     ],
     "Cape_Verde": [
-      "Atlantic/Cape_Verde",
-      232
+      "Atlantic/Cape_Verde<br>X-LIC-LOCATION:Atlantic/Cape_Verde",
+      73
     ],
     "Faeroe": [
-      "Atlantic/Faroe",
-      233
+      "Atlantic/Faroe<br>X-LIC-LOCATION:Atlantic/Faroe",
+      72
     ],
     "Faroe": [
-      "Atlantic/Faroe",
-      233
+      "Atlantic/Faroe<br>X-LIC-LOCATION:Atlantic/Faroe",
+      72
     ],
     "Jan_Mayen": [
-      "Europe/Berlin",
-      154
+      "Europe/Berlin<br>X-LIC-LOCATION:Europe/Berlin",
+      7
     ],
     "Madeira": [
-      "Atlantic/Madeira",
-      234
+      "Atlantic/Madeira<br>X-LIC-LOCATION:Atlantic/Madeira",
+      72
     ],
     "Reykjavik": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "South_Georgia": [
-      "Atlantic/South_Georgia",
-      235
+      "Atlantic/South_Georgia<br>X-LIC-LOCATION:Atlantic/South_Georgia",
+      32
     ],
     "St_Helena": [
-      "Africa/Abidjan",
+      "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
       0
     ],
     "Stanley": [
-      "Atlantic/Stanley",
-      236
+      "Atlantic/Stanley<br>X-LIC-LOCATION:Atlantic/Stanley",
+      12
     ]
   },
   "Australia": {
     "ACT": [
-      "Australia/Sydney",
-      237
+      "Australia/Sydney<br>X-LIC-LOCATION:Australia/Sydney",
+      40
     ],
     "Adelaide": [
-      "Australia/Adelaide",
-      238
+      "Australia/Adelaide<br>X-LIC-LOCATION:Australia/Adelaide",
+      74
     ],
     "Brisbane": [
-      "Australia/Brisbane",
-      239
+      "Australia/Brisbane<br>X-LIC-LOCATION:Australia/Brisbane",
+      75
     ],
     "Broken_Hill": [
-      "Australia/Broken_Hill",
-      240
+      "Australia/Broken_Hill<br>X-LIC-LOCATION:Australia/Broken_Hill",
+      74
     ],
     "Canberra": [
-      "Australia/Sydney",
-      237
+      "Australia/Sydney<br>X-LIC-LOCATION:Australia/Sydney",
+      40
     ],
     "Currie": [
-      "Australia/Hobart",
-      241
+      "Australia/Hobart<br>X-LIC-LOCATION:Australia/Hobart",
+      76
     ],
     "Darwin": [
-      "Australia/Darwin",
-      242
+      "Australia/Darwin<br>X-LIC-LOCATION:Australia/Darwin",
+      77
     ],
     "Eucla": [
-      "Australia/Eucla",
-      243
+      "Australia/Eucla<br>X-LIC-LOCATION:Australia/Eucla",
+      78
     ],
     "Hobart": [
-      "Australia/Hobart",
-      241
+      "Australia/Hobart<br>X-LIC-LOCATION:Australia/Hobart",
+      76
     ],
     "LHI": [
-      "Australia/Lord_Howe",
-      244
+      "Australia/Lord_Howe<br>X-LIC-LOCATION:Australia/Lord_Howe",
+      79
     ],
     "Lindeman": [
-      "Australia/Lindeman",
-      245
+      "Australia/Lindeman<br>X-LIC-LOCATION:Australia/Lindeman",
+      75
     ],
     "Lord_Howe": [
-      "Australia/Lord_Howe",
-      244
+      "Australia/Lord_Howe<br>X-LIC-LOCATION:Australia/Lord_Howe",
+      79
     ],
     "Melbourne": [
-      "Australia/Melbourne",
-      246
+      "Australia/Melbourne<br>X-LIC-LOCATION:Australia/Melbourne",
+      40
     ],
     "North": [
-      "Australia/Darwin",
-      242
+      "Australia/Darwin<br>X-LIC-LOCATION:Australia/Darwin",
+      77
     ],
     "NSW": [
-      "Australia/Sydney",
-      237
+      "Australia/Sydney<br>X-LIC-LOCATION:Australia/Sydney",
+      40
     ],
     "Perth": [
-      "Australia/Perth",
-      247
+      "Australia/Perth<br>X-LIC-LOCATION:Australia/Perth",
+      80
     ],
     "Queensland": [
-      "Australia/Brisbane",
-      239
+      "Australia/Brisbane<br>X-LIC-LOCATION:Australia/Brisbane",
+      75
     ],
     "South": [
-      "Australia/Adelaide",
-      238
+      "Australia/Adelaide<br>X-LIC-LOCATION:Australia/Adelaide",
+      74
     ],
     "Sydney": [
-      "Australia/Sydney",
-      237
+      "Australia/Sydney<br>X-LIC-LOCATION:Australia/Sydney",
+      40
     ],
     "Tasmania": [
-      "Australia/Hobart",
-      241
+      "Australia/Hobart<br>X-LIC-LOCATION:Australia/Hobart",
+      76
     ],
     "Victoria": [
-      "Australia/Melbourne",
-      246
+      "Australia/Melbourne<br>X-LIC-LOCATION:Australia/Melbourne",
+      40
     ],
     "West": [
-      "Australia/Perth",
-      247
+      "Australia/Perth<br>X-LIC-LOCATION:Australia/Perth",
+      80
     ],
     "Yancowinna": [
-      "Australia/Broken_Hill",
-      240
+      "Australia/Broken_Hill<br>X-LIC-LOCATION:Australia/Broken_Hill",
+      74
     ]
   },
   "Brazil": {
     "Acre": [
-      "America/Rio_Branco",
-      119
+      "America/Rio_Branco<br>X-LIC-LOCATION:America/Rio_Branco",
+      18
     ],
     "DeNoronha": [
-      "America/Noronha",
-      111
+      "America/Noronha<br>X-LIC-LOCATION:America/Noronha",
+      32
     ],
     "East": [
-      "America/Sao_Paulo",
-      130
+      "America/Sao_Paulo<br>X-LIC-LOCATION:America/Sao_Paulo",
+      12
     ],
     "West": [
-      "America/Manaus",
-      95
+      "America/Manaus<br>X-LIC-LOCATION:America/Manaus",
+      17
     ]
   },
   "Canada": {
     "Atlantic": [
-      "America/Halifax",
-      74
+      "America/Halifax<br>X-LIC-LOCATION:America/Halifax",
+      25
     ],
     "Central": [
-      "America/Winnipeg",
-      140
+      "America/Winnipeg<br>X-LIC-LOCATION:America/Winnipeg",
+      20
     ],
     "Eastern": [
-      "America/Toronto",
-      107
+      "America/Toronto<br>X-LIC-LOCATION:America/Toronto",
+      23
     ],
     "Mountain": [
-      "America/Edmonton",
-      60
+      "America/Edmonton<br>X-LIC-LOCATION:America/Edmonton",
+      19
     ],
     "Newfoundland": [
-      "America/St_Johns",
-      133
+      "America/St_Johns<br>X-LIC-LOCATION:America/St_Johns",
+      36
     ],
     "Pacific": [
-      "America/Vancouver",
-      138
+      "America/Vancouver<br>X-LIC-LOCATION:America/Vancouver",
+      24
     ],
     "Saskatchewan": [
-      "America/Regina",
-      125
+      "America/Regina<br>X-LIC-LOCATION:America/Regina",
+      16
     ],
     "Yukon": [
-      "America/Whitehorse",
-      139
+      "America/Whitehorse<br>X-LIC-LOCATION:America/Whitehorse",
+      22
     ]
   },
   "CET": [
-    "CET",
-    248
+    "CET<br>X-LIC-LOCATION:CET",
+    7
   ],
   "Chile": {
     "Continental": [
-      "America/Santiago",
-      128
+      "America/Santiago<br>X-LIC-LOCATION:America/Santiago",
+      34
     ],
     "EasterIsland": [
-      "Pacific/Easter",
-      249
+      "Pacific/Easter<br>X-LIC-LOCATION:Pacific/Easter",
+      81
     ]
   },
   "CST6CDT": [
-    "CST6CDT",
-    250
+    "CST6CDT<br>X-LIC-LOCATION:CST6CDT",
+    20
   ],
   "Cuba": [
-    "America/Havana",
-    75
+    "America/Havana<br>X-LIC-LOCATION:America/Havana",
+    29
   ],
   "EET": [
-    "EET",
-    251
+    "EET<br>X-LIC-LOCATION:EET",
+    56
   ],
   "Egypt": [
-    "Africa/Cairo",
-    6
+    "Africa/Cairo<br>X-LIC-LOCATION:Africa/Cairo",
+    5
   ],
   "Eire": [
-    "Europe/Dublin",
-    252
+    "Europe/Dublin<br>X-LIC-LOCATION:Europe/Dublin",
+    82
   ],
   "EST": [
-    "EST",
-    253
+    "EST<br>X-LIC-LOCATION:EST",
+    14
   ],
   "EST5EDT": [
-    "EST5EDT",
-    254
+    "EST5EDT<br>X-LIC-LOCATION:EST5EDT",
+    23
   ],
   "Etc": {
     "GMT-0": [
-      "Etc/GMT",
-      255
+      "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+      0
     ],
     "GMT-1": [
-      "Etc/GMT-1",
-      256
+      "Etc/GMT-1<br>X-LIC-LOCATION:Etc/GMT-1",
+      6
     ],
     "GMT-10": [
-      "Etc/GMT-10",
-      257
+      "Etc/GMT-10<br>X-LIC-LOCATION:Etc/GMT-10",
+      39
     ],
     "GMT-11": [
-      "Etc/GMT-11",
-      258
+      "Etc/GMT-11<br>X-LIC-LOCATION:Etc/GMT-11",
+      37
     ],
     "GMT-12": [
-      "Etc/GMT-12",
-      259
+      "Etc/GMT-12<br>X-LIC-LOCATION:Etc/GMT-12",
+      47
     ],
     "GMT-13": [
-      "Etc/GMT-13",
-      260
+      "Etc/GMT-13<br>X-LIC-LOCATION:Etc/GMT-13",
+      83
     ],
     "GMT-14": [
-      "Etc/GMT-14",
-      261
+      "Etc/GMT-14<br>X-LIC-LOCATION:Etc/GMT-14",
+      84
     ],
     "GMT-2": [
-      "Etc/GMT-2",
-      262
+      "Etc/GMT-2<br>X-LIC-LOCATION:Etc/GMT-2",
+      85
     ],
     "GMT-3": [
-      "Etc/GMT-3",
-      263
+      "Etc/GMT-3<br>X-LIC-LOCATION:Etc/GMT-3",
+      43
     ],
     "GMT-4": [
-      "Etc/GMT-4",
-      264
+      "Etc/GMT-4<br>X-LIC-LOCATION:Etc/GMT-4",
+      48
     ],
     "GMT-5": [
-      "Etc/GMT-5",
-      265
+      "Etc/GMT-5<br>X-LIC-LOCATION:Etc/GMT-5",
+      41
     ],
     "GMT-6": [
-      "Etc/GMT-6",
-      266
+      "Etc/GMT-6<br>X-LIC-LOCATION:Etc/GMT-6",
+      45
     ],
     "GMT-7": [
-      "Etc/GMT-7",
-      267
+      "Etc/GMT-7<br>X-LIC-LOCATION:Etc/GMT-7",
+      38
     ],
     "GMT-8": [
-      "Etc/GMT-8",
-      268
+      "Etc/GMT-8<br>X-LIC-LOCATION:Etc/GMT-8",
+      50
     ],
     "GMT-9": [
-      "Etc/GMT-9",
-      269
+      "Etc/GMT-9<br>X-LIC-LOCATION:Etc/GMT-9",
+      52
     ],
     "GMT": [
-      "Etc/GMT",
-      255
+      "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+      0
     ],
     "GMT+0": [
-      "Etc/GMT",
-      255
+      "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+      0
     ],
     "GMT+1": [
-      "Etc/GMT+1",
-      270
+      "Etc/GMT+1<br>X-LIC-LOCATION:Etc/GMT+1",
+      73
     ],
     "GMT+10": [
-      "Etc/GMT+10",
-      271
+      "Etc/GMT+10<br>X-LIC-LOCATION:Etc/GMT+10",
+      86
     ],
     "GMT+11": [
-      "Etc/GMT+11",
-      272
+      "Etc/GMT+11<br>X-LIC-LOCATION:Etc/GMT+11",
+      87
     ],
     "GMT+12": [
-      "Etc/GMT+12",
-      273
+      "Etc/GMT+12<br>X-LIC-LOCATION:Etc/GMT+12",
+      88
     ],
     "GMT+2": [
-      "Etc/GMT+2",
-      274
+      "Etc/GMT+2<br>X-LIC-LOCATION:Etc/GMT+2",
+      32
     ],
     "GMT+3": [
-      "Etc/GMT+3",
-      275
+      "Etc/GMT+3<br>X-LIC-LOCATION:Etc/GMT+3",
+      12
     ],
     "GMT+4": [
-      "Etc/GMT+4",
-      276
+      "Etc/GMT+4<br>X-LIC-LOCATION:Etc/GMT+4",
+      17
     ],
     "GMT+5": [
-      "Etc/GMT+5",
-      277
+      "Etc/GMT+5<br>X-LIC-LOCATION:Etc/GMT+5",
+      18
     ],
     "GMT+6": [
-      "Etc/GMT+6",
-      278
+      "Etc/GMT+6<br>X-LIC-LOCATION:Etc/GMT+6",
+      89
     ],
     "GMT+7": [
-      "Etc/GMT+7",
-      279
+      "Etc/GMT+7<br>X-LIC-LOCATION:Etc/GMT+7",
+      90
     ],
     "GMT+8": [
-      "Etc/GMT+8",
-      280
+      "Etc/GMT+8<br>X-LIC-LOCATION:Etc/GMT+8",
+      91
     ],
     "GMT+9": [
-      "Etc/GMT+9",
-      281
+      "Etc/GMT+9<br>X-LIC-LOCATION:Etc/GMT+9",
+      92
     ],
     "GMT0": [
-      "Etc/GMT",
-      255
+      "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+      0
     ],
     "Greenwich": [
-      "Etc/GMT",
-      255
+      "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+      0
     ],
     "UCT": [
-      "Etc/UTC",
-      282
+      "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+      93
     ],
     "Universal": [
-      "Etc/UTC",
-      282
+      "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+      93
     ],
     "UTC": [
-      "Etc/UTC",
-      282
+      "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+      93
     ],
     "Zulu": [
-      "Etc/UTC",
-      282
+      "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+      93
     ]
   },
   "Europe": {
     "Amsterdam": [
-      "Europe/Brussels",
-      283
+      "Europe/Brussels<br>X-LIC-LOCATION:Europe/Brussels",
+      7
     ],
     "Andorra": [
-      "Europe/Andorra",
-      284
+      "Europe/Andorra<br>X-LIC-LOCATION:Europe/Andorra",
+      7
     ],
     "Astrakhan": [
-      "Europe/Astrakhan",
-      285
+      "Europe/Astrakhan<br>X-LIC-LOCATION:Europe/Astrakhan",
+      48
     ],
     "Athens": [
-      "Europe/Athens",
-      286
+      "Europe/Athens<br>X-LIC-LOCATION:Europe/Athens",
+      56
     ],
     "Belfast": [
-      "Europe/London",
-      287
+      "Europe/London<br>X-LIC-LOCATION:Europe/London",
+      94
     ],
     "Belgrade": [
-      "Europe/Belgrade",
-      288
+      "Europe/Belgrade<br>X-LIC-LOCATION:Europe/Belgrade",
+      7
     ],
     "Berlin": [
-      "Europe/Berlin",
-      154
+      "Europe/Berlin<br>X-LIC-LOCATION:Europe/Berlin",
+      7
     ],
     "Bratislava": [
-      "Europe/Prague",
-      289
+      "Europe/Prague<br>X-LIC-LOCATION:Europe/Prague",
+      7
     ],
     "Brussels": [
-      "Europe/Brussels",
-      283
+      "Europe/Brussels<br>X-LIC-LOCATION:Europe/Brussels",
+      7
     ],
     "Bucharest": [
-      "Europe/Bucharest",
-      290
+      "Europe/Bucharest<br>X-LIC-LOCATION:Europe/Bucharest",
+      56
     ],
     "Budapest": [
-      "Europe/Budapest",
-      291
+      "Europe/Budapest<br>X-LIC-LOCATION:Europe/Budapest",
+      7
     ],
     "Busingen": [
-      "Europe/Zurich",
-      292
+      "Europe/Zurich<br>X-LIC-LOCATION:Europe/Zurich",
+      7
     ],
     "Chisinau": [
-      "Europe/Chisinau",
-      293
+      "Europe/Chisinau<br>X-LIC-LOCATION:Europe/Chisinau",
+      95
     ],
     "Copenhagen": [
-      "Europe/Berlin",
-      154
+      "Europe/Berlin<br>X-LIC-LOCATION:Europe/Berlin",
+      7
     ],
     "Dublin": [
-      "Europe/Dublin",
-      252
+      "Europe/Dublin<br>X-LIC-LOCATION:Europe/Dublin",
+      82
     ],
     "Gibraltar": [
-      "Europe/Gibraltar",
-      294
+      "Europe/Gibraltar<br>X-LIC-LOCATION:Europe/Gibraltar",
+      7
     ],
     "Guernsey": [
-      "Europe/London",
-      287
+      "Europe/London<br>X-LIC-LOCATION:Europe/London",
+      94
     ],
     "Helsinki": [
-      "Europe/Helsinki",
-      295
+      "Europe/Helsinki<br>X-LIC-LOCATION:Europe/Helsinki",
+      56
     ],
     "Isle_of_Man": [
-      "Europe/London",
-      287
+      "Europe/London<br>X-LIC-LOCATION:Europe/London",
+      94
     ],
     "Istanbul": [
-      "Europe/Istanbul",
-      187
+      "Europe/Istanbul<br>X-LIC-LOCATION:Europe/Istanbul",
+      43
     ],
     "Jersey": [
-      "Europe/London",
-      287
+      "Europe/London<br>X-LIC-LOCATION:Europe/London",
+      94
     ],
     "Kaliningrad": [
-      "Europe/Kaliningrad",
-      296
+      "Europe/Kaliningrad<br>X-LIC-LOCATION:Europe/Kaliningrad",
+      5
     ],
     "Kiev": [
-      "Europe/Kyiv",
-      297
+      "Europe/Kyiv<br>X-LIC-LOCATION:Europe/Kyiv",
+      67
     ],
     "Kirov": [
-      "Europe/Kirov",
-      298
+      "Europe/Kirov<br>X-LIC-LOCATION:Europe/Kirov",
+      43
     ],
     "Kyiv": [
-      "Europe/Kyiv",
-      297
+      "Europe/Kyiv<br>X-LIC-LOCATION:Europe/Kyiv",
+      67
     ],
     "Lisbon": [
-      "Europe/Lisbon",
-      299
+      "Europe/Lisbon<br>X-LIC-LOCATION:Europe/Lisbon",
+      96
     ],
     "Ljubljana": [
-      "Europe/Belgrade",
-      288
+      "Europe/Belgrade<br>X-LIC-LOCATION:Europe/Belgrade",
+      7
     ],
     "London": [
-      "Europe/London",
-      287
+      "Europe/London<br>X-LIC-LOCATION:Europe/London",
+      94
     ],
     "Luxembourg": [
-      "Europe/Brussels",
-      283
+      "Europe/Brussels<br>X-LIC-LOCATION:Europe/Brussels",
+      7
     ],
     "Madrid": [
-      "Europe/Madrid",
-      300
+      "Europe/Madrid<br>X-LIC-LOCATION:Europe/Madrid",
+      7
     ],
     "Malta": [
-      "Europe/Malta",
-      301
+      "Europe/Malta<br>X-LIC-LOCATION:Europe/Malta",
+      7
     ],
     "Mariehamn": [
-      "Europe/Helsinki",
-      295
+      "Europe/Helsinki<br>X-LIC-LOCATION:Europe/Helsinki",
+      56
     ],
     "Minsk": [
-      "Europe/Minsk",
-      302
+      "Europe/Minsk<br>X-LIC-LOCATION:Europe/Minsk",
+      43
     ],
     "Monaco": [
-      "Europe/Paris",
-      303
+      "Europe/Paris<br>X-LIC-LOCATION:Europe/Paris",
+      7
     ],
     "Moscow": [
-      "Europe/Moscow",
-      304
+      "Europe/Moscow<br>X-LIC-LOCATION:Europe/Moscow",
+      97
     ],
     "Nicosia": [
-      "Asia/Nicosia",
-      202
+      "Asia/Nicosia<br>X-LIC-LOCATION:Asia/Nicosia",
+      67
     ],
     "Oslo": [
-      "Europe/Berlin",
-      154
+      "Europe/Berlin<br>X-LIC-LOCATION:Europe/Berlin",
+      7
     ],
     "Paris": [
-      "Europe/Paris",
-      303
+      "Europe/Paris<br>X-LIC-LOCATION:Europe/Paris",
+      7
     ],
     "Podgorica": [
-      "Europe/Belgrade",
-      288
+      "Europe/Belgrade<br>X-LIC-LOCATION:Europe/Belgrade",
+      7
     ],
     "Prague": [
-      "Europe/Prague",
-      289
+      "Europe/Prague<br>X-LIC-LOCATION:Europe/Prague",
+      7
     ],
     "Riga": [
-      "Europe/Riga",
-      305
+      "Europe/Riga<br>X-LIC-LOCATION:Europe/Riga",
+      56
     ],
     "Rome": [
-      "Europe/Rome",
-      306
+      "Europe/Rome<br>X-LIC-LOCATION:Europe/Rome",
+      7
     ],
     "Samara": [
-      "Europe/Samara",
-      307
+      "Europe/Samara<br>X-LIC-LOCATION:Europe/Samara",
+      48
     ],
     "San_Marino": [
-      "Europe/Rome",
-      306
+      "Europe/Rome<br>X-LIC-LOCATION:Europe/Rome",
+      7
     ],
     "Sarajevo": [
-      "Europe/Belgrade",
-      288
+      "Europe/Belgrade<br>X-LIC-LOCATION:Europe/Belgrade",
+      7
     ],
     "Saratov": [
-      "Europe/Saratov",
-      308
+      "Europe/Saratov<br>X-LIC-LOCATION:Europe/Saratov",
+      48
     ],
     "Simferopol": [
-      "Europe/Simferopol",
-      309
+      "Europe/Simferopol<br>X-LIC-LOCATION:Europe/Simferopol",
+      97
     ],
     "Skopje": [
-      "Europe/Belgrade",
-      288
+      "Europe/Belgrade<br>X-LIC-LOCATION:Europe/Belgrade",
+      7
     ],
     "Sofia": [
-      "Europe/Sofia",
-      310
+      "Europe/Sofia<br>X-LIC-LOCATION:Europe/Sofia",
+      56
     ],
     "Stockholm": [
-      "Europe/Berlin",
-      154
+      "Europe/Berlin<br>X-LIC-LOCATION:Europe/Berlin",
+      7
     ],
     "Tallinn": [
-      "Europe/Tallinn",
-      311
+      "Europe/Tallinn<br>X-LIC-LOCATION:Europe/Tallinn",
+      56
     ],
     "Tirane": [
-      "Europe/Tirane",
-      312
+      "Europe/Tirane<br>X-LIC-LOCATION:Europe/Tirane",
+      7
     ],
     "Tiraspol": [
-      "Europe/Chisinau",
-      293
+      "Europe/Chisinau<br>X-LIC-LOCATION:Europe/Chisinau",
+      95
     ],
     "Ulyanovsk": [
-      "Europe/Ulyanovsk",
-      313
+      "Europe/Ulyanovsk<br>X-LIC-LOCATION:Europe/Ulyanovsk",
+      48
     ],
     "Uzhgorod": [
-      "Europe/Uzhgorod",
-      314
+      "Europe/Uzhgorod<br>X-LIC-LOCATION:Europe/Uzhgorod",
+      67
     ],
     "Vaduz": [
-      "Europe/Zurich",
-      292
+      "Europe/Zurich<br>X-LIC-LOCATION:Europe/Zurich",
+      7
     ],
     "Vatican": [
-      "Europe/Rome",
-      306
+      "Europe/Rome<br>X-LIC-LOCATION:Europe/Rome",
+      7
     ],
     "Vienna": [
-      "Europe/Vienna",
-      315
+      "Europe/Vienna<br>X-LIC-LOCATION:Europe/Vienna",
+      7
     ],
     "Vilnius": [
-      "Europe/Vilnius",
-      316
+      "Europe/Vilnius<br>X-LIC-LOCATION:Europe/Vilnius",
+      56
     ],
     "Volgograd": [
-      "Europe/Volgograd",
-      317
+      "Europe/Volgograd<br>X-LIC-LOCATION:Europe/Volgograd",
+      43
     ],
     "Warsaw": [
-      "Europe/Warsaw",
-      318
+      "Europe/Warsaw<br>X-LIC-LOCATION:Europe/Warsaw",
+      7
     ],
     "Zagreb": [
-      "Europe/Belgrade",
-      288
+      "Europe/Belgrade<br>X-LIC-LOCATION:Europe/Belgrade",
+      7
     ],
     "Zaporozhye": [
-      "Europe/Zaporozhye",
-      319
+      "Europe/Zaporozhye<br>X-LIC-LOCATION:Europe/Zaporozhye",
+      67
     ],
     "Zurich": [
-      "Europe/Zurich",
-      292
+      "Europe/Zurich<br>X-LIC-LOCATION:Europe/Zurich",
+      7
     ]
   },
   "GB-Eire": [
-    "Europe/London",
-    287
+    "Europe/London<br>X-LIC-LOCATION:Europe/London",
+    94
   ],
   "GB": [
-    "Europe/London",
-    287
+    "Europe/London<br>X-LIC-LOCATION:Europe/London",
+    94
   ],
   "GMT-0": [
-    "Etc/GMT",
-    255
+    "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+    0
   ],
   "GMT": [
-    "Etc/GMT",
-    255
+    "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+    0
   ],
   "GMT+0": [
-    "Etc/GMT",
-    255
+    "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+    0
   ],
   "GMT0": [
-    "Etc/GMT",
-    255
+    "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+    0
   ],
   "Greenwich": [
-    "Etc/GMT",
-    255
+    "Etc/GMT<br>X-LIC-LOCATION:Etc/GMT",
+    0
   ],
   "Hongkong": [
-    "Asia/Hong_Kong",
-    184
+    "Asia/Hong_Kong<br>X-LIC-LOCATION:Asia/Hong_Kong",
+    58
   ],
   "HST": [
-    "HST",
-    320
+    "HST<br>X-LIC-LOCATION:HST",
+    98
   ],
   "Iceland": [
-    "Africa/Abidjan",
+    "Africa/Abidjan<br>X-LIC-LOCATION:Africa/Abidjan",
     0
   ],
   "Indian": {
     "Antananarivo": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Chagos": [
-      "Indian/Chagos",
-      321
+      "Indian/Chagos<br>X-LIC-LOCATION:Indian/Chagos",
+      45
     ],
     "Christmas": [
-      "Asia/Bangkok",
-      165
+      "Asia/Bangkok<br>X-LIC-LOCATION:Asia/Bangkok",
+      38
     ],
     "Cocos": [
-      "Asia/Yangon",
-      211
+      "Asia/Yangon<br>X-LIC-LOCATION:Asia/Yangon",
+      69
     ],
     "Comoro": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Kerguelen": [
-      "Indian/Maldives",
-      322
+      "Indian/Maldives<br>X-LIC-LOCATION:Indian/Maldives",
+      41
     ],
     "Mahe": [
-      "Asia/Dubai",
-      178
+      "Asia/Dubai<br>X-LIC-LOCATION:Asia/Dubai",
+      48
     ],
     "Maldives": [
-      "Indian/Maldives",
-      322
+      "Indian/Maldives<br>X-LIC-LOCATION:Indian/Maldives",
+      41
     ],
     "Mauritius": [
-      "Indian/Mauritius",
-      323
+      "Indian/Mauritius<br>X-LIC-LOCATION:Indian/Mauritius",
+      48
     ],
     "Mayotte": [
-      "Africa/Nairobi",
+      "Africa/Nairobi<br>X-LIC-LOCATION:Africa/Nairobi",
       1
     ],
     "Reunion": [
-      "Asia/Dubai",
-      178
+      "Asia/Dubai<br>X-LIC-LOCATION:Asia/Dubai",
+      48
     ]
   },
   "Iran": [
-    "Asia/Tehran",
-    219
+    "Asia/Tehran<br>X-LIC-LOCATION:Asia/Tehran",
+    70
   ],
   "Israel": [
-    "Asia/Jerusalem",
-    190
+    "Asia/Jerusalem<br>X-LIC-LOCATION:Asia/Jerusalem",
+    61
   ],
   "Jamaica": [
-    "America/Jamaica",
-    86
+    "America/Jamaica<br>X-LIC-LOCATION:America/Jamaica",
+    14
   ],
   "Japan": [
-    "Asia/Tokyo",
-    221
+    "Asia/Tokyo<br>X-LIC-LOCATION:Asia/Tokyo",
+    71
   ],
   "Kwajalein": [
-    "Pacific/Kwajalein",
-    324
+    "Pacific/Kwajalein<br>X-LIC-LOCATION:Pacific/Kwajalein",
+    47
   ],
   "Libya": [
-    "Africa/Tripoli",
-    16
+    "Africa/Tripoli<br>X-LIC-LOCATION:Africa/Tripoli",
+    5
   ],
   "MET": [
-    "MET",
-    325
+    "MET<br>X-LIC-LOCATION:MET",
+    99
   ],
   "Mexico": {
     "BajaNorte": [
-      "America/Tijuana",
-      63
+      "America/Tijuana<br>X-LIC-LOCATION:America/Tijuana",
+      24
     ],
     "BajaSur": [
-      "America/Mazatlan",
-      98
+      "America/Mazatlan<br>X-LIC-LOCATION:America/Mazatlan",
+      21
     ],
     "General": [
-      "America/Mexico_City",
-      102
+      "America/Mexico_City<br>X-LIC-LOCATION:America/Mexico_City",
+      30
     ]
   },
   "MST": [
-    "MST",
-    326
+    "MST<br>X-LIC-LOCATION:MST",
+    22
   ],
   "MST7MDT": [
-    "MST7MDT",
-    327
+    "MST7MDT<br>X-LIC-LOCATION:MST7MDT",
+    19
   ],
   "Navajo": [
-    "America/Denver",
-    58
+    "America/Denver<br>X-LIC-LOCATION:America/Denver",
+    19
   ],
   "NZ-CHAT": [
-    "Pacific/Chatham",
-    328
+    "Pacific/Chatham<br>X-LIC-LOCATION:Pacific/Chatham",
+    100
   ],
   "NZ": [
-    "Pacific/Auckland",
-    148
+    "Pacific/Auckland<br>X-LIC-LOCATION:Pacific/Auckland",
+    42
   ],
   "Pacific": {
     "Apia": [
-      "Pacific/Apia",
-      329
+      "Pacific/Apia<br>X-LIC-LOCATION:Pacific/Apia",
+      83
     ],
     "Auckland": [
-      "Pacific/Auckland",
-      148
+      "Pacific/Auckland<br>X-LIC-LOCATION:Pacific/Auckland",
+      42
     ],
     "Bougainville": [
-      "Pacific/Bougainville",
-      330
+      "Pacific/Bougainville<br>X-LIC-LOCATION:Pacific/Bougainville",
+      37
     ],
     "Chatham": [
-      "Pacific/Chatham",
-      328
+      "Pacific/Chatham<br>X-LIC-LOCATION:Pacific/Chatham",
+      100
     ],
     "Chuuk": [
-      "Pacific/Port_Moresby",
-      145
+      "Pacific/Port_Moresby<br>X-LIC-LOCATION:Pacific/Port_Moresby",
+      39
     ],
     "Easter": [
-      "Pacific/Easter",
-      249
+      "Pacific/Easter<br>X-LIC-LOCATION:Pacific/Easter",
+      81
     ],
     "Efate": [
-      "Pacific/Efate",
-      331
+      "Pacific/Efate<br>X-LIC-LOCATION:Pacific/Efate",
+      37
     ],
     "Enderbury": [
-      "Pacific/Kanton",
-      332
+      "Pacific/Kanton<br>X-LIC-LOCATION:Pacific/Kanton",
+      83
     ],
     "Fakaofo": [
-      "Pacific/Fakaofo",
-      333
+      "Pacific/Fakaofo<br>X-LIC-LOCATION:Pacific/Fakaofo",
+      83
     ],
     "Fiji": [
-      "Pacific/Fiji",
-      334
+      "Pacific/Fiji<br>X-LIC-LOCATION:Pacific/Fiji",
+      101
     ],
     "Funafuti": [
-      "Pacific/Tarawa",
-      335
+      "Pacific/Tarawa<br>X-LIC-LOCATION:Pacific/Tarawa",
+      47
     ],
     "Galapagos": [
-      "Pacific/Galapagos",
-      336
+      "Pacific/Galapagos<br>X-LIC-LOCATION:Pacific/Galapagos",
+      89
     ],
     "Gambier": [
-      "Pacific/Gambier",
-      337
+      "Pacific/Gambier<br>X-LIC-LOCATION:Pacific/Gambier",
+      92
     ],
     "Guadalcanal": [
-      "Pacific/Guadalcanal",
-      338
+      "Pacific/Guadalcanal<br>X-LIC-LOCATION:Pacific/Guadalcanal",
+      37
     ],
     "Guam": [
-      "Pacific/Guam",
-      339
+      "Pacific/Guam<br>X-LIC-LOCATION:Pacific/Guam",
+      102
     ],
     "Honolulu": [
-      "Pacific/Honolulu",
-      340
+      "Pacific/Honolulu<br>X-LIC-LOCATION:Pacific/Honolulu",
+      98
     ],
     "Johnston": [
-      "Pacific/Honolulu",
-      340
+      "Pacific/Honolulu<br>X-LIC-LOCATION:Pacific/Honolulu",
+      98
     ],
     "Kanton": [
-      "Pacific/Kanton",
-      332
+      "Pacific/Kanton<br>X-LIC-LOCATION:Pacific/Kanton",
+      83
     ],
     "Kiritimati": [
-      "Pacific/Kiritimati",
-      341
+      "Pacific/Kiritimati<br>X-LIC-LOCATION:Pacific/Kiritimati",
+      84
     ],
     "Kosrae": [
-      "Pacific/Kosrae",
-      342
+      "Pacific/Kosrae<br>X-LIC-LOCATION:Pacific/Kosrae",
+      37
     ],
     "Kwajalein": [
-      "Pacific/Kwajalein",
-      324
+      "Pacific/Kwajalein<br>X-LIC-LOCATION:Pacific/Kwajalein",
+      47
     ],
     "Majuro": [
-      "Pacific/Tarawa",
-      335
+      "Pacific/Tarawa<br>X-LIC-LOCATION:Pacific/Tarawa",
+      47
     ],
     "Marquesas": [
-      "Pacific/Marquesas",
-      343
+      "Pacific/Marquesas<br>X-LIC-LOCATION:Pacific/Marquesas",
+      103
     ],
     "Midway": [
-      "Pacific/Pago_Pago",
-      344
+      "Pacific/Pago_Pago<br>X-LIC-LOCATION:Pacific/Pago_Pago",
+      104
     ],
     "Nauru": [
-      "Pacific/Nauru",
-      345
+      "Pacific/Nauru<br>X-LIC-LOCATION:Pacific/Nauru",
+      47
     ],
     "Niue": [
-      "Pacific/Niue",
-      346
+      "Pacific/Niue<br>X-LIC-LOCATION:Pacific/Niue",
+      87
     ],
     "Norfolk": [
-      "Pacific/Norfolk",
-      347
+      "Pacific/Norfolk<br>X-LIC-LOCATION:Pacific/Norfolk",
+      105
     ],
     "Noumea": [
-      "Pacific/Noumea",
-      348
+      "Pacific/Noumea<br>X-LIC-LOCATION:Pacific/Noumea",
+      37
     ],
     "Pago_Pago": [
-      "Pacific/Pago_Pago",
-      344
+      "Pacific/Pago_Pago<br>X-LIC-LOCATION:Pacific/Pago_Pago",
+      104
     ],
     "Palau": [
-      "Pacific/Palau",
-      349
+      "Pacific/Palau<br>X-LIC-LOCATION:Pacific/Palau",
+      52
     ],
     "Pitcairn": [
-      "Pacific/Pitcairn",
-      350
+      "Pacific/Pitcairn<br>X-LIC-LOCATION:Pacific/Pitcairn",
+      91
     ],
     "Pohnpei": [
-      "Pacific/Guadalcanal",
-      338
+      "Pacific/Guadalcanal<br>X-LIC-LOCATION:Pacific/Guadalcanal",
+      37
     ],
     "Ponape": [
-      "Pacific/Guadalcanal",
-      338
+      "Pacific/Guadalcanal<br>X-LIC-LOCATION:Pacific/Guadalcanal",
+      37
     ],
     "Port_Moresby": [
-      "Pacific/Port_Moresby",
-      145
+      "Pacific/Port_Moresby<br>X-LIC-LOCATION:Pacific/Port_Moresby",
+      39
     ],
     "Rarotonga": [
-      "Pacific/Rarotonga",
-      351
+      "Pacific/Rarotonga<br>X-LIC-LOCATION:Pacific/Rarotonga",
+      86
     ],
     "Saipan": [
-      "Pacific/Guam",
-      339
+      "Pacific/Guam<br>X-LIC-LOCATION:Pacific/Guam",
+      102
     ],
     "Samoa": [
-      "Pacific/Pago_Pago",
-      344
+      "Pacific/Pago_Pago<br>X-LIC-LOCATION:Pacific/Pago_Pago",
+      104
     ],
     "Tahiti": [
-      "Pacific/Tahiti",
-      352
+      "Pacific/Tahiti<br>X-LIC-LOCATION:Pacific/Tahiti",
+      86
     ],
     "Tarawa": [
-      "Pacific/Tarawa",
-      335
+      "Pacific/Tarawa<br>X-LIC-LOCATION:Pacific/Tarawa",
+      47
     ],
     "Tongatapu": [
-      "Pacific/Tongatapu",
-      353
+      "Pacific/Tongatapu<br>X-LIC-LOCATION:Pacific/Tongatapu",
+      83
     ],
     "Truk": [
-      "Pacific/Port_Moresby",
-      145
+      "Pacific/Port_Moresby<br>X-LIC-LOCATION:Pacific/Port_Moresby",
+      39
     ],
     "Wake": [
-      "Pacific/Tarawa",
-      335
+      "Pacific/Tarawa<br>X-LIC-LOCATION:Pacific/Tarawa",
+      47
     ],
     "Wallis": [
-      "Pacific/Tarawa",
-      335
+      "Pacific/Tarawa<br>X-LIC-LOCATION:Pacific/Tarawa",
+      47
     ],
     "Yap": [
-      "Pacific/Port_Moresby",
-      145
+      "Pacific/Port_Moresby<br>X-LIC-LOCATION:Pacific/Port_Moresby",
+      39
     ]
   },
   "Poland": [
-    "Europe/Warsaw",
-    318
+    "Europe/Warsaw<br>X-LIC-LOCATION:Europe/Warsaw",
+    7
   ],
   "Portugal": [
-    "Europe/Lisbon",
-    299
+    "Europe/Lisbon<br>X-LIC-LOCATION:Europe/Lisbon",
+    96
   ],
   "PRC": [
-    "Asia/Shanghai",
-    173
+    "Asia/Shanghai<br>X-LIC-LOCATION:Asia/Shanghai",
+    53
   ],
   "PST8PDT": [
-    "PST8PDT",
-    354
+    "PST8PDT<br>X-LIC-LOCATION:PST8PDT",
+    24
   ],
   "ROC": [
-    "Asia/Taipei",
-    216
+    "Asia/Taipei<br>X-LIC-LOCATION:Asia/Taipei",
+    53
   ],
   "ROK": [
-    "Asia/Seoul",
-    214
+    "Asia/Seoul<br>X-LIC-LOCATION:Asia/Seoul",
+    68
   ],
   "Singapore": [
-    "Asia/Singapore",
-    197
+    "Asia/Singapore<br>X-LIC-LOCATION:Asia/Singapore",
+    50
   ],
   "Turkey": [
-    "Europe/Istanbul",
-    187
+    "Europe/Istanbul<br>X-LIC-LOCATION:Europe/Istanbul",
+    43
   ],
   "UCT": [
-    "Etc/UTC",
-    282
+    "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+    93
   ],
   "Universal": [
-    "Etc/UTC",
-    282
+    "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+    93
   ],
   "US": {
     "Alaska": [
-      "America/Anchorage",
-      20
+      "America/Anchorage<br>X-LIC-LOCATION:America/Anchorage",
+      10
     ],
     "Aleutian": [
-      "America/Adak",
-      19
+      "America/Adak<br>X-LIC-LOCATION:America/Adak",
+      9
     ],
     "Arizona": [
-      "America/Phoenix",
-      53
+      "America/Phoenix<br>X-LIC-LOCATION:America/Phoenix",
+      22
     ],
     "Central": [
-      "America/Chicago",
-      50
+      "America/Chicago<br>X-LIC-LOCATION:America/Chicago",
+      20
     ],
     "East-Indiana": [
-      "America/Indiana/Indianapolis",
-      65
+      "America/Indiana/Indianapolis<br>X-LIC-LOCATION:America/Indiana/Indianapolis",
+      23
     ],
     "Eastern": [
-      "America/New_York",
-      108
+      "America/New_York<br>X-LIC-LOCATION:America/New_York",
+      23
     ],
     "Hawaii": [
-      "Pacific/Honolulu",
-      340
+      "Pacific/Honolulu<br>X-LIC-LOCATION:Pacific/Honolulu",
+      98
     ],
     "Indiana-Starke": [
-      "America/Indiana/Knox",
-      77
+      "America/Indiana/Knox<br>X-LIC-LOCATION:America/Indiana/Knox",
+      20
     ],
     "Michigan": [
-      "America/Detroit",
-      59
+      "America/Detroit<br>X-LIC-LOCATION:America/Detroit",
+      23
     ],
     "Mountain": [
-      "America/Denver",
-      58
+      "America/Denver<br>X-LIC-LOCATION:America/Denver",
+      19
     ],
     "Pacific": [
-      "America/Los_Angeles",
-      92
+      "America/Los_Angeles<br>X-LIC-LOCATION:America/Los_Angeles",
+      24
     ],
     "Samoa": [
-      "Pacific/Pago_Pago",
-      344
+      "Pacific/Pago_Pago<br>X-LIC-LOCATION:Pacific/Pago_Pago",
+      104
     ]
   },
   "UTC": [
-    "Etc/UTC",
-    282
+    "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+    93
   ],
   "W-SU": [
-    "Europe/Moscow",
-    304
+    "Europe/Moscow<br>X-LIC-LOCATION:Europe/Moscow",
+    97
   ],
   "WET": [
-    "WET",
-    355
+    "WET<br>X-LIC-LOCATION:WET",
+    72
   ],
   "Zulu": [
-    "Etc/UTC",
-    282
+    "Etc/UTC<br>X-LIC-LOCATION:Etc/UTC",
+    93
   ]
 };
 
 const tzlibZonesDetailsDB = [
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Abidjan<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Nairobi<br>BEGIN:STANDARD<br>TZNAME:EAT<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Algiers<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Lagos<br>BEGIN:STANDARD<br>TZNAME:WAT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Bissau<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Maputo<br>BEGIN:STANDARD<br>TZNAME:CAT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Cairo<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Casablanca<br>BEGIN:STANDARD<br>TZNAME:+01<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Ceuta<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/El_Aaiun<br>BEGIN:STANDARD<br>TZNAME:+01<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Johannesburg<br>BEGIN:STANDARD<br>TZNAME:SAST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Juba<br>BEGIN:STANDARD<br>TZNAME:CAT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Khartoum<br>BEGIN:STANDARD<br>TZNAME:CAT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Monrovia<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Ndjamena<br>BEGIN:STANDARD<br>TZNAME:WAT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Sao_Tome<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Tripoli<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Tunis<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Africa/Windhoek<br>BEGIN:STANDARD<br>TZNAME:CAT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Adak<br>BEGIN:DAYLIGHT<br>TZNAME:HDT<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-0900<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:HST<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-1000<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Anchorage<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Puerto_Rico<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Araguaina<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Buenos_Aires<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Catamarca<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Cordoba<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Jujuy<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/La_Rioja<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Mendoza<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Rio_Gallegos<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Salta<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/San_Juan<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/San_Luis<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Tucuman<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Argentina/Ushuaia<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Asuncion<br>BEGIN:DAYLIGHT<br>TZNAME:-03<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19701004T000000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19700322T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=4SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Panama<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Bahia_Banderas<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Bahia<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Barbados<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Belem<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Belize<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Boa_Vista<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Bogota<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Boise<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Cambridge_Bay<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Campo_Grande<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Cancun<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Caracas<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Cayenne<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Chicago<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Chihuahua<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Costa_Rica<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Phoenix<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Cuiaba<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Danmarkshavn<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Dawson_Creek<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Dawson<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Denver<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Detroit<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Edmonton<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Eirunepe<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/El_Salvador<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Tijuana<br>BEGIN:DAYLIGHT<br>TZNAME:PDT<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0700<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0800<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Fort_Nelson<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Indianapolis<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Fortaleza<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Glace_Bay<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Nuuk<br>BEGIN:DAYLIGHT<br>TZNAME:-02<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0200<br>DTSTART:19700328T220000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SA<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0300<br>DTSTART:19701024T230000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SA<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Goose_Bay<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Grand_Turk<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Guatemala<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Guayaquil<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Guyana<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Halifax<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Havana<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T010000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Hermosillo<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Knox<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Marengo<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Petersburg<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Tell_City<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Vevay<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Vincennes<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Indiana/Winamac<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Inuvik<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Iqaluit<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Jamaica<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Juneau<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Kentucky/Louisville<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Kentucky/Monticello<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/La_Paz<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Lima<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Los_Angeles<br>BEGIN:DAYLIGHT<br>TZNAME:PDT<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0700<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0800<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Maceio<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Managua<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Manaus<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Martinique<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Matamoros<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Mazatlan<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Menominee<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Merida<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Metlakatla<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Mexico_City<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Miquelon<br>BEGIN:DAYLIGHT<br>TZNAME:-02<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0200<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0300<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Moncton<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Monterrey<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Montevideo<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Toronto<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/New_York<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Nipigon<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Nome<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Noronha<br>BEGIN:STANDARD<br>TZNAME:-02<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/North_Dakota/Beulah<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/North_Dakota/Center<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/North_Dakota/New_Salem<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Ojinaga<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Pangnirtung<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Paramaribo<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Port-au-Prince<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Rio_Branco<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Porto_Velho<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Punta_Arenas<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Rainy_River<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Rankin_Inlet<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Recife<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Regina<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Resolute<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Santarem<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Santiago<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19700405T000000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:-03<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700906T000000<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Santo_Domingo<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Sao_Paulo<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Scoresbysund<br>BEGIN:DAYLIGHT<br>TZNAME:+00<br>TZOFFSETFROM:-0100<br>TZOFFSETTO:+0000<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-01<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:-0100<br>DTSTART:19701025T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Sitka<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/St_Johns<br>BEGIN:STANDARD<br>TZNAME:NST<br>TZOFFSETFROM:-0230<br>TZOFFSETTO:-0330<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:NDT<br>TZOFFSETFROM:-0330<br>TZOFFSETTO:-0230<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Swift_Current<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Tegucigalpa<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Thule<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Thunder_Bay<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Vancouver<br>BEGIN:DAYLIGHT<br>TZNAME:PDT<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0700<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0800<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Whitehorse<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Winnipeg<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Yakutat<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:America/Yellowknife<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Casey<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Davis<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Port_Moresby<br>BEGIN:STANDARD<br>TZNAME:+10<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Macquarie<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1000<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:AEDT<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Mawson<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Auckland<br>BEGIN:DAYLIGHT<br>TZNAME:NZDT<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1300<br>DTSTART:19700927T020000<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:NZST<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1200<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Palmer<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Rothera<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Riyadh<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Antarctica/Troll<br>BEGIN:DAYLIGHT<br>TZNAME:+02<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0200<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+00<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0000<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Urumqi<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Berlin<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Almaty<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Amman<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701030T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700227T000000<br>RRULE:FREQ=YEARLY;BYMONTH=2;BYDAY=-1FR<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Anadyr<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Aqtau<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Aqtobe<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Ashgabat<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Atyrau<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Baghdad<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Qatar<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Baku<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Bangkok<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Barnaul<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Beirut<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T000000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Bishkek<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Kuching<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Kolkata<br>BEGIN:STANDARD<br>TZNAME:IST<br>TZOFFSETFROM:+0530<br>TZOFFSETTO:+0530<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Chita<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Choibalsan<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Shanghai<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Colombo<br>BEGIN:STANDARD<br>TZNAME:+0530<br>TZOFFSETFROM:+0530<br>TZOFFSETTO:+0530<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Dhaka<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Damascus<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701030T000000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700327T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1FR<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Dili<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Dubai<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Dushanbe<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Famagusta<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Gaza<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701023T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Hebron<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701023T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Ho_Chi_Minh<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Hong_Kong<br>BEGIN:STANDARD<br>TZNAME:HKT<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Hovd<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Irkutsk<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Istanbul<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Jakarta<br>BEGIN:STANDARD<br>TZNAME:WIB<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Jayapura<br>BEGIN:STANDARD<br>TZNAME:WIT<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Jerusalem<br>BEGIN:DAYLIGHT<br>TZNAME:IDT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700327T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1FR<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:IST<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Kabul<br>BEGIN:STANDARD<br>TZNAME:+0430<br>TZOFFSETFROM:+0430<br>TZOFFSETTO:+0430<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Kamchatka<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Karachi<br>BEGIN:STANDARD<br>TZNAME:PKT<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Kathmandu<br>BEGIN:STANDARD<br>TZNAME:+0545<br>TZOFFSETFROM:+0545<br>TZOFFSETTO:+0545<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Khandyga<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Krasnoyarsk<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Singapore<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Macau<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Magadan<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Makassar<br>BEGIN:STANDARD<br>TZNAME:WITA<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Manila<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Nicosia<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Novokuznetsk<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Novosibirsk<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Omsk<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Oral<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Pontianak<br>BEGIN:STANDARD<br>TZNAME:WIB<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Pyongyang<br>BEGIN:STANDARD<br>TZNAME:KST<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Qostanay<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Qyzylorda<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Yangon<br>BEGIN:STANDARD<br>TZNAME:+0630<br>TZOFFSETFROM:+0630<br>TZOFFSETTO:+0630<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Sakhalin<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Samarkand<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Seoul<br>BEGIN:STANDARD<br>TZNAME:KST<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Srednekolymsk<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Taipei<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Tashkent<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Tbilisi<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Tehran<br>BEGIN:STANDARD<br>TZNAME:+0330<br>TZOFFSETFROM:+0330<br>TZOFFSETTO:+0330<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Thimphu<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Tokyo<br>BEGIN:STANDARD<br>TZNAME:JST<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Tomsk<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Ulaanbaatar<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Ust-Nera<br>BEGIN:STANDARD<br>TZNAME:+10<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Vladivostok<br>BEGIN:STANDARD<br>TZNAME:+10<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Yakutsk<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Yekaterinburg<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Asia/Yerevan<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Azores<br>BEGIN:DAYLIGHT<br>TZNAME:+00<br>TZOFFSETFROM:-0100<br>TZOFFSETTO:+0000<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-01<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:-0100<br>DTSTART:19701025T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Bermuda<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Canary<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Cape_Verde<br>BEGIN:STANDARD<br>TZNAME:-01<br>TZOFFSETFROM:-0100<br>TZOFFSETTO:-0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Faroe<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Madeira<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/South_Georgia<br>BEGIN:STANDARD<br>TZNAME:-02<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Atlantic/Stanley<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Sydney<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1000<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:AEDT<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Adelaide<br>BEGIN:STANDARD<br>TZNAME:ACST<br>TZOFFSETFROM:+1030<br>TZOFFSETTO:+0930<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:ACDT<br>TZOFFSETFROM:+0930<br>TZOFFSETTO:+1030<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Brisbane<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Broken_Hill<br>BEGIN:STANDARD<br>TZNAME:ACST<br>TZOFFSETFROM:+1030<br>TZOFFSETTO:+0930<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:ACDT<br>TZOFFSETFROM:+0930<br>TZOFFSETTO:+1030<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Hobart<br>BEGIN:DAYLIGHT<br>TZNAME:AEDT<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1000<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Darwin<br>BEGIN:STANDARD<br>TZNAME:ACST<br>TZOFFSETFROM:+0930<br>TZOFFSETTO:+0930<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Eucla<br>BEGIN:STANDARD<br>TZNAME:+0845<br>TZOFFSETFROM:+0845<br>TZOFFSETTO:+0845<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Lord_Howe<br>BEGIN:STANDARD<br>TZNAME:+1030<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1030<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:+11<br>TZOFFSETFROM:+1030<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Lindeman<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Melbourne<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1000<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:AEDT<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Australia/Perth<br>BEGIN:STANDARD<br>TZNAME:AWST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:CET<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Easter<br>BEGIN:STANDARD<br>TZNAME:-06<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19700404T220000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SA<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:-05<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700905T220000<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=1SA<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:CST6CDT<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:EET<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Dublin<br>BEGIN:STANDARD<br>TZNAME:IST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:GMT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:EST<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:EST5EDT<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-1<br>BEGIN:STANDARD<br>TZNAME:+01<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-10<br>BEGIN:STANDARD<br>TZNAME:+10<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-11<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-12<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-13<br>BEGIN:STANDARD<br>TZNAME:+13<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-14<br>BEGIN:STANDARD<br>TZNAME:+14<br>TZOFFSETFROM:+1400<br>TZOFFSETTO:+1400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-2<br>BEGIN:STANDARD<br>TZNAME:+02<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-3<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-4<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-5<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-6<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-7<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-8<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT-9<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+1<br>BEGIN:STANDARD<br>TZNAME:-01<br>TZOFFSETFROM:-0100<br>TZOFFSETTO:-0100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+10<br>BEGIN:STANDARD<br>TZNAME:-10<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+11<br>BEGIN:STANDARD<br>TZNAME:-11<br>TZOFFSETFROM:-1100<br>TZOFFSETTO:-1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+12<br>BEGIN:STANDARD<br>TZNAME:-12<br>TZOFFSETFROM:-1200<br>TZOFFSETTO:-1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+2<br>BEGIN:STANDARD<br>TZNAME:-02<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+3<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+4<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+5<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+6<br>BEGIN:STANDARD<br>TZNAME:-06<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+7<br>BEGIN:STANDARD<br>TZNAME:-07<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+8<br>BEGIN:STANDARD<br>TZNAME:-08<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/GMT+9<br>BEGIN:STANDARD<br>TZNAME:-09<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Etc/UTC<br>BEGIN:STANDARD<br>TZNAME:UTC<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Brussels<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Andorra<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Astrakhan<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Athens<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/London<br>BEGIN:DAYLIGHT<br>TZNAME:BST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Belgrade<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Prague<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Bucharest<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Budapest<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Zurich<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Chisinau<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Gibraltar<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Helsinki<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Kaliningrad<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Kyiv<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Kirov<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Lisbon<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Madrid<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Malta<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Minsk<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Paris<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Moscow<br>BEGIN:STANDARD<br>TZNAME:MSK<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Riga<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Rome<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Samara<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Saratov<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Simferopol<br>BEGIN:STANDARD<br>TZNAME:MSK<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Sofia<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Tallinn<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Tirane<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Ulyanovsk<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Uzhgorod<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Vienna<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Vilnius<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Volgograd<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Warsaw<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Europe/Zaporozhye<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:HST<br>BEGIN:STANDARD<br>TZNAME:HST<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Indian/Chagos<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Indian/Maldives<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Indian/Mauritius<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Kwajalein<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:MET<br>BEGIN:DAYLIGHT<br>TZNAME:MEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:MST<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:MST7MDT<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Chatham<br>BEGIN:DAYLIGHT<br>TZNAME:+1345<br>TZOFFSETFROM:+1245<br>TZOFFSETTO:+1345<br>DTSTART:19700927T024500<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+1245<br>TZOFFSETFROM:+1345<br>TZOFFSETTO:+1245<br>DTSTART:19700405T034500<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Apia<br>BEGIN:STANDARD<br>TZNAME:+13<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Bougainville<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Efate<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Kanton<br>BEGIN:STANDARD<br>TZNAME:+13<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Fakaofo<br>BEGIN:STANDARD<br>TZNAME:+13<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Fiji<br>BEGIN:DAYLIGHT<br>TZNAME:+13<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1300<br>DTSTART:19701108T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1200<br>DTSTART:19700118T030000<br>RRULE:FREQ=YEARLY;BYMONTH=1;BYDAY=-2SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Tarawa<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Galapagos<br>BEGIN:STANDARD<br>TZNAME:-06<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Gambier<br>BEGIN:STANDARD<br>TZNAME:-09<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Guadalcanal<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Guam<br>BEGIN:STANDARD<br>TZNAME:ChST<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Honolulu<br>BEGIN:STANDARD<br>TZNAME:HST<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Kiritimati<br>BEGIN:STANDARD<br>TZNAME:+14<br>TZOFFSETFROM:+1400<br>TZOFFSETTO:+1400<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Kosrae<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Marquesas<br>BEGIN:STANDARD<br>TZNAME:-0930<br>TZOFFSETFROM:-0930<br>TZOFFSETTO:-0930<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Pago_Pago<br>BEGIN:STANDARD<br>TZNAME:SST<br>TZOFFSETFROM:-1100<br>TZOFFSETTO:-1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Nauru<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Niue<br>BEGIN:STANDARD<br>TZNAME:-11<br>TZOFFSETFROM:-1100<br>TZOFFSETTO:-1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Norfolk<br>BEGIN:DAYLIGHT<br>TZNAME:+12<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1200<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1100<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Noumea<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Palau<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Pitcairn<br>BEGIN:STANDARD<br>TZNAME:-08<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0800<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Rarotonga<br>BEGIN:STANDARD<br>TZNAME:-10<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Tahiti<br>BEGIN:STANDARD<br>TZNAME:-10<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:Pacific/Tongatapu<br>BEGIN:STANDARD<br>TZNAME:+13<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1300<br>DTSTART:19700101T000000<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:PST8PDT<br>BEGIN:DAYLIGHT<br>TZNAME:PDT<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0700<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0800<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
-  "<br>LAST-MODIFIED:20220831T191120Z<br>X-LIC-LOCATION:WET<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD"
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EAT<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:WAT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CAT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+01<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:CEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:SAST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:HDT<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-0900<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:HST<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-1000<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:AKDT<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0800<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AKST<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0900<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0300<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:-03<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19701004T000000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19700322T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=4SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0400<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-05<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0500<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:MDT<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0600<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0700<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:MST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:PDT<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0700<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0800<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:-02<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0200<br>DTSTART:19700328T220000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SA<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0300<br>DTSTART:19701024T230000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SA<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:AST<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:ADT<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0500<br>DTSTART:19701101T010000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0400<br>DTSTART:19700308T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:-02<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0200<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-03<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0300<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-02<br>TZOFFSETFROM:-0200<br>TZOFFSETTO:-0200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:CDT<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-04<br>TZOFFSETFROM:-0300<br>TZOFFSETTO:-0400<br>DTSTART:19700405T000000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:-03<br>TZOFFSETFROM:-0400<br>TZOFFSETTO:-0300<br>DTSTART:19700906T000000<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:+00<br>TZOFFSETFROM:-0100<br>TZOFFSETTO:+0000<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:-01<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:-0100<br>DTSTART:19701025T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:NST<br>TZOFFSETFROM:-0230<br>TZOFFSETTO:-0330<br>DTSTART:19701101T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:NDT<br>TZOFFSETFROM:-0330<br>TZOFFSETTO:-0230<br>DTSTART:19700308T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+07<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+10<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1000<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:AEDT<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+05<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:NZDT<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1300<br>DTSTART:19700927T020000<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:NZST<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1200<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+03<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:+02<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0200<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+00<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0000<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+06<br>TZOFFSETFROM:+0600<br>TZOFFSETTO:+0600<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701030T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700227T000000<br>RRULE:FREQ=YEARLY;BYMONTH=2;BYDAY=-1FR<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+04<br>TZOFFSETFROM:+0400<br>TZOFFSETTO:+0400<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T000000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+08<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:IST<br>TZOFFSETFROM:+0530<br>TZOFFSETTO:+0530<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+09<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:CST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+0530<br>TZOFFSETFROM:+0530<br>TZOFFSETTO:+0530<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701030T000000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700327T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1FR<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701023T010000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1FR<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T000000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:HKT<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:WIB<br>TZOFFSETFROM:+0700<br>TZOFFSETTO:+0700<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:WIT<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:IDT<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700327T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1FR<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:IST<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+0430<br>TZOFFSETFROM:+0430<br>TZOFFSETTO:+0430<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:PKT<br>TZOFFSETFROM:+0500<br>TZOFFSETTO:+0500<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+0545<br>TZOFFSETFROM:+0545<br>TZOFFSETTO:+0545<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:WITA<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:PST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T040000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T030000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:KST<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+0630<br>TZOFFSETFROM:+0630<br>TZOFFSETTO:+0630<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+0330<br>TZOFFSETFROM:+0330<br>TZOFFSETTO:+0330<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:JST<br>TZOFFSETFROM:+0900<br>TZOFFSETTO:+0900<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-01<br>TZOFFSETFROM:-0100<br>TZOFFSETTO:-0100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:ACST<br>TZOFFSETFROM:+1030<br>TZOFFSETTO:+0930<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:ACDT<br>TZOFFSETFROM:+0930<br>TZOFFSETTO:+1030<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:AEDT<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:AEST<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1000<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:ACST<br>TZOFFSETFROM:+0930<br>TZOFFSETTO:+0930<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+0845<br>TZOFFSETFROM:+0845<br>TZOFFSETTO:+0845<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+1030<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1030<br>DTSTART:19700405T020000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:+11<br>TZOFFSETFROM:+1030<br>TZOFFSETTO:+1100<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:AWST<br>TZOFFSETFROM:+0800<br>TZOFFSETTO:+0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-06<br>TZOFFSETFROM:-0500<br>TZOFFSETTO:-0600<br>DTSTART:19700404T220000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SA<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:-05<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0500<br>DTSTART:19700905T220000<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=1SA<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:IST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:GMT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+13<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1300<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+14<br>TZOFFSETFROM:+1400<br>TZOFFSETTO:+1400<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:+02<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-10<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-11<br>TZOFFSETFROM:-1100<br>TZOFFSETTO:-1100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-12<br>TZOFFSETFROM:-1200<br>TZOFFSETTO:-1200<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-06<br>TZOFFSETFROM:-0600<br>TZOFFSETTO:-0600<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-07<br>TZOFFSETFROM:-0700<br>TZOFFSETTO:-0700<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-08<br>TZOFFSETFROM:-0800<br>TZOFFSETTO:-0800<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-09<br>TZOFFSETFROM:-0900<br>TZOFFSETTO:-0900<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:UTC<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:BST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:GMT<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:EEST<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0300<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:EET<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0200<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:WET<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0000<br>DTSTART:19701025T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD<br>BEGIN:DAYLIGHT<br>TZNAME:WEST<br>TZOFFSETFROM:+0000<br>TZOFFSETTO:+0100<br>DTSTART:19700329T010000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:MSK<br>TZOFFSETFROM:+0300<br>TZOFFSETTO:+0300<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:HST<br>TZOFFSETFROM:-1000<br>TZOFFSETTO:-1000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:MEST<br>TZOFFSETFROM:+0100<br>TZOFFSETTO:+0200<br>DTSTART:19700329T020000<br>RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:MET<br>TZOFFSETFROM:+0200<br>TZOFFSETTO:+0100<br>DTSTART:19701025T030000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:+1345<br>TZOFFSETFROM:+1245<br>TZOFFSETTO:+1345<br>DTSTART:19700927T024500<br>RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=-1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+1245<br>TZOFFSETFROM:+1345<br>TZOFFSETTO:+1245<br>DTSTART:19700405T034500<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:+13<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1300<br>DTSTART:19701108T020000<br>RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=2SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+12<br>TZOFFSETFROM:+1300<br>TZOFFSETTO:+1200<br>DTSTART:19700118T030000<br>RRULE:FREQ=YEARLY;BYMONTH=1;BYDAY=-2SU<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:ChST<br>TZOFFSETFROM:+1000<br>TZOFFSETTO:+1000<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:-0930<br>TZOFFSETFROM:-0930<br>TZOFFSETTO:-0930<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:STANDARD<br>TZNAME:SST<br>TZOFFSETFROM:-1100<br>TZOFFSETTO:-1100<br>DTSTART:19700101T000000<br>END:STANDARD",
+  "<br>LAST-MODIFIED:20220918T174041Z<br>BEGIN:DAYLIGHT<br>TZNAME:+12<br>TZOFFSETFROM:+1100<br>TZOFFSETTO:+1200<br>DTSTART:19701004T020000<br>RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU<br>END:DAYLIGHT<br>BEGIN:STANDARD<br>TZNAME:+11<br>TZOFFSETFROM:+1200<br>TZOFFSETTO:+1100<br>DTSTART:19700405T030000<br>RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU<br>END:STANDARD"
 ];
