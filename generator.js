@@ -13,17 +13,17 @@
 const fs = require('fs');
 const glob = require('glob');
 
-const files = glob.sync('./zoneinfo/**/*.ics');
+const files = glob.sync('./api/**/*.ics');
 const tz = {};
 
 // pull data from files
 for (const zone of files) {
-  const name = zone.replace('./zoneinfo/', '').replace('.ics', '');
-  // cleaning up the entry by stripping out any last empty line, replacing linebreaks with <br>, removing the file extension and path information (from symlink entries)
-  tz[name] = fs.readFileSync(`./zoneinfo/${name}.ics`, 'utf-8').replace(/\r\n$/, '').replace(/\r\n/g, '<br>').replace(/.ics$/, '').replace(/^[(\.)*\/]*/g, '');
+  const name = zone.replace('./api/', '').replace('.ics', '');
+  // cleaning up the entry by stripping out general stuff, any empty line, replacing linebreaks with <br>, removing the file extension and path information (from symlink entries)
+  tz[name] = fs.readFileSync(`./api/${name}.ics`, 'utf-8').replace(/(END|BEGIN):VTIMEZONE/g, '').replace(/\r\n$/, '').replace(/\r\n/g, '<br>').replace(/.ics$/, '').replace(/^[(\.)*\/]*/g, '');
 }
 
-// clean up symlinks
+// clean up symlinks (we could also adjust the Makefile to generate ics files with the TZID-ALIAS-OF - however, since this is can conflict with calendars, we create symlinks first, and remove them here completely)
 for (const index in tz) {
   const content = tz[index];
   if (content in tz) {
@@ -31,22 +31,25 @@ for (const index in tz) {
   }
 }
 
-// build up secondary database and clean up main one
-const tznames = [];
-const tzFinalArr = [];
+// build up secondary database, create timezone name overview JSON, and clean up main one
+const overviewJson = [];
+const tzNamesSecDb = [];
 const tzFinal = {};
 for (const index in tz) {
-  const content = tz[index];
-  const cutPos = content.indexOf("<br>LAST-MODIFIED");
-  const dbPart = content.slice(cutPos);
-  if (!tznames.includes(dbPart)) {
-    tznames.push(dbPart);
+  overviewJson.push(index);
+  const contentParts = tz[index].split('<br>LAST-MODIFIED:');
+  if (!tzNamesSecDb.includes(contentParts[1])) {
+    tzNamesSecDb.push(contentParts[1]);
   }
-  const dbIndex = tznames.indexOf(dbPart);
+  const dbIndex = tzNamesSecDb.indexOf(contentParts[1]);
   const nameParts = index.split('/');
-  // TODO: the next part could be smarter, maybe bringing in some reduce function
   const newEntry = [];
-  newEntry.push(content.slice(0, cutPos).replace("TZID:/timezones-ical-library/", ''));
+  const location = contentParts[0].replace("<br>TZID:/timezones-ical-library/", '').split('<br>')[0];
+  if (location == index) {
+    newEntry.push('');
+  } else {
+    newEntry.push(location);
+  }
   newEntry.push(dbIndex);
   if (nameParts.length === 3) {
     if (!tzFinal[nameParts[0]]) tzFinal[nameParts[0]] = {};
@@ -61,8 +64,13 @@ for (const index in tz) {
 }
 
 // write output file (aka the local database)
-const tzlibDBFile = './src/zonesdb.js';
-const outputJSON = JSON.stringify(tzFinal, null, 2);
-const outputJSONDetails = JSON.stringify(tznames, null, 2);
-fs.writeFileSync(tzlibDBFile, 'const tzlibZonesDB = ' + outputJSON + ';\n');
-fs.writeFileSync(tzlibDBFile, '\nconst tzlibZonesDetailsDB = ' + outputJSONDetails + ';\n', {flag: 'a'});
+const tzLibDBFile = './src/zonesdb.js';
+const tzLibOutputJSON = JSON.stringify(tzFinal);
+const tzLibOutputJSONDetails = JSON.stringify(tzNamesSecDb);
+fs.writeFileSync(tzLibDBFile, 'const tzlibZonesDB = ' + tzLibOutputJSON + ';\n');
+fs.writeFileSync(tzLibDBFile, '\nconst tzlibZonesDetailsDB = ' + tzLibOutputJSONDetails + ';\n', {flag: 'a'});
+
+// write overview JSON file for API
+const tzlibAPIOverviewFile = './api/zones.json';
+const apiOutputJSON = JSON.stringify(overviewJson, null, 2);
+fs.writeFileSync(tzlibAPIOverviewFile, apiOutputJSON);
