@@ -158,6 +158,7 @@ static int	rule_sort_func			(const void	*arg1,
 static void	output_zone			(char		*directory,
 						 ZoneData	*zone,
 						 char		*zone_name,
+             const char		*alias_of,
 						 GHashTable	*rule_data);
 static gboolean	parse_zone_name			(char		*name,
 						 char	       **directory,
@@ -165,6 +166,7 @@ static gboolean	parse_zone_name			(char		*name,
 						 char	       **filename);
 static void	output_zone_to_files		(ZoneData	*zone,
 						 char		*zone_name,
+             const char		*alias_of,
 						 GHashTable	*rule_data,
 						 FILE		*fp,
 						 FILE		*changes_fp);
@@ -195,6 +197,7 @@ static gboolean times_match			(VzicTime	*time1,
 						 int		 walloff2);
 static void	output_zone_components		(FILE		*fp,
 						 char		*name,
+             const char		*alias_of,
 						 GArray		*changes);
 static void	set_previous_offsets		(GArray		*changes);
 static gboolean	check_for_recurrence		(FILE		*fp,
@@ -288,7 +291,7 @@ output_vtimezone_files		(char		*directory,
   /* Output each timezone. */
   for (i = 0; i < zone_data->len; i++) {
     zone = &g_array_index (zone_data, ZoneData, i);
-    output_zone (directory, zone, zone->zone_name, rule_data);
+    output_zone (directory, zone, zone->zone_name, NULL, rule_data);
 
     /* Look for any links from this zone. */
     links = g_hash_table_lookup (link_data, zone->zone_name);
@@ -296,11 +299,15 @@ output_vtimezone_files		(char		*directory,
     while (links) {
       link_to = links->data;
 
+#if IGNORE_TOP_LEVEL_LINK
       /* We ignore Links that don't have a '/' in them (things like 'EST5EDT').
        */
       if (strchr (link_to, '/')) {
-	output_zone (directory, zone, link_to, rule_data);
+#endif
+        output_zone (directory, zone, link_to, zone->zone_name, rule_data);
+#if IGNORE_TOP_LEVEL_LINK
       }
+#endif
 
       links = links->next;
     }
@@ -470,6 +477,7 @@ static void
 output_zone			(char		*directory,
 				 ZoneData	*zone,
 				 char		*zone_name,
+         const char		*alias_of,
 				 GHashTable	*rule_data)
 {
   FILE *fp, *changes_fp = NULL;
@@ -552,7 +560,7 @@ output_zone			(char		*directory,
     }
   }
 
-  output_zone_to_files (zone, zone_name, rule_data, fp, changes_fp);
+  output_zone_to_files (zone, zone_name, alias_of, rule_data, fp, changes_fp);
 
   if (ferror (fp)) {
     fprintf (stderr, "Error writing file: %s\n", filename);
@@ -640,6 +648,7 @@ parse_zone_name			(char		*name,
 static void
 output_zone_to_files		(ZoneData	*zone,
 				 char		*zone_name,
+         const char		*alias_of,
 				 GHashTable	*rule_data,
 				 FILE		*fp,
 				 FILE		*changes_fp)
@@ -751,7 +760,7 @@ output_zone_to_files		(ZoneData	*zone,
 
   set_previous_offsets (changes);
 
-  output_zone_components (fp, zone_name, changes);
+  output_zone_components (fp, zone_name, alias_of, changes);
 
   if (VzicDumpChanges)
     dump_changes (changes_fp, zone_name, changes);
@@ -1112,6 +1121,7 @@ times_match				(VzicTime	*time1,
 static void
 output_zone_components			(FILE		*fp,
 					 char		*name,
+           const char		*alias_of,
 					 GArray		*changes)
 {
   VzicTime *vzictime;
@@ -1121,7 +1131,11 @@ output_zone_components			(FILE		*fp,
   time_t now = time(0);
   struct tm *tm = gmtime(&now);
 
-  fprintf (fp, "TZID:%s%s\r\n", TZIDPrefixExpanded, name);
+  fprintf (fp, "BEGIN:VTIMEZONE\r\nTZID:%s%s\r\n", TZIDPrefixExpanded, name);
+
+  if (alias_of) {
+    fprintf(fp, "TZID-ALIAS-OF:%s%s\r\n", TZIDPrefixExpanded, alias_of);
+  }
 
   vzictime = &g_array_index (changes, VzicTime, changes->len - 1);
   if (vzictime->until) {
@@ -1137,11 +1151,6 @@ output_zone_components			(FILE		*fp,
     vzictime->until = NULL;
   }
 
-  /* Use current time as LAST-MODIFIED */
-  fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
-	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
-	   tm->tm_hour, tm->tm_min, tm->tm_sec);
-
   if (VzicUrlPrefix != NULL)
       fprintf (fp, "TZURL:%s/%s\r\n", VzicUrlPrefix, name);
 
@@ -1155,6 +1164,11 @@ output_zone_components			(FILE		*fp,
     if (!vzictime->is_infinite) fputs(";X-NO-BIG-BANG=TRUE", fp);
     fprintf(fp, ":%s\r\n", vzictime->tzname);
   }
+
+  /* Use current time as LAST-MODIFIED */
+  fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
+	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
+	   tm->tm_hour, tm->tm_min, tm->tm_sec);
 
   /* We try to find any recurring components first, or they may get output
      as lots of RDATES instead. */
@@ -1176,6 +1190,7 @@ output_zone_components			(FILE		*fp,
 #if 0
       printf ("Zone: %s using 2 RRULEs\n", CurrentZoneName);
 #endif
+      fprintf (fp, "END:VTIMEZONE\r\n");
       return;
     }
   }
@@ -1292,6 +1307,8 @@ output_zone_components			(FILE		*fp,
     if (!VzicPureOutput)
       break;
   }
+
+  fprintf (fp, "END:VTIMEZONE\r\n");
 
 }
 
@@ -1739,7 +1756,7 @@ calculate_actual_time		(VzicTime	*vzictime,
     }
 
     g_date_clear (&date, 1);
-    days_in_month = g_date_days_in_month (vzictime->month + 1, vzictime->year);
+    days_in_month = g_date_get_days_in_month (vzictime->month + 1, vzictime->year);
 
   /* Note that the day_code refers to the date before we convert it to
      a wall-clock date and time. So we find the day it was referring to,
@@ -1748,7 +1765,7 @@ calculate_actual_time		(VzicTime	*vzictime,
       /* Find out what day the last day of the month is. */
       g_date_set_dmy (&date, days_in_month, vzictime->month + 1,
 		      vzictime->year);
-      weekday = g_date_weekday (&date) % 7;
+      weekday = g_date_get_weekday (&date) % 7;
 
       /* Calculate how many days we have to go back to get to day_weekday. */
       offset = (weekday + 7 - vzictime->day_weekday) % 7;
@@ -1758,7 +1775,7 @@ calculate_actual_time		(VzicTime	*vzictime,
       /* Find out what day day_number actually is. */
       g_date_set_dmy (&date, vzictime->day_number, vzictime->month + 1,
 		      vzictime->year);
-      weekday = g_date_weekday (&date) % 7;
+      weekday = g_date_get_weekday (&date) % 7;
 
       if (vzictime->day_code == DAY_WEEKDAY_ON_OR_AFTER)
 	offset = (vzictime->day_weekday + 7 - weekday) % 7;
@@ -1777,7 +1794,7 @@ calculate_actual_time		(VzicTime	*vzictime,
 
     if (vzictime->day_number <= 0) {
       vzictime->month--;
-      days_in_month = g_date_days_in_month (vzictime->month + 1, vzictime->year);
+      days_in_month = g_date_get_days_in_month (vzictime->month + 1, vzictime->year);
       vzictime->day_number += days_in_month;
     }
   }
@@ -1923,12 +1940,12 @@ fix_time_overflow			(int		*year,
 	*month = 11;
 	*year = *year - 1;
       }
-      *day = g_date_days_in_month (*month + 1, *year);
+      *day = g_date_get_days_in_month (*month + 1, *year);
     }
   } else if (day_offset == 1) {
     *day = *day + 1;
 
-    if (*day > g_date_days_in_month (*month + 1, *year)) {
+    if (*day > g_date_get_days_in_month (*month + 1, *year)) {
       *month = *month + 1;
       if (*month == 12) {
 	*month = 0;

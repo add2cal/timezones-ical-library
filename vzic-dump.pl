@@ -43,7 +43,7 @@ if ($#ARGV != 0) {
 my $OLSON_DIR = $ARGV[0];
 
 # We place output in subdirectories of the current directory.
-my $OUTPUT_DIR = "zoneinfo";
+my $OUTPUT_DIR = "api";
 
 if (! -d "$OUTPUT_DIR") {
     mkdir ("$OUTPUT_DIR", 0777)

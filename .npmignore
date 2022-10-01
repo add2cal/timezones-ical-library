@@ -16,13 +16,18 @@ set-release.js
 test/
 package-lock.json
 sitemap.xml
+*.min.css
+*.min.js
+*.map
 
 # plus all the maker stuff, which is not already ignored for Git
 
 tzdata/
-zoneinfo/
+api/*.ics
+api/*/
 Makefile
 *.c
+*.tab
 *.h
 *.sh
 *.pl

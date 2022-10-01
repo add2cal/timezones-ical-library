@@ -1,12 +1,17 @@
 const fs = require('fs');
-const tzDbPlaceholder = /\/\/ PLACE ZONES DB HERE/g;
+const tzDbPlaceholder = /let tzlibZonesDB,(\s)*tzlibZonesDetailsDB = {};/gm;
 const exportCodePlaceholder = /\/\/ PLACE EXPORT HERE/g;
+const zoneNamesPlaceholder = /\['%%PLACE ZONE NAMES HERE%%'\]/g;
 const tzDbContent = fs.readFileSync('./src/zonesdb.js', 'utf-8');
+const tzNamesList = fs.readFileSync('./api/zones.json', 'utf-8');
 
 function prepareFinalFile(content, exportPhrase = '') {
-  let newContent = content.replace(tzDbPlaceholder, tzDbContent);
+  let newContent = content.replace(tzDbPlaceholder, tzDbContent).replace(zoneNamesPlaceholder, tzNamesList);
   if (exportPhrase != '') {
-    newContent = newContent.replace(exportCodePlaceholder, `${exportPhrase} { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones };`);
+    newContent = newContent.replace(
+      exportCodePlaceholder,
+      `${exportPhrase} { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones };`
+    );
   } else {
     newContent = newContent.replace(exportCodePlaceholder, '');
   }
@@ -99,6 +104,15 @@ module.exports = function (grunt) {
           done();
         },
       },
+      '.eslintrc.json commonJS': {
+        'npm_dist/cjs/.eslintrc.json': function (fs, fd, done) {
+          fs.writeSync(
+            fd,
+            '{ "extends": "../../.eslintrc.json", "env": { "node": true }, "plugins": ["commonjs"] }'
+          );
+          done();
+        },
+      },
     },
     // minifies the main js file
     uglify: {
@@ -124,7 +138,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-file-creator');
   grunt.loadNpmTasks('grunt-version');
 
-  // Register task(s).
+  // Register task(s)
   grunt.registerTask('default', ['clean', 'cssmin', 'copy:plain_dist', 'uglify']);
   grunt.registerTask('npm', ['clean', 'cssmin', 'copy', 'file-creator', 'uglify']);
 };

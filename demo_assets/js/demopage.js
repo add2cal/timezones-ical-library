@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  * Add to Calendar TimeZones iCal Library - Demo Page Style
@@ -6,7 +7,7 @@
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
- * 
+ *
  */
 
 const lightModeButtonHeader = document.getElementById('light-mode-switch-header');
@@ -35,8 +36,6 @@ function toggle_atcb_light_mode() {
   document.cookie = 'atcb-light-mode=' + newCval + ';expires=' + d.toUTCString();
 }
 
-
-
 // TYPEAHEAD AUTO COMPLETE DROPDOWN
 // via https://github.com/trevoreyre/autocomplete by Trevor Eyre (https://github.com/trevoreyre)
 const tzNames = tzlib_get_timezones();
@@ -45,20 +44,20 @@ const today = new Date();
 const currentIsoDate = today.toISOString().replace(/:\d{2}.\d{3}Z$/g, '');
 const currentDate = currentIsoDate.split('T');
 const input = document.getElementById('tz-input');
-const noResults = document.getElementById('tz-no-results');
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const tzInput = new Autocomplete('#autocomplete', {
-
-  search: input => {
+  search: (input) => {
     inputValue = input;
-    if (input.length < 1) { return [] }
-    return tzNames.filter(tzName => {
-      return tzName.toLowerCase()
-        .includes(input.toLowerCase())
-    })
+    if (input.length < 1) {
+      return [];
+    }
+    return tzNames.filter((tzName) => {
+      return tzName.toLowerCase().includes(input.toLowerCase());
+    });
   },
 
-  onUpdate: (results, selectedIndex) => {
-    const showNoResults = inputValue && results.length === 0 ? true : false;    
+  onUpdate: (results) => {
+    const showNoResults = inputValue && results.length === 0 ? true : false;
     if (showNoResults) {
       autocomplete.classList.add('no-results');
       input.setAttribute('aria-describedby', 'no-results');
@@ -67,8 +66,8 @@ const tzInput = new Autocomplete('#autocomplete', {
       input.removeAttribute('aria-describedby');
     }
   },
-  
-  onSubmit: result => {
+
+  onSubmit: (result) => {
     let tzBlock = tzlib_get_ical_block(`${result}`)[0];
     let tzOffsetBlock = tzlib_get_offset(`${result}`, currentDate[0], currentDate[1]);
     if (tzBlock == '') {
@@ -76,20 +75,19 @@ const tzInput = new Autocomplete('#autocomplete', {
       tzOffsetBlock = tzBlock;
     }
     document.getElementById('tz-output').textContent = tzBlock;
-    document.getElementById('tz-offset-output').textContent = "Current Offset: " + tzOffsetBlock;
+    document.getElementById('tz-offset-output').textContent = 'Current Offset: ' + tzOffsetBlock;
     document.getElementById('tz-input').blur();
     document.getElementById('tz-output-wrapper').style.display = 'block';
   },
-  
+
   autoSelect: true,
 
-  debounceTime: 100
-
+  debounceTime: 100,
 });
 
 input.addEventListener('focus', () => {
-  input.classList.add('focused')
-})
+  input.classList.add('focused');
+});
 input.addEventListener('blur', () => {
-  input.classList.remove('focused')
-})
+  input.classList.remove('focused');
+});
