@@ -388,10 +388,6 @@ a.github:hover svg {
   background: var(--light-mode-switch);
 }
 
-#light-mode-switch-header.light-mode-switch div {
-  background: var(--light-mode-switch-header);
-}
-
 .light-mode-switch div::before {
   content: "";
   position: absolute;
@@ -421,6 +417,10 @@ a.github:hover svg {
 
 body.atcb-dark .light-mode-switch div {
   transform: scale(0.5);
+}
+
+#light-mode-switch-header.light-mode-switch div {
+  background: var(--light-mode-switch-header);
 }
 
 body.atcb-dark .light-mode-switch div::before {
@@ -470,7 +470,6 @@ body.atcb-dark .light-mode-switch div::after {
 .example {
   box-shadow: rgba(0 0 0 / 10%) 2px 5px 18px -1px, rgba(0 0 0 / 20%) 2px 2px 10px -3px;
   box-sizing: border-box;
-  text-align: center;
   width: 100%;
   text-align: center;
   margin: 50px 0;
@@ -500,11 +499,6 @@ body.atcb-dark .light-mode-switch div::after {
   margin: 50px auto 0;
   width: 100%;
   max-width: 550px;
-}
-
-#tz-output-wrapper pre+pre {
-  margin-top: 20px;
-  border-top: 1px solid var(--example-border);
 }
 
 @media (max-width: 991px) {
@@ -570,6 +564,11 @@ pre {
   background-color: var(--example-background);
 }
 
+#tz-output-wrapper pre+pre {
+  margin-top: 20px;
+  border-top: 1px solid var(--example-border);
+}
+
 /******************************
  * autoComplete
  * via https://github.com/trevoreyre/autocomplete by Trevor Eyre (https://github.com/trevoreyre)
@@ -622,7 +621,7 @@ pre {
 .autocomplete[data-loading="true"]::after {
   content: "";
   border: 3px solid var(--primary-color);
-  border-right: 3px solid rgba(0, 0, 0, 0.48);
+  border-right: 3px solid rgb(0 0 0 / 48%);
   border-radius: 100%;
   width: 20px;
   height: 20px;
@@ -644,19 +643,20 @@ pre {
   background: #fff;
   color: #333;
   list-style: none;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 2px rgb(0 0 0 / 16%);
 }
 
-[data-position="below"] .autocomplete-result-list {
+[data-position="below"] .autocomplete-result-list,
+.no-results .autocomplete-result-list {
   margin-top: -2px;
-  border-top: 0px;
+  border-top: 0;
   border-radius: 0 0 8px 8px;
   padding-bottom: 8px;
 }
 
-[data-position="above"] .autocomplete-result-list {
+[data-position="above"]:not(.no-results) .autocomplete-result-list {
   margin-bottom: -2px;
-  border-bottom: 0px;
+  border-bottom: 0;
   border-radius: 8px 8px 0 0;
   padding-top: 8px;
 }
@@ -704,6 +704,7 @@ pre {
   from {
     transform: translateY(-50%) rotate(0deg);
   }
+
   to {
     transform: translateY(-50%) rotate(359deg);
   }

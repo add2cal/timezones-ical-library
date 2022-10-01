@@ -55,7 +55,7 @@
     <script async defer data-website-id="f221953d-158e-46c9-88d1-3b05df00997a" src="./demo_assets/js/a.min.js" data-host-url="https://a.add-to-calendar-button.com" data-domains="tz.add-to-calendar-technology.com"></script>
 
     <!-- load some basic css just for this demo page here -->
-    <link rel="stylesheet" href="./demo_assets/css/demopage.min.css?v=1.2.1">
+    <link rel="stylesheet" href="./demo_assets/css/demopage.min.css?v=1.3.0">
 
   </head>
   <body>
@@ -141,13 +141,9 @@
 
       <hr>
 
-      <h3>How to install</h3>
+      <h3>📦 How to install</h3>
       <p>
-        Simply include the script via CDN into your application:
-      </p>
-      <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/timezones-ical-library"&gt;&lt;/script&gt;</code></pre>
-      <p>
-        <strong>OR</strong> install the package via npm:
+        Simply install the package via npm:
       </p>
       <pre><code>npm install timezones-ical-library</code></pre>
       <p>
@@ -161,7 +157,7 @@
 
       <hr>
 
-      <h3>How to use</h3>
+      <h3>⚙️ How to use</h3>
       <h4>Get time zones</h4>
       <p>
         Use `tzlib_get_timezones()` to retrieve a list of all available time zone strings. You can pass `true` to retrieve a JSON formatted string instead of an array.
@@ -179,7 +175,7 @@ PRODID:-// github.com/add2cal/add-to-calendar-button //EN
 CALSCALE:GREGORIAN
 
 <strong>BEGIN:VTIMEZONE
-TZID:/timezones-ical-library/America/New_York
+TZID:America/New_York
 LAST-MODIFIED:20220824T133813Z
 X-LIC-LOCATION:America/New_York
 BEGIN:DAYLIGHT
@@ -201,8 +197,8 @@ END:VTIMEZONE</strong>
 BEGIN:VEVENT
 UID:2022-08-30T19:29:38.618Z@add-to-calendar-button
 DTSTAMP:20230214T091500Z
-DTSTART<strong>;TZID=/timezones-ical-library/America/New_York</strong>:20230214T091500
-DTEND<strong>;TZID=/timezones-ical-library/America/New_York</strong>:20230218T223000
+DTSTART<strong>;TZID=America/New_York</strong>:20230214T091500
+DTEND<strong>;TZID=America/New_York</strong>:20230218T223000
 SUMMARY:A sample event
 DESCRIPTION:Just some descriptive text...
 LOCATION:World Wide Web
@@ -215,6 +211,30 @@ END:VCALENDAR</code></pre>
       <p>
         Use `tzlib_get_offset(tzName, isoDate, isoTime)` to get specific offset (relative to UTC), based on a provided date and time.<br>
         For example, you can provide *tzName* `'Europe/Berlin'`, *isoDate* `'2023-05-23'`, and *isoTime* `'15:45'` in order to retrieve the offset, which applies for this time zone at the 23rd of May in 2023 at exactly 15:45.
+      </p>
+
+      <hr>
+
+      <h3>⚙️ Use it via API</h3>
+      <p>
+        Alternatively to the installation, you can make use of the public API.
+      </p>
+      <h4>Get time zones via API</h4>
+      <p>
+        Get them directly via <a target="_blank" rel="noopener" href="https://tz.add-to-calendar-technology.com/api/zones.json">https://tz.add-to-calendar-technology.com/api/zones.json</a>.
+      </p>
+      <h4>Get the iCal time zone block via API</h4>
+      <p>
+        Once you have a valid zone name ready, you can get the ics part directly via the following URL scheme:
+      </p>
+      <pre><code>https://tz.add-to-calendar-technology.com/api/%zoneName%.ics</code></pre>
+      <p>
+        With %zoneName% being your time zone.<br>
+        So, for New York, this would be https://tz.add-to-calendar-technology.com/api/<strong>America/New_York</strong>.ics.<br>
+        <strong>This is case sensitive!</strong>
+      </p>
+      <p>
+        (Mind that this does not deliver a fully valid ics file, since it only contains the VTIMEZONE part. You will need to combine this with your other event information.)
       </p>
 
       <hr>
@@ -243,15 +263,15 @@ END:VCALENDAR</code></pre>
           This page is hosted via "GitHub Pages". It includes some very basic analytics, that still preserves your anonymity and does not use any cookies. However, mind that the GitHub privacy policy applies additionally (<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/site-policy/github-privacy-statement">click here for details</a>).
         </p>
       </div>
-      <div id="tiny-version">v1.2.1</div>
+      <div id="tiny-version">v1.3.0</div>
 
     </div>
 
 
     <!-- js stuff -->
-    <script type="application/javascript" src="./dist/tzlib.min.js?v=1.2.1"></script>
+    <script type="application/javascript" src="./dist/tzlib.min.js?v=1.3.0"></script>
     <script type="application/javascript" src="./demo_assets/js/autocomplete.min.js"></script>
-    <script type="application/javascript" src="./demo_assets/js/demopage.min.js?v=1.2.1"></script>
+    <script type="application/javascript" src="./demo_assets/js/demopage.min.js?v=1.3.0"></script>
 
   </body>
 </html>

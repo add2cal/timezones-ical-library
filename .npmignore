@@ -23,7 +23,8 @@ sitemap.xml
 # plus all the maker stuff, which is not already ignored for Git
 
 tzdata/
-api/
+api/*.ics
+api/*/
 Makefile
 *.c
 *.tab
