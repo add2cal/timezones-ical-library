@@ -7,6 +7,8 @@
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
+ * Using the awesome autocomplete script by Trevor Eyre (licensed MIT)
+ * DO NOT REMOVE THE COPYRIGHT NOTICE ABOVE!
  *
  */
 
