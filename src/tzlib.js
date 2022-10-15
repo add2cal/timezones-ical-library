@@ -1,14 +1,18 @@
-/**
+/*!
+ *  @preserve
+ *
  * ++++++++++++++++++++++++++++++++++++++
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
- */
-const tzlibVersion = '1.3.2';
-/* Creator: Jens Kuerschner (https://jenskuerschner.de)
+ *
+ * Version: 1.4.0
+ * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
  *
  */
+
+const tzlibVersion = '1.4.0';
 
 // DEFINING THE DB DATA - WILL GET RE-WRITTEN WITH THE ACTUAL DATA ON BUILD
 let tzlibZonesDB,
@@ -19,7 +23,6 @@ function tzlib_get_content(tzName) {
   // get timezone parts
   const nameParts = tzName.split('/');
   // validate timezone
-  // TODO: Make this a little bit smarter (depending on the future db structure)
   if (
     (nameParts.length === 3 &&
       (!tzlibZonesDB[`${nameParts[0]}`] ||
@@ -36,16 +39,35 @@ function tzlib_get_content(tzName) {
   if (nameParts.length === 3) {
     return [
       tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][0],
-      tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][1]],
+      tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][1]]),
     ];
   }
   if (nameParts.length === 2) {
     return [
       tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][0],
-      tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][1]],
+      tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][1]]),
     ];
   }
-  return [tzlibZonesDB[`${nameParts[0]}`][0], tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][1]]];
+  return [tzlibZonesDB[`${nameParts[0]}`][0], tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][1]])];
+}
+
+function tzlib_enrich_data(string) {
+  const shortenerMap = {
+    "<br>":"<n>",
+    "TZNAME:":"<tz>",
+    "TZOFFSETFROM:":"<of>",
+    "TZOFFSETTO:":"<ot>",
+    "DTSTART:":"<s>",
+    "RRULE:":"<r>",
+    "BEGIN:DAYLIGHT":"<bd>",
+    "END:DAYLIGHT":"<ed>",
+    "BEGIN:STANDARD":"<bs>",
+    "END:STANDARD":"<es>"
+  }
+  for (const [key, value] of Object.entries(shortenerMap)) {
+    string = string.replaceAll(value, key);
+  }
+  return string;
 }
 
 // LOADING THE RIGHT CODE BLOCK
@@ -191,15 +213,36 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
 }
 
 // PROVIDE ALL TIMEZONES
+let tzlibZoneNames = [];
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function tzlib_get_timezones(jsonType = false) {
-  const tzlibZoneNames = ['%%PLACE ZONE NAMES HERE%%'];
+  // generate the time zone names array, if not done yet
+  if (tzlibZoneNames.length == 0) {
+    tzlibZoneNames = (function () {
+      let namesArr = [];
+      for (const [key, value] of Object.entries(tzlibZonesDB)) {
+        if (typeof value === 'object' && !Array.isArray(value)) {
+          for (const [key2, value2] of Object.entries(value)) {
+            if (typeof value2 === 'object' && !Array.isArray(value2)) {
+              for (const [key3] of Object.entries(value2)) {
+                namesArr.push(key + '/' + key2 + '/' + key3);
+              }    
+            } else {
+              namesArr.push(key + '/' + key2);
+            }
+          } 
+        } else {
+          namesArr.push(key);
+        }
+      }
+      return namesArr;
+    })();
+  }
+  // and output the result
   if (jsonType) {
     return JSON.stringify(tzlibZoneNames);
   }
   return tzlibZoneNames;
 }
-
-console.log('Add to Calendar TimeZones iCal Library loaded (version ' + tzlibVersion + ')');
 
 // PLACE EXPORT HERE

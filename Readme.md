@@ -26,7 +26,7 @@ Run ...
 sudo sh update-tzdata.sh tzVersionNumber
 ```
 
-... with _tzVersionNumber_ being the version of the IANA time zone database you want to use (e.g. sudo sh update-tzdata.sh 2022d).
+... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. sudo sh update-tzdata.sh 2022e).
 
 <br />
 
@@ -165,6 +165,7 @@ Licensed under [Apache-2.0](LICENSE).
 
 ## ⚡ Changelog (without minor changes and fixes)
 
+- v1.4 : further minification via data mapping
 - v1.3 : bundle size optimization and API
 - v1.2 : providing tzblock as array with separate tzid
 - v1.1 : get-offset function

@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# provide tzVersion (like 2022d) via argument: sudo sh update-tzdata.sh 2022d
-if [ $1 ]
+# check for the latest time zone data package at https://www.iana.org/time-zones
+# provide tzVersion (like 2022e) via argument: sudo sh update-tzdata.sh 2022e
+if [ "$1" ]
 then
   # prepare system
   sudo apt-get install -y --no-install-recommends make gcc pkg-config libglib2.0-dev
@@ -25,3 +26,5 @@ then
 else
   echo "no version given"
 fi
+
+# mind to run `npm run build` afterwards to not only update the database, but the whole tool!

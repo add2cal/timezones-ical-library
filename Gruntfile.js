@@ -1,12 +1,11 @@
 const fs = require('fs');
 const tzDbPlaceholder = /let tzlibZonesDB,(\s)*tzlibZonesDetailsDB = {};/gm;
 const exportCodePlaceholder = /\/\/ PLACE EXPORT HERE/g;
-const zoneNamesPlaceholder = /\['%%PLACE ZONE NAMES HERE%%'\]/g;
 const tzDbContent = fs.readFileSync('./src/zonesdb.js', 'utf-8');
-const tzNamesList = fs.readFileSync('./api/zones.json', 'utf-8');
 
 function prepareFinalFile(content, exportPhrase = '') {
-  let newContent = content.replace(tzDbPlaceholder, tzDbContent).replace(zoneNamesPlaceholder, tzNamesList);
+  let newContent = content.replace(tzDbPlaceholder, tzDbContent);
+  // update export statement
   if (exportPhrase != '') {
     newContent = newContent.replace(
       exportCodePlaceholder,
@@ -15,6 +14,10 @@ function prepareFinalFile(content, exportPhrase = '') {
   } else {
     newContent = newContent.replace(exportCodePlaceholder, '');
   }
+  // remove regular comments
+  newContent = newContent.replace(/(^|(?<=;\s))\s*\/\/(?!\seslint).*$/gm, '');
+  // remove empty lines
+  newContent = newContent.replace(/^\s*$(?:\r\n?|\n)/gm, '');
   return newContent;
 }
 
@@ -32,17 +35,11 @@ module.exports = function (grunt) {
         },
         src: ['index.html'],
       },
-      generatorJS: {
+      js: {
         options: {
-          prefix: 'Version:.',
+          prefix: 'Version(.=..|:.)',
         },
-        src: ['generator.js'],
-      },
-      mainJS: {
-        options: {
-          prefix: 'Version.=..',
-        },
-        src: ['src/tzlib.js'],
+        src: ['generator.js', 'src/tzlib.js'],
       },
     },
     // cleans old built files
@@ -120,6 +117,9 @@ module.exports = function (grunt) {
         compress: true,
         mangle: true,
         sourceMap: true,
+        output: {
+          comments: 'some',
+        },
       },
       newBuild: {
         files: {
