@@ -26,7 +26,7 @@ Run ...
 sudo sh update-tzdata.sh tzVersionNumber
 ```
 
-... with _tzVersionNumber_ being the version of the IANA time zone database you want to use (e.g. sudo sh update-tzdata.sh 2022d).
+... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. sudo sh update-tzdata.sh 2022e).
 
 <br />
 

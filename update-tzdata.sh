@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# provide tzVersion (like 2022d) via argument: sudo sh update-tzdata.sh 2022d
+# check for the latest time zone data package at https://www.iana.org/time-zones
+# provide tzVersion (like 2022e) via argument: sudo sh update-tzdata.sh 2022e
 if [ "$1" ]
 then
   # prepare system
@@ -25,3 +26,5 @@ then
 else
   echo "no version given"
 fi
+
+# mind to run `npm run build` afterwards to not only update the database, but the whole tool!
