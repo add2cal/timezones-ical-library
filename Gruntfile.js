@@ -5,10 +5,6 @@ const tzDbContent = fs.readFileSync('./src/zonesdb.js', 'utf-8');
 
 function prepareFinalFile(content, exportPhrase = '') {
   let newContent = content.replace(tzDbPlaceholder, tzDbContent);
-  // remove regular comments
-  newContent = newContent.replace(/(^|(?<=;\s))\s*\/\/(?!\seslint).*$/gm, '');
-  // remove empty lines
-  newContent = newContent.replace(/^\s*$(?:\r\n?|\n)/gm, '');
   // update export statement
   if (exportPhrase != '') {
     newContent = newContent.replace(
@@ -18,6 +14,10 @@ function prepareFinalFile(content, exportPhrase = '') {
   } else {
     newContent = newContent.replace(exportCodePlaceholder, '');
   }
+  // remove regular comments
+  newContent = newContent.replace(/(^|(?<=;\s))\s*\/\/(?!\seslint).*$/gm, '');
+  // remove empty lines
+  newContent = newContent.replace(/^\s*$(?:\r\n?|\n)/gm, '');
   return newContent;
 }
 

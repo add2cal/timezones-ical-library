@@ -209,4 +209,3 @@ function tzlib_get_timezones(jsonType = false) {
   }
   return tzlibZoneNames;
 }
-console.log('Add to Calendar TimeZones iCal Library loaded (version ' + tzlibVersion + ')');
