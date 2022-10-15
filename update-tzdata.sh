@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # provide tzVersion (like 2022d) via argument: sudo sh update-tzdata.sh 2022d
-if [ $1 ]
+if [ "$1" ]
 then
   # prepare system
   sudo apt-get install -y --no-install-recommends make gcc pkg-config libglib2.0-dev
