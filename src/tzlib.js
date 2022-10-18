@@ -5,14 +5,14 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  *
- * Version: 1.4.1
+ * Version: 1.4.2
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
  *
  */
 
-const tzlibVersion = '1.4.1';
+const tzlibVersion = '1.4.2';
 
 // DEFINING THE DB DATA - WILL GET RE-WRITTEN WITH THE ACTUAL DATA ON BUILD
 let tzlibZonesDB,
