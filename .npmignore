@@ -16,6 +16,11 @@ set-release.js
 test/
 package-lock.json
 sitemap.xml
+.eslintrc.json
+.prettierignore
+.prettierrc.json
+.stylelintrc.json
+.gitattributes
 *.min.css
 *.min.js
 *.map
