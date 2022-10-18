@@ -13,10 +13,8 @@ manifest.json
 CNAME
 Gruntfile.js
 set-release.js
-test/
 package-lock.json
 sitemap.xml
-.eslintrc.json
 .prettierignore
 .prettierrc.json
 .stylelintrc.json

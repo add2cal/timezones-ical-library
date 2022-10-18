@@ -1,5 +1,10 @@
 ![Add to Calendar TimeZone iCal Library](https://github.com/add2cal/timezones-ical-library/blob/main/readme-header.png?raw=true)
 
+[![Codacy Grade](https://img.shields.io/codacy/grade/aa298c980fa4459a9f7a386c8f8dc35f?style=for-the-badge)](https://app.codacy.com/gh/add2cal/timezones-ical-library/dashboard)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/add2cal/timezones-ical-library/npm%20publish?style=for-the-badge)](https://github.com/add2cal/timezones-ical-library/actions/workflows/npm-publish.yml)
+[![npm Installations](https://img.shields.io/npm/dt/timezones-ical-library?label=npm%20Installations&style=for-the-badge)](https://www.npmjs.com/package/timezones-ical-library)
+[![GitHub license](https://img.shields.io/github/license/add2cal/timezones-ical-library?style=for-the-badge)](https://github.com/add2cal/timezones-ical-library/blob/main/LICENSE)
+
 <br />
 
 # Add to Calendar TimeZones iCal Library
