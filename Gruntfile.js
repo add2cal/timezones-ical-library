@@ -45,7 +45,6 @@ module.exports = function (grunt) {
     // cleans old built files
     clean: {
       oldBuildFiles: [
-        'npm_dist/',
         'dist/',
         'demo_assets/css/*.min.css',
         'demo_assets/css/*.min.css.map',
@@ -79,30 +78,30 @@ module.exports = function (grunt) {
       },
       mjs_dist: {
         src: 'src/tzlib.js',
-        dest: 'npm_dist/mjs/index.js',
+        dest: 'dist/mjs/index.js',
         options: { process: (content) => prepareFinalFile(content, 'export') },
       },
       cjs_dist: {
         src: 'src/tzlib.js',
-        dest: 'npm_dist/cjs/index.js',
+        dest: 'dist/cjs/index.js',
         options: { process: (content) => prepareFinalFile(content, 'module.exports =') },
       },
     },
     'file-creator': {
       'package.json ES Module': {
-        'npm_dist/mjs/package.json': function (fs, fd, done) {
+        'dist/mjs/package.json': function (fs, fd, done) {
           fs.writeSync(fd, '{ "type": "module" }');
           done();
         },
       },
       'package.json commonJS': {
-        'npm_dist/cjs/package.json': function (fs, fd, done) {
+        'dist/cjs/package.json': function (fs, fd, done) {
           fs.writeSync(fd, '{ "type": "commonjs" }');
           done();
         },
       },
       '.eslintrc.json commonJS': {
-        'npm_dist/cjs/.eslintrc.json': function (fs, fd, done) {
+        'dist/cjs/.eslintrc.json': function (fs, fd, done) {
           fs.writeSync(
             fd,
             '{ "extends": "../../.eslintrc.json", "env": { "node": true }, "plugins": ["commonjs"] }'
@@ -116,14 +115,14 @@ module.exports = function (grunt) {
       options: {
         compress: true,
         mangle: true,
-        sourceMap: true,
+        sourceMap: false,
         output: {
           comments: 'some',
         },
       },
       newBuild: {
         files: {
-          'dist/tzlib.min.js': ['dist/tzlib.js'],
+          'dist/tzlib.js': ['dist/tzlib.js'],
           'demo_assets/js/demopage.min.js': ['demo_assets/js/demopage.js'],
         },
       },
@@ -139,6 +138,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-version');
 
   // Register task(s)
-  grunt.registerTask('default', ['clean', 'cssmin', 'copy:plain_dist', 'uglify']);
-  grunt.registerTask('npm', ['clean', 'cssmin', 'copy', 'file-creator', 'uglify']);
+  grunt.registerTask('default', ['clean', 'cssmin', 'copy', 'file-creator', 'uglify']);
 };

@@ -3,7 +3,7 @@
 const execSync = require('child_process').execSync;
 
 try {
-  execSync('npm run build-npm', { stdio: [0, 1, 2] });
+  execSync('npm run build', { stdio: [0, 1, 2] });
 
   try {
     execSync('node test/load-module.mjs', { stdio: [0, 1, 2] });
@@ -22,7 +22,7 @@ try {
   }
 
   const fs = require('fs');
-  const dirToDrop = 'npm_dist';
+  const dirToDrop = 'dist';
   fs.rm(dirToDrop, { recursive: true }, (error) => {
     if (error) {
       throw error;

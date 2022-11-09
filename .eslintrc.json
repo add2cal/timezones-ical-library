@@ -32,7 +32,6 @@
     "zonesdb.js",
     "generator.js",
     "set-release.js",
-    "npm_dist/",
     "dist/"
   ],
   "rules": {}
