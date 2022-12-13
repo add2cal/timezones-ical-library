@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  *
- * Version: 1.5.0
+ * Version: 1.5.1
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -43,17 +43,17 @@ const overviewJson = [];
 const tzNamesSecDb = [];
 const tzFinal = {};
 const shortenerMap = {
-  "<br>":"<n>",
-  "TZNAME:":"<tz>",
-  "TZOFFSETFROM:":"<of>",
-  "TZOFFSETTO:":"<ot>",
-  "DTSTART:":"<s>",
-  "RRULE:":"<r>",
-  "BEGIN:DAYLIGHT":"<bd>",
-  "END:DAYLIGHT":"<ed>",
-  "BEGIN:STANDARD":"<bs>",
-  "END:STANDARD":"<es>"
-}
+  '<br>': '<n>',
+  'TZNAME:': '<tz>',
+  'TZOFFSETFROM:': '<of>',
+  'TZOFFSETTO:': '<ot>',
+  'DTSTART:': '<s>',
+  'RRULE:': '<r>',
+  'BEGIN:DAYLIGHT': '<bd>',
+  'END:DAYLIGHT': '<ed>',
+  'BEGIN:STANDARD': '<bs>',
+  'END:STANDARD': '<es>',
+};
 for (const index in tz) {
   overviewJson.push(index);
   const contentParts = tz[`${index}`].split('<br>LAST-MODIFIED:');

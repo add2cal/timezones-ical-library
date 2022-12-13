@@ -26,13 +26,6 @@
     ]
   },
   "plugins": ["@typescript-eslint"],
-  "ignorePatterns": [
-    "*.min.*",
-    "Gruntfile.js",
-    "zonesdb.js",
-    "generator.js",
-    "set-release.js",
-    "dist/"
-  ],
+  "ignorePatterns": ["*.min.*", "Gruntfile.js", "zonesdb.js", "generator.js", "set-release.js", "dist/"],
   "rules": {}
 }
