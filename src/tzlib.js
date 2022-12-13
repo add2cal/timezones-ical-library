@@ -12,6 +12,7 @@
  *
  */
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const tzlibVersion = '1.5.1';
 
 // DEFINING THE DB DATA - WILL GET RE-WRITTEN WITH THE ACTUAL DATA ON BUILD
@@ -39,7 +40,9 @@ function tzlib_get_content(tzName) {
   if (nameParts.length === 3) {
     return [
       tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][0],
-      tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][1]]),
+      tzlib_enrich_data(
+        tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][1]]
+      ),
     ];
   }
   if (nameParts.length === 2) {
@@ -48,22 +51,25 @@ function tzlib_get_content(tzName) {
       tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][1]]),
     ];
   }
-  return [tzlibZonesDB[`${nameParts[0]}`][0], tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][1]])];
+  return [
+    tzlibZonesDB[`${nameParts[0]}`][0],
+    tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][1]]),
+  ];
 }
 
 function tzlib_enrich_data(string) {
   const shortenerMap = {
-    "<br>":"<n>",
-    "TZNAME:":"<tz>",
-    "TZOFFSETFROM:":"<of>",
-    "TZOFFSETTO:":"<ot>",
-    "DTSTART:":"<s>",
-    "RRULE:":"<r>",
-    "BEGIN:DAYLIGHT":"<bd>",
-    "END:DAYLIGHT":"<ed>",
-    "BEGIN:STANDARD":"<bs>",
-    "END:STANDARD":"<es>"
-  }
+    '<br>': '<n>',
+    'TZNAME:': '<tz>',
+    'TZOFFSETFROM:': '<of>',
+    'TZOFFSETTO:': '<ot>',
+    'DTSTART:': '<s>',
+    'RRULE:': '<r>',
+    'BEGIN:DAYLIGHT': '<bd>',
+    'END:DAYLIGHT': '<ed>',
+    'BEGIN:STANDARD': '<bs>',
+    'END:STANDARD': '<es>',
+  };
   for (const [key, value] of Object.entries(shortenerMap)) {
     string = string.replaceAll(value, key);
   }
@@ -226,11 +232,11 @@ function tzlib_get_timezones(jsonType = false) {
             if (typeof value2 === 'object' && !Array.isArray(value2)) {
               for (const [key3] of Object.entries(value2)) {
                 namesArr.push(key + '/' + key2 + '/' + key3);
-              }    
+              }
             } else {
               namesArr.push(key + '/' + key2);
             }
-          } 
+          }
         } else {
           namesArr.push(key);
         }

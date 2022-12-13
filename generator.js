@@ -43,17 +43,17 @@ const overviewJson = [];
 const tzNamesSecDb = [];
 const tzFinal = {};
 const shortenerMap = {
-  "<br>":"<n>",
-  "TZNAME:":"<tz>",
-  "TZOFFSETFROM:":"<of>",
-  "TZOFFSETTO:":"<ot>",
-  "DTSTART:":"<s>",
-  "RRULE:":"<r>",
-  "BEGIN:DAYLIGHT":"<bd>",
-  "END:DAYLIGHT":"<ed>",
-  "BEGIN:STANDARD":"<bs>",
-  "END:STANDARD":"<es>"
-}
+  '<br>': '<n>',
+  'TZNAME:': '<tz>',
+  'TZOFFSETFROM:': '<of>',
+  'TZOFFSETTO:': '<ot>',
+  'DTSTART:': '<s>',
+  'RRULE:': '<r>',
+  'BEGIN:DAYLIGHT': '<bd>',
+  'END:DAYLIGHT': '<ed>',
+  'BEGIN:STANDARD': '<bs>',
+  'END:STANDARD': '<es>',
+};
 for (const index in tz) {
   overviewJson.push(index);
   const contentParts = tz[`${index}`].split('<br>LAST-MODIFIED:');
