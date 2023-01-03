@@ -1,6 +1,6 @@
 BEGIN:VTIMEZONE
-TZID:/timezones-ical-library/America/Cambridge_Bay
-X-LIC-LOCATION:America/Cambridge_Bay
+TZID:/timezones-ical-library/America/Ciudad_Juarez
+X-LIC-LOCATION:America/Ciudad_Juarez
 LAST-MODIFIED:20230103T195358Z
 BEGIN:DAYLIGHT
 TZNAME:MDT

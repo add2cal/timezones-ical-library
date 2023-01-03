@@ -1,7 +1,7 @@
 ![Add to Calendar TimeZone iCal Library](https://github.com/add2cal/timezones-ical-library/blob/main/readme-header.png?raw=true)
 
 [![Codacy Grade](https://img.shields.io/codacy/grade/aa298c980fa4459a9f7a386c8f8dc35f?style=for-the-badge)](https://app.codacy.com/gh/add2cal/timezones-ical-library/dashboard)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/add2cal/timezones-ical-library/npm%20publish?style=for-the-badge)](https://github.com/add2cal/timezones-ical-library/actions/workflows/npm-publish.yml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/add2cal/timezones-ical-library/npm-publish.yml?style=for-the-badge)](https://github.com/add2cal/timezones-ical-library/actions/workflows/npm-publish.yml)
 [![npm Installations](https://img.shields.io/npm/dt/timezones-ical-library?label=npm%20Installations&style=for-the-badge)](https://www.npmjs.com/package/timezones-ical-library)
 [![GitHub license](https://img.shields.io/github/license/add2cal/timezones-ical-library?style=for-the-badge)](https://github.com/add2cal/timezones-ical-library/blob/main/LICENSE)
 
@@ -31,7 +31,7 @@ Run ...
 sudo sh update-tzdata.sh tzVersionNumber
 ```
 
-... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. sudo sh update-tzdata.sh 2022e).
+... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. sudo sh update-tzdata.sh 2022g).
 
 <br />
 
@@ -170,6 +170,9 @@ Licensed under [Apache-2.0](LICENSE).
 
 ## ⚡ Changelog (without minor changes and fixes)
 
+![npm version](https://img.shields.io/npm/v/timezones-ical-library?label=current%20version&style=for-the-badge)
+
+- v1.6 : database update
 - v1.5 : new dist structure
 - v1.4 : further minification via data mapping
 - v1.3 : bundle size optimization and API
