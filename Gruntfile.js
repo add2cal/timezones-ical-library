@@ -110,7 +110,7 @@ module.exports = function (grunt) {
         },
       },
     },
-    // minifies the main js file
+    // minifies the demo js file
     uglify: {
       options: {
         compress: true,
@@ -122,7 +122,6 @@ module.exports = function (grunt) {
       },
       newBuild: {
         files: {
-          'dist/tzlib.js': ['dist/tzlib.js'],
           'demo_assets/js/demopage.min.js': ['demo_assets/js/demopage.js'],
         },
       },
