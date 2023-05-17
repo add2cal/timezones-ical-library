@@ -31,7 +31,7 @@ Run ...
 sudo sh update-tzdata.sh tzVersionNumber
 ```
 
-... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. sudo sh update-tzdata.sh 2022g).
+... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. sudo sh update-tzdata.sh 2023c).
 
 <br />
 
@@ -172,7 +172,8 @@ Licensed under [Apache-2.0](LICENSE).
 
 ![npm version](https://img.shields.io/npm/v/timezones-ical-library?label=current%20version&style=for-the-badge)
 
-- v1.6 : database update
+- v1.7 : database update (2023c)
+- v1.6 : database update (2022g)
 - v1.5 : new dist structure
 - v1.4 : further minification via data mapping
 - v1.3 : bundle size optimization and API
