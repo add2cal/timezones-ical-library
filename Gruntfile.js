@@ -9,7 +9,7 @@ function prepareFinalFile(content, exportPhrase = '') {
   if (exportPhrase != '') {
     newContent = newContent.replace(
       exportCodePlaceholder,
-      `${exportPhrase} { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones };`
+      `${exportPhrase} { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones };`,
     );
   } else {
     newContent = newContent.replace(exportCodePlaceholder, '');
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
         'dist/cjs/.eslintrc.json': function (fs, fd, done) {
           fs.writeSync(
             fd,
-            '{ "extends": "../../.eslintrc.json", "env": { "node": true }, "plugins": ["commonjs"] }'
+            '{ "extends": "../../.eslintrc.json", "env": { "node": true }, "plugins": ["commonjs"] }',
           );
           done();
         },
