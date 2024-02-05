@@ -172,6 +172,7 @@ Licensed under [Apache-2.0](LICENSE).
 
 ![npm version](https://img.shields.io/npm/v/timezones-ical-library?label=current%20version&style=for-the-badge)
 
+- v1.8 : database update (2024a)
 - v1.7 : database update (2023c)
 - v1.6 : database update (2022g)
 - v1.5 : new dist structure

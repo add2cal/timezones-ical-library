@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  *
- * Version: 1.7.2
+ * Version: 1.8.0
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -19,7 +19,7 @@ const tz = {};
 
 // pull data from files
 for (const zone of files) {
-  const name = zone.replace('./api/', '').replace('.ics', '');
+  const name = zone.replace('./api/', '').replace('api/', '').replace('.ics', '');
   // cleaning up the entry by stripping out general stuff, any empty line, replacing linebreaks with <br>, removing the file extension and path information (from symlink entries)
   tz[`${name}`] = fs
     .readFileSync(`./api/${name}.ics`, 'utf-8')
