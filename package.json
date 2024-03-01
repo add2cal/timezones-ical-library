@@ -1,14 +1,15 @@
 {
   "name": "timezones-ical-library",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "engines": {
-    "node": ">=14.20.0"
+    "node": ">=20.0.0"
   },
   "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./dist/mjs/index.js",
       "require": "./dist/cjs/index.js"
     }
@@ -70,12 +71,10 @@
     "build": "npx grunt"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-commonjs": "^1.0.2",
-    "eslint-plugin-security": "^2.1.0",
+    "eslint-plugin-security": "^2.1.1",
     "glob": "^10.3.10",
     "grunt": ">=1.6.1",
     "grunt-contrib-clean": "^2.0.1",
@@ -86,6 +85,7 @@
     "grunt-version": "^3.0.1",
     "prettier": "^3.2.5",
     "stylelint": "^16.2.1",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.0",
+    "typescript-eslint": "^7.1.0"
   }
 }

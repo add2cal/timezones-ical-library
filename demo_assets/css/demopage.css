@@ -639,8 +639,7 @@ pre {
   padding: 0;
   box-sizing: border-box;
   max-height: 296px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden auto;
   background: #fff;
   color: #333;
   list-style: none;

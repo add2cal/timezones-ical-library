@@ -5,7 +5,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  *
- * Version: 1.8.0
+ * Version: 1.8.1
  * Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
@@ -13,7 +13,7 @@
  */
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const tzlibVersion = '1.8.0';
+const tzlibVersion = '1.8.1';
 
 // DEFINING THE DB DATA - WILL GET RE-WRITTEN WITH THE ACTUAL DATA ON BUILD
 let tzlibZonesDB,
