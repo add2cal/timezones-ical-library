@@ -1,8 +1,9 @@
 {
   "name": "timezones-ical-library",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=18.17.0",
+    "npm": ">=9.6.7"
   },
   "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript",
   "main": "dist/cjs/index.js",
