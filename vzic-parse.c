@@ -2,8 +2,10 @@
  * Vzic - a program to convert Olson timezone database files into VZTIMEZONE
  * files compatible with the iCalendar specification (RFC2445).
  *
- * Copyright (C) 2000-2001 Ximian, Inc.
- * Copyright (C) 2003 Damon Chaplin.
+ * SPDX-FileCopyrightText: 2000-2001 Ximian, Inc.
+ * SPDX-FileCopyrightText: 2003, Damon Chaplin <damon@ximian.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
  *
  * Author: Damon Chaplin <damon@gnome.org>
  *
@@ -277,7 +279,7 @@ parse_fields			(ParsingData	*data)
 	    *s++ = ch;
 	  }
 	  p++;
-	}	  
+	}
       } else {
 	*s++ = ch;
       }
@@ -652,7 +654,7 @@ parse_day			(ParsingData	*data,
 	day_part = p + 2;
 	break;
       }
-      
+
       fprintf (stderr, "%s:%i: Invalid day: %s\n%s\n", data->filename,
 	       data->line_number, field, data->line);
       exit (1);

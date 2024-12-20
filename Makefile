@@ -28,6 +28,14 @@ CREATE_SYMLINK ?= 1
 # compatibility with previous vzic versions.
 IGNORE_TOP_LEVEL_LINK ?= 1
 
+# Set any -I include directories to find the libical header files, and the
+# libical library to link with. You only need these if you want to run the
+# tests. You may need to change the '#include <ical.h>' line at the top of
+# test-vzic.c as well.
+LIBICAL_CFLAGS = -I/usr/local/include/libical -L/usr/local/lib64
+#LIBICAL_LDADD = -lical-evolution
+LIBICAL_LDADD = -lical -lpthread
+
 #
 # You shouldn't need to change the rest of the file.
 #
@@ -48,6 +56,8 @@ all: vzic
 vzic: $(OBJECTS)
 	$(CC) $(OBJECTS) $(GLIB_LDADD) -o vzic
 
+test-vzic: test-vzic.o
+	$(CC) test-vzic.o $(LIBICAL_LDADD) -o test-vzic
 
 # Dependencies.
 $(OBJECTS): vzic.h
@@ -55,9 +65,9 @@ vzic.o vzic-parse.o: vzic-parse.h
 vzic.o vzic-dump.o: vzic-dump.h
 vzic.o vzic-output.o: vzic-output.h
 
-clean:
-	-rm -rf vzic $(OBJECTS) *~ ChangesVzic RulesVzic ZonesVzic RulesPerl ZonesPerl
-
-.PHONY: clean perl-dump
-
-
+test-parse: vzic
+	./vzic-dump.pl $(OLSON_DIR)
+	./vzic --dump --pure
+	@echo
+	@echo "#"
+	@echo "

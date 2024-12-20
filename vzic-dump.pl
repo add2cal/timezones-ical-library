@@ -4,8 +4,10 @@
 # Vzic - a program to convert Olson timezone database files into VZTIMEZONE
 # files compatible with the iCalendar specification (RFC2445).
 #
-# Copyright (C) 2000-2001 Ximian, Inc.
-# Copyright (C) 2003 Damon Chaplin.
+# SPDX-FileCopyrightText: 2000-2001 Ximian, Inc.
+# SPDX-FileCopyrightText: 2003, Damon Chaplin <damon@ximian.com>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
 #
 # Author: Damon Chaplin <damon@gnome.org>
 #
@@ -37,7 +39,7 @@ my $rules_fh = "rulesfile";
 my %Rules;
 
 if ($#ARGV != 0) {
-    die "Usage: $0 <OlsonDirectory>";
+  die "Usage: $0 <OlsonDirectory>";
 }
 
 my $OLSON_DIR = $ARGV[0];
@@ -45,27 +47,26 @@ my $OLSON_DIR = $ARGV[0];
 # We place output in subdirectories of the current directory.
 my $OUTPUT_DIR = "api";
 
-if (! -d "$OUTPUT_DIR") {
-    mkdir ("$OUTPUT_DIR", 0777)
-	|| die "Can't create directory: $OUTPUT_DIR";
+if (!-d "$OUTPUT_DIR") {
+  mkdir("$OUTPUT_DIR", 0777)
+    || die "Can't create directory: $OUTPUT_DIR";
 }
-if (! -d "$OUTPUT_DIR/ZonesPerl") {
-    mkdir ("$OUTPUT_DIR/ZonesPerl", 0777)
-	|| die "Can't create directory: $OUTPUT_DIR/ZonesPerl";
+if (!-d "$OUTPUT_DIR/ZonesPerl") {
+  mkdir("$OUTPUT_DIR/ZonesPerl", 0777)
+    || die "Can't create directory: $OUTPUT_DIR/ZonesPerl";
 }
-if (! -d "$OUTPUT_DIR/RulesPerl") {
-    mkdir ("$OUTPUT_DIR/RulesPerl", 0777)
-	|| die "Can't create directory: $OUTPUT_DIR/RulesPerl";
+if (!-d "$OUTPUT_DIR/RulesPerl") {
+  mkdir("$OUTPUT_DIR/RulesPerl", 0777)
+    || die "Can't create directory: $OUTPUT_DIR/RulesPerl";
 }
 
-
-&ReadOlsonFile ("africa");
-&ReadOlsonFile ("antarctica");
-&ReadOlsonFile ("asia");
-&ReadOlsonFile ("australasia");
-&ReadOlsonFile ("europe");
-&ReadOlsonFile ("northamerica");
-&ReadOlsonFile ("southamerica");
+&ReadOlsonFile("africa");
+&ReadOlsonFile("antarctica");
+&ReadOlsonFile("asia");
+&ReadOlsonFile("australasia");
+&ReadOlsonFile("europe");
+&ReadOlsonFile("northamerica");
+&ReadOlsonFile("southamerica");
 
 # These are backwards-compatibility and weird stuff.
 #&ReadOlsonFile ("backward");
@@ -83,140 +84,141 @@ if (! -d "$OUTPUT_DIR/RulesPerl") {
 # We don't do this since the vzic program can't do it.
 #&ReadOlsonFile ("systemv");
 
-
-
-
 1;
 
+sub ReadOlsonFile
+{
+  my ($file) = @_;
 
-sub ReadOlsonFile {
-    my ($file) = @_;
+  #    print ("Reading olson file: $file\n");
 
-#    print ("Reading olson file: $file\n");
+  open(OLSONFILE, "$OLSON_DIR/$file")
+    || die "Can't open file: $file";
 
-    open (OLSONFILE, "$OLSON_DIR/$file")
-	|| die "Can't open file: $file";
+  open($zones_fh, ">$OUTPUT_DIR/ZonesPerl/$file")
+    || die "Can't open file: $OUTPUT_DIR/ZonesPerl/$file";
 
-    open ($zones_fh, ">$OUTPUT_DIR/ZonesPerl/$file")
-	|| die "Can't open file: $OUTPUT_DIR/ZonesPerl/$file";
+  open($rules_fh, ">$OUTPUT_DIR/RulesPerl/$file")
+    || die "Can't open file: $OUTPUT_DIR/RulesPerl/$file";
 
-    open ($rules_fh, ">$OUTPUT_DIR/RulesPerl/$file")
-	|| die "Can't open file: $OUTPUT_DIR/RulesPerl/$file";
+  %Rules = ();
 
-    %Rules = ();
+  my $zone_continues = 0;
 
-    my $zone_continues = 0;
+  while (<OLSONFILE>) {
+    next if (m/^#/);
 
-    while (<OLSONFILE>) {
-	next if (m/^#/);
+    # '#' characters can appear in strings, but the Olson files don't use
+    # that feature at present so we treat all '#' as comments for now.
+    s/#.*//;
 
-	# '#' characters can appear in strings, but the Olson files don't use
-	# that feature at present so we treat all '#' as comments for now.
-	s/#.*//;
+    next if (m/^\s*$/);
 
-	next if (m/^\s*$/);
+    if ($zone_continues) {
+      $zone_continues = &ReadZoneContinuationLine;
 
-	if ($zone_continues) {
-	    $zone_continues = &ReadZoneContinuationLine;
+    } elsif (m/^Rule\s/) {
+      &ReadRuleLine;
 
-	} elsif (m/^Rule\s/) {
-	    &ReadRuleLine;
+    } elsif (m/^Zone\s/) {
+      $zone_continues = &ReadZoneLine;
 
-	} elsif (m/^Zone\s/) {
-	    $zone_continues = &ReadZoneLine;
+    } elsif (m/^Link\s/) {
 
-	} elsif (m/^Link\s/) {
-#	    print "Link: $link_from, $link_to\n";
+      #	    print "Link: $link_from, $link_to\n";
 
-	} elsif (m/^Leap\s/) {
-#	    print "Leap\n";
+    } elsif (m/^Leap\s/) {
 
-	} else {
-	    die "Invalid line: $_";
-	}
-    }
+      #	    print "Leap\n";
 
-#    print ("Read olson file: $file\n");
-
-    foreach $key (sort (keys (%Rules))) {
-	print $rules_fh "$Rules{$key}"
-    }
-
-    close ($zones_fh);
-    close ($rules_fh);
-    close (OLSONFILE);
-}
-
-
-sub ReadZoneLine {
-    my ($zone, $name, $gmtoff, $rules_save, $format,
-	$until_year, $until_month, $until_day, $until_time, $remainder)
-	= split ' ', $_, 10;
-
-    return &ReadZoneLineCommon ($zone, $name, $gmtoff, $rules_save, $format,
-				$until_year, $until_month, $until_day,
-				$until_time);
-}
-
-
-sub ReadZoneContinuationLine {
-    my ($gmtoff, $rules_save, $format,
-	$until_year, $until_month, $until_day, $until_time, $remainder)
-	= split ' ', $_, 8;
-
-    return &ReadZoneLineCommon ("", "", $gmtoff, $rules_save, $format,
-				$until_year, $until_month, $until_day,
-				$until_time);
-}
-
-
-sub ReadZoneLineCommon {
-    my ($zone, $name, $gmtoff, $rules_save, $format,
-	$until_year, $until_month, $until_day, $until_time) = @_;
-
-    if (!defined ($until_year)) { $until_year = ""; }
-    if (!defined ($until_month)) { $until_month = ""; }
-    if (!defined ($until_day)) { $until_day = ""; }
-    if (!defined ($until_time)) { $until_time = ""; }
-
-    # A few of the gmtoffsets have an unnecessary :00 seconds.
-    $gmtoff =~ s/(\d+):(\d+):00/$1:$2/;
-
-    # Make sure the gmtoff does have minutes.
-    $gmtoff =~ s/^(-?\d+)$/$1:00/;
-
-    # Fix a few other bits so they all use the same format.
-    if ($gmtoff eq "0") { $gmtoff = "0:00"; }
-    $until_time =~ s/^0(\d):/$1:/;
-    if ($until_time eq "0:00") { $until_time = ""; }
-    if ($until_day eq "1" && $until_time eq "") { $until_day = ""; }
-    if ($until_month eq "Jan" && $until_day eq "" && $until_time eq "") {
-	$until_month = "";
-    }
-
-    # For Zone continuation lines we need to insert an extra TAB.
-    if (!$zone) { $zone = "\t" };
-
-    print $zones_fh "$zone\t$name\t$gmtoff\t$rules_save\t$format\t$until_year\t$until_month\t$until_day\t$until_time\n";
-
-    if (defined ($until_year) && $until_year) {
-	return 1;
     } else {
-	return 0;
+      die "Invalid line: $_";
     }
+  }
+
+  #    print ("Read olson file: $file\n");
+
+  foreach $key (sort (keys(%Rules))) {
+    print $rules_fh "$Rules{$key}";
+  }
+
+  close($zones_fh);
+  close($rules_fh);
+  close(OLSONFILE);
 }
 
+sub ReadZoneLine
+{
+  my (
+    $zone,       $name,        $gmtoff,    $rules_save, $format,
+    $until_year, $until_month, $until_day, $until_time, $remainder
+  ) = split ' ', $_, 10;
 
-sub ReadRuleLine {
-    my ($rule, $name, $from, $to, $type, $in, $on, $at, $save, $letter_s,
-	$remainder) = split;
-
-    $at =~ s/(\d+:\d+):00/$1/;
-    $save =~ s/(\d+:\d+):00/$1/;
-    if ($save eq "0:00") { $save = "0"; }
-
-    $Rules{$name} .= "$rule\t$name\t$from\t$to\t$type\t$in\t$on\t$at\t$save\t$letter_s\n";
-
-#    print $rules_fh "$rule\t$name\t$from\t$to\t$type\t$in\t$on\t$at\t$save\t$letter_s\n";
+  return &ReadZoneLineCommon(
+    $zone,       $name,        $gmtoff,    $rules_save, $format,
+    $until_year, $until_month, $until_day, $until_time
+  );
 }
 
+sub ReadZoneContinuationLine
+{
+  my ($gmtoff, $rules_save, $format, $until_year, $until_month, $until_day, $until_time, $remainder)
+    = split ' ',
+    $_, 8;
+
+  return &ReadZoneLineCommon("", "", $gmtoff, $rules_save, $format, $until_year, $until_month,
+    $until_day, $until_time);
+}
+
+sub ReadZoneLineCommon
+{
+  my (
+    $zone,       $name,        $gmtoff,    $rules_save, $format,
+    $until_year, $until_month, $until_day, $until_time
+  ) = @_;
+
+  if (!defined($until_year))  {$until_year  = "";}
+  if (!defined($until_month)) {$until_month = "";}
+  if (!defined($until_day))   {$until_day   = "";}
+  if (!defined($until_time))  {$until_time  = "";}
+
+  # A few of the gmtoffsets have an unnecessary :00 seconds.
+  $gmtoff =~ s/(\d+):(\d+):00/$1:$2/;
+
+  # Make sure the gmtoff does have minutes.
+  $gmtoff =~ s/^(-?\d+)$/$1:00/;
+
+  # Fix a few other bits so they all use the same format.
+  if ($gmtoff eq "0") {$gmtoff = "0:00";}
+  $until_time =~ s/^0(\d):/$1:/;
+  if ($until_time eq "0:00") {$until_time = "";}
+  if ($until_day eq "1"     && $until_time eq "") {$until_day = "";}
+  if ($until_month eq "Jan" && $until_day eq "" && $until_time eq "") {
+    $until_month = "";
+  }
+
+  # For Zone continuation lines we need to insert an extra TAB.
+  if (!$zone) {$zone = "\t"}
+
+  print $zones_fh
+"$zone\t$name\t$gmtoff\t$rules_save\t$format\t$until_year\t$until_month\t$until_day\t$until_time\n";
+
+  if (defined($until_year) && $until_year) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+sub ReadRuleLine
+{
+  my ($rule, $name, $from, $to, $type, $in, $on, $at, $save, $letter_s, $remainder) = split;
+
+  $at   =~ s/(\d+:\d+):00/$1/;
+  $save =~ s/(\d+:\d+):00/$1/;
+  if ($save eq "0:00") {$save = "0";}
+
+  $Rules{$name} .= "$rule\t$name\t$from\t$to\t$type\t$in\t$on\t$at\t$save\t$letter_s\n";
+
+  #    print $rules_fh "$rule\t$name\t$from\t$to\t$type\t$in\t$on\t$at\t$save\t$letter_s\n";
+}
