@@ -2,8 +2,10 @@
  * Vzic - a program to convert Olson timezone database files into VZTIMEZONE
  * files compatible with the iCalendar specification (RFC2445).
  *
- * Copyright (C) 2000-2001 Ximian, Inc.
- * Copyright (C) 2003 Damon Chaplin.
+ * SPDX-FileCopyrightText: 2000-2001 Ximian, Inc.
+ * SPDX-FileCopyrightText: 2003, Damon Chaplin <damon@ximian.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
  *
  * Author: Damon Chaplin <damon@gnome.org>
  *
@@ -42,7 +44,7 @@
  * - For the first line the start time is -infinity.
  * - For the last line the end time is +infinity.
  * - The end time of each line is also the start time of the next.
- * 
+ *
  * We create an array of time changes which occur in this period, including
  * the one implied by the Zone line itself (though this is later taken out
  * if it is found to be at exactly the same time as the first Rule).
@@ -67,6 +69,7 @@
 
 
 /* These come from the Makefile. See the comments there. */
+char *ProductID = PRODUCT_ID;
 char *TZIDPrefix = TZID_PREFIX;
 
 /* We expand the TZIDPrefix, replacing %D with the date, in here. */
@@ -81,8 +84,8 @@ char TZIDPrefixExpanded[1024];
 
 
 /* The year we go up to when dumping the list of timezone changes (used
-   for debugging). */
-#define MAX_CHANGES_YEAR	2050
+   for testing & debugging). */
+#define MAX_CHANGES_YEAR	2030
 
 /* This is the maximum year that time_t value can typically hold on 32-bit
    systems. */
@@ -158,7 +161,7 @@ static int	rule_sort_func			(const void	*arg1,
 static void	output_zone			(char		*directory,
 						 ZoneData	*zone,
 						 char		*zone_name,
-             const char		*alias_of,
+						 const char		*alias_of,
 						 GHashTable	*rule_data);
 static gboolean	parse_zone_name			(char		*name,
 						 char	       **directory,
@@ -166,7 +169,7 @@ static gboolean	parse_zone_name			(char		*name,
 						 char	       **filename);
 static void	output_zone_to_files		(ZoneData	*zone,
 						 char		*zone_name,
-             const char		*alias_of,
+						 const char		*alias_of,
 						 GHashTable	*rule_data,
 						 FILE		*fp,
 						 FILE		*changes_fp);
@@ -197,7 +200,7 @@ static gboolean times_match			(VzicTime	*time1,
 						 int		 walloff2);
 static void	output_zone_components		(FILE		*fp,
 						 char		*name,
-             const char		*alias_of,
+						 const char		*alias_of,
 						 GArray		*changes);
 static void	set_previous_offsets		(GArray		*changes);
 static gboolean	check_for_recurrence		(FILE		*fp,
@@ -477,7 +480,7 @@ static void
 output_zone			(char		*directory,
 				 ZoneData	*zone,
 				 char		*zone_name,
-         const char		*alias_of,
+				 const char		*alias_of,
 				 GHashTable	*rule_data)
 {
   FILE *fp, *changes_fp = NULL;
@@ -560,12 +563,16 @@ output_zone			(char		*directory,
     }
   }
 
+  fprintf (fp, "BEGIN:VCALENDAR\r\nPRODID:%s\r\nVERSION:2.0\r\n", ProductID);
+
   output_zone_to_files (zone, zone_name, alias_of, rule_data, fp, changes_fp);
 
   if (ferror (fp)) {
     fprintf (stderr, "Error writing file: %s\n", filename);
     exit (1);
   }
+
+  fprintf (fp, "END:VCALENDAR\r\n");
 
   fclose (fp);
 
@@ -648,7 +655,7 @@ parse_zone_name			(char		*name,
 static void
 output_zone_to_files		(ZoneData	*zone,
 				 char		*zone_name,
-         const char		*alias_of,
+				 const char		*alias_of,
 				 GHashTable	*rule_data,
 				 FILE		*fp,
 				 FILE		*changes_fp)
@@ -1036,7 +1043,7 @@ expand_tzname				(char		*zone_name,
 }
 
 
-/* Compares 2 VzicTimes, returning strcmp()-like values, i.e. 0 if equal, 
+/* Compares 2 VzicTimes, returning strcmp()-like values, i.e. 0 if equal,
    1 if the 1st is after the 2nd and -1 if the 1st is before the 2nd. */
 static int
 compare_times				(VzicTime	*time1,
@@ -1121,7 +1128,7 @@ times_match				(VzicTime	*time1,
 static void
 output_zone_components			(FILE		*fp,
 					 char		*name,
-           const char		*alias_of,
+					 const char		*alias_of,
 					 GArray		*changes)
 {
   VzicTime *vzictime;
@@ -1151,6 +1158,11 @@ output_zone_components			(FILE		*fp,
     vzictime->until = NULL;
   }
 
+  /* Use current time as LAST-MODIFIED */
+  fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
+	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
+	   tm->tm_hour, tm->tm_min, tm->tm_sec);
+
   if (VzicUrlPrefix != NULL)
       fprintf (fp, "TZURL:%s/%s\r\n", VzicUrlPrefix, name);
 
@@ -1164,11 +1176,6 @@ output_zone_components			(FILE		*fp,
     if (!vzictime->is_infinite) fputs(";X-NO-BIG-BANG=TRUE", fp);
     fprintf(fp, ":%s\r\n", vzictime->tzname);
   }
-
-  /* Use current time as LAST-MODIFIED */
-  fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
-	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
-	   tm->tm_hour, tm->tm_min, tm->tm_sec);
 
   /* We try to find any recurring components first, or they may get output
      as lots of RDATES instead. */
@@ -1309,7 +1316,6 @@ output_zone_components			(FILE		*fp,
   }
 
   fprintf (fp, "END:VTIMEZONE\r\n");
-
 }
 
 
@@ -1591,7 +1597,7 @@ check_for_rdates		(FILE		*fp,
     }
 
     /* We have a match. */
-    
+
     tmp_vzictime = *vzictime;
     calculate_actual_time (&tmp_vzictime, TIME_WALL, vzictime->prev_stdoff,
 			   vzictime->prev_walloff);

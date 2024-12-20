@@ -1,6 +1,6 @@
 {
   "name": "timezones-ical-library",
-  "version": "1.8.3",
+  "version": "1.9.0",
   "engines": {
     "node": ">=18.17.0",
     "npm": ">=9.6.7"
@@ -52,7 +52,7 @@
   ],
   "author": {
     "name": "Jens Kuerschner",
-    "url": "https://jenskuerschner.de/"
+    "url": "https://jekuer.com/"
   },
   "license": "Apache-2.0",
   "bugs": {
@@ -72,7 +72,7 @@
     "build": "npx grunt"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-commonjs": "^1.0.2",
     "eslint-plugin-security": "^3.0.1",
@@ -84,9 +84,9 @@
     "grunt-contrib-uglify": "^5.2.2",
     "grunt-file-creator": "^0.1.3",
     "grunt-version": "^3.0.1",
-    "prettier": "^3.3.3",
-    "stylelint": "^16.7.0",
+    "prettier": "^3.4.2",
+    "stylelint": "^16.12.0",
     "stylelint-config-standard": "^36.0.1",
-    "typescript-eslint": "^7.16.1"
+    "typescript-eslint": "^8.18.1"
   }
 }
