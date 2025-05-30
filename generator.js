@@ -4,7 +4,7 @@
  * ++++++++++++++++++++++++++++++++++++++
  *
  * Version: 1.10.0
- * Creator: Jens Kuerschner (https://jenskuerschner.de)
+ * Creator: Jens Kuerschner (https://jekuer.com)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
  * DO NOT REMOVE THE COPYRIGHT NOTICE ABOVE!
