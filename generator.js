@@ -3,7 +3,7 @@
  * Add to Calendar TimeZones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  *
- * Version: 1.10.0
+ * Version: 1.11.0
  * Creator: Jens Kuerschner (https://jekuer.com)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0

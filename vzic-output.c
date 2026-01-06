@@ -2543,7 +2543,7 @@ expand_tzid_prefix		(void)
   src = TZIDPrefix;
   dest = TZIDPrefixExpanded;
 
-  while (ch1 = *src++) {
+  while ((ch1 = *src++) != '\0') {
 
     /* Look for a '%'. */
     if (ch1 == '%') {
