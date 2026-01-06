@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # check for the latest time zone data package at https://www.iana.org/time-zones
-# provide tzVersion (like 2023c) via argument: sudo sh update-tzdata.sh 2023c
+# provide tzVersion (like 2025c) via argument: sudo sh update-tzdata.sh 2025c
 if [ "$1" ]
 then
   # prepare system
