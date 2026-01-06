@@ -1173,6 +1173,9 @@ output_zone_components			(FILE		*fp,
     vzictime->until = NULL;
   }
 
+  /* We use an 'X-' property to place the city name in. */
+  fprintf (fp, "X-LIC-LOCATION:%s\r\n", name);
+
   /* Use current time as LAST-MODIFIED */
   fprintf (fp, "LAST-MODIFIED:%04i%02i%02iT%02i%02i%02iZ\r\n",
 	   tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
@@ -1180,9 +1183,6 @@ output_zone_components			(FILE		*fp,
 
   if (VzicUrlPrefix != NULL)
       fprintf (fp, "TZURL:%s/%s\r\n", VzicUrlPrefix, name);
-
-  /* We use an 'X-' property to place the city name in. */
-  fprintf (fp, "X-LIC-LOCATION:%s\r\n", name);
 
   /* We use an 'X-' property to place the proleptic tzname in. */
   vzictime = &g_array_index (changes, VzicTime, 0);
