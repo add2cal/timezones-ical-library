@@ -10,7 +10,7 @@
 
 Convert the [IANA (formerly Olson) time zone database files](http://www.iana.org/time-zones) into VTIMEZONE blocks, compatible with the iCalendar specification (RFC2445).
 
-It is based on ([vzic](https://github.com/libical/libical)), but only provides the VTIMEZONE part to easily put this into any other iCal generator (like the [add-to-calendar-button](https://github.com/add2cal/add-to-calendar-button)).  
+It is based on [vzic](https://github.com/libical/libical/tree/master/vzic), but only provides the VTIMEZONE part to easily put this into any other iCal generator (like the [add-to-calendar-button](https://github.com/add2cal/add-to-calendar-button)).  
 It is built to be used standalone, via API, or as JavaScript module, hosted as npm package.
 
 <br /><br />
@@ -25,8 +25,9 @@ It is built to be used standalone, via API, or as JavaScript module, hosted as n
 
 <details>
 <summary>Learn more (not required)</summary>
+
 **This step is only relevant if you want to build the package and data on your own and from source!**  
-_(Requires Node.js as well as Linux as operating system. You would also need to load/include it manually into your codebase.)_ 
+_(Requires Node.js as well as Linux as operating system. You would also need to load/include it manually into your codebase.)_  
 
 Run ...
 
@@ -34,7 +35,8 @@ Run ...
 sudo sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
 ```
 
-... with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2025c`) and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2025c true`).
+- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2025c`);
+- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2025c true`).
 </details>
 
 <br />
@@ -45,24 +47,37 @@ sudo sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
 npm install timezones-ical-library
 ```
 
-After the installation:
+<br />
 
-- require the package (commonJS) or ...
-- import the module (ES) via `import { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones } from 'timezones-ical-library';`.
+### 2. Import it
+
+For CommonJS:
+
+```
+require tzLib = require('timezones-ical-library');
+```
+
+With ES:
+
+```
+import { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones } from 'timezones-ical-library';
+```
 
 <br />
 
-### 2. Use it
+### 3. Use it
 
 #### A. Get time zones
 
 Use `tzlib_get_timezones()` to retrieve a list of all available time zone strings.  
-You can pass `true` to retrieve a JSON formatted string instead of an array.
+You can pass `true` to retrieve a JSON formatted string instead of an array.  
+For CommonJS, you would use `tzLib.tzlib_get_timezones()`.
 
 #### B. Get the iCal time zone block
 
 Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given time zone string (tzName).  
-Again, pass `true` to retrieve a JSON formatted string instead of an array _(not recommended)_.
+Again, pass `true` to retrieve a JSON formatted string instead of an array _(not recommended)_.  
+For CommonJS, you would use `tzLib.tzlib_get_ical_block(tzName)`.
 
 You will receive an array, holding the VTIMEZONE block first, and the TZID line (additionally) second. The latter one is needed for any further time statement.
 
@@ -125,20 +140,21 @@ For example, you can provide _tzName_ `'Europe/Berlin'`, _isoDate_ `'2023-05-23'
 
 Instead of using this code or the npm package, you could also make use of the free and open API.
 
-### Getting a list of all zone names
+### GET a list of all zone names
 
 ```
 https://tz.add-to-calendar-technology.com/api/zones.json
 ```
 
-### Getting the ics part of a respective zone
+### GET the ics part of a respective zone
 
 ```
 https://tz.add-to-calendar-technology.com/api/{{zoneName}}.ics
 ```
 
 With `{{zoneName}}` being your time zone.  
-So, for New York, this would be [https://tz.add-to-calendar-technology.com/api/America/New_York.ics](https://tz.add-to-calendar-technology.com/api/America/New_York.ics).  
+So, for New York, this would be [https://tz.add-to-calendar-technology.com/api/America/New_York.ics](https://tz.add-to-calendar-technology.com/api/America/New_York.ics).
+
 **This is case sensitive!**
 
 > [!WARNING]
@@ -172,6 +188,7 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com). Licensed under [Apache-2.0]
 
 <details>
 <summary>History (without minor changes and fixes)</summary>
+
 - v2.0 : Full refactoring reducing bundle size and easing future updates, using Astro for Demo page
 - v1.11 : database update (2025c)
 - v1.10 : upgrading to latest vzic improvements
@@ -186,8 +203,6 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com). Licensed under [Apache-2.0]
 - v1.1 : get-offset function
 - v1.0 : initial release
 </details>
-
----
 
 <br />
 
