@@ -60,7 +60,7 @@
   },
   "homepage": "https://tz.add-to-calendar-technology.com/",
   "scripts": {
-    "build": "node scripts/build.js && cd demo && npm run build",
+    "build": "node scripts/build.js && cd demo && npm ci && npm run build",
     "build:lib-only": "node scripts/build.js",
     "dev": "cd demo && npm run dev",
     "eslint": "npx eslint .",
