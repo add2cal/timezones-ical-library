@@ -30,7 +30,7 @@ jobs:
       - name: Prepare with npm ci
         run: npm ci
       - name: Set version in demo
-        run: ./scripts/set-version-in-demo.sh
+        run: bash ./scripts/set-version-in-demo.sh
       - name: Build
         run: npm run build
       - name: Upload artifact
