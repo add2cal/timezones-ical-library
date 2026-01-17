@@ -68,8 +68,6 @@ jobs:
         run: npm install -g npm@latest
       - name: Prepare with npm ci
         run: npm ci
-      - name: Set version in demo
-        run: ./scripts/set-version-in-demo.sh
       - name: Build package
         run: npm run build
       - name: Publish package
