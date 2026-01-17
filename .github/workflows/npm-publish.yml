@@ -66,7 +66,11 @@ jobs:
           cache: 'npm'
       - name: Update npm
         run: npm install -g npm@latest
-      - run: npm ci
-      - run: npm run build
+      - name: Prepare with npm ci
+        run: npm ci
+      - name: Set version in demo
+        run: ./scripts/set-version-in-demo.sh
+      - name: Build package
+        run: npm run build
       - name: Publish package
         run: npm publish

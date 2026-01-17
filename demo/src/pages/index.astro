@@ -1,0 +1,121 @@
+---
+import Lookup from "@components/TimeZoneLookup.vue";
+import LightSwitch from "@components/LightModeToogle.astro";
+import Version from "@components/Version.astro";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import GithubLogo from "@assets/github.svg";
+import { Code } from 'astro-expressive-code/components';
+import importedCode from '@assets/sample-ics-code.ics?raw';
+---
+
+<Layout>
+  <Header />
+  <main>
+		<div class="container py-20">
+			<h3>🗓️ iCal Time zone information for JavaScript</h3>
+			<p>
+				This tool converts the most recent IANA (formerly Olson) time zone database files into VTIMEZONE blocks, which are compatible with the iCalendar specification (RFC2445).
+			</p>
+			<p>
+				It is optimized to be easily used in every JavaScript or Typescript project; may it be VanillaJS, React, Angular, Vue, Svelte, or based on any other framework or library.
+			</p>
+		</div>
+    <Lookup client:load />
+		<div class="container py-14">
+			<h3>📦 How to install</h3>
+      <p>
+        Simply install the package via npm:
+      </p>
+			<Code code="npm install timezones-ical-library" frame="none" lang="bash" />
+      <p>
+        ... and import it for commonJS approaches with:
+      </p>
+			<Code code="const tzLib = require('timezones-ical-library');" lang="js" />
+      <p>
+        ... or (preferred) with ES support:
+      </p>
+      <Code code="import { tzlib_get_ical_block, tzlib_get_offset, tzlib_get_timezones } from 'timezones-ical-library';" lang="js" />
+
+      <hr class="my-14 opacity-20" />
+
+      <h3>⚙️ How to use</h3>
+      <h4>Get time zones</h4>
+      <p>
+        Use <span class="highlight">tzlib_get_timezones()</span> to retrieve a list of all available time zone strings. You can pass <span class="highlight">true</span> to retrieve a JSON formatted string instead of an array.
+      </p>
+      <h4>Get the iCal time zone block</h4>
+      <p>
+        Use the <span class="highlight">tzlib_get_ical_block(tzName)</span> function to return the proper iCal VTIMEZONE block for a given time zone string (tzName). Again, pass <span class="highlight">true</span> to retrieve a JSON formatted string instead of an array (not recommended).<br>
+        You will receive an array, holding the VTIMEZONE block first, and the TZID line (additionally) second. The latter one is needed for any further time statement.<br>
+        Include this into your further iCal data to come up with a complete ics file.
+      </p>
+			<p>
+					A final constellation could look like this:
+      </p>
+			<Code code={importedCode} lang="text" mark="TZID=America/New_York" ins={[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]} />
+      <h4>Get a specific offset</h4>
+      <p>
+        Use <span class="highlight">tzlib_get_offset(tzName, isoDate, isoTime)</span> to get specific offset (relative to UTC), based on a provided date and time.<br>
+        For example, you can provide <b>tzName</b> "Europe/Berlin", <b>isoDate</b> "2023-05-23", and <b>isoTime</b> "15:45" in order to retrieve the offset, which applies for this time zone at the 23rd of May in 2023 at exactly 15:45.
+      </p>
+
+      <hr class="my-14 opacity-20" />
+
+      <h3>⚙️ Use it via API</h3>
+      <p>
+        Alternatively to the installation, you can make use of the public API.
+      </p>
+      <h4>Get time zones via API</h4>
+      <p>
+        Get them directly via <a target="_blank" rel="noopener" href="https://tz.add-to-calendar-technology.com/api/zones.json">https://tz.add-to-calendar-technology.com/api/zones.json</a>.
+      </p>
+      <h4>Get the iCal time zone block via API</h4>
+      <p>
+        Once you have a valid zone name ready, you can get the ics part directly via the following URL scheme:
+      </p>
+      <Code code="https://tz.add-to-calendar-technology.com/api/{zoneName}.ics" mark="{zoneName}" lang="text" />
+      <p>
+        With <span class="highlight">{"{"}zoneName{"}"}</span> being your time zone.<br>
+			</p>
+			<p>
+				So, for New York, this would be https://tz.add-to-calendar-technology.com/api/<strong>America/New_York</strong>.ics.<br>
+      </p>
+			<p class="font-bold">This is case sensitive!</p>
+      <p class="opacity-50 hover:opacity-100 mt-10">
+        (Mind that this does not deliver a fully valid ics file, since it only contains the VTIMEZONE part.<br />
+				You will need to combine this with your other event information.)
+      </p>
+
+      <hr class="my-14 opacity-20" />
+
+      <h3>Background story</h3>
+      <p>
+        Time zones are a tricky thing. Especially because they do not follow any logical rules, but are rather randomly made up by politicians (and other people). This makes life  hard for any software developer dealing with time.
+      </p>
+      <p>Working on the <a target="_blank" rel="noopener" href="https://github.com/add2cal/add-to-calendar-button">Add to Calendar Button project</a>, I was facing the same issue.<br>
+        Generating iCal/ics files strictly requires time zone information - at least if you start dealing with recurring events. This time zone information needs to be more or less manually inserted. I started searching for some kind of official database or API.<br>
+			</p>
+			<p>
+				There were a lot of libraries, which are quite big in terms of functionality and also size. Most of this is dangerous overhead, when you only need time zone information. No API, of course. Basically, nothing of any use to me.<br>
+        The official database, on the other hand, is not directly accessible - especially not via JavaScript.
+      </p>
+      <p>
+        That's why I came up with this open source repository, pulling the latest official data, making it usable via JavaScript, and offering the most essential data, while stripping out all the rest - for best performance and bundle size.
+      </p>
+		</div>
+  </main>
+  <footer class="py-20 bg-white dark:bg-black shadow-inner">
+    <div class="container w-fit text-sm font-bold flex items-center gap-6">
+      <div class="opacity-50"><Version /></div>
+			<a href="https://github.com/add2cal/timezones-ical-library" class="opacity-75 ring-0 select-none focus-within:outline-2 rounded-full p-2 hover:opacity-100" target="_blank" rel="noopener noreferrer">
+				<GithubLogo class="w-6 h-6 fill-black dark:fill-white" />
+			</a>
+      <LightSwitch />
+    </div>
+		<div class="container text-balance text-center text-xs opacity-50 mt-10">
+			This page has been built and is maintained by the team behind the "Add to Calendar Button". See <a target="_blank" rel="noopener" href="https://add-to-calendar-pro.com/legal-notice">add-to-calendar-pro.com/legal-notice</a> for a full legal notice.<br>
+			This page is hosted via "GitHub Pages". It includes some very basic analytics, that still preserves your anonymity and does not use any cookies. However, mind that the GitHub privacy policy applies additionally (<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/site-policy/github-privacy-statement">click here for details</a>).
+		</div>
+  </footer>
+</Layout>

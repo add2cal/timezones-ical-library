@@ -6,3 +6,9 @@
 
 # Ignore minified files
 *.min.*
+
+# Ignore json files
+*.json
+
+# Ignore md files
+*.md

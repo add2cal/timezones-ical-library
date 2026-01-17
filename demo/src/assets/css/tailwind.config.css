@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Fonts */
+  --font-*: initial;
+  --font-sans: Inter, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-serif: Georgia, Times New Roman, Times, Garamond, serif;
+  --font-mono: 'Fira Mono', Consolas, Courier, monospace, ui-monospace, SFMono-Regular;
+  --font-headline: 'Paytone One', Arial, sans-serif;
+
+  /* Colors */
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #539eff;
+  --color-primary-light: #a9ceff;
+  --color-primary-dark: #336db9;
+  --color-secondary: #ffa255;
+  --color-secondary-light: #ffd0aa;
+  --color-secondary-dark: #fc8f29;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 450px) {
+    max-width: none;
+  }
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 976px) {
+    max-width: 976px;
+  }
+}

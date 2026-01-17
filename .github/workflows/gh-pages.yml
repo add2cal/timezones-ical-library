@@ -27,8 +27,10 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
           cache: 'npm'
-      - name: npm ci
+      - name: Prepare with npm ci
         run: npm ci
+      - name: Set version in demo
+        run: ./scripts/set-version-in-demo.sh
       - name: Build
         run: npm run build
       - name: Upload artifact

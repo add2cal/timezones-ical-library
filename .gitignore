@@ -1,7 +1,7 @@
 # Visual Studio Code from https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 # Adjust to your needs.
 
-.vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -20,12 +20,14 @@ RulesPerl
 RulesVzic
 ZonesPerl
 ZonesVzic
-vzic
+src/vzic/vzic
 *.o
 *~
 
-# dist.
+# dist and tmp folders
 dist/
+src/vzic/tzdata/
+src/vzic/output/
 
 # macOS-specific files
 .DS_Store
