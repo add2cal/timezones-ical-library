@@ -1,0 +1,125 @@
+---
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/fira-mono/400.css";
+import "@fontsource/paytone-one/400.css";
+import "@assets/css/entry.css";
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+
+// Shared meta data
+const title =
+  "Time Zones iCal Library | Easy access to the official time zones data";
+const description =
+  "The convenient way to directly access the most recent official time zone information for iCalendar files with JavaScript. Free and open source.";
+const ogImage = Astro.site + "img/og.png";
+const xImage = Astro.site + "img/x.png";
+const primaryColor = "#539eff";
+const canonical = (function () {
+  return pageUrl.href.replace(/\.html$/, "");
+})();
+
+// Structured data
+const author = {
+  "@type": "Person",
+  name: "Jens Kuerschner",
+  url: "https://jekuer.com",
+  image: "",
+};
+const publisher = {
+  "@type": "Organization",
+  name: "Add to Calendar PRO",
+  url: "https://add-to-calendar-pro.com",
+  image: "",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: title,
+  url: canonical,
+  image: [
+    ogImage,
+    Astro.site + "img/1x1.png",
+    Astro.site + "img/4x3.png",
+    Astro.site + "img/16x9.png",
+  ],
+  author: author,
+  creator: author,
+  publisher: publisher,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- technical -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <!-- icons and manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color={primaryColor}
+    />
+    <meta name="msapplication-TileColor" content={primaryColor} />
+    <meta name="theme-color" content={primaryColor} />
+    <!-- descriptive -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <!-- urls -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href={canonical} />
+    <!-- social (open graph) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Time Zones iCal Library" />
+    <meta property="og:locale" content="en" />
+    <!-- social (x/twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={canonical} />
+    <meta name="twitter:creator" content="add2calendar" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={xImage} />
+    <meta name="twitter:image:width" content="1600" />
+    <meta name="twitter:image:height" content="900" />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

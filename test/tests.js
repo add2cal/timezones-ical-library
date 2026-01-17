@@ -1,23 +1,64 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-// eslint-disable-next-line security/detect-child-process
-const execSync = require('child_process').execSync;
+const { execSync, spawnSync } = require('child_process');
+
+const testCases = [
+  'CST6CDT',
+  'GMT0',
+  'Europe/Berlin',
+  'America/New_York',
+  'America/Argentina/Buenos_Aires',
+  'Antarctica/Casey',
+  'Africa/Bangui',
+];
 
 try {
-  execSync('npm run build', { stdio: [0, 1, 2] });
+  execSync('npm run build:lib-only', { stdio: [0, 1, 2] });
 
+  const testCasesString = JSON.stringify(testCases);
+
+  console.log('\n🏎️  Running Tests...');
+
+  // Test ES Module import
   try {
-    execSync('node test/load-module.mjs', { stdio: [0, 1, 2] });
-    console.log('TEST SUCCESSFUL: importing the script as module\n');
+    const result = spawnSync('node', ['test/load-module.mjs', testCasesString], { encoding: 'utf8' });
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.status !== 0 || (result.stderr && result.stderr.length > 0)) {
+      throw new Error('Test script passed with errors');
+    }
+    console.log('✅ Importing the script as module and running tests\n');
   } catch (error) {
-    console.log('FAILED: Something went wrong with testing the ES Module setup\n');
+    console.error('❌ Something went wrong with testing the ES Module setup\n');
     throw error;
   }
 
+  // Test CommonJS require
   try {
-    execSync('node test/load-commonjs.cjs', { stdio: [0, 1, 2] });
-    console.log('TEST SUCCESSFUL: commonJS init via require\n');
+    const result = spawnSync('node', ['test/load-commonjs.cjs', testCasesString], { encoding: 'utf8' });
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.status !== 0 || (result.stderr && result.stderr.length > 0)) {
+      throw new Error('Test script passed with errors');
+    }
+    console.log('✅ CommonJS init via require and running tests\n');
   } catch (error) {
-    console.log('FAILED: Something went wrong with testing the commonJS setup\n');
+    console.error('❌ Something went wrong with testing the CommonJS setup\n');
+    throw error;
+  }
+
+  // Test whether there is an ics file per test case in the api folder
+  console.log('\n⚙️  Testing for ics files in the API folder:\n');
+  try {
+    testCases.forEach((tz) => {
+      const fs = require('fs');
+      const path = `api/${tz}.ics`;
+      // eslint-disable-next-line security/detect-non-literal-fs-filename
+      if (!fs.existsSync(path)) {
+        throw new Error(`🔴 Missing file for time zone ${tz} at API folder`);
+      }
+      console.log(`🟢 Found ics file for time zone ${tz} at API folder`);
+    });
+    console.log('✅ All time zones have a corresponding ics file in the API folder\n');
+  } catch (error) {
+    console.error(error.message);
+    console.error('❌ Could not find all ics files in the API folder\n');
     throw error;
   }
 
@@ -27,10 +68,10 @@ try {
     if (error) {
       throw error;
     }
-    console.log(`${dirToDrop} deleted again`);
-    console.log('All Tests SUCCESSFUL!\n');
+    console.log(`... ${dirToDrop} directory deleted again`);
+    console.log('\n🎉 All Tests SUCCESSFUL!\n');
   });
+  // eslint-disable-next-line no-unused-vars
 } catch (error) {
-  console.log('FAILED: Something went wrong with the npm build script while testing\n');
-  throw error;
+  console.error('\n😭 FAILED: Tests did not pass unfortunately.\n');
 }

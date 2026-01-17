@@ -24,18 +24,20 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           registry-url: https://registry.npmjs.org/
           cache: 'npm'
-      - name: npm ci
+      - name: Prepare with npm ci
         run: npm ci
+      - name: Set version in demo
+        run: ./scripts/set-version-in-demo.sh
       - name: Build
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: './demo/dist'
 
   deploy:
     environment:

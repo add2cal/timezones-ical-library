@@ -1,4 +1,4 @@
-# Contributing to the TimeZones iCal Library Repository
+# Contributing to the Time Zones iCal Library Repository
 
 You like the project and want to get involved?
 Awesome! It is always great to get some help.
