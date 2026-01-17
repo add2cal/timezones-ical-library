@@ -5,6 +5,7 @@ import {
   ComboboxButton,
   ComboboxOptions,
   ComboboxOption,
+  provideUseId
 } from "@headlessui/vue";
 import {
   CheckIcon,
@@ -13,9 +14,11 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/vue/20/solid";
 import { tzlib_get_timezones } from "timezones-ical-library";
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, useId } from "vue";
 
 type NullableString = string | null | undefined;
+
+provideUseId(() => useId());
 
 const props = defineProps<{
   modelValue?: NullableString;
@@ -124,6 +127,7 @@ const handleInputClick = () => {
                 <XMarkIcon
                   class="hover:text-secondary h-5 w-5 cursor-pointer text-zinc-400"
                   role="button"
+                  aria-label="Clear selected time zone"
                 />
               </span>
               <ChevronDownIcon
@@ -132,6 +136,7 @@ const handleInputClick = () => {
                   open ? 'rotate-180' : '',
                 ]"
                 aria-hidden="true"
+                aria-label="Toggle time zone options"
               />
             </ComboboxButton>
           </div>
