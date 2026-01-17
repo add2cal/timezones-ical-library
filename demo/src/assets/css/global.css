@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-gray-100 dark:bg-gray-800 m-0 h-full w-full p-0 text-left font-sans text-base text-black dark:text-white;
+    @apply m-0 h-full w-full bg-gray-100 p-0 text-left font-sans text-base text-black dark:bg-gray-800 dark:text-white;
   }
 
   ::selection {
@@ -24,7 +24,7 @@
 
 @layer utilities {
   h1 {
-    @apply font-headline font-bold text-5xl;
+    @apply font-headline text-5xl font-bold;
   }
 
   h2 {
@@ -32,11 +32,11 @@
   }
 
   h3 {
-    @apply text-xl font-bold mb-5;
+    @apply mb-5 text-xl font-bold;
   }
 
   h4 {
-    @apply text-lg font-bold mb-3;
+    @apply mb-3 text-lg font-bold;
   }
 
   a,
@@ -81,7 +81,6 @@
   }
 
   .highlight {
-    @apply px-1 mx-0.5 py-0.5 bg-yellow-200 dark:bg-amber-800 rounded font-mono;
+    @apply mx-0.5 rounded bg-yellow-200 px-1 py-0.5 font-mono dark:bg-amber-800;
   }
-
 }

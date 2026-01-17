@@ -67,7 +67,7 @@
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run eslint:fix && npm run prettier:fix",
+    "format": "npm run eslint:fix && npm run prettier:fix && cd demo && npm run format",
     "test": "node test/tests.js"
   },
   "devDependencies": {

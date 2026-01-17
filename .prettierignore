@@ -12,3 +12,6 @@
 
 # Ignore md files
 *.md
+
+# Ignore demo
+demo/**

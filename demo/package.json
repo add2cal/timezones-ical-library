@@ -7,8 +7,13 @@
     "build": "astro build",
     "eslint": "npx eslint .",
     "eslint:fix": "npm run eslint -- --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npx prettier . --write",
+    "format": "npm run eslint:fix && npm run prettier:fix",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "test": "npm run check && npx tsc"
   },
   "workspaces": [
     "../"
@@ -26,7 +31,7 @@
     "astro": "^6.0.0-beta.1",
     "astro-expressive-code": "^0.41.6",
     "tailwindcss": "^4.1.18",
-    "vue": "^3.5.26"
+    "vite": "^7.3.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

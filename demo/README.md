@@ -4,7 +4,7 @@
 
 ## 👉 General Information
 
-This part of the repository is building the simple demo page for the Time Zones iCal Library. 
+This part of the repository is building the simple demo page for the Time Zones iCal Library.
 Feel free to explore and also use it to get amazed by Astro (no paid promotion).
 
 > [!Caution]

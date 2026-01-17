@@ -1,14 +1,17 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   /* Fonts */
   --font-*: initial;
-  --font-sans: Inter, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-sans:
+    Inter, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
   --font-serif: Georgia, Times New Roman, Times, Garamond, serif;
-  --font-mono: 'Fira Mono', Consolas, Courier, monospace, ui-monospace, SFMono-Regular;
-  --font-headline: 'Paytone One', Arial, sans-serif;
+  --font-mono:
+    "Fira Mono", Consolas, Courier, monospace, ui-monospace, SFMono-Regular;
+  --font-headline: "Paytone One", Arial, sans-serif;
 
   /* Colors */
   --color-transparent: transparent;

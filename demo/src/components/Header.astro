@@ -5,23 +5,35 @@ import LightModeToogle from "@components/LightModeToogle.astro";
 ---
 
 <header
-  class="bg-linear-to-tr shadow-2xl from-primary-light to-primary relative w-full overflow-hidden py-20 dark:from-gray-950 dark:to-gray-900"
+  class="from-primary-light to-primary relative w-full overflow-hidden bg-linear-to-tr py-20 shadow-2xl dark:from-gray-950 dark:to-gray-900"
 >
   <div class="background-art" aria-hidden="true">
     <div><div></div></div>
     <div><div></div></div>
     <div><div></div></div>
   </div>
-  <div class="container text-center mx-auto max-w-3xl">
-    <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-5">
+  <div class="container mx-auto max-w-3xl text-center">
+    <div
+      class="relative z-10 flex flex-col items-center justify-center gap-5 md:flex-row"
+    >
       <Logo class="w-32 shrink-0" />
-      <h1 class="whitespace-nowrap md:text-left">Time Zones<br />iCal Library</h1>
+      <h1 class="whitespace-nowrap md:text-left">
+        Time Zones<br />iCal Library
+      </h1>
     </div>
-    <h2 class="text-balance mt-20">The convenient way to directly access the most recent official time zone information for iCalendar files with JavaScript/Typescript.</h2>
+    <h2 class="mt-20 text-balance">
+      The convenient way to directly access the most recent official time zone
+      information for iCalendar files with JavaScript/Typescript.
+    </h2>
   </div>
-  <div class="absolute gap-2 top-4 right-5 hidden items-center lg:flex">
-    <a href="https://github.com/add2cal/timezones-ical-library" class="opacity-75 select-none ring-0 focus-within:outline-2 rounded-full p-2 hover:opacity-100" target="_blank" rel="noopener noreferrer">
-      <GithubLogo class="w-6 h-6 fill-black dark:fill-white" />
+  <div class="absolute top-4 right-5 hidden items-center gap-2 lg:flex">
+    <a
+      href="https://github.com/add2cal/timezones-ical-library"
+      class="rounded-full p-2 opacity-75 ring-0 select-none focus-within:outline-2 hover:opacity-100"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <GithubLogo class="h-6 w-6 fill-black dark:fill-white" />
     </a>
     <LightModeToogle header={true} />
   </div>
