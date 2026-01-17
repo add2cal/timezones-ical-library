@@ -2,85 +2,24 @@
  *  @preserve
  *
  * ++++++++++++++++++++++++++++++++++++++
- * Add to Calendar TimeZones iCal Library
+ * Add to Calendar Time Zones iCal Library
  * ++++++++++++++++++++++++++++++++++++++
  *
- * Version: 1.11.1
  * Creator: Jens Kuerschner (https://jekuer.com)
  * Project: https://github.com/add2cal/timezones-ical-library
  * License: Apache-2.0
  *
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const tzlibVersion = '1.11.1';
+import tzDbData from './db/zonesdb.json';
+import { get_tz_content, escapeRegExp } from './utils.js';
 
-// DEFINING THE DB DATA - WILL GET RE-WRITTEN WITH THE ACTUAL DATA ON BUILD
-let tzlibZonesDB,
-  tzlibZonesDetailsDB = {};
-
-// SHARED FUNCTION TO GET THE TZ CONTENT FROM THE INTERNAL DATABASE
-function tzlib_get_content(tzName) {
-  // get timezone parts
-  const nameParts = tzName.split('/');
-  // validate timezone
-  if (
-    (nameParts.length === 3 &&
-      (!tzlibZonesDB[`${nameParts[0]}`] ||
-        !tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`] ||
-        !tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`])) ||
-    (nameParts.length === 2 &&
-      (!tzlibZonesDB[`${nameParts[0]}`] || !tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`])) ||
-    (nameParts.length === 1 && !tzlibZonesDB[`${nameParts[0]}`])
-  ) {
-    console.error('Given timezone not valid.');
-    return '';
-  }
-  // create the output
-  if (nameParts.length === 3) {
-    return [
-      tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][0],
-      tzlib_enrich_data(
-        tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][`${nameParts[2]}`][1]],
-      ),
-    ];
-  }
-  if (nameParts.length === 2) {
-    return [
-      tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][0],
-      tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][`${nameParts[1]}`][1]]),
-    ];
-  }
-  return [
-    tzlibZonesDB[`${nameParts[0]}`][0],
-    tzlib_enrich_data(tzlibZonesDetailsDB[tzlibZonesDB[`${nameParts[0]}`][1]]),
-  ];
-}
-
-function tzlib_enrich_data(string) {
-  const shortenerMap = {
-    '<br>': '<n>',
-    'TZNAME:': '<tz>',
-    'TZOFFSETFROM:': '<of>',
-    'TZOFFSETTO:': '<ot>',
-    'DTSTART:': '<s>',
-    'RRULE:': '<r>',
-    'BEGIN:DAYLIGHT': '<bd>',
-    'END:DAYLIGHT': '<ed>',
-    'BEGIN:STANDARD': '<bs>',
-    'END:STANDARD': '<es>',
-  };
-  for (const [key, value] of Object.entries(shortenerMap)) {
-    string = string.replaceAll(value, key);
-  }
-  return string;
-}
+const tzDb = tzDbData;
 
 // LOADING THE RIGHT CODE BLOCK
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function tzlib_get_ical_block(tzName, jsonType = false) {
-  const tzBlock = tzlib_get_content(tzName);
-  if (tzBlock[1] == null || tzBlock[1] == '') {
+export function tzlib_get_ical_block(tzName, jsonType = false) {
+  const tzBlock = get_tz_content(tzName);
+  if (!tzBlock[1] || tzBlock[1] === '') {
     return '';
   }
   // create the output
@@ -98,7 +37,7 @@ function tzlib_get_ical_block(tzName, jsonType = false) {
       '\r\nX-LIC-LOCATION:' +
       location +
       '\r\nLAST-MODIFIED:' +
-      tzBlock[1].replace(/[^\w_\-:,;=+/<br>]/g, '').replace(/<br>/g, '\r\n') +
+      tzBlock[1].replace(/[^\w\-:,;=+/<>]/g, '').replace(/<br>/g, '\r\n') +
       'END:VTIMEZONE',
     tzidLine,
   ];
@@ -110,9 +49,8 @@ function tzlib_get_ical_block(tzName, jsonType = false) {
 }
 
 // PROVIDING THE OFFSET BASED ON A GIVEN DATE AND TIME (YYYY-MM-DD and hh:mm as per ISO-8601).
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function tzlib_get_offset(tzName, isoDate, isoTime) {
-  const tzBlock = tzlib_get_content(tzName);
+export function tzlib_get_offset(tzName, isoDate, isoTime) {
+  const tzBlock = get_tz_content(tzName);
   if (tzBlock[1] == null || tzBlock[1] == '') {
     return '';
   }
@@ -139,8 +77,8 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
   const dateDay = date.getDate();
   const dateHour = date.getHours();
   // preparing the tz data
-  const timezoneData = tzBlock[1].replace(/[^\w_\-:,;=+/<br>]/g, '').split('<br>');
-  // collect timezone breakpoints (exactly 2)
+  const timezoneData = tzBlock[1].replace(/[^\w\-:,;=+/<>]/g, '').split('<br>');
+  // collect time zone breakpoints (exactly 2)
   const tzBreakpoints = { 1: {}, 2: {} };
   let breakpointCount = 0;
   for (let i = 0; i < timezoneData.length; i++) {
@@ -218,37 +156,58 @@ function tzlib_get_offset(tzName, isoDate, isoTime) {
   return tzBreakpoints[`${fallbackCase}`].offset;
 }
 
-// PROVIDE ALL TIMEZONES
-let tzlibZoneNames = [];
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function tzlib_get_timezones(jsonType = false) {
-  // generate the time zone names array, if not done yet
-  if (tzlibZoneNames.length == 0) {
-    tzlibZoneNames = (function () {
-      let namesArr = [];
-      for (const [key, value] of Object.entries(tzlibZonesDB)) {
-        if (typeof value === 'object' && !Array.isArray(value)) {
-          for (const [key2, value2] of Object.entries(value)) {
-            if (typeof value2 === 'object' && !Array.isArray(value2)) {
-              for (const [key3] of Object.entries(value2)) {
-                namesArr.push(key + '/' + key2 + '/' + key3);
-              }
-            } else {
-              namesArr.push(key + '/' + key2);
+// PROVIDE ALL TIME ZONES
+export function tzlib_get_timezones(jsonType = false) {
+  // parse zone names from tzDb.db object where we join levels with '/' to get the full names
+  const zoneNames = [];
+  const map_db_data = (raw) => {
+    const mappedData = {};
+    for (const [key, value] of Object.entries(raw)) {
+      if (typeof value === 'object' && !Array.isArray(value)) {
+        mappedData[`${key}`] = {};
+        for (const [key2, value2] of Object.entries(value)) {
+          if (typeof value2 === 'object' && !Array.isArray(value2)) {
+            mappedData[`${key}`][`${key2}`] = {};
+            for (const [key3, value3] of Object.entries(value2)) {
+              const location = value3[0].replace(
+                new RegExp(`^${escapeRegExp(key)}/${escapeRegExp(key2)}/`),
+                `${tzDb.toplevel.indexOf(key)}/${key2}/`,
+              );
+              mappedData[`${key}`][`${key2}`][`${key3}`] = [location, value3[1]];
             }
+          } else {
+            const location = value2[0].replace(
+              new RegExp(`^${escapeRegExp(key)}/`),
+              `${tzDb.toplevel.indexOf(key)}/`,
+            );
+            mappedData[`${key}`][`${key2}`] = [location, value2[1]];
           }
-        } else {
-          namesArr.push(key);
         }
+      } else {
+        const location = value[0].replace(
+          new RegExp(`^${escapeRegExp(key)}/`),
+          `${tzDb.toplevel.indexOf(key)}/`,
+        );
+        mappedData[`${key}`] = [location, value[1]];
       }
-      return namesArr;
-    })();
-  }
-  // and output the result
+    }
+    return mappedData;
+  };
+  const tzDbZones = map_db_data(tzDb.db);
+  // recursive function to traverse the db object
+  const traverse_db = (obj, path = '') => {
+    for (const [key, value] of Object.entries(obj)) {
+      if (typeof value === 'object' && !Array.isArray(value)) {
+        traverse_db(value, path + key + '/');
+      } else {
+        zoneNames.push(path + key);
+      }
+    }
+  };
+  traverse_db(tzDbZones);
+  // return
   if (jsonType) {
-    return JSON.stringify(tzlibZoneNames);
+    return JSON.stringify(zoneNames);
   }
-  return tzlibZoneNames;
+  return zoneNames;
 }
-
-// PLACE EXPORT HERE

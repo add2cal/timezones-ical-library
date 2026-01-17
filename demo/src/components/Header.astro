@@ -1,0 +1,204 @@
+---
+import Logo from "@assets/logo.svg";
+import GithubLogo from "@assets/github.svg";
+import LightModeToogle from "@components/LightModeToogle.astro";
+---
+
+<header
+  class="from-primary-light to-primary relative w-full overflow-hidden bg-linear-to-tr py-20 shadow-2xl dark:from-gray-950 dark:to-gray-900"
+>
+  <div class="background-art" aria-hidden="true">
+    <div><div></div></div>
+    <div><div></div></div>
+    <div><div></div></div>
+  </div>
+  <div class="container mx-auto max-w-3xl text-center">
+    <div
+      class="relative z-10 flex flex-col items-center justify-center gap-5 md:flex-row"
+    >
+      <Logo class="w-32 shrink-0" />
+      <h1 class="whitespace-nowrap md:text-left">
+        Time Zones<br />iCal Library
+      </h1>
+    </div>
+    <h2 class="mt-20 text-balance">
+      The convenient way to directly access the most recent official time zone
+      information for iCalendar files with JavaScript/Typescript.
+    </h2>
+  </div>
+  <div class="absolute top-4 right-5 hidden items-center gap-2 lg:flex">
+    <a
+      href="https://github.com/add2cal/timezones-ical-library"
+      class="rounded-full p-2 opacity-75 ring-0 select-none focus-within:outline-2 hover:opacity-100"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <GithubLogo class="h-6 w-6 fill-black dark:fill-white" />
+    </a>
+    <LightModeToogle header={true} />
+  </div>
+</header>
+
+<style>
+  .background-art {
+    --art-primary: #336db9;
+    --art-secondary: #ffa255;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .dark .background-art {
+    --art-primary: #539eff;
+    --art-secondary: #9755ff;
+  }
+
+  .background-art > div {
+    position: absolute;
+  }
+
+  .background-art > div > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: center center;
+  }
+
+  /* Child 1 */
+  .background-art > div:nth-child(1) {
+    bottom: -25%;
+    left: -25%;
+    height: 50%;
+    width: 50%;
+    filter: blur(100px);
+    z-index: 3;
+  }
+  .background-art > div:nth-child(1) > div {
+    background-color: var(--art-primary);
+    opacity: 0.5;
+    animation-name: floating1;
+    animation-duration: 33s;
+  }
+
+  /* Child 2 */
+  .background-art > div:nth-child(2) {
+    bottom: -25%;
+    left: 15%;
+    height: 40%;
+    width: 60%;
+    filter: blur(150px);
+    z-index: 2;
+  }
+  .background-art > div:nth-child(2) > div {
+    background: linear-gradient(
+      107.7deg,
+      var(--art-primary) 0%,
+      var(--art-secondary) 50%
+    );
+    opacity: 0.7;
+    animation-name: floating2;
+    animation-duration: 19s;
+  }
+
+  /* Child 3 */
+  .background-art > div:nth-child(3) {
+    bottom: -20%;
+    left: 75%;
+    height: 20%;
+    width: 40%;
+    filter: blur(50px);
+    z-index: 1;
+  }
+  .background-art > div:nth-child(3) > div {
+    background-color: var(--art-primary);
+    opacity: 0.6;
+    animation-name: floating3;
+    animation-duration: 27s;
+  }
+
+  @keyframes floating1 {
+    0% {
+      transform: translate(00%, 00%) scale(1, 1) rotate(0deg);
+    }
+    10% {
+      transform: translate(25%, -20%) scale(1.5, 1) rotate(0deg);
+    }
+    20% {
+      transform: translate(10%, -25%) scale(1, 1.5) rotate(0deg);
+    }
+    30% {
+      transform: translate(00%, -20%) scale(1, 1.5) rotate(-45deg);
+    }
+    40% {
+      transform: translate(10%, -30%) scale(1, 2) rotate(0deg);
+    }
+    50% {
+      transform: translate(15%, -35%) scale(2, 0.5) rotate(45deg);
+    }
+    60% {
+      transform: translate(10%, -30%) scale(1, 2) rotate(90deg);
+    }
+    70% {
+      transform: translate(25%, -10%) scale(1, 1.5) rotate(45deg);
+    }
+    80% {
+      transform: translate(40%, 20%) scale(1.5, 0.5) rotate(-45deg);
+    }
+    90% {
+      transform: translate(15%, -20%) scale(2, 1.5) rotate(0deg);
+    }
+    100% {
+      transform: translate(00%, 00%) scale(1, 1) rotate(0deg);
+    }
+  }
+
+  @keyframes floating2 {
+    0% {
+      transform: translate(00%, 00%) scale(1, 1) rotate(0deg);
+    }
+    20% {
+      transform: translate(-10%, -05%) scale(1.5, 1.5) rotate(15deg);
+    }
+    40% {
+      transform: translate(00%, -15%) scale(2, 0.5) rotate(-45deg);
+    }
+    60% {
+      transform: translate(-15%, -10%) scale(1.5, 1) rotate(45deg);
+    }
+    80% {
+      transform: translate(-25%, -05%) scale(2.5, 0.5) rotate(180deg);
+    }
+    100% {
+      transform: translate(00%, 00%) scale(1, 1) rotate(0deg);
+    }
+  }
+
+  @keyframes floating3 {
+    0% {
+      transform: translate(00%, 00%) scale(1, 1) rotate(0deg);
+    }
+    25% {
+      transform: translate(-10%, -10%) scale(2, 1) rotate(-15deg);
+    }
+    50% {
+      transform: translate(-20%, -05%) scale(1, 0.5) rotate(45deg);
+    }
+    75% {
+      transform: translate(-15%, -15%) scale(2, 1.5) rotate(180deg);
+    }
+    100% {
+      transform: translate(00%, 00%) scale(1, 1) rotate(0deg);
+    }
+  }
+</style>

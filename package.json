@@ -1,9 +1,9 @@
 {
   "name": "timezones-ical-library",
-  "version": "1.11.1",
+  "version": "2.0.0",
   "engines": {
-    "node": ">=18.17.0",
-    "npm": ">=9.6.7"
+    "node": ">=24.11.1",
+    "npm": ">=11.6.2"
   },
   "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript",
   "main": "dist/cjs/index.js",
@@ -24,7 +24,7 @@
   "jsdelivr": "./dist/tzlib.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/add2cal/timezones-ical-library.git"
+    "url": "git+https://github.com/add2cal/timezones-ical-library.git"
   },
   "keywords": [
     "ical",
@@ -60,33 +60,26 @@
   },
   "homepage": "https://tz.add-to-calendar-technology.com/",
   "scripts": {
-    "release": "node set-release.js",
-    "stylelint": "npx stylelint demo_assets/css/*.css",
-    "stylelint:fix": "npm run stylelint -- --fix",
+    "build": "node scripts/build.js && cd demo && npm ci && npm run build",
+    "build:lib-only": "node scripts/build.js",
+    "dev": "cd demo && npm run dev",
     "eslint": "npx eslint .",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run eslint:fix && npm run prettier:fix && npm run stylelint:fix",
-    "test": "node test/tests.js",
-    "build": "npx grunt"
+    "format": "npm run eslint:fix && npm run prettier:fix && cd demo && npm run format",
+    "test": "node test/tests.js"
   },
   "devDependencies": {
+    "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-commonjs": "^1.0.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-regexp": "^2.10.0",
     "eslint-plugin-security": "^3.0.1",
     "glob": "^13.0.0",
-    "grunt": ">=1.6.1",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^5.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-file-creator": "^0.1.3",
-    "grunt-version": "^3.0.2",
     "prettier": "^3.7.4",
-    "stylelint": "^16.26.1",
-    "stylelint-config-standard": "^39.0.1",
     "typescript-eslint": "^8.52.0"
   }
 }

@@ -1,0 +1,95 @@
+---
+interface Props {
+  header?: boolean;
+}
+
+const { header = false } = Astro.props;
+const maskId = header ? "moon-mask-header" : "moon-mask-main";
+const switchId = header ? "light-mode-switch-header" : "light-mode-switch";
+---
+
+<button
+  id={switchId}
+  class="light-mode-switch group tap-highlight-transparent focus-visible:ring-secondary relative z-20 flex cursor-pointer justify-center rounded-full border-0 bg-transparent p-3 opacity-75 outline-none select-none hover:opacity-100 focus-visible:ring-2"
+  aria-label="Light/Dark Mode Switch"
+>
+  <div
+    class:list={[
+      "switch-icon relative h-5 w-5 text-gray-100",
+      "rounded-full transition-transform duration-500 ease-out",
+      "dark:scale-50",
+    ]}
+  >
+    <span
+      class:list={[
+        "absolute top-1/2 left-1/2 -z-10 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full",
+        "opacity-0 transition-shadow duration-500 ease-out dark:opacity-100",
+        "shadow-none dark:shadow-[0_-20px_0_0_currentColor,0_20px_0_0_currentColor,-20px_0_0_0_currentColor,20px_0_0_0_currentColor,15px_15px_0_0_currentColor,15px_-15px_0_0_currentColor,-15px_15px_0_0_currentColor,-15px_-15px_0_0_currentColor]",
+      ]}></span>
+
+    <svg viewBox="0 0 20 20" class="h-full w-full overflow-visible">
+      <mask id={maskId} maskUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+        <circle
+          cx="15"
+          cy="5"
+          r="9"
+          fill="black"
+          class="transition-all duration-500 ease-out dark:translate-x-4 dark:-translate-y-4"
+        ></circle>
+      </mask>
+      <circle
+        cx="10"
+        cy="10"
+        r="10"
+        fill="currentColor"
+        mask={`url(#${maskId})`}
+        class="fill-gray-900 transition-colors duration-500 ease-out dark:fill-gray-100"
+      ></circle>
+    </svg>
+  </div>
+</button>
+
+<script is:inline>
+  function initLightSwitch() {
+    const theme = (() => {
+      const localStorageTheme = localStorage?.getItem("theme") ?? "";
+      if (["dark", "light"].includes(localStorageTheme)) {
+        return localStorageTheme;
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
+
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.setAttribute("data-theme", "github-light");
+    } else {
+      document.documentElement.classList.add("dark");
+      document.documentElement.setAttribute("data-theme", "github-dark");
+    }
+
+    window.localStorage.setItem("theme", theme);
+
+    const buttons = document.querySelectorAll(".light-mode-switch");
+    buttons.forEach((btn) => {
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      newBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        document.documentElement.setAttribute(
+          "data-theme",
+          isDark ? "github-dark" : "github-light",
+        );
+      });
+    });
+  }
+
+  initLightSwitch();
+
+  document.addEventListener("astro:page-load", initLightSwitch);
+</script>
