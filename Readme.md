@@ -10,7 +10,7 @@
 
 Convert the [IANA (formerly Olson) time zone database files](http://www.iana.org/time-zones) into VTIMEZONE blocks, compatible with the iCalendar specification (RFC2445).
 
-It is based on ([vzic](https://github.com/libical/libical)), but only provides the VTIMEZONE part to easily put this into any other iCal generator (like the [add-to-calendar-button](https://github.com/add2cal/add-to-calendar-button)). 
+It is based on ([vzic](https://github.com/libical/libical)), but only provides the VTIMEZONE part to easily put this into any other iCal generator (like the [add-to-calendar-button](https://github.com/add2cal/add-to-calendar-button)).  
 It is built to be used standalone, via API, or as JavaScript module, hosted as npm package.
 
 <br /><br />
@@ -25,7 +25,7 @@ It is built to be used standalone, via API, or as JavaScript module, hosted as n
 
 <details>
 <summary>Learn more (not required)</summary>
-**This step is only relevant if you want to build the package and data on your own and from source!** 
+**This step is only relevant if you want to build the package and data on your own and from source!**  
 _(Requires Node.js as well as Linux as operating system. You would also need to load/include it manually into your codebase.)_ 
 
 Run ...
@@ -56,12 +56,12 @@ After the installation:
 
 #### A. Get time zones
 
-Use `tzlib_get_timezones()` to retrieve a list of all available time zone strings. 
+Use `tzlib_get_timezones()` to retrieve a list of all available time zone strings.  
 You can pass `true` to retrieve a JSON formatted string instead of an array.
 
 #### B. Get the iCal time zone block
 
-Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given time zone string (tzName). 
+Use the `tzlib_get_ical_block(tzName)` function to return the proper iCal VTIMEZONE block for a given time zone string (tzName).  
 Again, pass `true` to retrieve a JSON formatted string instead of an array _(not recommended)_.
 
 You will receive an array, holding the VTIMEZONE block first, and the TZID line (additionally) second. The latter one is needed for any further time statement.
@@ -137,8 +137,8 @@ https://tz.add-to-calendar-technology.com/api/zones.json
 https://tz.add-to-calendar-technology.com/api/{{zoneName}}.ics
 ```
 
-With `{{zoneName}}` being your time zone. 
-So, for New York, this would be [https://tz.add-to-calendar-technology.com/api/America/New_York.ics](https://tz.add-to-calendar-technology.com/api/America/New_York.ics). 
+With `{{zoneName}}` being your time zone.  
+So, for New York, this would be [https://tz.add-to-calendar-technology.com/api/America/New_York.ics](https://tz.add-to-calendar-technology.com/api/America/New_York.ics).  
 **This is case sensitive!**
 
 > [!WARNING]
