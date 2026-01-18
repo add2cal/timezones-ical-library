@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "test": "npm run check && npx tsc"
+    "test": "npm run check"
   },
   "workspaces": [
     "../"
