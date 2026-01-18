@@ -1,8 +1,10 @@
 #!/bin/sh
 
 # check for the latest time zone data package at https://www.iana.org/time-zones
-# provide tzVersion (like 2025c) via argument: sudo sh update-tzdata.sh 2025c
-# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh update-tzdata.sh 2025c true
+# provide tzVersion (like 2025c) via argument: sudo sh scripts/update-tzdata.sh 2025c
+# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2025c true
+
+API_DIR="../../demo/public/api"
 
 sudo_sed_inplace() {
   if [ "$(uname)" = "Darwin" ]; then
@@ -84,17 +86,17 @@ then
   cd ..
   # create API data (overview zones.json alrady created by generator.js)
   echo "✨ Creating API data ..."
-  rm -rf ../../api
-  mkdir ../../api
-  cp -r output/* ../../api/
-  # move ../db/zones.json to ../../api/zones.json
-  mv ../db/zones.json ../../api/zones.json
+  rm -rf "$API_DIR"
+  mkdir "$API_DIR"
+  cp -r output/* "$API_DIR"/
+  # move ../db/zones.json to ../../demo/public/api/zones.json
+  mv ../db/zones.json "$API_DIR"/zones.json
   # clean up build
   echo "🧹 Cleaning up ..."
   rm -rf output
   rm -rf tzdata
   # clean up API
-  cd ../../api
+  cd "$API_DIR"
   rm zones.h
   rm zones.tab
   cd ..

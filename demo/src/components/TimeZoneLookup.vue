@@ -45,7 +45,9 @@ watch(selectedTimezone, (newVal) => {
   <div
     class="to-primary-dark/40 from-primary-light/50 bg-radial py-20 shadow-inner"
   >
-    <div class="mx-auto flex w-fit flex-col gap-6 md:flex-row md:gap-0">
+    <div
+      class="mx-auto flex w-full flex-col items-center gap-6 md:w-fit md:flex-row md:gap-0"
+    >
       <div class="flex flex-col">
         <h3 class="mb-1 text-center italic">Give it a try!</h3>
         <div class="hidden md:block">
@@ -73,13 +75,18 @@ watch(selectedTimezone, (newVal) => {
         </div>
       </div>
 
-      <div class="relative z-50 min-w-xs grow">
+      <div class="relative z-50 w-full max-w-[360px] grow px-3">
         <Autocomplete v-model="selectedTimezone" />
       </div>
       <div class="w-52 shrink"></div>
     </div>
 
-    <div :class="['mx-auto mt-8 w-md', showOutput ? 'block' : 'hidden']">
+    <div
+      :class="[
+        'mx-auto mt-8 w-full max-w-md px-3',
+        showOutput ? 'block' : 'hidden',
+      ]"
+    >
       <div
         class="rounded border border-gray-400 bg-gray-100 p-4 shadow-lg dark:border-gray-500 dark:bg-gray-800"
       >
