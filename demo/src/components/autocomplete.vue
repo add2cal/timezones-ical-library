@@ -110,35 +110,35 @@ const handleInputClick = () => {
               @click="handleInputClick"
             />
 
-            <ComboboxButton
-              ref="comboBtn"
-              class="flex shrink-0 cursor-pointer items-center"
-              v-slot="{ open }"
-            >
-              <span
+            <div class="flex items-center gap-1">
+              <button
                 v-if="!hasEmptyValue"
-                role="button"
                 tabindex="0"
                 class="focus-visible:ring-secondary/75 focus:outline-none focus-visible:ring"
                 @click.stop.prevent="clear"
                 @keydown.space.stop.prevent="clear"
                 @keydown.enter.stop.prevent="clear"
+                aria-label="Clear selected time zone"
               >
                 <XMarkIcon
                   class="hover:text-secondary h-5 w-5 cursor-pointer text-zinc-400"
-                  role="button"
-                  aria-label="Clear selected time zone"
                 />
-              </span>
+            </button>
+            <ComboboxButton
+              ref="comboBtn"
+              class="flex shrink-0 cursor-pointer items-center"
+              v-slot="{ open }"
+              aria-label="Toggle time zone options"
+            >
               <ChevronDownIcon
                 :class="[
                   'h-5 w-5 text-zinc-400 transition-transform',
                   open ? 'rotate-180' : '',
                 ]"
                 aria-hidden="true"
-                aria-label="Toggle time zone options"
               />
             </ComboboxButton>
+            </div>
           </div>
         </div>
 
