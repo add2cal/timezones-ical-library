@@ -5,7 +5,7 @@ import {
   ComboboxButton,
   ComboboxOptions,
   ComboboxOption,
-  provideUseId
+  provideUseId,
 } from "@headlessui/vue";
 import {
   CheckIcon,
@@ -123,21 +123,21 @@ const handleInputClick = () => {
                 <XMarkIcon
                   class="hover:text-secondary h-5 w-5 cursor-pointer text-zinc-400"
                 />
-            </button>
-            <ComboboxButton
-              ref="comboBtn"
-              class="flex shrink-0 cursor-pointer items-center"
-              v-slot="{ open }"
-              aria-label="Toggle time zone options"
-            >
-              <ChevronDownIcon
-                :class="[
-                  'h-5 w-5 text-zinc-400 transition-transform',
-                  open ? 'rotate-180' : '',
-                ]"
-                aria-hidden="true"
-              />
-            </ComboboxButton>
+              </button>
+              <ComboboxButton
+                ref="comboBtn"
+                class="flex shrink-0 cursor-pointer items-center"
+                v-slot="{ open }"
+                aria-label="Toggle time zone options"
+              >
+                <ChevronDownIcon
+                  :class="[
+                    'h-5 w-5 text-zinc-400 transition-transform',
+                    open ? 'rotate-180' : '',
+                  ]"
+                  aria-hidden="true"
+                />
+              </ComboboxButton>
             </div>
           </div>
         </div>
