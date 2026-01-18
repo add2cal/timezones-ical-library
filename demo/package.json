@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "node scripts/generateLLMFiles.js",
     "eslint": "npx eslint .",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "npx prettier . --check",
