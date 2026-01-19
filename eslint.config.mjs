@@ -6,7 +6,7 @@ import pluginSecurity from 'eslint-plugin-security';
 export default [
   // general ignores
   {
-    ignores: ['**/*.d.ts', '**/*.min.*', 'dist/', 'api/', 'demo/', 'scripts/', 'node_modules/', '.github/'],
+    ignores: ['**/*.d.ts', '**/*.min.*', 'dist/', 'demo/', 'scripts/', 'node_modules/', '.github/', '.ai/'],
   },
   // general rules
   js.configs.recommended,

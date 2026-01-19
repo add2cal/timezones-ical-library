@@ -63,7 +63,9 @@ They should remain focused in scope and avoid containing unrelated commits.
 **Please ask first** before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language).
 Otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
-New development happens on the dev branch first. It is the only branch which gets merged into main!
+Also always make sure to run the linters (`npm run format` would also fix what can be auto-fixed) and adjust any documentation in the .ai directory if applicable!
+
+**New development happens on the dev branch first. It is the only branch which gets merged into main!**
 
 Adhering to the following process is the best way to get your work included in the project:
 
