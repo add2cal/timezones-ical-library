@@ -24,9 +24,7 @@ This repository requires a multi-layered testing strategy due to its hybrid natu
 * **Key Scenarios:**
     * **Parsing Logic:** Ensure `vzic-parse.c` correctly interprets IANA rule definitions.
     * **Memory Safety:** The C tool handles large buffers; ensure no segfaults on large datasets.
-
-**LLM Instruction:**
-> If modifying `vzic-*.c`, you MUST verify compilation with `make` before running tests.
+* **Disclaimer:** The test-vzic requires an ical.h file, which can be hard to find outside a Linux environment. For regular use, since vzic gets included as dependency, it is not necessary to test it.
 
 ## 3. Data Integrity Validation
 **Context:** Since we generate thousands of JSON files, we must ensure the generation process didn't produce corrupt JSON.

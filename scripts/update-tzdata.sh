@@ -19,7 +19,7 @@ then
   echo "👉 Updating ..."
   # prepare system
   echo "⚙️ Installing build dependencies..."
-  sudo apt-get install -y --no-install-recommends make gcc pkg-config libglib2.0-dev
+  sudo apt-get install -y --no-install-recommends make gcc pkg-config libical-dev libglib2.0-dev
   npm install
   cd src
   # update vzic tool if requested or no vzic folder exists

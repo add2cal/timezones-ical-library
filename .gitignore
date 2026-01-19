@@ -21,6 +21,7 @@ RulesVzic
 ZonesPerl
 ZonesVzic
 src/vzic/vzic
+src/vzic/test-output
 *.o
 *~
 
