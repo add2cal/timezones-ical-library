@@ -37,9 +37,9 @@ then
     mv tmp_libical/vzic vzic
     # clean up
     rm -rf tmp_libical
-    # in the vzic folder, remove any file that is not "Makefile" or ends with ".c" or ".h" or ".pl"
+    # in the vzic folder, remove any file that is not "Makefile" or ends with ".c" or ".h" or ".pl" or ".md"
     cd vzic
-    find . -type f ! -name 'Makefile' ! -name '*.c' ! -name '*.h' ! -name '*.pl' -delete
+    find . -type f ! -name 'Makefile' ! -name '*.c' ! -name '*.h' ! -name '*.pl' ! -name '*.md' -delete
     # update file contents
     # in the Makefile, set TZID_PREFIX and PRODUCT_ID to empty
     sudo_sed_inplace 's/^TZID_PREFIX .*=.*$/TZID_PREFIX = /' Makefile
