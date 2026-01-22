@@ -73,7 +73,7 @@ then
   sudo make -B -s
   sudo ./vzic --olson-dir tzdata --output-dir output
   cd ..
-  node db-generator.js
+  node ../scripts/db-generator.js
   # convert symlinks to real files
   echo "🪄 Converting symlinks to real files ..."
   cd vzic
