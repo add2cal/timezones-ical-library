@@ -73,7 +73,6 @@ try {
     console.log(`... ${dirToDrop} directory deleted again`);
     console.log('\n🎉 All Tests SUCCESSFUL!\n');
   });
-  // eslint-disable-next-line no-unused-vars
-} catch (error) {
+} catch (_error) {
   console.error('\n😭 FAILED: Tests did not pass unfortunately.\n');
 }

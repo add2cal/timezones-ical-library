@@ -14,11 +14,11 @@ async function build() {
   fs.mkdirSync('dist/mjs', { recursive: true });
 
   const universalConfig = {
-    entryPoints: ['src/tzlib.js'],
+    entryPoints: ['src/tzlib.ts'],
     bundle: true,
     minify: true,
     legalComments: 'inline',
-    target: 'es2020',
+    target: 'es2022',
     loader: {
       '.json': 'json',
     },

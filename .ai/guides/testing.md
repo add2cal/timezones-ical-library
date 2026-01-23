@@ -1,9 +1,9 @@
 # Testing Strategy & Guidelines
 
 ## Overview
-This repository requires a multi-layered testing strategy due to its hybrid nature (C generation tools vs. JavaScript runtime).
+This repository requires a multi-layered testing strategy due to its hybrid nature (C generation tools vs. JavaScript/TypeScript runtime).
 
-## 1. Core Library Tests (JavaScript)
+## 1. Core Library Tests (JavaScript/TypeScript)
 **Context:** These tests verify the `npm` package functionality (the code in `src/`). They ensure the library correctly loads and serves the JSON data.
 
 * **Command:** `npm test`

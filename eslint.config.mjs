@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import regexpEslint from 'eslint-plugin-regexp';
 import pluginSecurity from 'eslint-plugin-security';
@@ -10,24 +11,36 @@ export default [
   },
   // general rules
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   regexpEslint.configs['flat/recommended'],
   prettierRecommended,
   pluginSecurity.configs.recommended,
   // overrides
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ['**/*.{js,mjs,cjs,ts}'],
     rules: {
       'prettier/prettier': 'error',
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
       'no-undef': 'off',
-      'no-unused-vars': [
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
         'warn',
         {
           argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
           destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
         },
       ],
       'security/detect-non-literal-regexp': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+  {
+    files: ['**/*.{js,mjs,cjs}'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 ];

@@ -11,7 +11,7 @@
 Convert the [IANA (formerly Olson) time zone database files](http://www.iana.org/time-zones) into VTIMEZONE blocks, compatible with the iCalendar specification (RFC2445).
 
 It is based on [vzic](https://github.com/libical/libical/tree/master/vzic), but only provides the VTIMEZONE part to easily put this into any other iCal generator (like the [add-to-calendar-button](https://github.com/add2cal/add-to-calendar-button)).  
-It is built to be used standalone, via API, or as JavaScript module, hosted as npm package.
+It is built to be used standalone, via API, or as JavaScript/TypeScript module, hosted as npm package.
 
 <br /><br />
 

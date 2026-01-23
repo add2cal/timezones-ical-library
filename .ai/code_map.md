@@ -1,5 +1,7 @@
 # Code Map
 
+This code map gives an overview of the most important files and directory, structured by nature. It is no complete sitemap of the codebase!
+
 ## Root Directory
 * `scripts/update-tzdata.sh`: Script to download IANA data and trigger the build.
 * `scripts/db-generator.js`: Node script that orchestrates the JSON generation after C tools run.
@@ -8,13 +10,16 @@
 * `.github/workflows/`: yml based scripts to run GitHub based tests, deploy to npm as well as deploying the demo page to GitHub Pages.
 
 ## C Source (Data Tools)
-* `vzic.c` / `vzic.h`: Main logic for parsing timezone definitions.
-* `vzic-dump.c`: Handles the output formatting of VTIMEZONE blocks.
-* `test-vzic.c`: Unit tests for the C components.
+* `src/vzic/vzic.c` / `src/vzic/vzic.h`: Main logic for parsing timezone definitions.
+* `src/vzic/vzic-dump.c`: Handles the output formatting of VTIMEZONE blocks.
+* `src/vzic/test-vzic.c`: Unit tests for the C components.
 
 ## JavaScript Source (Library)
 * `src/`: Contains the source for the npm package.
-* `index.d.ts`: TypeScript definitions (ensure these are updated if library changes).
+* `src/tzlib.ts`: Main entry point.
+* `src/utils.ts`: Utility functions.
+* `src/types.ts`: Internal TypeScript definitions.
+* `index.d.ts`: Public TypeScript definitions (ensure these are updated if library changes).
 * `test/`: Unit/Component tests.
 * `dist/`: **DO NOT EDIT.** Generated build artifacts (CJS/MJS).
 
