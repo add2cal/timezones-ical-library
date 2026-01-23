@@ -1,7 +1,7 @@
 # TimeZones iCal Library - AI Context
 
 # Project Summary
-A JavaScript library providing official IANA timezone information for iCalendar (RFC5545) files. 
+A JavaScript/TypeScript library providing official IANA timezone information for iCalendar (RFC5545) files. 
 It includes a C-based build pipeline (`vzic`) to generate the underlying core data from source.
 The actual build provides timezone data in the form of VTIMEZONE components for use in iCalendar files - optimized for all popular calendar applications (Outlook, Google Calendar, Apple Calendar, etc.).
 

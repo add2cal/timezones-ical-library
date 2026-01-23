@@ -1,7 +1,7 @@
 # Coding Conventions
 
 ## General
-* **Language:** JavaScript (ES6+) for library, C for tools.
+* **Language:** TypeScript for library, C for tools.
 * **Formatting:** Follow `.prettierrc.json` and `.eslintrc.json`. Use `npm run format` as a shortcut to auto-format the project (can be used on both, the library/root as well as on the demo level)
 * **Scripting:** When creating temporary scripts for debugging, create them in a new directory `./tmp_scripts`, which also always needs to be deleted after debugging. For scripts that should become part of the codebase, they go into `./scripts` (for the demo app, into `./demo/scripts`).
 

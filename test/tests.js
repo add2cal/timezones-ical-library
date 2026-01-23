@@ -10,6 +10,8 @@ const testCases = [
   'Africa/Bangui',
 ];
 
+const apiDir = './demo/public/api'; // relative to root
+
 try {
   execSync('npm run build:lib-only', { stdio: [0, 1, 2] });
 
@@ -48,7 +50,7 @@ try {
   try {
     testCases.forEach((tz) => {
       const fs = require('fs');
-      const path = `api/${tz}.ics`;
+      const path = `${apiDir}/${tz}.ics`;
       // eslint-disable-next-line security/detect-non-literal-fs-filename
       if (!fs.existsSync(path)) {
         throw new Error(`🔴 Missing file for time zone ${tz} at API folder`);
@@ -71,7 +73,6 @@ try {
     console.log(`... ${dirToDrop} directory deleted again`);
     console.log('\n🎉 All Tests SUCCESSFUL!\n');
   });
-  // eslint-disable-next-line no-unused-vars
-} catch (error) {
+} catch (_error) {
   console.error('\n😭 FAILED: Tests did not pass unfortunately.\n');
 }

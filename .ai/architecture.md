@@ -15,7 +15,7 @@ This phase converts raw IANA timezone data into usable JSON/VTIMEZONE formats.
 See `scripts/update-tzdata.sh` for the code and details via the included comments.
 
 ## 2. Consumption (The JS/TS Library)
-The JavaScript library serves the pre-generated data to the user.
+The JavaScript/TypeScript library serves the pre-generated data to the user.
 * **Runtime:** Node.js / Browser compatible.
 * **Module System:** Dual support for CommonJS (`require`) and ESM (`import`).
 * **Entry Point:** `index.js` (exports `tzlib_get_ical_block`, `tzlib_get_offset`, `tzlib_get_timezones`).

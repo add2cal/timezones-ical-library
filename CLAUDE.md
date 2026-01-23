@@ -7,7 +7,7 @@ This is the `timezones-ical-library`. It provides IANA timezone data for iCalend
 It can be used to access VTIMEZONE blocks for a specific time zone as well as retrieve offset information within JavaScript/Typescript projects. Those blocks are also already optimized for ideal compatibility with all kinds of calendars - from Google Calendar to Microsoft Outlook and Apple Calendar.
 It is a **hybrid project**:
 1. **Data Generation (C):** Uses `vzic` (C code) to parse IANA databases into VTIMEZONE blocks.
-2. **Library (JS):** A Node.js package (Dual CJS/ESM) that serves this data.
+2. **Library (TS):** A Node.js package (Dual CJS/ESM) that serves this data.
 
 ## Documentation References
 - Architecture & Data Flow: @.ai/architecture.md

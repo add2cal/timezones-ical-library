@@ -1,11 +1,11 @@
 {
   "name": "timezones-ical-library",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "engines": {
     "node": ">=24.11.1",
     "npm": ">=11.6.2"
   },
-  "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript",
+  "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript/TypeScript",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
   "exports": {
@@ -29,19 +29,19 @@
   "keywords": [
     "ical",
     "timezone",
+    "time zone",
     "generator",
     "builder",
     "icalendar",
-    "google",
-    "apple",
     "component",
     "module",
     "package",
+    "library",
     "free",
     "snippet",
     "outlook",
-    "microsoft",
     "javascript",
+    "typescript",
     "node",
     "react",
     "IANA",
@@ -68,7 +68,7 @@
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
     "format": "npm run eslint:fix && npm run prettier:fix && cd demo && npm run format",
-    "test": "node test/tests.js"
+    "test": "node test/tests.js && npx tsc"
   },
   "devDependencies": {
     "esbuild": "^0.27.2",
@@ -76,10 +76,11 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-commonjs": "^1.0.2",
     "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-regexp": "^2.10.0",
+    "eslint-plugin-regexp": "^3.0.0",
     "eslint-plugin-security": "^3.0.1",
     "glob": "^13.0.0",
-    "prettier": "^3.8.0",
-    "typescript-eslint": "^8.53.0"
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.1"
   }
 }

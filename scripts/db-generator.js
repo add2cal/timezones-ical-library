@@ -18,7 +18,7 @@ function escapeRegExp(string) {
   return string.replace(/[^+\-\w]/g, '\\$&');
 }
 
-const files = glob.sync('./vzic/output/**/*.ics');
+const files = glob.sync('../src/vzic/output/**/*.ics');
 let tz = {};
 let topLevelZones = [];
 
@@ -37,7 +37,7 @@ const shortenerMap = {
 
 // pull data from files
 for (const zone of files) {
-  const name = zone.replace('./vzic/output/', '').replace('vzic/output/', '').replace('.ics', '');
+  const name = zone.replace('../src/vzic/output/', '').replace('vzic/output/', '').replace('.ics', '');
   // collect top-level zones
   const nameParts = name.split('/');
   topLevelZones.push(nameParts[0]);
@@ -47,7 +47,7 @@ for (const zone of files) {
   // for all occurences (TZID: and X-LIC-LOCATION:) of the name, we also replace the first part with its index in topLevelZones to reduce size (like Europe/Berlin becomes 9/Berlin)
   // eslint-disable-next-line security/detect-non-literal-fs-filename
   tz[`${name}`] = fs
-    .readFileSync(`./vzic/output/${name}.ics`, 'utf-8')
+    .readFileSync(`../src/vzic/output/${name}.ics`, 'utf-8')
     .replace(/(END|BEGIN):VTIMEZONE/g, '')
     .replace(/\r\n$/, '')
     .replace(/\r\n/g, '<br>')
@@ -124,7 +124,7 @@ for (const index in tz) {
 // consists of a three-level object (Continent -> Country/Region -> City), each holding an array with [0] = location (or empty string, if same as timezone name), [1] = index to secondary database with the actual ical data
 // also the actual ical data in a compacted way
 // and a top-level mapping of all top-level zones
-const tzLibDBFile = './db/zonesdb.json';
+const tzLibDBFile = '../src/db/zonesdb.json';
 fs.writeFileSync(
   tzLibDBFile,
   JSON.stringify({
@@ -138,7 +138,7 @@ fs.writeFileSync(
 );
 
 // write overview JSON file for API
-const tzlibAPIOverviewFile = './db/zones.json';
+const tzlibAPIOverviewFile = '../src/db/zones.json';
 const apiOutputJSON = JSON.stringify(overviewJson, null, 2);
 fs.writeFileSync(tzlibAPIOverviewFile, apiOutputJSON, {
   flag: 'a',

@@ -12,7 +12,7 @@ npm install timezones-ical-library
 
 ### Imports
 #### ES Modules (Preferred)
-```javascript
+```typescript
 import { 
   tzlib_get_ical_block, 
   tzlib_get_offset, 
