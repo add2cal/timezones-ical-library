@@ -29,7 +29,7 @@
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.2.0",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^6.0.0-beta.2",
+    "astro": "^6.0.0-beta.5",
     "astro-expressive-code": "^0.41.6",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.1"
@@ -38,7 +38,7 @@
     "@astrojs/check": "^0.9.6",
     "@astrojs/ts-plugin": "^1.10.6",
     "@eslint/js": "^9.39.2",
-    "@typescript-eslint/parser": "^8.53.1",
+    "@typescript-eslint/parser": "^8.54.0",
     "astro-compress": "^2.3.9",
     "astro-eslint-parser": "^1.2.2",
     "eslint": "^9.39.2",
@@ -46,12 +46,12 @@
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-regexp": "^3.0.0",
     "fs-extra": "^11.3.3",
-    "globals": "^17.1.0",
+    "globals": "^17.2.0",
     "jsdom": "^27.4.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.1"
+    "typescript-eslint": "^8.54.0"
   }
 }
