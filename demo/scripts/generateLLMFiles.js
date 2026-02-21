@@ -106,7 +106,7 @@ function extractTextFromHTML(html, extractTitle = false) {
     const clone = el.cloneNode(true);
     clone.querySelectorAll("br").forEach((br) => br.replaceWith("\n"));
     const codeLines = clone.querySelectorAll(".ec-line");
-    let codeText = "";
+    let codeText;
     if (codeLines.length > 0) {
       codeText = Array.from(codeLines)
         .map((line) => line.textContent)

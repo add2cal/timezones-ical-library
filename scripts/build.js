@@ -43,14 +43,26 @@ async function build() {
 
     // 3. Browser (IIFE + Global attach)
     const globalName = 'tzlib_tmp_scope';
-    await esbuild.build({
+    const browserConfig = {
       ...universalConfig,
-      outfile: 'dist/tzlib.js',
       format: 'iife',
       globalName: globalName,
       footer: {
         js: `if(typeof window !== "undefined"){ for(var k in ${globalName}) window[k] = ${globalName}[k]; }`,
       },
+    };
+
+    // 3a. Unminified
+    await esbuild.build({
+      ...browserConfig,
+      outfile: 'dist/tzlib.js',
+      minify: false,
+    });
+
+    // 3b. Minified
+    await esbuild.build({
+      ...browserConfig,
+      outfile: 'dist/tzlib.min.js',
     });
 
     console.log('Build finished successfully.');
