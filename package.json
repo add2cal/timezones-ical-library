@@ -2,7 +2,7 @@
   "name": "timezones-ical-library",
   "version": "2.1.2",
   "engines": {
-    "node": ">=22.20.0",
+    "node": ">=22.18.0",
     "npm": ">=10.9.3"
   },
   "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript/TypeScript",
