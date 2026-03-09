@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tz.add-to-calendar-technology.com//sitemap-index.xml
