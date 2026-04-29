@@ -35,8 +35,8 @@ Run ...
 sudo sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
 ```
 
-- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2025c`);
-- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2025c true`).
+- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2026b`);
+- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2026b true`).
 </details>
 
 <br />
@@ -178,7 +178,7 @@ Anyone is welcome to contribute, but mind the [guidelines](.github/CONTRIBUTING.
 
 ## 📃 Copyright and License
 
-Copyright (c) [Jens Kuerschner](https://jekuer.com). Licensed under [Apache-2.0](LICENSE).
+Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licensed under [Apache-2.0](LICENSE).
 
 <br />
 
@@ -189,6 +189,8 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com). Licensed under [Apache-2.0]
 <details>
 <summary>History (without minor changes and fixes)</summary>
 
+- v2.2 : database update (2026b)
+- v2.1 : JS to TS migration
 - v2.0 : Full refactoring reducing bundle size and easing future updates, using Astro for Demo page
 - v1.11 : database update (2025c)
 - v1.10 : upgrading to latest vzic improvements

@@ -24,6 +24,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
+  experimental: {
+    rustCompiler: true,
+  },
+
   integrations: [
     vue(),
     sitemap(),

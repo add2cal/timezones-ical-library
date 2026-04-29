@@ -4,13 +4,12 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["*"],
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "~/*": ["./*"],
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@layouts/*": ["./src/layouts/*"]
     },
     "plugins": [
       {

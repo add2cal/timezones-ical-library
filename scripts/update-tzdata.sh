@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # check for the latest time zone data package at https://www.iana.org/time-zones
-# provide tzVersion (like 2025c) via argument: sudo sh scripts/update-tzdata.sh 2025c
-# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2025c true
+# provide tzVersion (like 2026b) via argument: sudo sh scripts/update-tzdata.sh 2026b
+# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2026b true
 
 API_DIR="../../demo/public/api"
 
