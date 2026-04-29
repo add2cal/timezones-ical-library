@@ -20,7 +20,7 @@ It is a **hybrid project**:
   - `build:lib-only` (only builds the library)
 - **Test JS:** `npm test`
 - **Lint and format:** `npm run format`
-- **Update TZ Data:** `sudo sh update-tzdata.sh <version>` (e.g. 2025c)
+- **Update TZ Data:** `sudo sh update-tzdata.sh <version>` (e.g. 2026b)
 - **Update vTZ Data and zic dependency:** `sudo sh update-tzdata.sh <version> true` (updates the vzic dependency before updating the tz data)
 - **Compile C tools:** `make` in @src/vzic (done automatically via build)
 
