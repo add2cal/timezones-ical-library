@@ -178,7 +178,7 @@ Anyone is welcome to contribute, but mind the [guidelines](.github/CONTRIBUTING.
 
 ## 📃 Copyright and License
 
-Copyright (c) [Jens Kuerschner](https://jekuer.com). Licensed under [Apache-2.0](LICENSE).
+Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licensed under [Apache-2.0](LICENSE).
 
 <br />
 
