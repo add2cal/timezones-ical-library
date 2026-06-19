@@ -1,10 +1,6 @@
 {
   "name": "timezones-ical-library",
-  "version": "2.2.0",
-  "engines": {
-    "node": ">=22.18.0",
-    "npm": ">=10.9.3"
-  },
+  "version": "2.2.1",
   "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript/TypeScript",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
@@ -72,17 +68,17 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^8.59.1",
-    "esbuild": "^0.28.0",
-    "eslint": "^10.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.61.1",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-commonjs": "^1.0.2",
-    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-regexp": "^3.1.0",
-    "eslint-plugin-security": "^4.0.0",
+    "eslint-plugin-security": "^4.0.1",
     "glob": "^13.0.6",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.1"
+    "typescript-eslint": "^8.61.1"
   }
 }
