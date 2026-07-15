@@ -43,16 +43,7 @@ export function tzlib_get_ical_block(tzName: string, jsonType: boolean = false):
     }
   })();
   const tzidLine = 'TZID=' + location;
-  const output = [
-    'BEGIN:VTIMEZONE\r\nTZID:' +
-      location +
-      '\r\nX-LIC-LOCATION:' +
-      location +
-      '\r\nLAST-MODIFIED:' +
-      blockArray[1].replace(/[^\w\-:,;=+/<>]/g, '').replace(/<br>/g, '\r\n') +
-      'END:VTIMEZONE',
-    tzidLine,
-  ];
+  const output = ['BEGIN:VTIMEZONE\r\nTZID:' + location + '\r\nX-LIC-LOCATION:' + location + '\r\nLAST-MODIFIED:' + blockArray[1].replace(/[^\w\-:,;=+/<>]/g, '').replace(/<br>/g, '\r\n') + 'END:VTIMEZONE', tzidLine];
   // return
   if (jsonType) {
     return JSON.stringify(output);
@@ -132,23 +123,14 @@ export function tzlib_get_offset(tzName: string, isoDate: string, isoTime: strin
     }
   }
   // swap objects, if larger one comes first
-  if (
-    tzBreakpoints['1'].month !== undefined &&
-    tzBreakpoints['2'].month !== undefined &&
-    tzBreakpoints['1'].month > tzBreakpoints['2'].month
-  ) {
+  if (tzBreakpoints['1'].month !== undefined && tzBreakpoints['2'].month !== undefined && tzBreakpoints['1'].month > tzBreakpoints['2'].month) {
     [tzBreakpoints['1'], tzBreakpoints['2']] = [tzBreakpoints['2'], tzBreakpoints['1']];
   }
 
   const bp1 = tzBreakpoints['1'];
   const bp2 = tzBreakpoints['2'];
 
-  if (
-    bp1.month === undefined ||
-    bp2.month === undefined ||
-    bp1.offset === undefined ||
-    bp2.offset === undefined
-  ) {
+  if (bp1.month === undefined || bp2.month === undefined || bp1.offset === undefined || bp2.offset === undefined) {
     // Should not happen if data is correct
     return '';
   }
@@ -241,27 +223,18 @@ export function tzlib_get_timezones(jsonType: boolean = false): string[] | strin
             const subValue2 = value2 as ZoneMap;
             for (const [key3, value3] of Object.entries(subValue2)) {
               const entry = value3 as ZoneEntry;
-              const location = entry[0].replace(
-                new RegExp(`^${escapeRegExp(key)}/${escapeRegExp(key2)}/`),
-                `${tzDb.toplevel.indexOf(key)}/${key2}/`,
-              );
+              const location = entry[0].replace(new RegExp(`^${escapeRegExp(key)}/${escapeRegExp(key2)}/`), `${tzDb.toplevel.indexOf(key)}/${key2}/`);
               ((mappedData[`${key}`] as ZoneMap)[`${key2}`] as ZoneMap)[`${key3}`] = [location, entry[1]];
             }
           } else {
             const entry = value2 as ZoneEntry;
-            const location = entry[0].replace(
-              new RegExp(`^${escapeRegExp(key)}/`),
-              `${tzDb.toplevel.indexOf(key)}/`,
-            );
+            const location = entry[0].replace(new RegExp(`^${escapeRegExp(key)}/`), `${tzDb.toplevel.indexOf(key)}/`);
             (mappedData[`${key}`] as ZoneMap)[`${key2}`] = [location, entry[1]];
           }
         }
       } else {
         const entry = value as ZoneEntry;
-        const location = entry[0].replace(
-          new RegExp(`^${escapeRegExp(key)}/`),
-          `${tzDb.toplevel.indexOf(key)}/`,
-        );
+        const location = entry[0].replace(new RegExp(`^${escapeRegExp(key)}/`), `${tzDb.toplevel.indexOf(key)}/`);
         mappedData[`${key}`] = [location, entry[1]];
       }
     }

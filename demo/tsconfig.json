@@ -8,13 +8,16 @@
       "~/*": ["./*"],
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
+      "@images/*": ["./src/images/*"],
       "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/styles/*"],
       "@layouts/*": ["./src/layouts/*"]
     },
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
       }
-    ]
+    ],
+    "jsx": "preserve"
   }
 }

@@ -79,7 +79,7 @@ vzic.o vzic-output.o: vzic-output.h
 test-parse: vzic
 ifndef OLSON_DIR
 	@echo "You forgot to pass OLSON_DIR"
-	@echo "Example: make test OLSON_DIR=tzdata2026b"
+	@echo "Example: make test OLSON_DIR=tzdata2026c"
 else
 	./vzic-dump.pl $(OLSON_DIR)
 	./vzic --dump --pure --olson-dir $(OLSON_DIR)

@@ -1,93 +1,93 @@
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import tsParser from "@typescript-eslint/parser";
-import astroParser from "astro-eslint-parser";
-import eslintPluginAstro from "eslint-plugin-astro";
-import prettierRecommended from "eslint-plugin-prettier/recommended";
-import regexpEslint from "eslint-plugin-regexp";
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import prettierPlugin from 'eslint-plugin-prettier';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import regexpEslint from 'eslint-plugin-regexp';
+import pluginSecurity from 'eslint-plugin-security';
+import astroPlugin from 'eslint-plugin-astro';
 
-// Base configuration for all files
-const baseConfig = {
-  languageOptions: {
-    globals: {
-      ...globals.browser,
-      ...globals.node,
-    },
-    parserOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-    },
-  },
-  rules: {
-    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-  },
+// Prettier options that mirror the demo's `.prettierrc.json`
+const prettierOptions = {
+  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  proseWrap: 'preserve',
+  useTabs: false,
+  singleQuote: true,
+  trailingComma: 'all',
+  arrowParens: 'always',
+  printWidth: 400,
+  endOfLine: 'lf',
 };
 
 export default [
-  baseConfig,
   // general ignores
   {
-    ignores: [
-      "**/*.d.ts",
-      ".astro/",
-      ".vscode/",
-      "**/*.min.*",
-      "node_modules/",
-      "dist/",
-      "public/",
-    ],
+    ignores: ['**/*.d.ts', '**/*.min.*', 'dist/', 'scripts/', 'node_modules/', '.github/', '.ai/', '.astro/', 'public/api/**'],
   },
   // general rules
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  ...eslintPluginAstro.configs.recommended,
-  prettierRecommended,
-  regexpEslint.configs["flat/recommended"],
+  ...astroPlugin.configs.recommended,
+  regexpEslint.configs['flat/recommended'],
+  pluginSecurity.configs.recommended,
   {
-    // default for astro files
-    files: ["**/*.astro"],
-    languageOptions: {
-      parser: astroParser,
-      parserOptions: {
-        parser: tsParser,
-        extraFileExtensions: [".astro"],
-      },
-    },
-    rules: {
-      "prettier/prettier": "error",
-    },
+    plugins: { prettier: prettierPlugin },
   },
+  // turn off all ESLint rules that conflict with Prettier
+  eslintConfigPrettier,
+  // overrides for JS/TS files - run prettier/prettier with synced options.
   {
-    // JavaScript/TypeScript files
-    files: ["**/*.{js,jsx,mjs,ts,tsx}"],
+    files: ['**/*.{js,mjs,cjs,ts}'],
     rules: {
-      "prettier/prettier": "error",
-    },
-  },
-  {
-    // TypeScript-specific rules
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      parser: tsParser,
-    },
-    rules: {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
+      'prettier/prettier': ['error', prettierOptions],
+      'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      'no-undef': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
         {
-          argsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
         },
       ],
-      "@typescript-eslint/no-non-null-assertion": "off",
+    },
+  },
+  // overrides for Astro files - prettier/prettier is intentionally NOT
+  // enabled here. Standalone Prettier (via `npm run fix:prettier`) handles
+  // .astro formatting using prettier-plugin-astro.
+  {
+    files: ['**/*.astro'],
+    rules: {
+      'prettier/prettier': 'off',
+      'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      'no-undef': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
+    },
+  },
+  // eslint-plugin-astro extracts inline <script> blocks from .astro files
+  // into virtual `*.astro/*.ts` files. The JS/TS override above re-enables
+  // prettier/prettier on them, which causes spurious parsing errors. Turn
+  // it back off here (matching the astro plugin's own recommendation).
+  {
+    files: ['**/*.astro/*.{js,ts}'],
+    rules: {
+      'prettier/prettier': 'off',
     },
   },
   {
-    // disable prettier only for js/ts in <script> tags in astro files
-    files: ["**/*.astro/*.js", "**/*.astro/*.ts"],
+    files: ['**/*.{js,mjs,cjs}'],
     rules: {
-      "prettier/prettier": "off",
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 ];

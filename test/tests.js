@@ -1,14 +1,6 @@
 const { execSync, spawnSync } = require('child_process');
 
-const testCases = [
-  'CST6CDT',
-  'GMT0',
-  'Europe/Berlin',
-  'America/New_York',
-  'America/Argentina/Buenos_Aires',
-  'Antarctica/Casey',
-  'Africa/Bangui',
-];
+const testCases = ['CST6CDT', 'GMT0', 'Europe/Berlin', 'America/New_York', 'America/Argentina/Buenos_Aires', 'Antarctica/Casey', 'Africa/Bangui'];
 
 const apiDir = './demo/public/api'; // relative to root
 

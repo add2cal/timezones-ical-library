@@ -1,4 +1,3 @@
-# Visual Studio Code from https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 # Adjust to your needs.
 
 .vscode
@@ -35,3 +34,6 @@ src/vzic/output/
 
 # jetbrains setting folder
 .idea/
+
+# AI
+.claude
