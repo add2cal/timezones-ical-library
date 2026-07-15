@@ -1,6 +1,6 @@
 {
   "name": "timezones-ical-library",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Easy direct access to the most recent official timezone information for iCalendar files via JavaScript/TypeScript",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
@@ -63,7 +63,7 @@
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run eslint:fix && npm run prettier:fix && cd demo && npm run format",
+    "format": "npm run eslint:fix && npm run prettier:fix && cd demo && npm run fix",
     "test": "node test/tests.js && npx tsc"
   },
   "devDependencies": {

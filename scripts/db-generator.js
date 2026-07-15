@@ -53,14 +53,8 @@ for (const zone of files) {
     .replace(/\r\n/g, '<br>')
     .replace(/.ics$/, '')
     .replace(/^[(.)*/]*/g, '')
-    .replace(
-      new RegExp(`^TZID:${escapeRegExp(nameParts[0])}/`, 'gm'),
-      `TZID:${topLevelZones.indexOf(nameParts[0])}/`,
-    )
-    .replace(
-      new RegExp(`^X-LIC-LOCATION:${escapeRegExp(nameParts[0])}/`, 'gm'),
-      `X-LIC-LOCATION:${topLevelZones.indexOf(nameParts[0])}/`,
-    );
+    .replace(new RegExp(`^TZID:${escapeRegExp(nameParts[0])}/`, 'gm'), `TZID:${topLevelZones.indexOf(nameParts[0])}/`)
+    .replace(new RegExp(`^X-LIC-LOCATION:${escapeRegExp(nameParts[0])}/`, 'gm'), `X-LIC-LOCATION:${topLevelZones.indexOf(nameParts[0])}/`);
 }
 
 // clean up symlinks by copying the linked data for use in the entry item
@@ -100,12 +94,7 @@ for (const index in tz) {
   if (location == index) {
     newEntry.push('');
   } else {
-    newEntry.push(
-      location.replace(
-        new RegExp(`^${escapeRegExp(nameParts[0])}/`, 'gm'),
-        `${topLevelZones.indexOf(nameParts[0])}/`,
-      ),
-    );
+    newEntry.push(location.replace(new RegExp(`^${escapeRegExp(nameParts[0])}/`, 'gm'), `${topLevelZones.indexOf(nameParts[0])}/`));
   }
   newEntry.push(dbIndex);
   if (nameParts.length === 3) {

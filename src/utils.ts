@@ -62,10 +62,7 @@ function map_db_data(dbData: ZonesDb): ZoneMap {
           for (const [key3, value3] of Object.entries(subLevel2)) {
             const entry = value3 as ZoneEntry;
             const fallbackPath = `${key}/${key2}/${key3}`;
-            ((mappedData[`${key}`] as ZoneMap)[`${key2}`] as ZoneMap)[`${key3}`] = [
-              expandLocation(entry[0], fallbackPath),
-              entry[1],
-            ];
+            ((mappedData[`${key}`] as ZoneMap)[`${key2}`] as ZoneMap)[`${key3}`] = [expandLocation(entry[0], fallbackPath), entry[1]];
           }
         } else {
           const entry = value2 as ZoneEntry;

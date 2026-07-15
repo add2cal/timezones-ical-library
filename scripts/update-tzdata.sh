@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # check for the latest time zone data package at https://www.iana.org/time-zones
-# provide tzVersion (like 2026b) via argument: sudo sh scripts/update-tzdata.sh 2026b
-# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2026b true
+# provide tzVersion (like 2026c) via argument: sudo sh scripts/update-tzdata.sh 2026c
+# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2026c true
 
 API_DIR="../../demo/public/api"
 
@@ -16,6 +16,18 @@ sudo_sed_inplace() {
 
 if [ "$1" ]
 then
+  # validate tzVersionNumber: must start with a 4-digit year, max 6 characters, only [a-z0-9]
+  if ! echo "$1" | grep -Eq '^[0-9]{4}[a-z0-9]{0,2}$'; then
+    echo "❌ Error: invalid tzVersionNumber '$1'."
+    echo "   It must start with a 4-digit year and be at most 6 characters long, using only lowercase letters and digits (e.g. 2026c)."
+    exit 1
+  fi
+  # validate rebuildVzic: must be "true" or "false" (if provided)
+  if [ -n "$2" ] && [ "$2" != "true" ] && [ "$2" != "false" ]; then
+    echo "❌ Error: invalid rebuildVzic value '$2'."
+    echo "   It must be either 'true' or 'false' (or omitted)."
+    exit 1
+  fi
   echo "👉 Updating ..."
   # prepare system
   echo "⚙️ Installing build dependencies..."

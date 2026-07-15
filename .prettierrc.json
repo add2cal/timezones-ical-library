@@ -1,8 +1,10 @@
 {
   "proseWrap": "preserve",
-  "printWidth": 110,
   "embeddedLanguageFormatting": "off",
   "useTabs": false,
   "singleQuote": true,
-  "arrowParens": "always"
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "printWidth": 400,
+  "endOfLine": "lf"
 }
