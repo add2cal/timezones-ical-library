@@ -189,6 +189,7 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licens
 <details>
 <summary>History (without minor changes and fixes)</summary>
 
+- v2.3 : artificial time zone aliases PT, MT, CT, ET for convenience
 - v2.2 : database update (2026c)
 - v2.1 : JS to TS migration
 - v2.0 : Full refactoring reducing bundle size and easing future updates, using Astro for Demo page

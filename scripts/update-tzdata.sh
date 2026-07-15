@@ -84,6 +84,20 @@ then
   mkdir ../db
   sudo make -B -s
   sudo ./vzic --olson-dir tzdata --output-dir output
+  # create artificial aliases for common US timezone abbreviations that are
+  # not part of the official IANA database (PT, MT, CT, ET) by symlinking
+  # them to their closest top-level IANA equivalents
+  echo "🔗 Creating artificial aliases (PT, MT, CT, ET) ..."
+  cd output
+  for pair in "PT:PST8PDT" "MT:MST7MDT" "CT:CST6CDT" "ET:EST5EDT"; do
+    alias_name="${pair%%:*}"
+    target_name="${pair##*:}"
+    if [ -f "${target_name}.ics" ] && [ ! -e "${alias_name}.ics" ]; then
+      ln -s "${target_name}.ics" "${alias_name}.ics"
+      echo "  ${alias_name} -> ${target_name}"
+    fi
+  done
+  cd ..
   cd ..
   node ../scripts/db-generator.js
   # convert symlinks to real files
