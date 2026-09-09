@@ -5,6 +5,7 @@ This code map gives an overview of the most important files and directory, struc
 ## Root Directory
 * `scripts/update-tzdata.sh`: Script to download IANA data and trigger the build.
 * `scripts/db-generator.js`: Node script that orchestrates the JSON generation after C tools run.
+* `scripts/build.js`: Builds the CJS, ESM, and browser bundles with esbuild. It reads the version from `package.json` and injects it into the preserved header without modifying `src/tzlib.ts`.
 * `src/vzic/Makefile`: Instructions to compile the C source files (`vzic`). Do not alter this as it gets pulled directly from the vzic dependency.
 * `demo/`: **ISOLATED.** Contains the Astro documentation site. Has its own `package.json` and dependencies, but includes the library as dependency directly from the root project's dist directory (therefore, requires its built first).
 * `.github/workflows/`: yml based scripts to run GitHub based tests, deploy to npm as well as deploying the demo page to GitHub Pages.
@@ -16,12 +17,12 @@ This code map gives an overview of the most important files and directory, struc
 
 ## JavaScript Source (Library)
 * `src/`: Contains the source for the npm package.
-* `src/tzlib.ts`: Main entry point.
+* `src/tzlib.ts`: Main TypeScript entry point. Its preserved header intentionally contains the empty `* Version:` placeholder used by the build.
 * `src/utils.ts`: Utility functions.
 * `src/types.ts`: Internal TypeScript definitions.
 * `index.d.ts`: Public TypeScript definitions (ensure these are updated if library changes).
 * `test/`: Unit/Component tests.
-* `dist/`: **DO NOT EDIT.** Generated build artifacts (CJS/MJS).
+* `dist/`: **DO NOT EDIT.** Generated CJS (`dist/cjs/index.js`), ESM (`dist/mjs/index.js`), and browser (`dist/tzlib.js` and `dist/tzlib.min.js`) artifacts.
 
 ## Configuration
 * `package.json`: Defines exports for `.` (default), `import`, and `require`.

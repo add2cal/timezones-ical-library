@@ -3,9 +3,22 @@ const { execSync, spawnSync } = require('child_process');
 const testCases = ['CST6CDT', 'GMT0', 'Europe/Berlin', 'America/New_York', 'America/Argentina/Buenos_Aires', 'Antarctica/Casey', 'Africa/Bangui'];
 
 const apiDir = './demo/public/api'; // relative to root
+const packageVersion = require('../package.json').version;
+const bundlePaths = ['dist/cjs/index.js', 'dist/mjs/index.js', 'dist/tzlib.js', 'dist/tzlib.min.js'];
 
 try {
   execSync('npm run build:lib-only', { stdio: [0, 1, 2] });
+
+  // The source header stays versionless; the package version is injected into every build artifact.
+  const fs = require('fs');
+  const expectedVersionLine = ` * Version: ${packageVersion}`;
+  bundlePaths.forEach((bundlePath) => {
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
+    const bundle = fs.readFileSync(bundlePath, 'utf8');
+    if (!bundle.includes(expectedVersionLine)) {
+      throw new Error(`Missing package version in ${bundlePath}`);
+    }
+  });
 
   const testCasesString = JSON.stringify(testCases);
 
@@ -56,7 +69,6 @@ try {
     throw error;
   }
 
-  const fs = require('fs');
   const dirToDrop = 'dist';
   fs.rm(dirToDrop, { recursive: true }, (error) => {
     if (error) {
@@ -67,4 +79,5 @@ try {
   });
 } catch (_error) {
   console.error('\n😭 FAILED: Tests did not pass unfortunately.\n');
+  process.exitCode = 1;
 }

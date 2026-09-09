@@ -7,6 +7,7 @@
  *
  * Creator: Jens Kuerschner (https://jekuer.com)
  * Project: https://github.com/add2cal/timezones-ical-library
+ * Version:
  * License: Apache-2.0
  *
  */
