@@ -2,7 +2,7 @@
 
 ## General
 * **Language:** TypeScript for library, C for tools.
-* **Formatting:** Follow `.prettierrc.json` and `.eslintrc.json`. Use `npm run format` as a shortcut to auto-format the project (can be used on both, the library/root as well as on the demo level)
+* **Formatting:** Follow `.prettierrc.json` and `eslint.config.mjs`. Use `npm run format` as a shortcut to auto-format the project (can be used on both, the library/root as well as on the demo level)
 * **Scripting:** When creating temporary scripts for debugging, create them in a new directory `./tmp_scripts`, which also always needs to be deleted after debugging. For scripts that should become part of the codebase, they go into `./scripts` (for the demo app, into `./demo/scripts`).
 
 ## JavaScript / TypeScript
@@ -16,6 +16,8 @@
 
 ## Versioning
 * When IANA data updates, `package.json` version should likely be bumped.
+* `package.json` is the single source of truth for the library version.
+* Keep the preserved header in `src/tzlib.ts` versionless as `* Version:`. `scripts/build.js` injects the current package version into every generated library bundle at build time. Do not set or update the version in the source header manually.
 
 ## Demo Application (Astro) Rules
 If you are asked to edit files in `./demo`:

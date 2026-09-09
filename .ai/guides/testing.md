@@ -12,6 +12,7 @@ This repository requires a multi-layered testing strategy due to its hybrid natu
 * **Key Scenarios:**
     * **API Integrity:** Ensure `tzlib_get_ical_block` and `tzlib_get_offset` return valid responses for different time zone cases.
     * **Data Integrity:** Ensures for the same time zone cases that there are properly ics files generated for API use.
+    * **Build Metadata:** Ensures every generated CJS, ESM, and browser bundle contains the current `package.json` version in its preserved header.
 
 **LLM Instruction:**
 > When writing JS tests, do not mock the filesystem unless necessary. Prefer integration tests that load the actual generated JSON files to verify data integrity.

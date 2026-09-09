@@ -1,6 +1,33 @@
 const esbuild = require('esbuild');
 const fs = require('fs');
 const path = require('path');
+const { version } = require('../package.json');
+
+const entryPoint = path.resolve('src/tzlib.ts');
+const versionPlaceholder = /^ \* Version:\s*$/gm;
+
+const injectPackageVersion = {
+  name: 'inject-package-version',
+  setup(build) {
+    build.onLoad({ filter: /tzlib\.ts$/ }, (args) => {
+      if (path.resolve(args.path) !== entryPoint) {
+        return undefined;
+      }
+
+      const source = fs.readFileSync(args.path, 'utf8');
+      const placeholders = source.match(versionPlaceholder);
+
+      if (placeholders?.length !== 1) {
+        throw new Error('Expected exactly one "* Version:" placeholder in src/tzlib.ts');
+      }
+
+      return {
+        contents: source.replace(versionPlaceholder, ` * Version: ${version}`),
+        loader: 'ts',
+      };
+    });
+  },
+};
 
 async function build() {
   console.log('Building...');
@@ -19,6 +46,7 @@ async function build() {
     minify: true,
     legalComments: 'inline',
     target: 'es2022',
+    plugins: [injectPackageVersion],
     loader: {
       '.json': 'json',
     },
