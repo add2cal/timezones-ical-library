@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # check for the latest time zone data package at https://www.iana.org/time-zones
-# provide tzVersion (like 2026c) via argument: sudo sh scripts/update-tzdata.sh 2026c
-# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2026c true
+# provide tzVersion (like 2026e) via argument: sudo sh scripts/update-tzdata.sh 2026e
+# provide "true" as second argument to also refresh vzic tool (not needed normally): sudo sh scripts/update-tzdata.sh 2026e true
 
 API_DIR="../../demo/public/api"
 
@@ -19,7 +19,7 @@ then
   # validate tzVersionNumber: must start with a 4-digit year, max 6 characters, only [a-z0-9]
   if ! echo "$1" | grep -Eq '^[0-9]{4}[a-z0-9]{0,2}$'; then
     echo "❌ Error: invalid tzVersionNumber '$1'."
-    echo "   It must start with a 4-digit year and be at most 6 characters long, using only lowercase letters and digits (e.g. 2026c)."
+    echo "   It must start with a 4-digit year and be at most 6 characters long, using only lowercase letters and digits (e.g. 2026e)."
     exit 1
   fi
   # validate rebuildVzic: must be "true" or "false" (if provided)

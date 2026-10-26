@@ -2,9 +2,9 @@
 
 To update the timezone data to the latest IANA version:
 
-1.  **Check Version:** Find the latest IANA release (e.g., "2026c").
+1.  **Check Version:** Find the latest IANA release (e.g., "2026e").
 2.  **Run Script from root:** ```bash
-    sudo sh scripts/update-tzdata.sh 2026c
+    sudo sh scripts/update-tzdata.sh 2026e
     ```
     *This script downloads the data, compiles the C tools, runs the generation, and updates the JSON files.*
 3.  **Verify:** Run `npm test` to ensure offsets are correct.
