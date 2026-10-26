@@ -1,5 +1,4 @@
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import regexpEslint from 'eslint-plugin-regexp';
 import pluginSecurity from 'eslint-plugin-security';
@@ -7,23 +6,22 @@ import pluginSecurity from 'eslint-plugin-security';
 export default [
   // general ignores
   {
-    ignores: ['**/*.d.ts', '**/*.min.*', 'dist/', 'demo/', 'scripts/', 'node_modules/', '.github/', '.ai/'],
+    // TypeScript 7 is checked by tsc; typescript-eslint does not support its native compiler yet.
+    ignores: ['**/*.ts', '**/*.min.*', 'dist/', 'demo/', 'scripts/', 'node_modules/', '.github/', '.ai/'],
   },
   // general rules
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   regexpEslint.configs['flat/recommended'],
   prettierRecommended,
   pluginSecurity.configs.recommended,
   // overrides
   {
-    files: ['**/*.{js,mjs,cjs,ts}'],
+    files: ['**/*.{js,mjs,cjs}'],
     rules: {
       'prettier/prettier': 'error',
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
       'no-undef': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
+      'no-unused-vars': [
         'warn',
         {
           argsIgnorePattern: '^_',
@@ -34,13 +32,6 @@ export default [
         },
       ],
       'security/detect-non-literal-regexp': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-    },
-  },
-  {
-    files: ['**/*.{js,mjs,cjs}'],
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 ];
