@@ -35,8 +35,8 @@ Run ...
 sudo sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
 ```
 
-- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2026c`);
-- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2026c true`).
+- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2026e`);
+- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2026e true`).
 </details>
 
 <br />
@@ -189,6 +189,7 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licens
 <details>
 <summary>History (without minor changes and fixes)</summary>
 
+- v2.4 : database update (2026e)
 - v2.3 : artificial time zone aliases PT, MT, CT, ET for convenience
 - v2.2 : database update (2026c)
 - v2.1 : JS to TS migration

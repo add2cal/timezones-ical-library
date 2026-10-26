@@ -6,7 +6,7 @@ import icon from 'astro-icon';
 import tailwindcss from '@tailwindcss/vite';
 import astroExpressiveCode from 'astro-expressive-code';
 
-// Shared SVGO config used by the experimental svgOptimizer, astro-icon, and astro-compress.
+// Shared SVGO config used by the experimental svgOptimizer and astro-icon.
 const svgoConfig: Config = {
   multipass: true,
   floatPrecision: 5,
@@ -90,16 +90,5 @@ export default defineConfig({
       useDarkModeMediaQuery: false,
     }),
     astroExpressiveCode(),
-    (await import('astro-compress')).default({
-      CSS: false, // disabled: astro-compress's CSS minifier (csso) strips Tailwind v4's modern `@media (width >= ...)` range syntax, which removes all responsive breakpoints and makes the site render mobile-only. Vite already minifies CSS safely.
-      HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
-        },
-      },
-      SVG: {
-        svgo: svgoConfig,
-      },
-    }),
   ],
 });
