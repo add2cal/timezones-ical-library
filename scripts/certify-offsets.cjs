@@ -72,4 +72,5 @@ const data = {
   uncertified: unresolved.sort(),
 };
 fs.writeFileSync(outputPath, JSON.stringify(data, null, 2) + '\n');
+if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, '## Source-certified offset coverage\n\n```json\n' + JSON.stringify(data, null, 2) + '\n```\n');
 console.log(JSON.stringify({ certified, uncertified: unresolved.length, ranges: groups.size, bytes: fs.statSync(outputPath).size }));
