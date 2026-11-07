@@ -60,7 +60,7 @@ export function tzlib_get_offset(tzName: string, isoDate: string, isoTime: strin
     return '';
   }
 
-  return get_offset(tzName, tzBlock[0], isoDate, isoTime);
+  return get_offset(tzName, tzBlock[0], tzBlock[1], isoDate, isoTime);
 }
 
 // PROVIDE ALL TIME ZONES

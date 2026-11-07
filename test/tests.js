@@ -7,6 +7,7 @@ const packageVersion = require('../package.json').version;
 const bundlePaths = ['dist/cjs/index.js', 'dist/mjs/index.js', 'dist/tzlib.js', 'dist/tzlib.min.js'];
 
 try {
+  execSync('node test/bundled-offsets.cjs', { stdio: [0, 1, 2] });
   execSync('npm run build:lib-only', { stdio: [0, 1, 2] });
 
   // The source header stays versionless; the package version is injected into every build artifact.

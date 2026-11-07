@@ -108,14 +108,75 @@ async function main() {
     assert.ok(block.includes('RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU'));
     assert.ok(block.includes('RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU'));
   }
-  const unavailable = browser('dist/tzlib.js', {
-    DateTimeFormat() {
-      throw new RangeError('unsupported');
-    },
-  });
-  assert.equal(unavailable.tzlib_get_offset('America/New_York', '2001-03-25', '12:00'), '');
-  const missing = browser('dist/tzlib.js', null);
-  assert.equal(missing.tzlib_get_offset('UTC', '2021-01-01', '12:00'), '');
+  const nativeIntl = global.Intl;
+  for (const mode of ['absent', 'unsupported', 'stale', 'native']) {
+    let calls = [];
+    const mocked =
+      mode === 'absent'
+        ? null
+        : {
+            DateTimeFormat: function (locale, options) {
+              calls.push(options.timeZone);
+              if (mode === 'unsupported') throw new RangeError('unsupported');
+              return new nativeIntl.DateTimeFormat(locale, mode === 'stale' ? { ...options, timeZone: 'UTC' } : options);
+            },
+          };
+    const apis = [commonjs, esm, browser('dist/tzlib.js', mocked), browser('dist/tzlib.min.js', mocked)];
+    global.Intl = mocked;
+    try {
+      for (const api of apis) {
+        calls = [];
+        assert.equal(api.tzlib_get_offset('America/New_York', '2021-07-01', '12:00'), '-0400', `covered ignores ${mode} Intl`);
+        assert.equal(api.tzlib_get_offset('America/Sao_Paulo', '2021-01-01', '12:00'), '-0300', 'formerly-DST coverage');
+        assert.equal(api.tzlib_get_offset('Pacific/Chatham', '2021-09-26', '02:45'), '+1345', 'transition minutes and gap');
+        assert.deepEqual(calls, [], 'certified bundled dates must never consult Intl');
+        if (mode === 'stale') {
+          assert.equal(api.tzlib_get_offset('Africa/Bangui', '1915-01-01', '12:00'), '+0100');
+          assert.deepEqual(calls, [], 'alias has its own established coverage');
+          assert.equal(api.tzlib_get_offset('Africa/Lagos', '1915-01-01', '12:00'), '+0000');
+          assert.deepEqual(calls, ['Africa/Lagos'], 'shared bundled rules do not imply shared historical coverage');
+          calls = [];
+          assert.equal(api.tzlib_get_offset('America/New_York', '2001-03-25', '12:00'), '+0000');
+          assert.deepEqual(calls, ['America/New_York'], 'outside coverage the runtime remains authoritative');
+          calls = [];
+          assert.equal(api.tzlib_get_offset('America/New_York', '2100-12-30', '00:00'), '+0000');
+          assert.deepEqual(calls, ['America/New_York'], 'finite coverage end is exclusive');
+        }
+        calls = [];
+        if (mode === 'native') {
+          assert.equal(api.tzlib_get_offset('America/New_York', '2001-03-25', '12:00'), '-0500');
+          assert.deepEqual(calls, ['America/New_York'], 'historical date uses runtime');
+          calls = [];
+          assert.equal(api.tzlib_get_offset('Africa/Bangui', '1900-01-01', '12:00'), '+0013');
+          assert.deepEqual(calls, ['Africa/Bangui'], 'requested historical alias is not replaced by bundled target');
+          assert.equal(api.tzlib_get_offset('America/Sao_Paulo', '2018-01-01', '12:00'), '-0200');
+        } else if (mode !== 'stale') {
+          assert.equal(api.tzlib_get_offset('America/New_York', '2001-03-25', '12:00'), '-0400', 'uncertified history has best-effort bundled fallback');
+          assert.equal(api.tzlib_get_offset('America/Sao_Paulo', '2018-01-01', '12:00'), '-0300', 'fallback does not promise historical DST');
+          assert.equal(api.tzlib_get_offset('UTC', '0099-01-01', '00:00'), '+0000');
+        }
+        const diagnostics = [];
+        const originalError = console.error;
+        console.error = (...args) => diagnostics.push(args);
+        try {
+          calls = [];
+          for (const [date, time, field, format] of [
+            ['2021-02-29', '12:00', 'date', 'YYYY-MM-DD'],
+            ['2021-01-01', '24:00', 'time', 'hh:mm'],
+          ]) {
+            diagnostics.length = 0;
+            assert.equal(api.tzlib_get_offset('UTC', date, time), '');
+            assert.deepEqual(diagnostics, [[`offset calculation failed: ${field} misspelled [-> ${format}]`]]);
+          }
+          assert.deepEqual(calls, [], 'invalid input never reaches either lookup tier');
+        } finally {
+          console.error = originalError;
+        }
+      }
+    } finally {
+      global.Intl = nativeIntl;
+    }
+  }
   // Every bundled name, including artificial and legacy aliases, must remain usable.
   for (const zone of commonjs.tzlib_get_timezones()) {
     assert.match(commonjs.tzlib_get_offset(zone, '2021-07-01', '12:00'), /^[+-]\d{4}$/, zone);

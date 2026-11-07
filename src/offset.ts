@@ -1,6 +1,17 @@
-// Resolve a local wall-clock time using the runtime's historical IANA data.
+import coverage from './db/offset-coverage.json';
+import { bundled_model } from './bundled-offset';
+
+const ranges = new Map(coverage.ranges.flatMap(([start, end, names]) => names.split('|').map((name) => [name, [start, end]] as const)));
+const format = (offsetMs: number): string => {
+  if (!Number.isFinite(offsetMs)) return '';
+  // The public ±HHMM format cannot represent historical sub-minute offsets.
+  const totalMinutes = Math.trunc(Math.abs(offsetMs) / 60000);
+  return `${offsetMs < 0 ? '-' : '+'}${String(Math.floor(totalMinutes / 60)).padStart(2, '0')}${String(totalMinutes % 60).padStart(2, '0')}`;
+};
+
+// Use source-certified bundled coverage, historical Intl, then best-effort rules.
 // UTC arithmetic is intentional: the host's local time zone must never participate.
-export function get_offset(timeZone: string, fallbackZone: string, isoDate: string, isoTime: string): string {
+export function get_offset(timeZone: string, fallbackZone: string, content: string, isoDate: string, isoTime: string): string {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate)) {
     console.error('offset calculation failed: date misspelled [-> YYYY-MM-DD]');
     return '';
@@ -22,6 +33,13 @@ export function get_offset(timeZone: string, fallbackZone: string, isoDate: stri
     return '';
   }
   wallDate.setUTCHours(hour, minute, 0, 0);
+  const model = bundled_model(content);
+  const bundled = () => format(model?.wall(wallDate.getTime()) ?? NaN);
+  const range = ranges.get(timeZone);
+  if (range && isoDate >= range[0] && isoDate < range[1]) {
+    const result = bundled();
+    if (result) return result;
+  }
 
   try {
     const options: Intl.DateTimeFormatOptions = {
@@ -42,7 +60,9 @@ export function get_offset(timeZone: string, fallbackZone: string, isoDate: stri
       // Prefer the requested IANA name: VTIMEZONE aliases may differ historically.
       formatter = new Intl.DateTimeFormat('en-US', options);
     } catch {
-      // Includes artificial aliases such as ET and legacy names absent from ICU.
+      // Only the four library-defined abbreviations inherit another name's
+      // history. A real IANA alias rejected by ICU must not borrow bundle identity.
+      if (!['PT', 'MT', 'CT', 'ET'].includes(timeZone)) throw new RangeError('unsupported time zone');
       formatter = new Intl.DateTimeFormat('en-US', { ...options, timeZone: fallbackZone });
     }
     const offsetAt = (instant: number): number => {
@@ -62,12 +82,9 @@ export function get_offset(timeZone: string, fallbackZone: string, isoDate: stri
     // A fold selects the earlier instant (larger offset). A gap uses the offset
     // after the forward jump, preserving the existing New York gap policy.
     const offsetMs = Math.max(...(matches.length ? matches : offsets));
-    if (!Number.isFinite(offsetMs)) return '';
-    // The public ±HHMM format cannot represent historical sub-minute offsets.
-    const totalMinutes = Math.trunc(Math.abs(offsetMs) / 60000);
-    return `${offsetMs < 0 ? '-' : '+'}${String(Math.floor(totalMinutes / 60)).padStart(2, '0')}${String(totalMinutes % 60).padStart(2, '0')}`;
+    return format(offsetMs) || bundled();
   } catch {
-    // Never silently substitute today's bundled rules for missing runtime data.
-    return '';
+    // This extrapolation is usable offline, not a promise of historical accuracy.
+    return bundled();
   }
 }

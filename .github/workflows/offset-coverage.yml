@@ -28,6 +28,7 @@ jobs:
           cd "$RUNNER_TEMP/offset-source"
           curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' -O https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz
           curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' -O https://data.iana.org/time-zones/releases/tzcode2026e.tar.gz
+          printf '%s  %s\n' b26882805f26aac59d5b222978e6580484b834ccdc98be89df2f05a6dc53a652 tzdata2026e.tar.gz cc3d27ca2a0d8399504551b920970d80af83bfb9c216e8082a15491921935d54 tzcode2026e.tar.gz | sha256sum --check --strict
           tar -xzf tzdata2026e.tar.gz
           tar -xzf tzcode2026e.tar.gz
           test "$(cat version)" = 2026e
