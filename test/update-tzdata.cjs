@@ -44,8 +44,11 @@ fs.writeFileSync(output, JSON.stringify({tzdataVersion: version}));
   // A normal checkout already has a database; an interrupted update can leave the overview too.
   write('src/db/zonesdb.json', '{"stale":true}\n');
   write('src/db/zones.json', '["Stale/Zone"]\n');
+  write('src/db/obsolete.json', '{"obsolete":true}\n');
+  write('src/db/offset-coverage.json', '{"staleCoverage":true}\n');
   const result = run();
   assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.equal(fs.existsSync(path.join(root, 'src/db/obsolete.json')), false, 'old database files must be removed');
   const log = fs.readFileSync(env.UPDATE_LOG, 'utf8').trim().split('\n');
   assert.deepEqual(log, ['https://data.iana.org/time-zones/releases/tzdata2027a.tar.gz', 'https://data.iana.org/time-zones/releases/tzcode2027a.tar.gz', 'certify 2027a']);
   assert.match(fs.readFileSync(env.TOOL_LOG, 'utf8'), /PACKRATDATA=backzone PACKRATLIST= tzdata\.zi/);
@@ -64,12 +67,11 @@ fs.writeFileSync(output, JSON.stringify({tzdataVersion: version}));
   assert.equal(fs.readFileSync(path.join(root, 'demo/public/api/zones.json'), 'utf8'), overview);
   // Failure must stop before cleanup/publication, leaving the previous declaration intact.
   write('package.json', '{"version":"2.4.0","tzdataVersion":"2026e"}\n');
-  const previousCoverage = fs.readFileSync(path.join(root, 'src/db/offset-coverage.json'), 'utf8');
   env.FAIL_CERTIFY = 'true';
   const failure = run();
   assert.notEqual(failure.status, 0);
   assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'package.json'))).tzdataVersion, '2026e');
-  assert.equal(fs.readFileSync(path.join(root, 'src/db/offset-coverage.json'), 'utf8'), previousCoverage);
+  assert.equal(fs.existsSync(path.join(root, 'src/db/offset-coverage.json')), false, 'failed regeneration must not retain old coverage');
   assert.equal(fs.existsSync(path.join(root, 'src/vzic/tzdata/version')), true);
   assert.doesNotMatch(failure.stdout, /Successfully updated/);
   // Retry the actual generator with both outputs present after interrupted certification.

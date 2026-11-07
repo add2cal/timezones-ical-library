@@ -87,8 +87,9 @@ then
   cd ..
   # create local database
   echo "🛠 Building local tzdata database and API ..."
-  # Preserve old coverage until replacement; changed data still fails its digest guard.
-  mkdir -p ../db
+  # Remove all previous database outputs, including obsolete files and coverage.
+  rm -rf ../db
+  mkdir ../db
   sudo make -B -s
   sudo ./vzic --olson-dir tzdata --output-dir output
   # create artificial aliases for common US timezone abbreviations that are
