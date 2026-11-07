@@ -41,7 +41,10 @@ linux_install() {
 install_maintainer_dependencies() {
   case "$MAINTAINER_MANAGER" in
     brew) brew install make pkg-config libical glib python || maintainer_error 'Homebrew dependency installation failed; resolve its diagnostic before retrying.' ;;
-    apt-get) linux_install apt-get install -y --no-install-recommends build-essential pkg-config libical-dev libglib2.0-dev python3 || maintainer_error 'apt-get dependency installation failed; check package indexes and permissions before retrying.' ;;
+    apt-get)
+      linux_install apt-get update || maintainer_error 'apt-get package index refresh failed; resolve repository, network or permission diagnostics before retrying.'
+      linux_install apt-get install -y --no-install-recommends build-essential pkg-config libical-dev libglib2.0-dev python3 || maintainer_error 'apt-get dependency installation failed after index refresh; check that configured distro repositories provide build-essential, pkg-config, libical-dev, libglib2.0-dev and python3, and resolve permission diagnostics before retrying.'
+      ;;
     apk) linux_install apk add --no-cache build-base pkgconf libical-dev glib-dev python3 || maintainer_error 'apk dependency installation failed; check repositories and permissions before retrying.' ;;
   esac
 }

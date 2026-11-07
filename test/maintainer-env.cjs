@@ -20,7 +20,7 @@ function run({ host = 'Linux', uid = '1000', manager = 'apt-get', missing = [], 
   write('id', `echo '${uid}'`);
   const logged = 'printf "%s\\n" "$0 $*" >> "$LOG"';
   if (manager) {
-    write(manager, `${logged}\nif [ "$1" = --prefix ]; then printf '%s\\n' "$BREW_PREFIX"; else [ "$FAIL" != install ]; fi`);
+    write(manager, `${logged}\nif [ "$1" = --prefix ]; then printf '%s\\n' "$BREW_PREFIX"; elif [ "$1" = update ]; then [ "$FAIL" != update ]; else [ "$FAIL" != install ]; fi`);
   }
   write('sudo', `${logged}\ncase "$1" in apt-get|apk) exec "$@" ;; *) exit 91 ;; esac`);
   write('make', logged);
@@ -43,6 +43,12 @@ try {
       assert.equal(result.status, 0, result.stderr);
       assert.match(result.log, manager === 'apk' ? /apk add --no-cache build-base pkgconf libical-dev glib-dev python3/ : /apt-get install -y --no-install-recommends build-essential pkg-config libical-dev libglib2.0-dev python3/);
       assert.equal(result.log.includes('/sudo '), uid !== '0');
+      if (manager === 'apt-get') {
+        assert.ok(result.log.indexOf('/apt-get update\n') < result.log.indexOf('/apt-get install '), 'refresh must precede installation');
+        assert.match(result.log, /\/apt-get update\n/);
+      } else {
+        assert.doesNotMatch(result.log, /update/);
+      }
       assert.doesNotMatch(result.log, /sudo (?:g?make|python3) /);
     }
   }
@@ -69,6 +75,16 @@ try {
     assert.notEqual(failure.status, 0);
     assert.doesNotMatch(failure.log, /\/pkg-config |python3 -c|curl -fL/);
   }
+  for (const uid of ['0', '1000']) {
+    const refreshFailure = run({ uid, fail: 'update', missing: uid === '0' ? ['sudo'] : [] });
+    assert.notEqual(refreshFailure.status, 0);
+    assert.match(refreshFailure.stderr, /apt-get.*refresh failed/);
+    assert.match(refreshFailure.log, /\/apt-get update\n/);
+    assert.equal(refreshFailure.log.includes('/sudo apt-get update'), uid !== '0');
+    assert.doesNotMatch(refreshFailure.log, /apt-get install|\/pkg-config |python3 -c|curl -fL/);
+  }
+  const aptInstallFailure = run({ fail: 'install' });
+  assert.match(aptInstallFailure.stderr, /configured.*repositories/);
   const wget = run({ downloader: 'wget' });
   assert.equal(wget.status, 0, wget.stderr);
   assert.match(wget.log, /wget -O archive.tar.gz https:\/\/example.invalid\/archive.tar.gz/);

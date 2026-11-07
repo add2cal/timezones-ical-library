@@ -35,7 +35,7 @@ fs.writeFileSync(output, JSON.stringify({tzdataVersion: version}));
   write('bin/uname', '#!/bin/sh\necho Linux\n', true);
   write('bin/id', '#!/bin/sh\necho 0\n', true);
   write('bin/sudo', '#!/bin/sh\necho "unexpected sudo" >&2; exit 90\n', true);
-  write('bin/apt-get', '#!/bin/sh\nexit "${FAIL_INSTALL:-0}"\n', true);
+  write('bin/apt-get', '#!/bin/sh\necho "$*" >> "$INSTALL_LOG"\nif [ "$1" = update ]; then exit "${FAIL_UPDATE:-0}"; fi\nexit "${FAIL_INSTALL:-0}"\n', true);
   write('bin/cc', '#!/bin/sh\nexit 0\n', true);
   write('bin/pkg-config', '#!/bin/sh\nexit 0\n', true);
   write('bin/npm', '#!/bin/sh\nexit 0\n', true);
@@ -49,15 +49,33 @@ fs.writeFileSync(output, JSON.stringify({tzdataVersion: version}));
   }
   const env = { ...process.env, PATH: path.join(root, 'bin') + ':' + process.env.PATH, UPDATE_LOG: path.join(root, 'log'), TOOL_LOG: path.join(root, 'tools'), FAKE_ZIC: path.join(root, 'bin/zic'), FIXTURES: path.join(root, 'fixtures'), FAIL_CERTIFY: 'false' };
   write('package.json', '{"version":"2.4.0","tzdataVersion":"2026e"}\n');
+  env.INSTALL_LOG = path.join(root, 'install-log');
   const run = () => spawnSync('sh', ['scripts/update-tzdata.sh', '2027a'], { cwd: root, env, encoding: 'utf8' });
   // A normal checkout already has a database; an interrupted update can leave the overview too.
   write('src/db/zonesdb.json', '{"stale":true}\n');
   write('src/db/zones.json', '["Stale/Zone"]\n');
   write('src/db/obsolete.json', '{"obsolete":true}\n');
   write('src/db/offset-coverage.json', '{"staleCoverage":true}\n');
+  const preservedFiles = ['src/db/zonesdb.json', 'src/db/zones.json', 'src/db/obsolete.json', 'src/db/offset-coverage.json', 'package.json'];
+  const preservedContents = preservedFiles.map((file) => fs.readFileSync(path.join(root, file), 'utf8'));
+  env.FAIL_UPDATE = '42';
+  const refreshFailure = run();
+  assert.notEqual(refreshFailure.status, 0);
+  assert.match(refreshFailure.stderr, /apt-get.*refresh failed/);
+  assert.equal(fs.readFileSync(env.INSTALL_LOG, 'utf8'), 'update\n', 'failed refresh must prevent installation');
+  assert.equal(fs.existsSync(env.UPDATE_LOG), false, 'failed refresh must prevent downloads and certification');
+  assert.equal(fs.existsSync(env.TOOL_LOG), false, 'failed refresh must prevent generation');
+  assert.equal(fs.existsSync(path.join(root, 'src/vzic/tzdata')), false);
+  assert.deepEqual(
+    preservedFiles.map((file) => fs.readFileSync(path.join(root, file), 'utf8')),
+    preservedContents,
+  );
+  env.FAIL_UPDATE = '0';
+  fs.rmSync(env.INSTALL_LOG);
   env.FAIL_INSTALL = '42';
   const installFailure = run();
   assert.notEqual(installFailure.status, 0);
+  assert.equal(fs.readFileSync(env.INSTALL_LOG, 'utf8'), 'update\ninstall -y --no-install-recommends build-essential pkg-config libical-dev libglib2.0-dev python3\n');
   assert.equal(fs.existsSync(env.UPDATE_LOG), false, 'failed installation must stop before downloads');
   assert.equal(fs.readFileSync(path.join(root, 'src/db/obsolete.json'), 'utf8'), '{"obsolete":true}\n');
   env.FAIL_INSTALL = '0';
