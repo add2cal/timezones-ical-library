@@ -73,5 +73,8 @@ const data = {
 };
 fs.writeFileSync(outputPath, JSON.stringify(data, null, 2) + '\n');
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, '## Source-certified offset coverage\n\n```json\n' + JSON.stringify(data, null, 2) + '\n```\n');
-if (process.env.GITHUB_ACTIONS) console.log('::notice title=Source-certified offset coverage::' + JSON.stringify(data));
+if (process.env.GITHUB_ACTIONS) {
+  const text = JSON.stringify(data);
+  for (let i = 0; i < text.length; i += 3000) console.log(`::notice title=Coverage metadata part ${i / 3000 + 1}::` + text.slice(i, i + 3000));
+}
 console.log(JSON.stringify({ certified, uncertified: unresolved.length, ranges: groups.size, bytes: fs.statSync(outputPath).size }));
