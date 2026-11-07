@@ -20,6 +20,14 @@ try {
     }
   });
 
+  // Run offset assertions in separate processes so host-local Date behavior cannot hide regressions.
+  for (const hostZone of ['UTC', 'America/New_York', 'Europe/Berlin', 'Pacific/Auckland']) {
+    const result = spawnSync(process.execPath, ['test/offsets.cjs'], { encoding: 'utf8', env: { ...process.env, TZ: hostZone } });
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.stderr) process.stderr.write(result.stderr);
+    if (result.status !== 0) throw new Error(`Offset regressions failed in host TZ=${hostZone}`);
+  }
+
   const testCasesString = JSON.stringify(testCases);
 
   console.log('\n🏎️  Running Tests...');

@@ -130,6 +130,16 @@ Use `tzlib_get_offset(tzName, isoDate, isoTime)` to get specific offset (relativ
 
 For example, you can provide _tzName_ `'Europe/Berlin'`, _isoDate_ `'2023-05-23'`, and _isoTime_ `'15:45'` in order to retrieve the offset, which applies for this time zone at the 23rd of May in 2023 at exactly 15:45.
 
+The date and time describe a **local wall-clock time in the requested zone**, not a UTC instant or the host's local time. The result remains a signed `±HHMM` string. Invalid zone names, impossible dates, invalid times or missing runtime time-zone support return `''`. Dates must use `YYYY-MM-DD` (years `0001` through `9999`) and times `HH:mm` (`00:00` through `23:59`). Historical offsets containing seconds are truncated toward zero to whole minutes because this API cannot represent seconds.
+
+- Historical lookup uses the JavaScript runtime's `Intl.DateTimeFormat` IANA/ICU data, rather than extrapolating the bundled VTIMEZONE's current DST rules. For example, `America/New_York` at `2001-03-25 12:00` returns `-0500`, not the modern-rule `-0400`.
+- During a backward clock change, a repeated local time selects the **earlier instant** (the larger UTC offset). During a forward clock change, a nonexistent local time returns the **post-transition offset**. For example, New York `2021-11-07 01:30` returns `-0400`, and `2021-03-14 02:30` also returns `-0400`. The latter does not make the nonexistent time valid; callers needing strict rejection must validate it separately.
+- The bundled, case-sensitive zone list is still used for validation. Native IANA names are resolved directly to preserve their history, even where their exported VTIMEZONE blocks are shared. Names not understood by `Intl`, including the convenience aliases `PT`, `MT`, `CT` and `ET`, use their bundled mapped IANA names.
+- No runtime dependency or full transition database is added to the bundle. The tradeoff is that results depend on the host's ICU/tzdata version, which can differ from the bundled database or another runtime. An up-to-date runtime with IANA time-zone support is required; unavailable runtime data returns `''` rather than silently falling back to inaccurate current rules.
+
+> [!WARNING]
+> This historical correction applies only to `tzlib_get_offset`. The generated `tzlib_get_ical_block` output and static `.ics` API files are unchanged and are **not full historical transition data**. For example, the bundled New York VTIMEZONE uses March/November recurrence rules, which do not describe its April/October transitions in 2001. Do not use those blocks as evidence of historical correctness.
+
 <br /><br />
 
 ---
