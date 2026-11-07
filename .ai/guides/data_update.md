@@ -2,13 +2,21 @@
 
 ## Explicit Maintainer Operation
 
-Run on a Linux development machine with Node.js/npm, sudo, apt-get, git, wget and tar available. A disposable environment may be used but is not required. The script installs make, GCC, pkg-config, libical/GLib development packages and Python 3 with apt-get, and runs `npm install`. This changes system packages and generated repository files; it is not a normal PR build/test command. Do not run it on a live production server.
+Use a development machine with Node.js/npm, tar and either curl or wget already available (curl is preferred). Git is required when refreshing vzic. A disposable environment may be used but is not required. Run from an ordinary user shell, never with whole-script sudo. The updater selects only these explicit host/package-manager paths:
+
+- macOS: existing Homebrew, run without sudo and not as root. `brew install make pkg-config libical glib python` supplies GNU make (`gmake`) and libraries/Python. Install Apple's Command Line Tools yourself with `xcode-select --install` if `cc` is missing. Homebrew is not installed automatically. Its prefix and GLib/libical pkg-config directories are discovered, including Apple Silicon prefixes.
+- Debian/Ubuntu: existing apt-get; `build-essential pkg-config libical-dev libglib2.0-dev python3` are installed. Ensure package indexes are current before running.
+- Alpine: existing apk; `build-base pkgconf libical-dev glib-dev python3` are installed.
+
+Only Linux package installation is elevated through sudo for non-root users. Already-root Linux environments execute the package manager directly and do not require sudo. Build tools, npm, source edits and generation are never prefixed with sudo. Unsupported hosts/managers and missing prerequisites fail with a diagnostic rather than guessing or bootstrapping a package manager. A failed package installation stops before generation. GNU make, a C compiler (`CC`, default `cc`, must name one executable), libical/GLib pkg-config discovery and Python 3.9+ with `zoneinfo` are checked before source downloads/database replacement. The script also runs `npm install`. This changes system packages and generated repository files; it is not a normal PR build/test command. Do not run it on a live production server.
+
+Host/privilege dispatch is covered by Linux-executed stubs, not a complete macOS or Alpine regeneration. No full cross-platform source-generation validation is implied. Windows and other Linux package managers are not supported by this updater.
 
 1. Select an official IANA release. Substitute it for `2026e` below; the example is not an automatic latest-version lookup. Start with a clean checkout and no leftover `src/vzic/tzdata/` or `src/vzic/output/` from an interrupted update.
 2. From the repository root, run:
 
    ```bash
-   sudo sh scripts/update-tzdata.sh 2026e
+   sh scripts/update-tzdata.sh 2026e
    ```
 
 3. Inspect the resulting database, coverage, static API and `package.json` diff. `tzdataVersion` identifies the generated IANA release; the npm package `version` is not automatically bumped.
@@ -42,4 +50,4 @@ The updater fails fast, but is not transactional. A failed generation/certificat
 
 Inspect or discard the partial generated changes and the exact `src/vzic/tzdata/` and `src/vzic/output/` leftovers before a full retry in a clean checkout. The full updater uses plain `mkdir` for its source directory, so an interrupted directory cannot simply be reused by rerunning it. Direct JSON-generator replacement tests do not prove that the entire updater is resumable.
 
-See the [testing guide](testing.md) for the distinction between offline regressions, stubbed integration and an actual privileged source-generation run. For refreshing upstream vzic as well, use the [vzic update guide](vzic_update.md).
+See the [testing guide](testing.md) for the distinction between offline regressions, stubbed integration and an actual source-generation run with system dependency installation. For refreshing upstream vzic as well, use the [vzic update guide](vzic_update.md).

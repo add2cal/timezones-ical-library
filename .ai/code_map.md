@@ -7,6 +7,7 @@ This code map gives an overview of the most important files and directory, struc
 - `scripts/update-tzdata.sh`: Explicit maintainer update: selected tzdata/tzcode downloads, full database cleanup, C/JSON/API generation, certification and release declaration. Not an ordinary PR check.
 - `scripts/db-generator.js`: Node script that orchestrates the JSON generation after C tools run.
 - `scripts/generate-coverage.sh`: Builds selected-release zic/zdump with backzone histories and runs source comparison before cleanup.
+- `scripts/maintainer-env.sh`: Shared explicit host/package-manager dispatch, Linux-only install elevation, build prerequisites and curl/wget download selection. Sourcing it does not install anything.
 - `scripts/source-offsets.py`: Enumerates source transition partitions for each requested name.
 - `scripts/certify-offsets.cjs`: Certifies continuous matching bundled tails and records source provenance/digests.
 - `scripts/verify-coverage.cjs`: Offline release/database/evaluator consistency guard, called before library builds.

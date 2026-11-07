@@ -27,16 +27,18 @@ It is built to be used standalone, via API, or as JavaScript/TypeScript module, 
 <summary>Learn more (not required)</summary>
 
 **This step is only relevant if you want to build the package and data on your own and from source!**  
-_(Requires Node.js as well as Linux as operating system. You would also need to load/include it manually into your codebase.)_  
+_(Requires Node.js/npm and macOS with existing Homebrew, Debian/Ubuntu with apt-get, or Alpine with apk. See the [maintainer prerequisites](.ai/guides/data_update.md).)_
 
 Run ...
 
 ```
-sudo sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
+sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
 ```
 
-- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2026e`);
-- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2026e true`).
+- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sh scripts/update-tzdata.sh 2026e`);
+- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sh scripts/update-tzdata.sh 2026e true`).
+
+Run as your ordinary user, not with whole-script sudo. Only Linux package installation is elevated when needed; Homebrew must not run as root.
 </details>
 
 <br />
@@ -141,7 +143,7 @@ The date and time describe a **local wall-clock time in the requested zone**, no
 
 Coverage provenance is recorded in `src/db/offset-coverage.json`; `package.json` declares the successfully generated IANA release as `tzdataVersion` (independent of the npm package version). Ordinary builds and tests verify the committed coverage's database/evaluator digests and release declaration **offline**. PR checks do not download timezone sources or rebuild source tools; npm dependency installation remains unchanged. Changed bundled data, evaluator code or release declarations fail closed until recertification.
 
-Maintainer data updates are run from the repository root with `sudo sh scripts/update-tzdata.sh <release>` (for example `2026e`; optional second argument `true` refreshes vzic). Run this on a Linux development machine, including your local machine, with permission to install the required build tools. The update command uses sudo to install system build dependencies and regenerates repository database and static API files; do not run it on a live production server. A disposable environment is optional. It downloads the selected official tzdata archive once, reuses its extracted sources for vzic and coverage generation, and downloads matching tzcode once for `zic`/`zdump`. `scripts/generate-coverage.sh` includes all `backzone` histories, enumerates every source transition from 1800 through 2100, and compares exact constant-offset partitions at the union of source and bundled transitions. Coverage is generated before source cleanup; the release declaration is written only after successful generation and API operations. A failed update exits nonzero without advancing that declaration; inspect/discard partial generated files before retrying. Review and commit the generated database, coverage, API files and release declaration together, then run the build/tests.
+Maintainer data updates are run from the repository root with `sh scripts/update-tzdata.sh <release>` (for example `2026e`; optional second argument `true` refreshes vzic). Host dispatch supports macOS/Homebrew, Debian/Ubuntu/apt-get and Alpine/apk; see the [data update guide](.ai/guides/data_update.md) for prerequisites and testing limitations. Run as your ordinary user: only Linux package installation uses sudo when non-root, while an already-root Linux environment does not need sudo. Homebrew is never bootstrapped or run as root. The updater installs system build dependencies and regenerates repository database and static API files; do not run it on a live production server. A disposable environment is optional. It downloads the selected official tzdata archive once, reuses its extracted sources for vzic and coverage generation, and downloads matching tzcode once for `zic`/`zdump`. `scripts/generate-coverage.sh` includes all `backzone` histories, enumerates every source transition from 1800 through 2100, and compares exact constant-offset partitions at the union of source and bundled transitions. Coverage is generated before source cleanup; the release declaration is written only after successful generation and API operations. A failed update exits nonzero without advancing that declaration; inspect/discard partial generated files before retrying. Review and commit the generated database, coverage, API files and release declaration together, then run the build/tests.
 
 Only continuous matching tails are certified, with conservative two-day wall-time margins and a finite exclusive end. Unsupported recurrence forms, unresolved source identities and tails that disagree remain uncertified. This is transition-equivalence checking, not sampled dates or an `Intl` comparison. Selected release URLs and downloaded archive SHA-256 digests are preserved for provenance; HTTPS source retrieval is part of the explicit maintainer update, not an automatic freshness/update service. No full historical runtime database is shipped. This PR does not regenerate static ICS or exported VTIMEZONE blocks.
 
@@ -224,6 +226,7 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licens
 - v1.2 : providing tzblock as array with separate tzid
 - v1.1 : get-offset function
 - v1.0 : initial release
+
 </details>
 
 <br />

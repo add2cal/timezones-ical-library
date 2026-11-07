@@ -8,7 +8,7 @@ const bundlePaths = ['dist/cjs/index.js', 'dist/mjs/index.js', 'dist/tzlib.js', 
 
 try {
   execSync('node test/bundled-offsets.cjs', { stdio: [0, 1, 2] });
-  execSync('node test/coverage.cjs && node test/update-tzdata.cjs', { stdio: [0, 1, 2] });
+  execSync('node test/coverage.cjs && node test/maintainer-env.cjs && node test/update-tzdata.cjs', { stdio: [0, 1, 2] });
   execSync('npm run build:lib-only', { stdio: [0, 1, 2] });
 
   // The source header stays versionless; the package version is injected into every build artifact.

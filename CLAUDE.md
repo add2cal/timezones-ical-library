@@ -27,9 +27,9 @@ It is a **hybrid project**:
   - `npm run build:lib-only` (only builds the library)
 - **Test JS:** `npm test`
 - **Lint and format:** `npm run format`
-- **Update TZ Data:** `sudo sh scripts/update-tzdata.sh <version>` (e.g. 2026e), an explicit maintainer operation on Linux, not an ordinary PR check; see the data update guide before running.
-- **Update TZ Data and vzic dependency:** `sudo sh scripts/update-tzdata.sh <version> true`; see @.ai/guides/vzic_update.md.
-- **Compile C tools:** `make` in `src/vzic/` (done by the maintainer update, not the ordinary npm build).
+- **Update TZ Data:** `sh scripts/update-tzdata.sh <version>` (e.g. 2026e), an explicit maintainer operation with macOS/Homebrew, Debian/Ubuntu/apt-get or Alpine/apk dispatch, not an ordinary PR check. Run without whole-script sudo; see the data update guide for prerequisites and stubbed-test limitations.
+- **Update TZ Data and vzic dependency:** `sh scripts/update-tzdata.sh <version> true`; see @.ai/guides/vzic_update.md.
+- **Compile C tools:** GNU `make` (`gmake` on macOS) in `src/vzic/` with pkg-config library flags (configured by the maintainer update, not the ordinary npm build).
 
 ## Critical Rules
 

@@ -12,7 +12,7 @@ The same extracted release plus matching tzcode is used by `scripts/generate-cov
 
 `src/db/offset-coverage.json` records ranges, uncertified names, release URLs, archive SHA-256 digests, database/evaluator digests and the IANA version. Coverage is staged before source cleanup; it and `package.json`'s `tzdataVersion` are finalized after API operations succeed. The npm package `version` is independent. Generation is not transactional: a failure can leave partial outputs, but must not advance the declared release or retain old certification.
 
-This explicit flow installs system build dependencies on a Linux development machine; a disposable environment is optional. See the [data update guide](guides/data_update.md). Ordinary PR tests do not download IANA sources or regenerate certification.
+This explicit flow installs system build dependencies through existing Homebrew on macOS, apt-get on Debian/Ubuntu or apk on Alpine; a disposable environment is optional. Only non-root Linux package installation uses sudo, never the entire updater or Homebrew. Host dispatch is stub-tested, not a claim of full cross-platform regeneration. See the [data update guide](guides/data_update.md). Ordinary PR tests do not download IANA sources or regenerate certification.
 
 ## 2. Runtime Consumption
 
@@ -28,4 +28,4 @@ Coverage reflects the selected release, not future legislation. Runtime history 
 
 ## Toolchain Dependencies
 
-Maintainer generation needs make, GCC, pkg-config, libical/GLib development packages, Python 3, download/archive tools and Node.js/npm. Ordinary library builds need Node.js/npm development dependencies, not the C toolchain. The published runtime has no npm dependencies.
+Maintainer generation needs GNU make, a C compiler, pkg-config, libical/GLib development packages, Python 3.9+ with zoneinfo, curl or wget, tar and Node.js/npm (plus git for vzic refresh). `scripts/maintainer-env.sh` shares host dispatch, dependency installation, tool validation and downloader selection between maintainer scripts; coverage generation never installs packages. Ordinary library builds need Node.js/npm development dependencies, not the C toolchain. The published runtime has no npm dependencies.
