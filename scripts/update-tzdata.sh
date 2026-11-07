@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 
 # check for the latest time zone data package at https://www.iana.org/time-zones
 # provide tzVersion (like 2026e) via argument: sudo sh scripts/update-tzdata.sh 2026e
@@ -14,7 +15,7 @@ sudo_sed_inplace() {
   fi
 }
 
-if [ "$1" ]
+if [ "${1:-}" ]
 then
   # validate tzVersionNumber: must start with a 4-digit year, max 6 characters, only [a-z0-9]
   if ! echo "$1" | grep -Eq '^[0-9]{4}[a-z0-9]{0,2}$'; then
@@ -23,7 +24,7 @@ then
     exit 1
   fi
   # validate rebuildVzic: must be "true" or "false" (if provided)
-  if [ -n "$2" ] && [ "$2" != "true" ] && [ "$2" != "false" ]; then
+  if [ -n "${2:-}" ] && [ "$2" != "true" ] && [ "$2" != "false" ]; then
     echo "❌ Error: invalid rebuildVzic value '$2'."
     echo "   It must be either 'true' or 'false' (or omitted)."
     exit 1
@@ -31,11 +32,11 @@ then
   echo "👉 Updating ..."
   # prepare system
   echo "⚙️ Installing build dependencies..."
-  sudo apt-get install -y --no-install-recommends make gcc pkg-config libical-dev libglib2.0-dev
+  sudo apt-get install -y --no-install-recommends make gcc pkg-config libical-dev libglib2.0-dev python3
   npm install
   cd src
   # update vzic tool if requested or no vzic folder exists
-  if [ "$2" = "true" ] || [ ! -d "vzic" ]
+  if [ "${2:-}" = "true" ] || [ ! -d "vzic" ]
   then
     echo "🔄 Updating vzic tool ..."
     # clone repo from https://github.com/libical/libical
@@ -77,11 +78,17 @@ then
   cd tzdata
   wget "https://data.iana.org/time-zones/releases/tzdata${1}.tar.gz"
   tar -xf "tzdata${1}.tar.gz"
+  # Reuse this data for both vzic and historical source certification.
+  # Matching tzcode supplies zic/zdump and the backzone-aware source Makefile.
+  test "$(cat version)" = "$1"
+  wget "https://data.iana.org/time-zones/releases/tzcode${1}.tar.gz"
+  tar -xf "tzcode${1}.tar.gz"
+  test "$(cat version)" = "$1"
   cd ..
   # create local database
   echo "🛠 Building local tzdata database and API ..."
-  rm -rf ../db
-  mkdir ../db
+  # Preserve old coverage until replacement; changed data still fails its digest guard.
+  mkdir -p ../db
   sudo make -B -s
   sudo ./vzic --olson-dir tzdata --output-dir output
   # create artificial aliases for common US timezone abbreviations that are
@@ -100,13 +107,16 @@ then
   cd ..
   cd ..
   node ../scripts/db-generator.js
+  # Stage coverage before cleanup. A failed comparison must not publish metadata.
+  (cd .. && sh scripts/generate-coverage.sh "$1" src/vzic/tzdata src/vzic/tzdata/offset-coverage.json)
   # convert symlinks to real files
   echo "🪄 Converting symlinks to real files ..."
   cd vzic
   cd output
   for f in *.ics; do
     if [ -L "$f" ]; then
-      cp --remove-destination "$f" "$f" 2>/dev/null
+      cp -L "$f" "$f.tmp"
+      mv "$f.tmp" "$f"
     fi
   done
   cd ..
@@ -120,15 +130,25 @@ then
   # clean up build
   echo "🧹 Cleaning up ..."
   rm -rf output
-  rm -rf tzdata
   # clean up API
   cd "$API_DIR"
   rm zones.h
   rm zones.tab
-  cd ..
+  cd ../../..
+  mv src/vzic/tzdata/offset-coverage.json src/db/offset-coverage.json
+  # Record the release only after all generation/API operations have succeeded.
+  node - "$1" <<'NODE'
+const fs = require('node:fs');
+const file = 'package.json';
+const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+data.tzdataVersion = process.argv[2];
+fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+NODE
+  rm -rf src/vzic/tzdata
   echo "✅ Successfully updated to tzdata version $1"
 else
   echo "❌ Error: no version given"
+  exit 1
 fi
 
 # mind to run `npm run build` afterwards to not only update the database, but the whole tool!

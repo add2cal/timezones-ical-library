@@ -2,17 +2,7 @@ const esbuild = require('esbuild');
 const fs = require('fs');
 const path = require('path');
 const { version } = require('../package.json');
-const crypto = require('node:crypto');
-const coverage = require('../src/db/offset-coverage.json');
-
-// Never let regenerated data or a changed evaluator inherit stale certification.
-for (const [file, expected] of [
-  ['src/db/zonesdb.json', coverage.databaseSha256],
-  ['src/bundled-offset.ts', coverage.evaluatorSha256],
-]) {
-  const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-  if (actual !== expected) throw new Error('Offset coverage must be recertified: ' + file);
-}
+require('./verify-coverage.cjs').verifyCoverage();
 
 const entryPoint = path.resolve('src/tzlib.ts');
 const versionPlaceholder = /^ \* Version:\s*$/gm;

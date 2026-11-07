@@ -1,6 +1,6 @@
 """Enumerate complete source offset partitions, never runtime ICU samples.
 
-Run only against a zic-built directory from the pinned source release. tzdb's
+Run only against a zic-built directory from the selected source release. tzdb's
 zdump enumerates POSIX-tail transitions as well as TZif's explicit transitions.
 """
 import datetime
@@ -11,7 +11,10 @@ import subprocess
 import sys
 import zoneinfo
 
-root, zdump, output = sys.argv[1:]
+root, tools, version, output = sys.argv[1:]
+if pathlib.Path(tools, 'version').read_text().strip() != version:
+    raise ValueError('Source release does not match selected IANA version')
+zdump = str(pathlib.Path(tools, 'zdump').resolve())
 db = json.loads(pathlib.Path('src/db/zonesdb.json').read_text())
 names = []
 
@@ -51,5 +54,5 @@ for name in names:
         if start <= when < end:
             points[int(when.timestamp()) * 1000] = int(match[2]) * 1000
     result[name] = sorted(points.items())
-pathlib.Path(output).write_text(json.dumps(result, separators=(',', ':')))
+pathlib.Path(output).write_text(json.dumps({'version': version, 'zones': result}, separators=(',', ':')))
 print(f'Enumerated complete source partitions for {len(result)} requested names')

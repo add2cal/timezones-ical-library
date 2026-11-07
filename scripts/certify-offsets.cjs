@@ -4,8 +4,12 @@ const fs = require('node:fs');
 const crypto = require('node:crypto');
 const vm = require('node:vm');
 const esbuild = require('esbuild');
-const [sourcePath, archiveDirectory, outputPath] = process.argv.slice(2);
-const source = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+const [sourcePath, archiveDirectory, version, outputPath] = process.argv.slice(2);
+const partitions = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+if (!/^[0-9]{4}[a-z0-9]{0,2}$/.test(version) || partitions.version !== version || fs.readFileSync(archiveDirectory + '/version', 'utf8').trim() !== version) {
+  throw new Error('Source release does not match selected IANA version');
+}
+const source = partitions.zones;
 const db = require('../src/db/zonesdb.json');
 const moduleObject = { exports: {} };
 vm.runInNewContext(esbuild.buildSync({ entryPoints: ['src/bundled-offset.ts'], bundle: true, write: false, format: 'cjs' }).outputFiles[0].text, { module: moduleObject, exports: moduleObject.exports });
@@ -61,11 +65,12 @@ function walk(node, prefix = '') {
 walk(db.db);
 const digest = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const data = {
-  source: 'https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz',
-  sourceSha256: digest(archiveDirectory + '/tzdata2026e.tar.gz'),
-  code: 'https://data.iana.org/time-zones/releases/tzcode2026e.tar.gz',
-  codeSha256: digest(archiveDirectory + '/tzcode2026e.tar.gz'),
-  configuration: 'zic 2026e; PACKRATDATA=backzone; PACKRATLIST=; UTC exact-transition partition comparison 1800-01-01/2101-01-01; two-day wall-time margins',
+  tzdataVersion: version,
+  source: `https://data.iana.org/time-zones/releases/tzdata${version}.tar.gz`,
+  sourceSha256: digest(archiveDirectory + `/tzdata${version}.tar.gz`),
+  code: `https://data.iana.org/time-zones/releases/tzcode${version}.tar.gz`,
+  codeSha256: digest(archiveDirectory + `/tzcode${version}.tar.gz`),
+  configuration: `zic ${version}; PACKRATDATA=backzone; PACKRATLIST=; UTC exact-transition partition comparison 1800-01-01/2101-01-01; two-day wall-time margins`,
   databaseSha256: digest('src/db/zonesdb.json'),
   evaluatorSha256: digest('src/bundled-offset.ts'),
   ranges: [...groups].sort(([a], [b]) => a.localeCompare(b)).map(([range, names]) => [...range.split('/'), names.sort().join('|')]),

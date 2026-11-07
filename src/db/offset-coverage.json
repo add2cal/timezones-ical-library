@@ -1,4 +1,5 @@
 {
+  "tzdataVersion": "2026e",
   "source": "https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz",
   "sourceSha256": "b26882805f26aac59d5b222978e6580484b834ccdc98be89df2f05a6dc53a652",
   "code": "https://data.iana.org/time-zones/releases/tzcode2026e.tar.gz",
