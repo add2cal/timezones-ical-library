@@ -6,7 +6,7 @@ async function main() {
   const commonjs = require('../dist/cjs/index.js');
   const esm = await import('../dist/mjs/index.js');
   const browser = (file, intl = Intl) => {
-    const context = { window: {}, Intl: intl, console: { error() {} } };
+    const context = { window: {}, Intl: intl, console };
     // eslint-disable-next-line security/detect-non-literal-fs-filename
     vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);
     return context.window;
@@ -79,6 +79,27 @@ async function main() {
         ['UTC', '2021-01-01', '1:00'],
       ])
         assert.equal(api.tzlib_get_offset(zone, date, time), '', `${name}: invalid ${zone} ${date} ${time}`);
+    } finally {
+      console.error = originalError;
+    }
+    const diagnostics = [];
+    console.error = (...args) => diagnostics.push(args);
+    try {
+      for (const [date, time, field, format] of [
+        ['2021-1-01', '12:00', 'date', 'YYYY-MM-DD'],
+        ['2021-02-29', '12:00', 'date', 'YYYY-MM-DD'],
+        ['2021-04-31', '12:00', 'date', 'YYYY-MM-DD'],
+        ['2021-01-01', '1:00', 'time', 'hh:mm'],
+        ['2021-01-01', '24:00', 'time', 'hh:mm'],
+        ['2021-01-01', '12:60', 'time', 'hh:mm'],
+      ]) {
+        diagnostics.length = 0;
+        assert.equal(api.tzlib_get_offset('UTC', date, time), '');
+        assert.deepEqual(diagnostics, [[`offset calculation failed: ${field} misspelled [-> ${format}]`]], `${name}: ${field} diagnostic`);
+      }
+      diagnostics.length = 0;
+      assert.equal(api.tzlib_get_offset('UTC', '2000-02-29', '23:59'), '+0000');
+      assert.deepEqual(diagnostics, [], `${name}: valid input must not log an error`);
     } finally {
       console.error = originalError;
     }

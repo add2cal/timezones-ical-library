@@ -1,13 +1,27 @@
 // Resolve a local wall-clock time using the runtime's historical IANA data.
 // UTC arithmetic is intentional: the host's local time zone must never participate.
 export function get_offset(timeZone: string, fallbackZone: string, isoDate: string, isoTime: string): string {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate) || !/^\d{2}:\d{2}$/.test(isoTime)) return '';
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate)) {
+    console.error('offset calculation failed: date misspelled [-> YYYY-MM-DD]');
+    return '';
+  }
   const [year, month, day] = isoDate.split('-').map(Number);
-  const [hour, minute] = isoTime.split(':').map(Number);
   const wallDate = new Date(0);
   wallDate.setUTCFullYear(year, month - 1, day);
+  if (year < 1 || wallDate.getUTCFullYear() !== year || wallDate.getUTCMonth() !== month - 1 || wallDate.getUTCDate() !== day) {
+    console.error('offset calculation failed: date misspelled [-> YYYY-MM-DD]');
+    return '';
+  }
+  if (!/^\d{2}:\d{2}$/.test(isoTime)) {
+    console.error('offset calculation failed: time misspelled [-> hh:mm]');
+    return '';
+  }
+  const [hour, minute] = isoTime.split(':').map(Number);
+  if (hour > 23 || minute > 59) {
+    console.error('offset calculation failed: time misspelled [-> hh:mm]');
+    return '';
+  }
   wallDate.setUTCHours(hour, minute, 0, 0);
-  if (year < 1 || wallDate.getUTCFullYear() !== year || wallDate.getUTCMonth() !== month - 1 || wallDate.getUTCDate() !== day || wallDate.getUTCHours() !== hour || wallDate.getUTCMinutes() !== minute) return '';
 
   try {
     const options: Intl.DateTimeFormatOptions = {
