@@ -12,11 +12,11 @@ Only Linux package installation is elevated through sudo for non-root users. Alr
 
 Host/privilege dispatch is covered by Linux-executed stubs, not a complete macOS or Alpine regeneration. No full cross-platform source-generation validation is implied. Windows and other Linux package managers are not supported by this updater.
 
-1. Select an official IANA release. Substitute it for `2026e` below; the example is not an automatic latest-version lookup. Start with a clean checkout and no leftover `src/vzic/tzdata/` or `src/vzic/output/` from an interrupted update.
+1. Select an official IANA release. Substitute it for `2026f` below; the example is not an automatic latest-version lookup. Start with a clean checkout and no leftover `src/vzic/tzdata/` or `src/vzic/output/` from an interrupted update.
 2. From the repository root, run:
 
    ```bash
-   sh scripts/update-tzdata.sh 2026e
+   sh scripts/update-tzdata.sh 2026f
    ```
 
 3. Inspect the resulting database, coverage, static API and `package.json` diff. `tzdataVersion` identifies the generated IANA release; the npm package `version` is not automatically bumped.

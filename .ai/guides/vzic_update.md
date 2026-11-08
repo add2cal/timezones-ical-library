@@ -2,10 +2,10 @@
 
 Follow the prerequisites, host/package-manager choices, clean-checkout checks, failure recovery and explicit validation sequence in the [data update guide](data_update.md). This is the same maintainer-only flow, with an upstream vzic refresh added; there is no separate vzic-only generation path. Run as your ordinary user, not with whole-script sudo; Homebrew rejects root.
 
-From the repository root, substitute the selected IANA release for `2026e`:
+From the repository root, substitute the selected IANA release for `2026f`:
 
 ```bash
-sh scripts/update-tzdata.sh 2026e true
+sh scripts/update-tzdata.sh 2026f true
 ```
 
 The `true` argument clones `libical/libical`, replaces `src/vzic/` with its vzic subtree (including the Makefile), retains the selected source file types and reapplies the compatibility edits encoded in `scripts/update-tzdata.sh`. The normal flow then downloads selected-release tzdata/matching tzcode, regenerates ICS/JSON/API output and certifies bundled offset coverage before source cleanup.
