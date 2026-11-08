@@ -1,11 +1,11 @@
 {
-  "tzdataVersion": "2026e",
-  "source": "https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz",
-  "sourceSha256": "b26882805f26aac59d5b222978e6580484b834ccdc98be89df2f05a6dc53a652",
-  "code": "https://data.iana.org/time-zones/releases/tzcode2026e.tar.gz",
-  "codeSha256": "cc3d27ca2a0d8399504551b920970d80af83bfb9c216e8082a15491921935d54",
-  "configuration": "zic 2026e; PACKRATDATA=backzone; PACKRATLIST=; UTC exact-transition partition comparison 1800-01-01/2101-01-01; two-day wall-time margins",
-  "databaseSha256": "fd62b0445389a7bb0e73463927fd6d939d0ceacd4f755a2a701783e01823c97b",
+  "tzdataVersion": "2026f",
+  "source": "https://data.iana.org/time-zones/releases/tzdata2026f.tar.gz",
+  "sourceSha256": "01b4a91cec5167ed48c11e8ab78f2048cead78ce94b0cafcad0ae8c5a3044d3d",
+  "code": "https://data.iana.org/time-zones/releases/tzcode2026f.tar.gz",
+  "codeSha256": "5a18da01393679ef2559214dc687563f7f3d05691f6f58b7fbc0166f3e796cd6",
+  "configuration": "zic 2026f; PACKRATDATA=backzone; PACKRATLIST=; UTC exact-transition partition comparison 1800-01-01/2101-01-01; two-day wall-time margins",
+  "databaseSha256": "cf5f1b2a34f68202c1e11f9f2056a9d0425d0d3fed9620e7de89b5de868535d7",
   "evaluatorSha256": "ae44a05ab3d4c99a7fd67f235d771ece9a2780c2b0be1ad625865b521eddc7c9",
   "ranges": [
     [
@@ -859,11 +859,6 @@
       "America/Bahia"
     ],
     [
-      "2012-04-04",
-      "2100-12-30",
-      "America/Havana|Cuba"
-    ],
-    [
       "2013-02-20",
       "2100-12-30",
       "America/Araguaina"
@@ -1112,6 +1107,11 @@
       "2026-09-23",
       "2100-12-30",
       "Africa/Casablanca|Africa/El_Aaiun"
+    ],
+    [
+      "2027-03-17",
+      "2100-12-30",
+      "America/Havana|Cuba"
     ],
     [
       "2096-04-01",
