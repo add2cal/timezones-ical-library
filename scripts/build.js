@@ -2,6 +2,7 @@ const esbuild = require('esbuild');
 const fs = require('fs');
 const path = require('path');
 const { version } = require('../package.json');
+require('./verify-coverage.cjs').verifyCoverage();
 
 const entryPoint = path.resolve('src/tzlib.ts');
 const versionPlaceholder = /^ \* Version:\s*$/gm;

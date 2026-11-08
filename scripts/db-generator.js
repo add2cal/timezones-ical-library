@@ -109,6 +109,7 @@ for (const index in tz) {
   }
 }
 
+// Replace complete outputs so existing databases and interrupted updates can be regenerated.
 // write output file (aka the local database, which holds the different zones and data in a compact way)
 // consists of a three-level object (Continent -> Country/Region -> City), each holding an array with [0] = location (or empty string, if same as timezone name), [1] = index to secondary database with the actual ical data
 // also the actual ical data in a compacted way
@@ -121,14 +122,9 @@ fs.writeFileSync(
     details: tzNamesSecDb,
     toplevel: topLevelZones,
   }),
-  {
-    flag: 'a',
-  },
 );
 
 // write overview JSON file for API
 const tzlibAPIOverviewFile = '../src/db/zones.json';
 const apiOutputJSON = JSON.stringify(overviewJson, null, 2);
-fs.writeFileSync(tzlibAPIOverviewFile, apiOutputJSON, {
-  flag: 'a',
-});
+fs.writeFileSync(tzlibAPIOverviewFile, apiOutputJSON);
