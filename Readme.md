@@ -27,16 +27,18 @@ It is built to be used standalone, via API, or as JavaScript/TypeScript module, 
 <summary>Learn more (not required)</summary>
 
 **This step is only relevant if you want to build the package and data on your own and from source!**  
-_(Requires Node.js as well as Linux as operating system. You would also need to load/include it manually into your codebase.)_  
+_(Requires Node.js/npm and macOS with existing Homebrew, Debian/Ubuntu with apt-get, or Alpine with apk. See the [maintainer prerequisites](.ai/guides/data_update.md).)_
 
 Run ...
 
 ```
-sudo sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
+sh scripts/update-tzdata.sh tzVersionNumber rebuildVzic
 ```
 
-- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sudo sh scripts/update-tzdata.sh 2026e`);
-- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sudo sh scripts/update-tzdata.sh 2026e true`).
+- with _tzVersionNumber_ being the version of the [IANA time zone database](https://www.iana.org/time-zones) you want to use (e.g. `sh scripts/update-tzdata.sh 2026f`);
+- and _rebuildVzic_ as an optional param to rebuild the vzic library from scratch (e.g. `sh scripts/update-tzdata.sh 2026f true`).
+
+Run as your ordinary user, not with whole-script sudo. Only Linux package installation is elevated when needed; Homebrew must not run as root.
 </details>
 
 <br />
@@ -130,6 +132,11 @@ Use `tzlib_get_offset(tzName, isoDate, isoTime)` to get specific offset (relativ
 
 For example, you can provide _tzName_ `'Europe/Berlin'`, _isoDate_ `'2023-05-23'`, and _isoTime_ `'15:45'` in order to retrieve the offset, which applies for this time zone at the 23rd of May in 2023 at exactly 15:45.
 
+The date and time describe a **local wall-clock time in the requested zone**, not a UTC instant or the host's local time. The result remains a signed `±HHMM` string. Invalid zone names, impossible dates and invalid times return `''`; malformed dates/times retain their explicit console diagnostics. Dates must use `YYYY-MM-DD` (years `0001` through `9999`) and times `HH:mm` (`00:00` through `23:59`). Historical offsets containing seconds are truncated toward zero to whole minutes because this API cannot represent seconds.
+
+> [!NOTE]
+> Certified dates use bundled rules. Outside those ranges, historical timezone offsets may vary with your browser or runtime IANA timezone data, especially if it is outdated. When historical runtime support is unavailable, bundled-rule fallback is best effort and may differ from historical rules.
+
 <br /><br />
 
 ---
@@ -189,6 +196,7 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licens
 <details>
 <summary>History (without minor changes and fixes)</summary>
 
+- v3.0 : falling back to local libraries for historical offsets; database update (2026f)
 - v2.4 : database update (2026e)
 - v2.3 : artificial time zone aliases PT, MT, CT, ET for convenience
 - v2.2 : database update (2026c)
@@ -206,6 +214,7 @@ Copyright (c) [Jens Kuerschner](https://jekuer.com) (Calendarverse GmbH). Licens
 - v1.2 : providing tzblock as array with separate tzid
 - v1.1 : get-offset function
 - v1.0 : initial release
+
 </details>
 
 <br />

@@ -42,9 +42,9 @@ IGNORE_TOP_LEVEL_LINK ?= 1
 # libical library to link with. You only need these if you want to run the
 # tests. You may need to change the '#include <ical.h>' line at the top of
 # test-vzic.c as well.
-LIBICAL_CFLAGS = -I/usr/local/include/libical
+LIBICAL_CFLAGS = -I/usr/local/include/libical -L/usr/local/lib64
 #LIBICAL_LDADD = -lical-evolution
-LIBICAL_LDADD = -L/usr/local/lib64 -lical -lpthread
+LIBICAL_LDADD = -lical -lpthread
 
 
 #
@@ -79,7 +79,7 @@ vzic.o vzic-output.o: vzic-output.h
 test-parse: vzic
 ifndef OLSON_DIR
 	@echo "You forgot to pass OLSON_DIR"
-	@echo "Example: make test OLSON_DIR=tzdata2026e"
+	@echo "Example: make test OLSON_DIR=tzdata2026f"
 else
 	./vzic-dump.pl $(OLSON_DIR)
 	./vzic --dump --pure --olson-dir $(OLSON_DIR)

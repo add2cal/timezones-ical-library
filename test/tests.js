@@ -7,6 +7,8 @@ const packageVersion = require('../package.json').version;
 const bundlePaths = ['dist/cjs/index.js', 'dist/mjs/index.js', 'dist/tzlib.js', 'dist/tzlib.min.js'];
 
 try {
+  execSync('node test/bundled-offsets.cjs', { stdio: [0, 1, 2] });
+  execSync('node test/coverage.cjs && node test/maintainer-env.cjs && node test/update-tzdata.cjs', { stdio: [0, 1, 2] });
   execSync('npm run build:lib-only', { stdio: [0, 1, 2] });
 
   // The source header stays versionless; the package version is injected into every build artifact.
@@ -19,6 +21,14 @@ try {
       throw new Error(`Missing package version in ${bundlePath}`);
     }
   });
+
+  // Run offset assertions in separate processes so host-local Date behavior cannot hide regressions.
+  for (const hostZone of ['UTC', 'America/New_York', 'Europe/Berlin', 'Pacific/Auckland']) {
+    const result = spawnSync(process.execPath, ['test/offsets.cjs'], { encoding: 'utf8', env: { ...process.env, TZ: hostZone } });
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.stderr) process.stderr.write(result.stderr);
+    if (result.status !== 0) throw new Error(`Offset regressions failed in host TZ=${hostZone}`);
+  }
 
   const testCasesString = JSON.stringify(testCases);
 

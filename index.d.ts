@@ -31,13 +31,20 @@ export function tzlib_get_ical_block(tzName: string, jsonType: false): string[] 
 export function tzlib_get_ical_block(tzName: string, jsonType: true): JsonString<[string, string]>;
 
 /**
- * Returns the timezone offset for a given date and time.
+ * Returns the timezone offset for a local wall-clock date and time using source-certified
+ * bundled rules, then historical runtime Intl outside that coverage, then best-effort
+ * bundled extrapolation if runtime support is unavailable.
+ * Repeated times select the earlier instant; nonexistent times use the post-jump offset.
+ * Historical seconds are truncated toward zero to minutes. The fallback may be historically
+ * inaccurate; runtime tzdata is required for reliable history outside certified coverage.
+ * This does not change the historical limitations of exported VTIMEZONE blocks.
  *
  * @param tzName - IANA time zone name (e.g. `America/New_York`).
  * @param isoDate - Date in `YYYY-MM-DD` format.
  * @param isoTime - Time in `hh:mm` (24-hour) format.
  * @returns
- * - Offset in `+HHMM` or `-HHMM` format (e.g. `+0100`, `-0500`).
+ * - Offset in `+HHMM` or `-HHMM` format (e.g. `+0100`, `-0500`),
+ *   or an empty string for invalid input or if neither offset mechanism can resolve it.
  */
 export function tzlib_get_offset(tzName: string, isoDate: IsoDate, isoTime: IsoTime): string;
 
